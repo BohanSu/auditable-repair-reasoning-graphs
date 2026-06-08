@@ -1,0 +1,137 @@
+{
+  "scope": "10_standard_flow_350_subset_package/07_code",
+  "created_at": "2026-06-04T02:27:37+08:00",
+  "file_count": 26,
+  "files": [
+    {
+      "file": "build_ans_claims_for_strict_merge_candidates.py",
+      "bytes": 13575,
+      "sha256": "4841794fada3f709cf27ee11ab7e416d1f2cc087f17398c46ed3a3e18701f3ca"
+    },
+    {
+      "file": "build_evidence_bound_candidate_selection_ledger.py",
+      "bytes": 15626,
+      "sha256": "64f147ae53a38fbab8a98dbf856689353accb7f27aa0291f6be21444c3a2bc17"
+    },
+    {
+      "file": "build_evidence_bound_feedback_regeneration_packets.py",
+      "bytes": 18707,
+      "sha256": "841164804fcd2686572ae83db9bacf782696ca9bd6a7714c9c40ac7d2ec58bda"
+    },
+    {
+      "file": "build_evidence_bound_micro_edit_packets.py",
+      "bytes": 18566,
+      "sha256": "35cec37926c2eb6057e7fd57d81835b550fd38cb1a06f97ef3b8fc5976343298"
+    },
+    {
+      "file": "build_evidence_bound_regeneration_packets.py",
+      "bytes": 41132,
+      "sha256": "4c13814a280f721ad43a16b747fbff8ece28fe6fe2a3ace36def1248b55fc4dc"
+    },
+    {
+      "file": "build_frontier_micro_merge_candidate.py",
+      "bytes": 6816,
+      "sha256": "1557a256ea5ee810c696186839eba1b1bb4b5d850d2e4efd3b416f2870e82793"
+    },
+    {
+      "file": "build_residual_50_closeout_package.py",
+      "bytes": 31589,
+      "sha256": "752f1d39ad5fc510aa758feb8411dd221e9fcbdb147edf11201dc739348bb445"
+    },
+    {
+      "file": "build_strict_merge_ans_guard_report.py",
+      "bytes": 4881,
+      "sha256": "88e252bc0d9e3cd47712f56fbf1541e106bbec208bebccb1bd977fb501225769"
+    },
+    {
+      "file": "build_strict_merge_candidate_package.py",
+      "bytes": 10108,
+      "sha256": "3065c5871b3785469f26b1ecba73d4b32c76bd430475c35bf3efc548f81504a5"
+    },
+    {
+      "file": "build_strict_merge_proposal_350.py",
+      "bytes": 16280,
+      "sha256": "fc6c61d52d81bea4071d694fb5895e2e1f9e099483930e46d7dd5d3b49fe8998"
+    },
+    {
+      "file": "curate_graph_from_vote_results_gpt55.py",
+      "bytes": 117853,
+      "sha256": "b5fdd092a8dd8fbbd7fbeedf315279e75e77ce70088c09497cf2a39f3684f250"
+    },
+    {
+      "file": "evaluate_ans_factscore_style_350.py",
+      "bytes": 41421,
+      "sha256": "65f6e99d217283b26de4a90795c998398687f77edabb1fdd70d04a77bd6ca81f"
+    },
+    {
+      "file": "evaluate_evidence_bound_staged_candidate.py",
+      "bytes": 15801,
+      "sha256": "f70abcce648cc58ffa515ab9dab02b68e84651974e9ec592ada43bee2141c4d3"
+    },
+    {
+      "file": "evaluator.py",
+      "bytes": 95146,
+      "sha256": "3e1dba6e556c7e5b01dc49af3acb17c1e148af5aa10f366904bf07643460900a"
+    },
+    {
+      "file": "extract_residual_50_candidate_frontier.py",
+      "bytes": 6363,
+      "sha256": "441428bd886a04c3cdc6a03f266e1a6b628ccebc23d4972417912719651e64bd"
+    },
+    {
+      "file": "generate_pearl_figures_350_no_gpt54_gpt55.py",
+      "bytes": 26272,
+      "sha256": "c677a2e3f283b3d825ab99fd099aed1c1585a4664d8becd4c475fff746074926"
+    },
+    {
+      "file": "materialize_anchor_adapted_transfer.py",
+      "bytes": 26149,
+      "sha256": "b4c4b696d3840bb0c1e1fb4f37955a3a4785d86f26befcc18f2bffa36c2e93f5"
+    },
+    {
+      "file": "materialize_same_paper_graph_transfer.py",
+      "bytes": 12420,
+      "sha256": "e617270798c1eec16080102bff5740d4ed643294991863207dabd3cbb8589716"
+    },
+    {
+      "file": "refresh_350_subset_manifests.py",
+      "bytes": 3724,
+      "sha256": "59e57ac8845fa3a8f4a612ef0b9549f4acb67c2699310281d19f10112627ad4e"
+    },
+    {
+      "file": "repair_evidence_bound_fresh_eval_provider_errors.py",
+      "bytes": 18954,
+      "sha256": "649bca4e0789f782bc838708e1f7c51022d511dda794d8892478ebe7ed5fcb4f"
+    },
+    {
+      "file": "run_edge_repair_raw_regeneration_residuals.py",
+      "bytes": 41505,
+      "sha256": "abdcb8c0468fbe10648cad8efdc7d4d0f794dd7cd7a5c9c1df78b4167da173bf"
+    },
+    {
+      "file": "run_evidence_bound_graph_spec_regeneration.py",
+      "bytes": 39235,
+      "sha256": "acd083c3f657f0bb314af5f9e8cd7038e338ceedd74b367957d6b3b6511f5001"
+    },
+    {
+      "file": "run_evidence_bound_local_window_patch.py",
+      "bytes": 17278,
+      "sha256": "168c2cff1012d9d51f87467caa26015ed15f62ce31d64e66344c29c8a2049edc"
+    },
+    {
+      "file": "run_evidence_bound_micro_edit_patch.py",
+      "bytes": 33523,
+      "sha256": "e42d48b34125512ab3b3c0bcb9370bcfc68909f179426032ced2db0c8339b4bd"
+    },
+    {
+      "file": "run_residual_50_closure_engine.py",
+      "bytes": 44916,
+      "sha256": "c941d094acaacf358e8c95a35d3c49a10d00ed9bd1769b33b1e3bfd65d8e3b0a"
+    },
+    {
+      "file": "run_vote_guided_semantic_root_batch.py",
+      "bytes": 123447,
+      "sha256": "6d203561780c79680253ea0f46347ffbf8d1d568095a3343705bb71a58450062"
+    }
+  ]
+}
