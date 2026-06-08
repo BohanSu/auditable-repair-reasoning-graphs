@@ -1,0 +1,5 @@
+failure_type,count
+final_judge_failed,2
+final_metric_gate_failed,13
+metric_regression,4
+preflight:no_anchor_regenerate,31

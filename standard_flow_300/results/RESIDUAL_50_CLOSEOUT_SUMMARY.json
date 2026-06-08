@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-06-03T01:38:45+08:00",
+  "scope": "350-row standard-flow subset residual closeout plan; excludes gpt_5_4 and gpt_5_5 generator rows",
+  "current_result_boundary": {
+    "rows": 350,
+    "strict_success_rows": 300,
+    "typed_residual_rows": 50,
+    "note": "This package does not rewrite current accounting. It defines the next residual candidate-closure iteration."
+  },
+  "acceptance_gate": {
+    "final_CG": 1.0,
+    "final_REA": 1.0,
+    "quality_tier": [
+      "A_main",
+      "B_usable",
+      "C_thin"
+    ],
+    "fresh_evaluation_required": true,
+    "provider_error_is_not_semantic_failure": true
+  },
+  "semantic_quality_guard": {
+    "primary": "ANS/FActScore-style support is a diagnostic guard for source grounding, not a replacement for CG/REA.",
+    "policy": "Do not accept a candidate that reaches CG/REA by adding unsupported paper-level claims or by pruning away required content.",
+    "current_reference": {
+      "raw_main_factual_ans": 0.7835740202321166,
+      "step2_main_factual_ans": 0.774975035818174,
+      "pearl_main_factual_ans": 0.8033754732721555,
+      "pearl_without_roots_or_bridges_ans": 0.828893058161351
+    }
+  },
+  "counts": {
+    "rows": 50,
+    "by_lane": {
+      "anchor_bootstrap_then_semantic_repair": 31,
+      "entity_coverage_targeted_repair": 13,
+      "non_regression_selection_or_merge": 4,
+      "bounded_final_judge_feedback_repair": 2
+    },
+    "by_failure_type": {
+      "preflight:no_anchor_regenerate": 31,
+      "final_metric_gate_failed": 13,
+      "metric_regression": 4,
+      "final_judge_failed": 2
+    },
+    "by_model": {
+      "claude_sonnet_4_5_20250929": 9,
+      "gemini_3_1_pro_preview": 17,
+      "grok_4_1_thinking": 11,
+      "qwen3_5_397b_a17b": 11,
+      "gpt_5_2": 2
+    },
+    "repeated_residual_papers": {
+      "s41467-025-56034-2": 2,
+      "s41467-025-56075-7": 2,
+      "s41467-025-56283-1": 4,
+      "s41467-025-56635-x": 2,
+      "s41467-025-56769-y": 2,
+      "s41467-025-56786-x": 2,
+      "s41467-025-56814-w": 2,
+      "s41467-025-56887-7": 2,
+      "s41467-025-56912-9": 2,
+      "s41467-025-56921-8": 3
+    }
+  },
+  "lane_summaries": {
+    "anchor_bootstrap_then_semantic_repair": {
+      "count": 31,
+      "failure_types": {
+        "preflight:no_anchor_regenerate": 31
+      },
+      "terminal_graph_rows": 0,
+      "avg_final_CG": 0.0,
+      "avg_final_REA": 0.0,
+      "avg_raw_main_factual_ans": 0.7763508720512227,
+      "avg_step2_main_factual_ans": 0.8041244666531152,
+      "avg_pearl_main_factual_ans": null,
+      "details": {
+        "problem": "The current source graph has no majority-correct reasoning anchor, so ordinary PEARL repair has no safe local starting point.",
+        "entry_point": "paper evidence/input_data.json plus a regenerated or cross-model bootstrapped source graph candidate",
+        "allowed_actions": [
+          "regenerate a bounded source-grounded candidate graph from the same evidence",
+          "optionally borrow paper-level anchors from accepted runs of the same paper after exact source-evidence verification",
+          "rerun the normal PEARL semantic repair loop after anchors exist"
+        ],
+        "forbidden_actions": [
+          "claim closure from the old no-anchor source graph",
+          "skip fresh EC/CG and REA evaluation",
+          "use GPT-5.4 or GPT-5.5 generator rows in the 350-only reporting set"
+        ]
+      }
+    },
+    "entity_coverage_targeted_repair": {
+      "count": 13,
+      "failure_types": {
+        "final_metric_gate_failed": 13
+      },
+      "terminal_graph_rows": 13,
+      "avg_final_CG": 0.7698135198135199,
+      "avg_final_REA": 1.0,
+      "avg_raw_main_factual_ans": 0.7588128839339714,
+      "avg_step2_main_factual_ans": 0.7388923333778794,
+      "avg_pearl_main_factual_ans": 0.7917372223061538,
+      "details": {
+        "problem": "The terminal graph is reasoning-clean but misses the strict entity coverage/content grounding gate.",
+        "entry_point": "existing terminal graph, final evaluation anchor entities, and source evidence",
+        "allowed_actions": [
+          "audit final coverage against the fixed entity anchor",
+          "add or reroute only source-supported units for uncovered core entities",
+          "preserve all current correct reasoning unless a fresh judge rejects it"
+        ],
+        "forbidden_actions": [
+          "full regeneration before trying targeted coverage repair",
+          "lower the final CG threshold",
+          "accept coverage gains with REA below 1.0"
+        ]
+      }
+    },
+    "non_regression_selection_or_merge": {
+      "count": 4,
+      "failure_types": {
+        "metric_regression": 4
+      },
+      "terminal_graph_rows": 4,
+      "avg_final_CG": 0.48174603174603176,
+      "avg_final_REA": 1.0,
+      "avg_raw_main_factual_ans": 0.8039315507925373,
+      "avg_step2_main_factual_ans": 0.8154033381514999,
+      "avg_pearl_main_factual_ans": 0.7701719609421509,
+      "details": {
+        "problem": "The terminal graph reached REA=1.0 but reduced CG relative to the source graph.",
+        "entry_point": "source graph, terminal graph, final evaluation anchor, and non-regression selector",
+        "allowed_actions": [
+          "rollback to the source graph when source CG is already sufficient and repair is harmful",
+          "merge only source-supported coverage units into the clean terminal graph",
+          "accept only candidates that satisfy non-regression and the strict final gate"
+        ],
+        "forbidden_actions": [
+          "report a graph whose final CG is lower than original CG",
+          "optimize REA by pruning away required paper entities",
+          "treat REA=1.0 alone as closure"
+        ]
+      }
+    },
+    "bounded_final_judge_feedback_repair": {
+      "count": 2,
+      "failure_types": {
+        "final_judge_failed": 2
+      },
+      "terminal_graph_rows": 0,
+      "avg_final_CG": 0.8424242424242425,
+      "avg_final_REA": 0.09166666666666667,
+      "avg_raw_main_factual_ans": 0.7634066358024691,
+      "avg_step2_main_factual_ans": 0.796669310071372,
+      "avg_pearl_main_factual_ans": null,
+      "details": {
+        "problem": "The final judge rejected a repaired/new reasoning unit or the semantic root.",
+        "entry_point": "failed vote payload and the graph candidate that triggered it",
+        "allowed_actions": [
+          "repair, reroute, or drop the failed target using the explicit judge feedback",
+          "rerun fresh final voting after the bounded edit",
+          "fall back to source/step2 candidate if the judge feedback reveals a bad root synthesis"
+        ],
+        "forbidden_actions": [
+          "repeat the rejected target content unchanged",
+          "accept without a fresh final judge pass",
+          "hide the failed vote as a provider error"
+        ]
+      }
+    }
+  }
+}

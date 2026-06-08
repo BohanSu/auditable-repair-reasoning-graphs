@@ -1,0 +1,6 @@
+model,strict_success,typed_residual,total
+claude_sonnet_4_5_20250929,61,9,70
+gemini_3_1_pro_preview,53,17,70
+gpt_5_2,68,2,70
+grok_4_1_thinking,59,11,70
+qwen3_5_397b_a17b,59,11,70

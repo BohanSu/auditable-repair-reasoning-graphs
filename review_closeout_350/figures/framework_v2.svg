@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+  <defs>
+    <style>
+      .bg { fill: #050607; }
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #f3f7fb; }
+      .subtitle { font: 20px Arial, Helvetica, sans-serif; fill: #a9b8c7; }
+      .lane-title { font: 700 22px Arial, Helvetica, sans-serif; }
+      .box-title { font: 700 20px Arial, Helvetica, sans-serif; }
+      .box-sub { font: 16px Arial, Helvetica, sans-serif; }
+      .tiny { font: 14px Arial, Helvetica, sans-serif; }
+      .num { font: 700 18px Arial, Helvetica, sans-serif; }
+      .blue-stroke { stroke: #2a78b8; }
+      .blue-fill { fill: #071523; }
+      .blue-text { fill: #74b9ff; }
+      .teal-stroke { stroke: #009879; }
+      .teal-fill { fill: #061c18; }
+      .teal-text { fill: #7ff4df; }
+      .amber-stroke { stroke: #d98b00; }
+      .amber-fill { fill: #1d1507; }
+      .amber-text { fill: #ffd08a; }
+      .orange-stroke { stroke: #d76017; }
+      .orange-fill { fill: #1f0d05; }
+      .orange-text { fill: #ffb18a; }
+      .green-stroke { stroke: #5cad35; }
+      .green-fill { fill: #10220b; }
+      .green-text { fill: #a9ef84; }
+      .muted { fill: #9aa8b4; }
+      .box { stroke-width: 4; rx: 22; }
+      .lane { stroke-width: 3; rx: 28; fill-opacity: 0.9; }
+      .arrow { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow-thin { fill: none; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+      .icon { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a78b8"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#009879"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d98b00"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d76017"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff3b30"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5cad35"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1120"/>
+
+  <text class="title" x="900" y="55" text-anchor="middle">PEARL 350/350 Closure Framework</text>
+  <text class="subtitle" x="900" y="88" text-anchor="middle">Original standard flow, plus the residual closeout layer that made the last rows close without ANS regression</text>
+
+  <!-- Legend -->
+  <rect x="1280" y="32" width="22" height="14" class="blue-fill blue-stroke" stroke-width="2"/>
+  <text class="tiny muted" x="1310" y="45">original standard flow</text>
+  <rect x="1280" y="58" width="22" height="14" class="amber-fill amber-stroke" stroke-width="2"/>
+  <text class="tiny muted" x="1310" y="71">new residual closeout modules</text>
+  <rect x="1280" y="84" width="22" height="14" class="orange-fill orange-stroke" stroke-width="2"/>
+  <text class="tiny muted" x="1310" y="97">strict evaluation gates</text>
+
+  <!-- Lanes -->
+  <rect x="55" y="130" width="1690" height="235" class="lane blue-fill blue-stroke"/>
+  <text class="lane-title blue-text" x="88" y="164">A. Original Standard Flow</text>
+
+  <rect x="55" y="410" width="1690" height="285" class="lane amber-fill amber-stroke"/>
+  <text class="lane-title amber-text" x="88" y="444">B. Residual Closeout Control Layer</text>
+
+  <rect x="55" y="740" width="1690" height="260" class="lane orange-fill orange-stroke"/>
+  <text class="lane-title orange-text" x="88" y="774">C. Verification, Accounting, and Closure Layer</text>
+
+  <!-- Standard flow boxes -->
+  <g id="standard-flow">
+    <rect x="105" y="195" width="235" height="125" class="box blue-fill blue-stroke"/>
+    <text class="num blue-text" x="126" y="226">1</text>
+    <text class="box-title blue-text" x="222" y="232" text-anchor="middle">Raw Graph</text>
+    <text class="box-sub muted" x="222" y="260" text-anchor="middle">LLM extraction</text>
+    <g class="icon blue-stroke" transform="translate(193 274) scale(0.55)">
+      <circle cx="0" cy="0" r="14"/><circle cx="58" cy="-18" r="14"/><circle cx="86" cy="28" r="14"/><circle cx="18" cy="54" r="14"/>
+      <path d="M12 -5 L46 -15 M67 -7 L80 16 M75 32 L31 49 M10 12 L15 40 M12 -5 L75 32"/>
+    </g>
+
+    <rect x="405" y="195" width="235" height="125" class="box blue-fill blue-stroke"/>
+    <text class="num blue-text" x="426" y="226">2</text>
+    <text class="box-title blue-text" x="522" y="232" text-anchor="middle">Second Pass</text>
+    <text class="box-sub muted" x="522" y="260" text-anchor="middle">structure repair</text>
+    <g class="icon blue-stroke" transform="translate(486 277) scale(0.55)">
+      <rect x="0" y="0" width="92" height="58" rx="8"/>
+      <circle cx="30" cy="30" r="13"/>
+      <path d="M30 10 V0 M30 60 V48 M10 30 H0 M60 30 H48 M20 20 L10 10 M50 50 L42 42"/>
+      <path d="M76 23 A23 23 0 1 1 57 4"/>
+    </g>
+
+    <rect x="705" y="195" width="235" height="125" class="box teal-fill teal-stroke"/>
+    <text class="num teal-text" x="726" y="226">3</text>
+    <text class="box-title teal-text" x="822" y="232" text-anchor="middle">PEARL Repair</text>
+    <text class="box-sub muted" x="822" y="260" text-anchor="middle">vote, unit, root</text>
+    <g class="icon teal-stroke" transform="translate(790 276) scale(0.55)">
+      <rect x="0" y="0" width="25" height="54" rx="5"/>
+      <rect x="40" y="0" width="25" height="54" rx="5"/>
+      <rect x="80" y="0" width="25" height="54" rx="5"/>
+      <path d="M10 70 H95"/>
+    </g>
+
+    <rect x="1005" y="195" width="235" height="125" class="box orange-fill orange-stroke"/>
+    <text class="num orange-text" x="1026" y="226">4</text>
+    <text class="box-title orange-text" x="1122" y="232" text-anchor="middle">Fresh Eval</text>
+    <text class="box-sub muted" x="1122" y="260" text-anchor="middle">CG / REA scoring</text>
+    <g class="icon orange-stroke" transform="translate(1088 278) scale(0.55)">
+      <path d="M0 58 V18 M30 58 V0 M60 58 V28 M90 58 V10"/>
+      <path d="M0 18 L30 0 L60 28 L90 10"/>
+      <circle cx="0" cy="18" r="8"/><circle cx="30" cy="0" r="8"/><circle cx="60" cy="28" r="8"/><circle cx="90" cy="10" r="8"/>
+    </g>
+
+    <rect x="1305" y="195" width="235" height="125" class="box orange-fill orange-stroke"/>
+    <text class="num orange-text" x="1326" y="226">5</text>
+    <text class="box-title orange-text" x="1422" y="232" text-anchor="middle">Closure Gate</text>
+    <text class="box-sub muted" x="1422" y="260" text-anchor="middle">strict pass / fail</text>
+    <g class="icon orange-stroke" transform="translate(1395 278) scale(0.55)">
+      <path d="M50 0 L96 15 V48 C96 76 78 96 50 110 C22 96 4 76 4 48 V15 Z"/>
+      <path d="M31 54 L45 68 L73 35"/>
+    </g>
+
+    <path class="arrow blue-stroke" d="M340 257 H405" marker-end="url(#arrowBlue)"/>
+    <path class="arrow blue-stroke" d="M640 257 H705" marker-end="url(#arrowBlue)"/>
+    <path class="arrow orange-stroke" d="M940 257 H1005" marker-end="url(#arrowOrange)"/>
+    <path class="arrow orange-stroke" d="M1240 257 H1305" marker-end="url(#arrowOrange)"/>
+  </g>
+
+  <!-- Residual trigger from original gate -->
+  <path class="arrow-thin" d="M1422 320 V390 H205 V410" stroke="#ff3b30" marker-end="url(#arrowRed)"/>
+  <text class="tiny" x="1320" y="388" fill="#ff7b73">failed / residual rows are routed below</text>
+
+  <!-- Residual layer boxes -->
+  <g id="residual-layer">
+    <rect x="105" y="495" width="260" height="130" class="box amber-fill amber-stroke"/>
+    <text class="box-title amber-text" x="235" y="535" text-anchor="middle">Failure-Typed</text>
+    <text class="box-title amber-text" x="235" y="562" text-anchor="middle">Controller</text>
+    <text class="box-sub muted" x="235" y="594" text-anchor="middle">classifies why row failed</text>
+
+    <rect x="455" y="468" width="220" height="92" class="box teal-fill teal-stroke"/>
+    <text class="box-title teal-text" x="565" y="505" text-anchor="middle">Compact</text>
+    <text class="box-sub muted" x="565" y="533" text-anchor="middle">source-seed rebuild</text>
+
+    <rect x="715" y="468" width="220" height="92" class="box teal-fill teal-stroke"/>
+    <text class="box-title teal-text" x="825" y="505" text-anchor="middle">Source-Leaf</text>
+    <text class="box-sub muted" x="825" y="533" text-anchor="middle">bridge repair</text>
+
+    <rect x="455" y="596" width="220" height="92" class="box teal-fill teal-stroke"/>
+    <text class="box-title teal-text" x="565" y="633" text-anchor="middle">ANS-Delta</text>
+    <text class="box-sub muted" x="565" y="661" text-anchor="middle">minimal root edit</text>
+
+    <rect x="715" y="596" width="220" height="92" class="box teal-fill teal-stroke"/>
+    <text class="box-title teal-text" x="825" y="633" text-anchor="middle">Provider</text>
+    <text class="box-sub muted" x="825" y="661" text-anchor="middle">judge error isolation</text>
+
+    <rect x="1035" y="495" width="260" height="130" class="box amber-fill amber-stroke"/>
+    <text class="box-title amber-text" x="1165" y="535" text-anchor="middle">Candidate</text>
+    <text class="box-title amber-text" x="1165" y="562" text-anchor="middle">Preflight</text>
+    <text class="box-sub muted" x="1165" y="594" text-anchor="middle">coverage, source, hash</text>
+
+    <rect x="1385" y="495" width="260" height="130" class="box orange-fill orange-stroke"/>
+    <text class="box-title orange-text" x="1515" y="535" text-anchor="middle">Fresh 1/1</text>
+    <text class="box-title orange-text" x="1515" y="562" text-anchor="middle">Re-Evaluation</text>
+    <text class="box-sub muted" x="1515" y="594" text-anchor="middle">fail-fast on provider error</text>
+
+    <path class="arrow amber-stroke" d="M365 560 H455" marker-end="url(#arrowAmber)"/>
+    <path class="arrow amber-stroke" d="M365 560 C405 560 405 642 455 642" marker-end="url(#arrowAmber)"/>
+    <path class="arrow teal-stroke" d="M675 514 H715" marker-end="url(#arrowTeal)"/>
+    <path class="arrow teal-stroke" d="M675 642 H715" marker-end="url(#arrowTeal)"/>
+    <path class="arrow teal-stroke" d="M935 514 C985 514 985 560 1035 560" marker-end="url(#arrowTeal)"/>
+    <path class="arrow teal-stroke" d="M935 642 C985 642 985 560 1035 560" marker-end="url(#arrowTeal)"/>
+    <path class="arrow amber-stroke" d="M1295 560 H1385" marker-end="url(#arrowAmber)"/>
+  </g>
+
+  <!-- Verification layer boxes -->
+  <g id="verification-layer">
+    <rect x="105" y="825" width="245" height="125" class="box orange-fill orange-stroke"/>
+    <text class="box-title orange-text" x="228" y="867" text-anchor="middle">Row ANS Guard</text>
+    <text class="box-sub muted" x="228" y="897" text-anchor="middle">each row non-regression</text>
+    <text class="tiny orange-text" x="228" y="925" text-anchor="middle">CG=1, REA=1, ANS floor</text>
+
+    <rect x="430" y="825" width="245" height="125" class="box amber-fill amber-stroke"/>
+    <text class="box-title amber-text" x="553" y="867" text-anchor="middle">Controller-Filtered</text>
+    <text class="box-title amber-text" x="553" y="894" text-anchor="middle">Merge Union</text>
+    <text class="tiny muted" x="553" y="925" text-anchor="middle">23 ready candidates only</text>
+
+    <rect x="755" y="825" width="245" height="125" class="box amber-fill amber-stroke"/>
+    <text class="box-title amber-text" x="878" y="867" text-anchor="middle">Review</text>
+    <text class="box-title amber-text" x="878" y="894" text-anchor="middle">State</text>
+    <text class="tiny muted" x="878" y="925" text-anchor="middle">locked write = false</text>
+
+    <rect x="1080" y="825" width="245" height="125" class="box orange-fill orange-stroke"/>
+    <text class="box-title orange-text" x="1203" y="867" text-anchor="middle">Batch ANS Guard</text>
+    <text class="box-sub muted" x="1203" y="897" text-anchor="middle">350 strict set check</text>
+    <text class="tiny orange-text" x="1203" y="925" text-anchor="middle">ANS >= 300 floor</text>
+
+    <rect x="1405" y="815" width="260" height="145" class="box green-fill green-stroke"/>
+    <text class="box-title green-text" x="1535" y="858" text-anchor="middle">Verified Closure</text>
+    <text class="box-title green-text" x="1535" y="891" text-anchor="middle">350 / 350 = 1 / 1</text>
+    <text class="tiny green-text" x="1535" y="923" text-anchor="middle">proposal ANS margin +0.00513</text>
+    <g class="icon green-stroke" transform="translate(1516 936) scale(0.38)">
+      <circle cx="50" cy="50" r="45"/>
+      <path d="M28 52 L45 69 L76 33"/>
+    </g>
+
+    <path class="arrow orange-stroke" d="M1515 625 V715 H228 V825" marker-end="url(#arrowOrange)"/>
+    <path class="arrow orange-stroke" d="M350 888 H430" marker-end="url(#arrowOrange)"/>
+    <path class="arrow amber-stroke" d="M675 888 H755" marker-end="url(#arrowAmber)"/>
+    <path class="arrow amber-stroke" d="M1000 888 H1080" marker-end="url(#arrowAmber)"/>
+    <path class="arrow green-stroke" d="M1325 888 H1405" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- Feedback loops -->
+  <path class="arrow-thin" d="M228 825 C190 730 190 695 235 625" stroke="#ff3b30" marker-end="url(#arrowRed)"/>
+  <text class="tiny" x="120" y="720" fill="#ff7b73">row guard fail</text>
+
+  <path class="arrow-thin" d="M1203 825 C1215 725 1175 695 1165 625" stroke="#ff3b30" marker-end="url(#arrowRed)"/>
+  <text class="tiny" x="1235" y="720" fill="#ff7b73">batch guard fail</text>
+
+  <!-- Explanation strip -->
+  <rect x="105" y="1030" width="1560" height="55" rx="18" fill="#0b0f12" stroke="#2c3b48" stroke-width="2"/>
+  <text class="box-sub muted" x="130" y="1064">
+    Read left to right. The blue lane is the locked standard flow. The amber/orange lanes are the closeout layer: type failures, choose repair lanes, verify fresh 1/1, guard ANS, build a review state, then run the batch ANS guard.
+  </text>
+</svg>

@@ -1,0 +1,4 @@
+metric,stage,specs_requested,specs_with_ans,nodes,supported,total,ans
+locked_standard_flow_ans_floor,pearl_terminal_graph,300,300,7862,23948,29809,0.8033815290684022
+review_state_on_base_ans_artifacts,pearl_terminal_graph,350,317,8240,25038,31166,0.8033754732721555
+review_state_with_candidate_ans_replacements,pearl_terminal_graph,350,331,8478,25743,31840,0.8085113065326633

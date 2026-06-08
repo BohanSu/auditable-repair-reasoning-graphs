@@ -1,0 +1,478 @@
+{
+  "scope": "350-row benchmark",
+  "results": [
+    {
+      "result_id": "FULL",
+      "result_name": "Full PEARL standard flow",
+      "location": "01_final_accounting/FULL_350_ACCOUNTING.csv",
+      "rows_total": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "avg_EC_CG": 0.896055452484024,
+      "avg_REA": 0.9062380952380953,
+      "delta_strict_vs_full": 0,
+      "delta_EC_CG_vs_full": 0.0,
+      "delta_REA_vs_full": 0.0,
+      "status": "reference"
+    },
+    {
+      "result_id": "A0",
+      "result_name": "Raw extraction only",
+      "location": "04_ablations/A0_raw_extraction_only/A0_RAW_ONLY_ACCOUNTING_350.csv",
+      "rows_total": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 1,
+      "avg_EC_CG": 0.5243861218146932,
+      "avg_REA": 0.3222677368656719,
+      "delta_strict_vs_full": -299,
+      "delta_EC_CG_vs_full": -0.3716693306693307,
+      "delta_REA_vs_full": -0.5839703583724234,
+      "status": "reported_350_benchmark"
+    },
+    {
+      "result_id": "A2",
+      "result_name": "Root only / no iterative feedback",
+      "location": "04_ablations/A2_root_only_no_iterative_feedback/A2_ROOT_ONLY_ACCOUNTING_350.csv",
+      "rows_total": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "avg_EC_CG": 0.7978182056039199,
+      "avg_REA": 0.8547236372585273,
+      "delta_strict_vs_full": 0,
+      "delta_EC_CG_vs_full": -0.09823724688010405,
+      "delta_REA_vs_full": -0.051514457979567996,
+      "status": "reported_350_benchmark"
+    },
+    {
+      "result_id": "A3",
+      "result_name": "No root generation",
+      "location": "04_ablations/A3_no_root_generation/A3_NO_ROOT_ACCOUNTING_350.csv",
+      "rows_total": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "avg_EC_CG": 0.7356219019076162,
+      "avg_REA": 0.9047619047619048,
+      "delta_strict_vs_full": 0,
+      "delta_EC_CG_vs_full": -0.16043355057640774,
+      "delta_REA_vs_full": -0.0014761904761905198,
+      "status": "reported_350_benchmark"
+    },
+    {
+      "result_id": "A4",
+      "result_name": "Retained root / no rejected-unit repair",
+      "location": "04_ablations/A4_retained_root_no_repair/A4_RETAINED_ROOT_NO_REPAIR_ACCOUNTING_350.csv",
+      "rows_total": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "avg_EC_CG": 0.7301413824270967,
+      "avg_REA": 0.8918888888888888,
+      "delta_strict_vs_full": 0,
+      "delta_EC_CG_vs_full": -0.16591407005692727,
+      "delta_REA_vs_full": -0.014349206349206445,
+      "status": "reported_350_benchmark"
+    }
+  ],
+  "summaries": {
+    "FULL": {
+      "rows": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "typed_residual_or_non_strict": 50,
+      "avg_EC_CG": 0.896055452484024,
+      "avg_REA": 0.9062380952380953,
+      "failure_type_counts": {
+        "final_judge_failed": 2,
+        "final_metric_gate_failed": 13,
+        "metric_regression": 4,
+        "none": 300,
+        "preflight:no_anchor_regenerate": 31
+      },
+      "by_model": {
+        "claude_sonnet_4_5_20250929": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 61,
+          "typed_residual_or_non_strict": 9,
+          "avg_EC_CG": 0.8828571428571429,
+          "avg_REA": 0.8857142857142857,
+          "failure_type_counts": {
+            "metric_regression": 1,
+            "none": 61,
+            "preflight:no_anchor_regenerate": 8
+          }
+        },
+        "gemini_3_1_pro_preview": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 53,
+          "typed_residual_or_non_strict": 17,
+          "avg_EC_CG": 0.8063760049474336,
+          "avg_REA": 0.8285714285714286,
+          "failure_type_counts": {
+            "final_metric_gate_failed": 4,
+            "metric_regression": 1,
+            "none": 53,
+            "preflight:no_anchor_regenerate": 12
+          }
+        },
+        "gpt_5_2": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 68,
+          "typed_residual_or_non_strict": 2,
+          "avg_EC_CG": 0.9922077922077922,
+          "avg_REA": 1.0,
+          "failure_type_counts": {
+            "final_metric_gate_failed": 2,
+            "none": 68
+          }
+        },
+        "grok_4_1_thinking": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.8887569573283859,
+          "avg_REA": 0.9007142857142857,
+          "failure_type_counts": {
+            "final_judge_failed": 1,
+            "final_metric_gate_failed": 3,
+            "metric_regression": 1,
+            "none": 59,
+            "preflight:no_anchor_regenerate": 6
+          }
+        },
+        "qwen3_5_397b_a17b": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.910079365079365,
+          "avg_REA": 0.9161904761904762,
+          "failure_type_counts": {
+            "final_judge_failed": 1,
+            "final_metric_gate_failed": 4,
+            "metric_regression": 1,
+            "none": 59,
+            "preflight:no_anchor_regenerate": 5
+          }
+        }
+      },
+      "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
+      "result_id": "FULL",
+      "result_name": "Full PEARL standard flow"
+    },
+    "A0": {
+      "rows": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 1,
+      "typed_residual_or_non_strict": 349,
+      "avg_EC_CG": 0.5243861218146932,
+      "avg_REA": 0.3222677368656719,
+      "failure_type_counts": {
+        "graph_conversion_failed": 5,
+        "graph_parse_failed": 81,
+        "none": 264
+      },
+      "by_model": {
+        "claude_sonnet_4_5_20250929": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 0,
+          "typed_residual_or_non_strict": 70,
+          "avg_EC_CG": 0.5634777127634271,
+          "avg_REA": 0.2479832736010024,
+          "failure_type_counts": {
+            "graph_conversion_failed": 3,
+            "graph_parse_failed": 3,
+            "none": 64
+          }
+        },
+        "gemini_3_1_pro_preview": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 0,
+          "typed_residual_or_non_strict": 70,
+          "avg_EC_CG": 0.04420634920634921,
+          "avg_REA": 0.022782574568288853,
+          "failure_type_counts": {
+            "graph_conversion_failed": 1,
+            "graph_parse_failed": 64,
+            "none": 5
+          }
+        },
+        "gpt_5_2": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 0,
+          "typed_residual_or_non_strict": 70,
+          "avg_EC_CG": 0.6943573490002062,
+          "avg_REA": 0.5514509544217638,
+          "failure_type_counts": {
+            "none": 70
+          }
+        },
+        "grok_4_1_thinking": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 1,
+          "typed_residual_or_non_strict": 69,
+          "avg_EC_CG": 0.708555452484024,
+          "avg_REA": 0.4624715270723674,
+          "failure_type_counts": {
+            "graph_conversion_failed": 1,
+            "graph_parse_failed": 2,
+            "none": 67
+          }
+        },
+        "qwen3_5_397b_a17b": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 0,
+          "typed_residual_or_non_strict": 70,
+          "avg_EC_CG": 0.6113337456194599,
+          "avg_REA": 0.32665035466493714,
+          "failure_type_counts": {
+            "graph_parse_failed": 12,
+            "none": 58
+          }
+        }
+      },
+      "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
+      "result_id": "A0",
+      "result_name": "Raw extraction only"
+    },
+    "A2": {
+      "rows": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "typed_residual_or_non_strict": 50,
+      "avg_EC_CG": 0.7978182056039199,
+      "avg_REA": 0.8547236372585273,
+      "failure_type_counts": {
+        "no_current_semantic_root_graph": 33,
+        "none": 317
+      },
+      "by_model": {
+        "claude_sonnet_4_5_20250929": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 61,
+          "typed_residual_or_non_strict": 9,
+          "avg_EC_CG": 0.7578259835402693,
+          "avg_REA": 0.7761732986513288,
+          "failure_type_counts": {
+            "no_current_semantic_root_graph": 8,
+            "none": 62
+          }
+        },
+        "gemini_3_1_pro_preview": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 53,
+          "typed_residual_or_non_strict": 17,
+          "avg_EC_CG": 0.6315711669283098,
+          "avg_REA": 0.8101133786848073,
+          "failure_type_counts": {
+            "no_current_semantic_root_graph": 12,
+            "none": 58
+          }
+        },
+        "gpt_5_2": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 68,
+          "typed_residual_or_non_strict": 2,
+          "avg_EC_CG": 0.9659632034632034,
+          "avg_REA": 0.9395424657016184,
+          "failure_type_counts": {
+            "none": 70
+          }
+        },
+        "grok_4_1_thinking": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.7936306947021232,
+          "avg_REA": 0.8653383719455148,
+          "failure_type_counts": {
+            "no_current_semantic_root_graph": 7,
+            "none": 63
+          }
+        },
+        "qwen3_5_397b_a17b": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.8400999793856937,
+          "avg_REA": 0.8824506713093669,
+          "failure_type_counts": {
+            "no_current_semantic_root_graph": 6,
+            "none": 64
+          }
+        }
+      },
+      "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
+      "result_id": "A2",
+      "result_name": "Root only / no iterative feedback"
+    },
+    "A3": {
+      "rows": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "typed_residual_or_non_strict": 50,
+      "avg_EC_CG": 0.7356219019076162,
+      "avg_REA": 0.9047619047619048,
+      "failure_type_counts": {
+        "no_current_vote_kept_graph": 33,
+        "none": 317
+      },
+      "by_model": {
+        "claude_sonnet_4_5_20250929": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 61,
+          "typed_residual_or_non_strict": 9,
+          "avg_EC_CG": 0.590312148169291,
+          "avg_REA": 0.8809523809523809,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 8,
+            "none": 62
+          }
+        },
+        "gemini_3_1_pro_preview": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 53,
+          "typed_residual_or_non_strict": 17,
+          "avg_EC_CG": 0.648461260961261,
+          "avg_REA": 0.8285714285714286,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 12,
+            "none": 58
+          }
+        },
+        "gpt_5_2": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 68,
+          "typed_residual_or_non_strict": 2,
+          "avg_EC_CG": 0.9148304473304474,
+          "avg_REA": 1.0,
+          "failure_type_counts": {
+            "none": 70
+          }
+        },
+        "grok_4_1_thinking": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.714887136672851,
+          "avg_REA": 0.9,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 7,
+            "none": 63
+          }
+        },
+        "qwen3_5_397b_a17b": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.8096185164042307,
+          "avg_REA": 0.9142857142857143,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 6,
+            "none": 64
+          }
+        }
+      },
+      "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
+      "result_id": "A3",
+      "result_name": "No root generation"
+    },
+    "A4": {
+      "rows": 350,
+      "provider_failure_rows": 0,
+      "strict_success": 300,
+      "typed_residual_or_non_strict": 50,
+      "avg_EC_CG": 0.7301413824270967,
+      "avg_REA": 0.8918888888888888,
+      "failure_type_counts": {
+        "invalid_reasoning_steps": 1,
+        "no_current_vote_kept_graph": 33,
+        "none": 314,
+        "patch_contract_error": 2
+      },
+      "by_model": {
+        "claude_sonnet_4_5_20250929": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 61,
+          "typed_residual_or_non_strict": 9,
+          "avg_EC_CG": 0.6031692910264339,
+          "avg_REA": 0.8761904761904762,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 8,
+            "none": 62
+          }
+        },
+        "gemini_3_1_pro_preview": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 53,
+          "typed_residual_or_non_strict": 17,
+          "avg_EC_CG": 0.648461260961261,
+          "avg_REA": 0.8178571428571428,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 12,
+            "none": 58
+          }
+        },
+        "gpt_5_2": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 68,
+          "typed_residual_or_non_strict": 2,
+          "avg_EC_CG": 0.874570707070707,
+          "avg_REA": 0.9571428571428572,
+          "failure_type_counts": {
+            "invalid_reasoning_steps": 1,
+            "none": 67,
+            "patch_contract_error": 2
+          }
+        },
+        "grok_4_1_thinking": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.714887136672851,
+          "avg_REA": 0.8971428571428571,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 7,
+            "none": 63
+          }
+        },
+        "qwen3_5_397b_a17b": {
+          "rows": 70,
+          "provider_failure_rows": 0,
+          "strict_success": 59,
+          "typed_residual_or_non_strict": 11,
+          "avg_EC_CG": 0.8096185164042307,
+          "avg_REA": 0.9111111111111111,
+          "failure_type_counts": {
+            "no_current_vote_kept_graph": 6,
+            "none": 64
+          }
+        }
+      },
+      "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
+      "result_id": "A4",
+      "result_name": "Retained root / no rejected-unit repair"
+    }
+  }
+}

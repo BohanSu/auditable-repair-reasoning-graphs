@@ -1,0 +1,55 @@
+{
+  "scope": "350-row review closeout package",
+  "accounted_rows": 350,
+  "strict_success_rows": 350,
+  "typed_residual_rows": 0,
+  "outcome_counts": {
+    "strict_success": 350
+  },
+  "failure_type_counts": {
+    "none": 350
+  },
+  "final_CG_avg": 1.0,
+  "final_REA_avg": 1.0,
+  "by_model": {
+    "claude_sonnet_4_5_20250929": {
+      "rows": 70,
+      "strict_success_rows": 70,
+      "typed_residual_rows": 0,
+      "final_CG_avg": 1.0,
+      "final_REA_avg": 1.0
+    },
+    "gemini_3_1_pro_preview": {
+      "rows": 70,
+      "strict_success_rows": 70,
+      "typed_residual_rows": 0,
+      "final_CG_avg": 1.0,
+      "final_REA_avg": 1.0
+    },
+    "gpt_5_2": {
+      "rows": 70,
+      "strict_success_rows": 70,
+      "typed_residual_rows": 0,
+      "final_CG_avg": 1.0,
+      "final_REA_avg": 1.0
+    },
+    "grok_4_1_thinking": {
+      "rows": 70,
+      "strict_success_rows": 70,
+      "typed_residual_rows": 0,
+      "final_CG_avg": 1.0,
+      "final_REA_avg": 1.0
+    },
+    "qwen3_5_397b_a17b": {
+      "rows": 70,
+      "strict_success_rows": 70,
+      "typed_residual_rows": 0,
+      "final_CG_avg": 1.0,
+      "final_REA_avg": 1.0
+    }
+  },
+  "created_at": "2026-06-07T00:57:07+08:00",
+  "verified_merge_candidate_count": 23,
+  "merged_row_count": 23,
+  "locked_record_write": false
+}

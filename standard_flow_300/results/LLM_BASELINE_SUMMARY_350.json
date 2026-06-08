@@ -1,0 +1,59 @@
+{
+  "scope": "350-row benchmark",
+  "rows": 350,
+  "baseline_strict_success": 0,
+  "pearl_strict_success": 300,
+  "baseline_avg_EC_CG": 0.8274058084772371,
+  "baseline_avg_REA": 0.3385678166307718,
+  "pearl_avg_EC_CG": 0.896055452484024,
+  "pearl_avg_REA": 0.9062380952380953,
+  "avg_delta_EC_CG": 0.06864964400678686,
+  "avg_delta_REA": 0.5676702786073234,
+  "by_model": {
+    "claude_sonnet_4_5_20250929": {
+      "rows": 70,
+      "baseline_strict_success": 0,
+      "pearl_strict_success": 61,
+      "baseline_avg_EC_CG": 0.7847991690848833,
+      "baseline_avg_REA": 0.21911736093690423,
+      "pearl_avg_EC_CG": 0.8828571428571429,
+      "pearl_avg_REA": 0.8857142857142857
+    },
+    "gemini_3_1_pro_preview": {
+      "rows": 70,
+      "baseline_strict_success": 0,
+      "pearl_strict_success": 53,
+      "baseline_avg_EC_CG": 0.6976307819164962,
+      "baseline_avg_REA": 0.4107062382062382,
+      "pearl_avg_EC_CG": 0.8063760049474336,
+      "pearl_avg_REA": 0.8285714285714286
+    },
+    "gpt_5_2": {
+      "rows": 70,
+      "baseline_strict_success": 0,
+      "pearl_strict_success": 68,
+      "baseline_avg_EC_CG": 0.962478354978355,
+      "baseline_avg_REA": 0.4666368638594934,
+      "pearl_avg_EC_CG": 0.9922077922077922,
+      "pearl_avg_REA": 1.0
+    },
+    "grok_4_1_thinking": {
+      "rows": 70,
+      "baseline_strict_success": 0,
+      "pearl_strict_success": 59,
+      "baseline_avg_EC_CG": 0.8230328798185941,
+      "baseline_avg_REA": 0.27722008020553296,
+      "pearl_avg_EC_CG": 0.8887569573283859,
+      "pearl_avg_REA": 0.9007142857142857
+    },
+    "qwen3_5_397b_a17b": {
+      "rows": 70,
+      "baseline_strict_success": 0,
+      "pearl_strict_success": 59,
+      "baseline_avg_EC_CG": 0.8690878565878566,
+      "baseline_avg_REA": 0.31915853994569005,
+      "pearl_avg_EC_CG": 0.910079365079365,
+      "pearl_avg_REA": 0.9161904761904762
+    }
+  }
+}

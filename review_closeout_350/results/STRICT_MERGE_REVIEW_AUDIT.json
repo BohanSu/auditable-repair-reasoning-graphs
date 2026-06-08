@@ -1,0 +1,592 @@
+{
+  "created_at": "2026-06-07T00:57:07+08:00",
+  "candidate_verification_rows": [
+    {
+      "paper_spec": "claude_sonnet_4_5_20250929:s41467-025-56034-2",
+      "candidate_label": "after327-pareto-terminal-plus-step2-v1-claude_sonnet_4_5_20250929_s41467-025-56034-2",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56075-7",
+      "candidate_label": "gemini56075-rootexact-v2",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56283-1",
+      "candidate_label": "gemini56283-compact-source-seed-v6",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56522-5",
+      "candidate_label": "after327-56522-supervised-methods-evidence-bridge-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56667-3",
+      "candidate_label": "gemini56667-ansdelta-v7-coulomb-only",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56698-w",
+      "candidate_label": "gemini56698-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56724-x",
+      "candidate_label": "after327-56724-phasecondition-rb-clarity-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56850-6",
+      "candidate_label": "after327-56850-source27-mice-psychoactive-bridge-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56852-4",
+      "candidate_label": "gemini56852-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56283-1",
+      "candidate_label": "after327-56283-energy-minimization-lexical-bridge-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56611-5",
+      "candidate_label": "grok56611-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56786-x",
+      "candidate_label": "grok56786-compact-source-seed-v3",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56797-8",
+      "candidate_label": "after327-56797-mechanism-translation-bridge-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56814-w",
+      "candidate_label": "grok56814-ansdelta-v3",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56819-5",
+      "candidate_label": "grok56819-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56873-z",
+      "candidate_label": "grok56873-ansdelta-v15",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56882-y",
+      "candidate_label": "grok56882-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56887-7",
+      "candidate_label": "after327-56887-source31-nadar-hydrolase-bridge-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56106-3",
+      "candidate_label": "qwen56106-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56635-x",
+      "candidate_label": "qwen56635-step2-ansdelta-v6",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56769-y",
+      "candidate_label": "qwen56769-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56795-w",
+      "candidate_label": "qwen56795-compact-source-seed-v1",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56856-0",
+      "candidate_label": "qwen56856-barcode-ansdelta-v3",
+      "candidate_CG": 1.0,
+      "candidate_REA": 1.0,
+      "graph_exists": true,
+      "eval_dir_exists": true,
+      "fresh_eval_exists": true,
+      "fresh_eval_hash_matches": true,
+      "mergeable_verified": true
+    }
+  ],
+  "merge_audit_rows": [
+    {
+      "paper_spec": "claude_sonnet_4_5_20250929:s41467-025-56034-2",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "metric_regression",
+      "previous_final_CG": "0.8",
+      "previous_final_REA": "1.0",
+      "candidate_label": "after327-pareto-terminal-plus-step2-v1-claude_sonnet_4_5_20250929_s41467-025-56034-2",
+      "candidate_fresh_eval_results_sha256": "bba87475cafac03ae26d084409b9b10f1ed7e877fbca73f0c5f86b69a20be984",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56075-7",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "gemini56075-rootexact-v2",
+      "candidate_fresh_eval_results_sha256": "99a5551e64093f84fb1ac73c89dd3fe69196aae34eb5f4979b3db372a452058d",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56283-1",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "gemini56283-compact-source-seed-v6",
+      "candidate_fresh_eval_results_sha256": "11cd74330dad79e8a9166fbe2caf218a3614c3d41db64378be27bc43f650504b",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56522-5",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56522-supervised-methods-evidence-bridge-v1",
+      "candidate_fresh_eval_results_sha256": "fb0ed3bb0ae4e45a98e1acea552e9fec40bd44f0489f19aefb68c3ef9b5bbb9f",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56667-3",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "metric_regression",
+      "previous_final_CG": "0.5714285714285714",
+      "previous_final_REA": "1.0",
+      "candidate_label": "gemini56667-ansdelta-v7-coulomb-only",
+      "candidate_fresh_eval_results_sha256": "7f0b4075f5c9f6ece2dcec005e66efed0457852b6ed9b31b7b105b580fbbcfd7",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56698-w",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "gemini56698-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "d4a663f2600d2939a9a8adc938657b7ff24442e77be7550cef681216a954fafe",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56724-x",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56724-phasecondition-rb-clarity-v1",
+      "candidate_fresh_eval_results_sha256": "da4806518c2a6ccca7be87052ba68193a11e19d3278863206acccd4f113adc76",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56850-6",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56850-source27-mice-psychoactive-bridge-v1",
+      "candidate_fresh_eval_results_sha256": "da4806518c2a6ccca7be87052ba68193a11e19d3278863206acccd4f113adc76",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "gemini_3_1_pro_preview:s41467-025-56852-4",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_metric_gate_failed",
+      "previous_final_CG": "0.5333333333333333",
+      "previous_final_REA": "1.0",
+      "candidate_label": "gemini56852-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "6d53ce562730321aad2fd006d28cc01bb0c9b764f5b49289e3a5a5c72f371ded",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56283-1",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56283-energy-minimization-lexical-bridge-v1",
+      "candidate_fresh_eval_results_sha256": "fb0ed3bb0ae4e45a98e1acea552e9fec40bd44f0489f19aefb68c3ef9b5bbb9f",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56611-5",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_metric_gate_failed",
+      "previous_final_CG": "0.7857142857142857",
+      "previous_final_REA": "1.0",
+      "candidate_label": "grok56611-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "f004471e2f0d3a33943dec873991b76c74f068f2f8dece58a6e82d99b3944f0f",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56786-x",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "grok56786-compact-source-seed-v3",
+      "candidate_fresh_eval_results_sha256": "2200e7c06432eacd4bd15b409b87487e17a058d25183ce919cefa062df02fe8c",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56797-8",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56797-mechanism-translation-bridge-v1",
+      "candidate_fresh_eval_results_sha256": "e9873c1a9397376ed8c249849dccd8787e54dc2c674cca73474b31c9d260ca8d",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56814-w",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "metric_regression",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "1.0",
+      "candidate_label": "grok56814-ansdelta-v3",
+      "candidate_fresh_eval_results_sha256": "b02aec183b7e98a8c85fdb3c2984310950089a8722ccd89bf3bebeaf4bb67d17",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56819-5",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_judge_failed",
+      "previous_final_CG": "0.8181818181818182",
+      "previous_final_REA": "0.05",
+      "candidate_label": "grok56819-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "3f2f35afa8abf3b7c454c87381517ef7818c49fc8e20e9520921253f824ca7a0",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56873-z",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_metric_gate_failed",
+      "previous_final_CG": "0.7",
+      "previous_final_REA": "1.0",
+      "candidate_label": "grok56873-ansdelta-v15",
+      "candidate_fresh_eval_results_sha256": "7f559d906693ae4a574d66cde4513e6d564f15e2639ac059e2639685fcdb022a",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56882-y",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "grok56882-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "18f66bdd0f41f2e02333b0db08cd9d7629c59269c97dbe752bec5d48f3212d34",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "grok_4_1_thinking:s41467-025-56887-7",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "after327-56887-source31-nadar-hydrolase-bridge-v1",
+      "candidate_fresh_eval_results_sha256": "94ffcd0de190d6669ef23b970ca33883cbdc22e4c64b8c47f9f32cb6cf79c22d",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56106-3",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "qwen56106-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "479d899deb3de90c73c263356bbb28d7e41c9be5d0edc5f7a63c1fbaf618a375",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56635-x",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "metric_regression",
+      "previous_final_CG": "0.5555555555555556",
+      "previous_final_REA": "1.0",
+      "candidate_label": "qwen56635-step2-ansdelta-v6",
+      "candidate_fresh_eval_results_sha256": "4754bcd22a7d92e0c44da08f32c4b3110b0888aa302900ce93de34723bf562e7",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56769-y",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_metric_gate_failed",
+      "previous_final_CG": "0.9",
+      "previous_final_REA": "1.0",
+      "candidate_label": "qwen56769-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "04018b1a7c4b087b8359b20d6e55ae7af10e0e5ffe822f1531ff76a9a5a00c1d",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56795-w",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "preflight:no_anchor_regenerate",
+      "previous_final_CG": "0.0",
+      "previous_final_REA": "0.0",
+      "candidate_label": "qwen56795-compact-source-seed-v1",
+      "candidate_fresh_eval_results_sha256": "091f1ce8ee10b0b90a0b0bddfdf3a220fced947117a60ed9ab48fa0f46c0de01",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    },
+    {
+      "paper_spec": "qwen3_5_397b_a17b:s41467-025-56856-0",
+      "previous_outcome": "typed_residual",
+      "previous_failure_type": "final_metric_gate_failed",
+      "previous_final_CG": "0.8",
+      "previous_final_REA": "1.0",
+      "candidate_label": "qwen56856-barcode-ansdelta-v3",
+      "candidate_fresh_eval_results_sha256": "169860cc39f1bc2bd3084e4bcfb00e86a68f48ccf25d1f93af7ea4d358a1b07e",
+      "review_final_CG": "1",
+      "review_final_REA": "1",
+      "merge_source": "strict_merge_candidate"
+    }
+  ],
+  "summary": {
+    "scope": "350-row review closeout package",
+    "locked_record_write": false,
+    "accounted_rows": 350,
+    "strict_success_rows": 350,
+    "typed_residual_rows": 0,
+    "outcome_counts": {
+      "strict_success": 350
+    },
+    "failure_type_counts": {
+      "none": 350
+    },
+    "final_CG_avg": 1.0,
+    "final_REA_avg": 1.0,
+    "by_model": {
+      "claude_sonnet_4_5_20250929": {
+        "rows": 70,
+        "strict_success_rows": 70,
+        "typed_residual_rows": 0,
+        "final_CG_avg": 1.0,
+        "final_REA_avg": 1.0
+      },
+      "gemini_3_1_pro_preview": {
+        "rows": 70,
+        "strict_success_rows": 70,
+        "typed_residual_rows": 0,
+        "final_CG_avg": 1.0,
+        "final_REA_avg": 1.0
+      },
+      "gpt_5_2": {
+        "rows": 70,
+        "strict_success_rows": 70,
+        "typed_residual_rows": 0,
+        "final_CG_avg": 1.0,
+        "final_REA_avg": 1.0
+      },
+      "grok_4_1_thinking": {
+        "rows": 70,
+        "strict_success_rows": 70,
+        "typed_residual_rows": 0,
+        "final_CG_avg": 1.0,
+        "final_REA_avg": 1.0
+      },
+      "qwen3_5_397b_a17b": {
+        "rows": 70,
+        "strict_success_rows": 70,
+        "typed_residual_rows": 0,
+        "final_CG_avg": 1.0,
+        "final_REA_avg": 1.0
+      }
+    },
+    "created_at": "2026-06-07T00:57:07+08:00",
+    "verified_merge_candidate_count": 23,
+    "merged_row_count": 23
+  },
+  "locked_record_write": false
+}

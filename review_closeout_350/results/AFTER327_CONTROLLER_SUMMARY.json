@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-07T00:53:10+08:00",
+  "mode": "after327_failure_typed_controller_queue",
+  "provider_calls": false,
+  "locked_record_write": false,
+  "current_strict_success_rows": 327,
+  "current_typed_residual_rows": 23,
+  "controller_row_count": 23,
+  "route_counts": {
+    "strict_candidate_ready_for_review_merge": 23
+  },
+  "status_counts": {
+    "ready_for_merge_guard": 23
+  },
+  "failure_type_counts": {
+    "metric_regression": 4,
+    "preflight:no_anchor_regenerate": 13,
+    "final_metric_gate_failed": 5,
+    "final_judge_failed": 1
+  },
+  "attempt_rows_scanned": 418,
+  "fresh_rows_scanned": 205,
+  "ans_guard_rows_scanned": 76,
+  "strict_candidate_rows_scanned": 117,
+  "ans_eval_status_rows_scanned": 184,
+  "literature_design_map": [
+    {
+      "source": "FActScore",
+      "url": "https://arxiv.org/abs/2305.14251",
+      "controller_rule": "Operate on atomic factual units instead of whole graph rewrites."
+    },
+    {
+      "source": "SAFE",
+      "url": "https://arxiv.org/abs/2403.18802",
+      "controller_rule": "Verify long-form factual units against external evidence before acceptance."
+    },
+    {
+      "source": "VERISCORE",
+      "url": "https://arxiv.org/abs/2406.19276",
+      "controller_rule": "Separate verifiable anchor claims from unverifiable or structural text."
+    },
+    {
+      "source": "CORE",
+      "url": "https://aclanthology.org/2025.findings-acl.1018/",
+      "controller_rule": "Prefer unique informative subclaims; avoid adding obvious duplicate source leaves."
+    },
+    {
+      "source": "RAGAS",
+      "url": "https://arxiv.org/abs/2309.15217",
+      "controller_rule": "Separate evidence relevance, faithfulness, and answer quality failures."
+    },
+    {
+      "source": "RAGChecker",
+      "url": "https://arxiv.org/abs/2408.08067",
+      "controller_rule": "Route residuals by retrieval/evidence versus generation/reasoning failure."
+    },
+    {
+      "source": "CRAG",
+      "url": "https://arxiv.org/abs/2401.15884",
+      "controller_rule": "Use an evidence-quality evaluator to choose corrective retrieval or generation."
+    },
+    {
+      "source": "RARR",
+      "url": "https://arxiv.org/abs/2210.08726",
+      "controller_rule": "Revise unsupported content while preserving already-correct text."
+    },
+    {
+      "source": "Re-Ex",
+      "url": "https://arxiv.org/abs/2402.17097",
+      "controller_rule": "Explain the factual error before applying a narrow revision."
+    },
+    {
+      "source": "FAVA",
+      "url": "https://arxiv.org/abs/2401.06855",
+      "controller_rule": "Use typed factual-error categories to constrain the edit template."
+    },
+    {
+      "source": "Importance-aware factual recall",
+      "url": "https://arxiv.org/abs/2604.03141",
+      "controller_rule": "Do not route a candidate as complete when it preserves precision but drops important anchor facts."
+    },
+    {
+      "source": "Cited but Not Verified",
+      "url": "https://arxiv.org/abs/2605.06635",
+      "controller_rule": "Treat source presence as insufficient unless the cited span supports the exact graph commitment."
+    },
+    {
+      "source": "LLM-as-judge bias",
+      "url": "https://arxiv.org/abs/2305.17926",
+      "controller_rule": "Keep provider and judge failures separate from content failures."
+    }
+  ],
+  "strict_acceptance_contract": {
+    "fresh_CG": 1.0,
+    "fresh_REA": 1.0,
+    "judge_provider_error": false,
+    "fresh_eval_hash_matches": true,
+    "row_ANS": "non-regression",
+    "review_batch_ANS": "at_or_above_locked_standard_flow_ans_floor"
+  }
+}
