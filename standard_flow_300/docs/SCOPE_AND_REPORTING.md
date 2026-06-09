@@ -34,13 +34,12 @@ The locked standard-flow result is:
 300/350 strict rows
 ```
 
-The review closeout state is separate:
+Any separate review package is outside this branch:
 
 ```text
 350/350 strict rows, locked-record write disabled
 ```
-
-Use `review_closeout_350` only when discussing the review closeout evidence.
+Do not use this workshop branch as evidence for that separate package.
 
 ## Primary Evidence
 

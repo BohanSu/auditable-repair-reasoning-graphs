@@ -20,7 +20,9 @@ workspace.
 | `results/ABLATION_RESULTS_TABLE_350.csv` | Ablation comparison table. |
 | `figures/` | Lightweight benchmark figures. |
 | `docs/CURRENT_RESULT.md` | Locked result summary. |
+| `docs/STANDARD_FLOW_METHOD_DESIGN.md` | Method design for the locked standard flow. |
 | `docs/SCOPE_AND_REPORTING.md` | Reporting boundary and metric notes. |
+| `docs/FILE_MAP.md` | This public file inventory. |
 
 The full per-paper graphs, evaluator directories, provider logs, and local
 caches are not included in this GitHub-ready package.

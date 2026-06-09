@@ -1,8 +1,7 @@
-# Metrics and Workflow
+# Metrics and Standard-Flow Workflow
 
-This release separates the standard-flow result from the later review closeout
-state. The separation is necessary because the standard-flow record and the
-review closeout answer different audit questions.
+This branch documents the locked standard-flow result only. It does not include
+the separate 350/350 review package.
 
 ## Row-Level Strict Gate
 
@@ -13,16 +12,11 @@ strict row iff EC/CG = 1.0 and REA = 1.0, with no provider or judge error
 ```
 
 Rows that fail either metric remain counted in the denominator. They are not
-removed from the benchmark; they are assigned a typed residual label so the
-next repair step can be audited.
+removed from the benchmark; they are assigned a typed residual label.
 
 ## EC/CG
 
 `EC/CG` is the project evaluator's coverage and grounding score for the graph.
-The score measures whether the final graph covers the required scientific
-entities or content units under the evaluator's matching protocol. A score of
-`1.0` means the row satisfies the coverage/grounding gate used by this benchmark.
-
 The locked standard-flow result has:
 
 ```text
@@ -32,81 +26,64 @@ strict rows with EC/CG = 1.0 and REA = 1.0 = 300
 
 ## REA
 
-`REA` is the project evaluator's reasoning-edge accuracy score. It measures
-whether the graph's reasoning steps are accepted by the evaluator. A score of
-`1.0` means every evaluated reasoning step required for the row passes.
-
-The locked standard-flow result has:
+`REA` is the project evaluator's reasoning-edge accuracy score. The locked
+standard-flow result has:
 
 ```text
 final REA average = 0.9062380952380953
 strict rows with EC/CG = 1.0 and REA = 1.0 = 300
 ```
 
-## ANS
+## ANS Boundary
 
-`ANS` means Atomic Node Support. It is a FActScore-style support audit over
-atomic factual units extracted from graph nodes. It is used as a grounding guard
-to prevent a repair from reaching EC/CG and REA by adding unsupported graph
-content or by deleting difficult but required content.
+`ANS` means Atomic Node Support. It is a FActScore-style source-support audit
+over atomic factual units extracted from graph nodes. In this branch, ANS is a
+grounding audit, not the strict row gate. The strict row decision still requires
+`EC/CG = 1.0` and `REA = 1.0`.
 
-ANS is a guard, not the strict closure metric. The strict row decision still
-requires `EC/CG = 1.0` and `REA = 1.0`.
-
-The review closeout uses two ANS checks:
-
-- row-level ANS non-regression for each final merge candidate;
-- batch-level ANS comparison between the locked 300-row support floor and the
-  review 350-row state.
-
-The final review batch guard has:
+The locked PEARL terminal graph has:
 
 ```text
-locked standard-flow ANS floor = 0.8033815290684022
-review 350-row ANS = 0.8085113065326633
-margin = +0.005129777464261132
+all-node ANS = 0.801003
+main factual node ANS = 0.8033754732721555
 ```
 
-## Workflow States
-
-The release uses three explicit states:
+## Standard-Flow States
 
 | State | Strict rows | Residual rows | Meaning |
 |---|---:|---:|---|
-| locked standard flow | 300/350 | 50 | The reportable standard-flow record |
-| intermediate review checkpoint | 327/350 | 23 | A checkpoint after part of the residual closeout had been verified |
-| review closeout | 350/350 | 0 | The audited closeout state, with locked-record write disabled |
+| raw graph baseline | 0/350 | 350 | Raw model graphs under the same strict gate |
+| locked standard flow | 300/350 | 50 | Reportable standard-flow record |
 
-The final 23 rows are not silently blended into the locked standard-flow record.
-They are represented as a review closeout state with separate controller,
-fresh-evaluation, merge-audit, and ANS-guard evidence.
+The standard flow is:
+
+```text
+raw row input
+-> raw graph extraction
+-> structure repair
+-> PEARL semantic repair
+-> fresh EC/CG + REA evaluation
+-> row accounting
+```
 
 ## Residual Failure Types
 
-The locked 300/350 record leaves 50 residual rows:
+The locked 300/350 record leaves 50 typed residual rows:
 
 | Failure type | Count | Meaning |
 |---|---:|---|
-| `preflight:no_anchor_regenerate` | 31 | The row lacked a reliable graph anchor for ordinary local repair |
-| `final_metric_gate_failed` | 13 | The terminal graph still failed the strict EC/CG or REA gate |
-| `metric_regression` | 4 | A candidate improved one metric but regressed another required metric |
-| `final_judge_failed` | 2 | The final judge failed despite available graph/evidence material |
+| `preflight:no_anchor_regenerate` | 31 | The row lacked a reliable graph anchor for ordinary local repair. |
+| `final_metric_gate_failed` | 13 | The terminal graph still failed the strict EC/CG or REA gate. |
+| `metric_regression` | 4 | A candidate improved one metric but regressed another required metric. |
+| `final_judge_failed` | 2 | The final judge failed despite available graph/evidence material. |
 
-The closeout controller routes these failures into narrower repair lanes before
-any final merge is considered.
+## Reporting Boundary
 
-## Closeout Acceptance Contract
+Use this branch for:
 
-A final review merge candidate must satisfy:
+```text
+locked standard-flow result: 300/350 strict rows, 50 typed residual rows
+```
 
-- fresh `EC/CG = 1.0`;
-- fresh `REA = 1.0`;
-- no provider or judge contamination;
-- local preflight checks for candidate material;
-- row-level ANS non-regression;
-- inclusion in the controller-filtered merge set;
-- review batch ANS at or above the locked standard-flow support floor;
-- locked-record write remains disabled.
-
-This is why the review closeout can be audited without changing the locked
-standard-flow result.
+Do not use this branch to claim that the locked standard-flow record is
+350/350.

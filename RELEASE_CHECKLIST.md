@@ -6,7 +6,7 @@ This branch contains the locked standard-flow 300/350 code set.
 
 - `standard_flow_300/code`: 63 Python source files.
 - `standard_flow_300/results`: locked summary tables and slim row-level CSVs.
-- `standard_flow_300/docs`: public reporting and metric notes.
+- `standard_flow_300/docs`: public method design, reporting, and metric notes.
 - `standard_flow_300/figures`: lightweight benchmark figures.
 
 ## Verified Counts
@@ -25,3 +25,5 @@ This branch contains the locked standard-flow 300/350 code set.
 - No local caches or Python bytecode.
 - No private absolute paths in public docs/results.
 - No credentials or local configuration files.
+- `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` is present and
+  describes only the locked 300/350 standard-flow state.
