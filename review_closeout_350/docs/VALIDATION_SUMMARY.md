@@ -1,6 +1,6 @@
 # Validation Summary
 
-This file summarizes the checks that support the review closeout state.
+This file summarizes the checks that support the separate review package.
 
 ## Review Result
 
@@ -14,7 +14,7 @@ This file summarizes the checks that support the review closeout state.
 | final merge rows | 23 |
 | locked-record write | false |
 
-The review result is separate from the locked standard-flow result. The locked
+The review package is separate from the locked standard-flow result. The locked
 standard-flow result remains `300/350`.
 
 ## Controller State
@@ -64,7 +64,7 @@ The public evidence is:
 | provider calls | false |
 | guard passed | true |
 
-The batch guard shows that the 350/350 review state does not reach strict
+The batch guard shows that the 350/350 review package does not reach strict
 metrics by sacrificing source support relative to the locked 300-row floor.
 
 ## Interpretation

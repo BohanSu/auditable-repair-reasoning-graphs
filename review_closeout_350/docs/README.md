@@ -9,7 +9,7 @@ The closeout is separate from the locked standard-flow record.
 |---|---:|---:|---|
 | locked standard flow | 300/350 | 50 | Reportable standard-flow record |
 | intermediate review checkpoint | 327/350 | 23 | Checkpoint before final review merge |
-| review closeout | 350/350 | 0 | Audited closeout state |
+| separate review package | 350/350 | 0 | Audited closeout package |
 
 The locked standard-flow record is not overwritten. The review closeout keeps
 `locked_record_write = false`.
@@ -29,6 +29,8 @@ The locked standard-flow record is not overwritten. The review closeout keeps
 
 ## Documents
 
+- `REVIEW_CLOSEOUT_METHOD_DESIGN.md`: plain method design for the residual
+  review closeout and its relation to the locked 300/350 standard-flow record.
 - `DESIGN_DOCUMENT.md`: closeout framework and module design.
 - `VALIDATION_SUMMARY.md`: validation results and acceptance contract.
 - `REPRODUCTION_COMMANDS.md`: commands for checking the lightweight release and

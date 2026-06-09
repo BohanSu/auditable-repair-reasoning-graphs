@@ -75,10 +75,10 @@ The release uses three explicit states:
 |---|---:|---:|---|
 | locked standard flow | 300/350 | 50 | The reportable standard-flow record |
 | intermediate review checkpoint | 327/350 | 23 | A checkpoint after part of the residual closeout had been verified |
-| review closeout | 350/350 | 0 | The audited closeout state, with locked-record write disabled |
+| separate review package | 350/350 | 0 | Audited closeout package, with locked-record write disabled |
 
 The final 23 rows are not silently blended into the locked standard-flow record.
-They are represented as a review closeout state with separate controller,
+They are represented in a separate review package with controller,
 fresh-evaluation, merge-audit, and ANS-guard evidence.
 
 ## Residual Failure Types

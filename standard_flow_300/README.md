@@ -24,6 +24,15 @@ recorded as typed residual rows. In this state, the residual count is 50.
 - `docs/`: scope, metric, and reporting notes for this state.
 - `figures/`: lightweight result figures.
 
+## Recommended Reading Order
+
+1. `docs/STANDARD_FLOW_METHOD_DESIGN.md`: what the locked standard-flow method
+   does and why the modules are separated.
+2. `docs/CURRENT_RESULT.md`: the locked 300/350 result summary.
+3. `docs/SCOPE_AND_REPORTING.md`: how to report this directory without
+   conflating it with the later review package.
+4. `docs/FILE_MAP.md`: what each public result file contains.
+
 ## Key Result Files
 
 - `results/FULL_350_SUMMARY.json`: locked standard-flow summary.

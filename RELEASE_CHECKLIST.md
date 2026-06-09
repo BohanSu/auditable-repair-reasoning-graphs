@@ -25,8 +25,11 @@ This checklist records the GitHub-readiness checks for this package.
 ## Content Checks
 
 - Package size: about 3.9 MB.
-- File count: 171 files before empty-directory cleanup.
+- File count: 174 files.
 - Python source files: 63 in `standard_flow_300/code`, 63 in `review_closeout_350/code`.
+- Method-design docs are present in both public code sets:
+  `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` and
+  `review_closeout_350/docs/REVIEW_CLOSEOUT_METHOD_DESIGN.md`.
 - No files larger than 10 MB.
 - No `.pyc`, `.DS_Store`, `.log`, `.tmp`, `.bak`, or editor backup files in the release directory.
 - No symlinks in the release directory.

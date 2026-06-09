@@ -9,8 +9,8 @@ explain two distinct states:
   rows in the locked evaluation record.
 - `review_closeout_350/`: the review closeout result. It starts from the locked
   300/350 state, uses an intermediate 327/350 checkpoint, verifies a final
-  23-row merge set, and reaches a review-only 350/350 state with locked-record
-  write disabled.
+  23-row merge set, and reaches a separate 350/350 review package with
+  locked-record write disabled.
 
 These two directories must not be treated as the same claim. The first is the
 locked standard-flow record; the second is a separately audited closeout state.
@@ -58,10 +58,16 @@ the strict EC/CG and REA gate.
 
 - Read `METRICS_AND_WORKFLOW.md` first for the metric definitions and stage
   logic.
+- Read `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` for the locked
+  standard-flow method: raw graph extraction, structure repair, PEARL semantic
+  repair, fresh EC/CG+REA evaluation, and accounting.
+- Read `review_closeout_350/docs/REVIEW_CLOSEOUT_METHOD_DESIGN.md` for the
+  residual closeout method: controller routing, targeted residual repair,
+  fresh evaluation, merge review, and ANS guard.
 - Use `standard_flow_300/results/FULL_350_SUMMARY.json` for the locked 300/350
   summary.
 - Use `review_closeout_350/results/REVIEW_FULL_350_SUMMARY.json` for the
-  review-only 350/350 summary.
+  separate 350/350 review-package summary.
 - Use `review_closeout_350/results/STANDARD_FLOW_350_CLOSURE_TRACE.csv` to see
   how the 300/350, 327/350, and 350/350 states relate.
 

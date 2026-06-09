@@ -3,6 +3,14 @@
 This directory documents the locked standard-flow state for the 350-row
 benchmark.
 
+## Recommended Reading Order
+
+1. `STANDARD_FLOW_METHOD_DESIGN.md`: method design, module roles, and the
+   standard-flow data path.
+2. `CURRENT_RESULT.md`: locked 300/350 summary and residual breakdown.
+3. `SCOPE_AND_REPORTING.md`: reporting language and metric boundaries.
+4. `FILE_MAP.md`: public file inventory.
+
 The benchmark contains five model groups with 70 rows each:
 
 - `claude_sonnet_4_5_20250929`
