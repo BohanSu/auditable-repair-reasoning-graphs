@@ -10,7 +10,7 @@ Run commands from the release root:
 cd github_ready/pearl_300_350_code_release_20260608
 ```
 
-## Check Locked Standard-Flow Summary
+## Check Original-Version Summary
 
 ```bash
 python - <<'PY'
@@ -38,7 +38,7 @@ typed_residual_rows = 50
 provider_failures = 0
 ```
 
-## Check Review Closeout Summary
+## Check Current Version Summary
 
 ```bash
 python - <<'PY'
@@ -54,7 +54,7 @@ print({
     "final_CG_avg": d["final_CG_avg"],
     "final_REA_avg": d["final_REA_avg"],
     "merged_row_count": d["merged_row_count"],
-    "locked_record_write": d["locked_record_write"],
+    "original_version_overwrite": d["original_version_overwrite"],
 })
 PY
 ```
@@ -65,10 +65,10 @@ Expected:
 strict_success_rows = 350
 typed_residual_rows = 0
 merged_row_count = 23
-locked_record_write = false
+original_version_overwrite = false
 ```
 
-## Check Row-Level Review Accounting
+## Check Row-Level Current-Version Accounting
 
 ```bash
 python - <<'PY'
@@ -133,10 +133,10 @@ from pathlib import Path
 p = Path("review_closeout_350/results/REVIEW_BATCH_ANS_GUARD.json")
 d = json.loads(p.read_text())
 print({
-    "locked_floor": d["locked_standard_flow_ans_floor"]["ans"],
-    "review_ans": d["review_state_with_candidate_ans_replacements"]["ans"],
-    "margin": d["review_batch_ans_guard_margin"],
-    "passed": d["review_batch_ans_guard_passed"],
+    "original_version_floor": d["original_version_ans_floor"]["ans"],
+    "current_version_ans": d["current_version_with_candidate_ans_replacements"]["ans"],
+    "margin": d["current_version_batch_ans_guard_margin"],
+    "passed": d["current_version_batch_ans_guard_passed"],
 })
 PY
 ```

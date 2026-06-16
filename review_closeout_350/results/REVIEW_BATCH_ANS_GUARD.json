@@ -26,7 +26,7 @@
     "qwen3_5_397b_a17b:s41467-025-56795-w",
     "qwen3_5_397b_a17b:s41467-025-56856-0"
   ],
-  "locked_standard_flow_ans_floor": {
+  "original_version_ans_floor": {
     "stage": "pearl_terminal_graph",
     "specs_requested": 300,
     "specs_with_ans": 300,
@@ -175,12 +175,12 @@
       "ans": 0.8863636363636364
     }
   },
-  "locked_record_write": false,
-  "review_package_state": {
+  "original_version_overwrite": false,
+  "current_version_state": {
     "strict_success_rows": 350,
     "typed_residual_rows": 0
   },
-  "review_state_on_base_ans_artifacts": {
+  "current_version_on_base_ans_artifacts": {
     "stage": "pearl_terminal_graph",
     "specs_requested": 350,
     "specs_with_ans": 317,
@@ -189,7 +189,7 @@
     "total": 31166,
     "ans": 0.8033754732721555
   },
-  "review_state_with_candidate_ans_replacements": {
+  "current_version_with_candidate_ans_replacements": {
     "stage": "pearl_terminal_graph",
     "specs_requested": 350,
     "specs_with_ans": 331,
@@ -198,6 +198,6 @@
     "total": 31840,
     "ans": 0.8085113065326633
   },
-  "review_batch_ans_guard_passed": true,
-  "review_batch_ans_guard_margin": 0.005129777464261132
+  "current_version_batch_ans_guard_passed": true,
+  "current_version_batch_ans_guard_margin": 0.005129777464261132
 }

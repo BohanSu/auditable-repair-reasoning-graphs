@@ -1,6 +1,6 @@
 # Scope and Reporting
 
-This file defines how to report the locked standard-flow state.
+This file defines how to report the original-version state.
 
 ## Scope
 
@@ -20,7 +20,7 @@ strict.
 ## Reportable Statement
 
 ```text
-On the 350-row benchmark, the locked PEARL standard flow accounts for all rows
+On the 350-row benchmark, the PEARL original version accounts for all rows
 with zero provider-failure rows and reaches 300 strict successes. The remaining
 50 rows are typed residuals. Final EC/CG improves from 0.8274 to 0.8961, and
 final REA improves from 0.3386 to 0.9062.
@@ -28,19 +28,19 @@ final REA improves from 0.3386 to 0.9062.
 
 ## Do Not Conflate States
 
-The locked standard-flow result is:
+The original-version result is:
 
 ```text
 300/350 strict rows
 ```
 
-The review closeout state is separate:
+The current-version state is separate:
 
 ```text
-350/350 strict rows, locked-record write disabled
+350/350 strict rows, original-version overwrite disabled
 ```
 
-Use `review_closeout_350` only when discussing the review closeout evidence.
+Use `review_closeout_350` only when discussing the current-version evidence.
 
 ## Primary Evidence
 
@@ -56,5 +56,5 @@ Atomic Node Support is a grounding audit inspired by FActScore-style atomic
 fact verification. It is used to check whether graph nodes are source-supported.
 It is not the strict closure metric.
 
-The locked PEARL terminal graph has all-node ANS `0.801003` and main factual
+The PEARL original-version terminal graph has all-node ANS `0.801003` and main factual
 node ANS `0.8033754732721555`.

@@ -2,7 +2,7 @@
   "created_at": "2026-06-07T00:53:10+08:00",
   "mode": "after327_failure_typed_controller_queue",
   "provider_calls": false,
-  "locked_record_write": false,
+  "original_version_overwrite": false,
   "current_strict_success_rows": 327,
   "current_typed_residual_rows": 23,
   "controller_row_count": 23,
@@ -96,6 +96,6 @@
     "judge_provider_error": false,
     "fresh_eval_hash_matches": true,
     "row_ANS": "non-regression",
-    "review_batch_ANS": "at_or_above_locked_standard_flow_ans_floor"
+    "current_version_batch_ANS": "at_or_above_original_version_ans_floor"
   }
 }

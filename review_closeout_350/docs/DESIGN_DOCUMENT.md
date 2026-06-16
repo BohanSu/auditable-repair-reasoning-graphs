@@ -1,36 +1,36 @@
-# Review Closeout Design
+# Current Version Design
 
-This document describes the review closeout framework for the PEARL 350-row
-benchmark. The closeout is designed to be auditable: every row remains in the
+This document describes the current-version framework for the PEARL 350-row
+benchmark. The current version is designed to be auditable: every row remains in the
 denominator, every repair candidate is routed by failure type, and the final
-review state is checked by both strict graph metrics and Atomic Node Support.
+current-version state is checked by both strict graph metrics and Atomic Node Support.
 
 ## Objective
 
-The locked standard flow reaches `300/350` strict rows. The remaining 50 rows
-are typed residuals rather than dropped cases. The closeout layer asks a
+The original version reaches `300/350` strict rows. The remaining 50 rows
+are typed residuals rather than dropped cases. The current-version layer asks a
 separate question: can the residual rows be repaired and verified under the same
 strict row rule, while preserving source support?
 
-The final review state reaches:
+The final current-version state reaches:
 
 | Item | Value |
 |---|---:|
-| review strict rows | 350/350 |
+| current-version strict rows | 350/350 |
 | typed residual rows | 0 |
 | final EC/CG average | 1.0 |
 | final REA average | 1.0 |
 | final merge rows | 23 |
-| locked-record write | false |
-| review ANS | 0.8085113065326633 |
-| locked standard-flow ANS floor | 0.8033815290684022 |
+| original-version overwrite | false |
+| current-version ANS | 0.8085113065326633 |
+| original-version ANS floor | 0.8033815290684022 |
 
-The locked standard-flow record remains `300/350`. The review closeout is a
+The original-version result remains `300/350`. The current version is a
 separate audited state.
 
 ## Why a Closeout Layer Was Needed
 
-The standard flow handles most rows with a single high-throughput path:
+The original version handles most rows with a single high-throughput path:
 
 ```text
 raw graph extraction
@@ -40,11 +40,10 @@ raw graph extraction
 -> strict row gate
 ```
 
-The final residual rows did not fail for one uniform reason. The locked 300/350
-state contains no-anchor failures, metric-gate failures, metric regressions, and
+The final residual rows did not fail for one uniform reason. The original 300/350 state contains no-anchor failures, metric-gate failures, metric regressions, and
 judge failures. Repeating the same repair loop would mix these causes together.
 
-The closeout layer therefore separates:
+The current-version layer therefore separates:
 
 - failure typing;
 - targeted repair lane selection;
@@ -59,16 +58,16 @@ The closeout layer therefore separates:
 The final workflow is:
 
 ```text
-locked standard-flow residuals
+original-version residuals
 -> failure-typed controller
 -> targeted repair lanes
 -> candidate preflight
 -> fresh EC/CG = 1.0 and REA = 1.0 evaluation
 -> row-level ANS guard
 -> controller-filtered strict merge set
--> review accounting state
--> review batch ANS guard
--> 350/350 review closeout
+-> current-version accounting state
+-> current-version batch ANS guard
+-> 350/350 current version
 ```
 
 The accompanying vector figure is `figures/framework_v2.svg`.
@@ -86,7 +85,7 @@ At the final review checkpoint, the controller has:
 | current strict rows | 327 |
 | current residual rows | 23 |
 | controller rows | 23 |
-| rows ready for review merge | 23 |
+| rows ready for current-version merge | 23 |
 
 The final 23-row controller queue contains:
 
@@ -99,7 +98,7 @@ The final 23-row controller queue contains:
 
 ## Repair Lanes
 
-The closeout uses multiple narrow lanes rather than one general extra module.
+The current version uses multiple narrow lanes rather than one general extra module.
 
 `compact source-seed rebuild` is used when the row lacks a reliable graph
 anchor. It builds a short source-grounded graph with a semantic root and direct
@@ -130,7 +129,7 @@ fresh-evaluation step.
 
 ## Fresh Evaluation
 
-A closeout candidate must pass:
+A current-version candidate must pass:
 
 ```text
 fresh EC/CG = 1.0
@@ -159,33 +158,32 @@ type, fresh metrics, row ANS values, guard margin, and mergeability flags.
 
 The final merge set contains 23 rows.
 
-## Review Accounting State
+## Current-Version Accounting State
 
-The review accounting state combines the locked standard-flow rows and the
-controller-filtered final merge set into a separate 350-row review state. It
-does not overwrite the locked standard-flow record.
+The current-version accounting state combines the original-version rows and the controller-filtered final merge set into a 350-row current-version state. It
+does not overwrite the original-version result.
 
 The public row table is `results/REVIEW_FULL_350_ACCOUNTING.csv`, and the
 summary is `results/REVIEW_FULL_350_SUMMARY.json`.
 
 ## Batch ANS Guard
 
-The batch guard compares the review 350-row ANS against the locked standard-flow
+The batch guard compares the current-version 350-row ANS against the original-version
 ANS floor:
 
 | Item | Value |
 |---|---:|
-| locked standard-flow ANS floor | 0.8033815290684022 |
-| review 350-row ANS | 0.8085113065326633 |
+| original-version ANS floor | 0.8033815290684022 |
+| current-version 350-row ANS | 0.8085113065326633 |
 | margin | +0.005129777464261132 |
 | guard passed | true |
 
 This check is needed because row-level non-regression alone does not prove that
-the full 350-row review state preserves source support.
+the full 350-row current-version state preserves source support.
 
 ## Acceptance Contract
 
-A final review merge candidate must satisfy all of the following:
+A final current-version merge candidate must satisfy all of the following:
 
 - fresh `EC/CG = 1.0`;
 - fresh `REA = 1.0`;
@@ -194,9 +192,9 @@ A final review merge candidate must satisfy all of the following:
 - row-level ANS non-regression passes;
 - inclusion in the controller-filtered merge set;
 - fresh-evaluation hash verification passes;
-- locked-record write remains disabled.
+- original-version overwrite remains disabled.
 
-The full review state must also pass the batch ANS guard.
+The full current-version state must also pass the batch ANS guard.
 
 ## Evidence Files
 

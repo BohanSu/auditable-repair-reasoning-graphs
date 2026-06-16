@@ -1,8 +1,8 @@
 # Validation Summary
 
-This file summarizes the checks that support the separate review package.
+This file summarizes the checks that support the separate current-version package.
 
-## Review Result
+## Current Version Result
 
 | Metric | Value |
 |---|---:|
@@ -12,10 +12,9 @@ This file summarizes the checks that support the separate review package.
 | final EC/CG average | 1.0 |
 | final REA average | 1.0 |
 | final merge rows | 23 |
-| locked-record write | false |
+| original-version overwrite | false |
 
-The review package is separate from the locked standard-flow result. The locked
-standard-flow result remains `300/350`.
+The current-version package is separate from the original-version result. The original-version result remains `300/350`.
 
 ## Controller State
 
@@ -24,7 +23,7 @@ standard-flow result remains `300/350`.
 | checkpoint strict rows | 327 |
 | checkpoint residual rows | 23 |
 | controller rows | 23 |
-| rows ready for review merge | 23 |
+| rows ready for current-version merge | 23 |
 | provider calls in final controller step | false |
 
 Failure types in the final 23-row controller queue:
@@ -57,23 +56,22 @@ The public evidence is:
 
 | Metric | Value |
 |---|---:|
-| locked standard-flow ANS floor | 0.8033815290684022 |
-| review 350-row ANS | 0.8085113065326633 |
+| original-version ANS floor | 0.8033815290684022 |
+| current-version 350-row ANS | 0.8085113065326633 |
 | ANS margin | +0.005129777464261132 |
 | candidate rows replaced | 23 |
 | provider calls | false |
 | guard passed | true |
 
-The batch guard shows that the 350/350 review package does not reach strict
-metrics by sacrificing source support relative to the locked 300-row floor.
+The batch guard shows that the 350/350 current-version package does not reach strict
+metrics by sacrificing source support relative to the original 300-row floor.
 
 ## Interpretation
 
-The review closeout passes three nested checks:
+The current version passes three nested checks:
 
 1. Each final candidate row passes fresh EC/CG and REA.
 2. Each final candidate row passes row-level ANS non-regression.
-3. The full 350-row review state passes batch ANS against the locked
-   standard-flow floor.
+3. The full 350-row current-version state passes batch ANS against the original-version floor.
 
-All three checks are required for the review closeout claim.
+All three checks are required for the current version claim.

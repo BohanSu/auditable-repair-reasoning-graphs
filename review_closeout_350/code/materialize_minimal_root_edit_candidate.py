@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Materialize a staged candidate by replacing only NROOT text.
 
-This is a narrow provider-free helper for ANS-safe residual closeout cases:
+This is a narrow provider-free helper for ANS-safe current-version residual repair cases:
 start from an already staged graph_spec, apply a minimal root wording edit,
 rerun local preflight, and emit a fresh-eval-ready ATTEMPT_INDEX.csv.
 """

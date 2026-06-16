@@ -1,8 +1,8 @@
 # Metrics and Workflow
 
-This release separates the standard-flow result from the later review closeout
-state. The separation is necessary because the standard-flow record and the
-review closeout answer different audit questions.
+This release separates the original-version result from the later current version
+state. The separation is necessary because the original-version result and the
+current version answer different audit questions.
 
 ## Row-Level Strict Gate
 
@@ -23,7 +23,7 @@ The score measures whether the final graph covers the required scientific
 entities or content units under the evaluator's matching protocol. A score of
 `1.0` means the row satisfies the coverage/grounding gate used by this benchmark.
 
-The locked standard-flow result has:
+The original-version result has:
 
 ```text
 final EC/CG average = 0.896055452484024
@@ -36,7 +36,7 @@ strict rows with EC/CG = 1.0 and REA = 1.0 = 300
 whether the graph's reasoning steps are accepted by the evaluator. A score of
 `1.0` means every evaluated reasoning step required for the row passes.
 
-The locked standard-flow result has:
+The original-version result has:
 
 ```text
 final REA average = 0.9062380952380953
@@ -53,17 +53,17 @@ content or by deleting difficult but required content.
 ANS is a guard, not the strict closure metric. The strict row decision still
 requires `EC/CG = 1.0` and `REA = 1.0`.
 
-The review closeout uses two ANS checks:
+The current version uses two ANS checks:
 
 - row-level ANS non-regression for each final merge candidate;
-- batch-level ANS comparison between the locked 300-row support floor and the
-  review 350-row state.
+- batch-level ANS comparison between the original 300-row support floor and the
+  current-version 350-row state.
 
-The final review batch guard has:
+The final current-version batch guard has:
 
 ```text
-locked standard-flow ANS floor = 0.8033815290684022
-review 350-row ANS = 0.8085113065326633
+original-version ANS floor = 0.8033815290684022
+current-version 350-row ANS = 0.8085113065326633
 margin = +0.005129777464261132
 ```
 
@@ -73,17 +73,17 @@ The release uses three explicit states:
 
 | State | Strict rows | Residual rows | Meaning |
 |---|---:|---:|---|
-| locked standard flow | 300/350 | 50 | The reportable standard-flow record |
-| intermediate review checkpoint | 327/350 | 23 | A checkpoint after part of the residual closeout had been verified |
-| separate review package | 350/350 | 0 | Audited closeout package, with locked-record write disabled |
+| original version | 300/350 | 50 | The reportable original-version result |
+| intermediate current-version checkpoint | 327/350 | 23 | A checkpoint after part of the current-version residual repair had been verified |
+| separate current-version package | 350/350 | 0 | Audited current-version package, with original-version overwrite disabled |
 
-The final 23 rows are not silently blended into the locked standard-flow record.
-They are represented in a separate review package with controller,
+The final 23 rows are not silently blended into the original-version result.
+They are represented in a separate current-version package with controller,
 fresh-evaluation, merge-audit, and ANS-guard evidence.
 
 ## Residual Failure Types
 
-The locked 300/350 record leaves 50 residual rows:
+The original 300/350 result leaves 50 residual rows:
 
 | Failure type | Count | Meaning |
 |---|---:|---|
@@ -92,12 +92,12 @@ The locked 300/350 record leaves 50 residual rows:
 | `metric_regression` | 4 | A candidate improved one metric but regressed another required metric |
 | `final_judge_failed` | 2 | The final judge failed despite available graph/evidence material |
 
-The closeout controller routes these failures into narrower repair lanes before
+The current-version controller routes these failures into narrower repair lanes before
 any final merge is considered.
 
 ## Closeout Acceptance Contract
 
-A final review merge candidate must satisfy:
+A final current-version merge candidate must satisfy:
 
 - fresh `EC/CG = 1.0`;
 - fresh `REA = 1.0`;
@@ -105,8 +105,7 @@ A final review merge candidate must satisfy:
 - local preflight checks for candidate material;
 - row-level ANS non-regression;
 - inclusion in the controller-filtered merge set;
-- review batch ANS at or above the locked standard-flow support floor;
-- locked-record write remains disabled.
+- current-version batch ANS at or above the original-version support floor;
+- original-version overwrite remains disabled.
 
-This is why the review closeout can be audited without changing the locked
-standard-flow result.
+This is why the current version can be audited without changing the original-version result.

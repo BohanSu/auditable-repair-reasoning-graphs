@@ -1,28 +1,29 @@
-# Locked Standard-Flow Result
+# Original Version Result
 
-This document summarizes the locked standard-flow state for the 350-row
-benchmark.
+This document summarizes the PEARL original-version state for the fixed
+350-input-record benchmark.
 
 ## Result
 
 | Item | Value |
 |---|---:|
-| benchmark rows | 350 |
-| strict-success rows | 300 |
-| typed residual rows | 50 |
-| provider-failure rows | 0 |
+| input records | 350 |
+| strictly accepted input records | 300 |
+| typed residual input records | 50 |
+| provider-failure records | 0 |
 | final EC/CG average | 0.896055452484024 |
 | final REA average | 0.9062380952380953 |
 | original EC/CG average | 0.8274058084772371 |
 | original REA average | 0.3385678166307718 |
 
-The strict row rule is:
+The strict rule is:
 
 ```text
-strict row iff EC/CG = 1.0 and REA = 1.0, with no provider or judge error
+strictly accepted iff EC/CG = 1.0 and REA = 1.0,
+with no provider or judge error
 ```
 
-The locked standard-flow result is therefore `300/350`, not `350/350`.
+The original-version result is therefore `300/350`, not `350/350`.
 
 ## Residual Breakdown
 
@@ -35,8 +36,8 @@ The locked standard-flow result is therefore `300/350`, not `350/350`.
 
 ## ANS Grounding Audit
 
-Atomic Node Support is used as a grounding guard rather than as the strict
-closure metric.
+Atomic Node Support is used as a grounding diagnostic rather than as the strict
+acceptance metric.
 
 | Graph stage | Nodes | Atomic facts | Supported facts | ANS |
 |---|---:|---:|---:|---:|

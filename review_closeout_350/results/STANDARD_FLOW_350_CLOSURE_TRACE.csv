@@ -1,5 +1,5 @@
 stage,rows,strict_success_rows,typed_residual_rows,role
-locked_standard_flow,350,300,50,reportable standard-flow record
-intermediate_review_checkpoint,350,327,23,post-repair checkpoint used before the final merge review
-final_merge_review,23,23,0,controller-filtered candidates for the last residual rows
-review_closeout_state,350,350,0,review-only closeout package; locked record write remains disabled
+original_version,350,300,50,reportable original-version result
+intermediate_current_version_checkpoint,350,327,23,post-repair checkpoint used before the final current-version merge
+final_current_version_merge,23,23,0,controller-filtered candidates for the final current-version merge
+current_version,350,350,0,current-version package; original-version overwrite remains disabled

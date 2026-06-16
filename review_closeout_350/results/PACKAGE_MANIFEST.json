@@ -1,11 +1,11 @@
 {
-  "package": "review_closeout_350",
+  "package": "current_version_350",
   "release_policy": "lightweight GitHub package; full run directories are external artifacts",
   "contains_soft_links": false,
-  "locked_record_write": false,
+  "original_version_overwrite": false,
   "result_boundary": {
-    "locked_standard_flow": "300/350",
-    "review_closeout": "350/350",
+    "original_version": "300/350",
+    "current_version": "350/350",
     "final_merge_rows": 23
   },
   "directories": {

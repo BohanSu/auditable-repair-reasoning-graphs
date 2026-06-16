@@ -450,10 +450,10 @@ def fig6_residual(accounting: pd.DataFrame, outputs: list[dict]) -> None:
     order = residual["failure_type"].value_counts().index.tolist()
     counts = residual["failure_type"].value_counts().loc[order]
     label_map = {
-        "preflight:no_anchor_regenerate": "preflight:\nno anchor",
-        "final_metric_gate_failed": "final metric\ngate failed",
+        "preflight:no_anchor_regenerate": "missing\nanchor",
+        "final_metric_gate_failed": "metric check\nfailed",
         "metric_regression": "metric\nregression",
-        "final_judge_failed": "final judge\nfailed",
+        "final_judge_failed": "judge\nfailure",
         "repair_budget_exceeded": "repair budget\nexceeded",
     }
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), gridspec_kw={"width_ratios": [1.0, 1.35]})
@@ -514,7 +514,7 @@ def fig7_distributions(accounting: pd.DataFrame, outputs: list[dict]) -> None:
 
 def write_docs(outputs: list[dict], summary: dict, ablation: pd.DataFrame, minicheck: pd.DataFrame) -> None:
     captions = {
-        "fig1_350_main_result_overview": "PEARL standard-flow result on the 350-row subset excluding GPT-5.4 and GPT-5.5.",
+        "fig1_350_main_result_overview": "PEARL original-version result on the 350-row subset excluding GPT-5.4 and GPT-5.5.",
         "fig2_350_model_outcomes": "Per-model strict-success and typed-residual outcomes for the five-model 350-row subset.",
         "fig3_350_llm_baseline_vs_pearl": "Model-wise comparison between the LLM generation-final baseline and PEARL on the 350-row subset.",
         "fig4_350_ablation_comparison": "Ablation comparison recomputed for the 350-row subset.",

@@ -469,8 +469,8 @@ def summarize_rows(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
 
     return {
         "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
-        "scope": "350-row standard-flow subset residual closeout plan; excludes gpt_5_4 and gpt_5_5 generator rows",
-        "current_result_boundary": {
+        "scope": "350-row original-version subset current-version residual repair plan; excludes gpt_5_4 and gpt_5_5 generator rows",
+        "original_result_boundary": {
             "rows": 350,
             "strict_success_rows": 300,
             "typed_residual_rows": 50,

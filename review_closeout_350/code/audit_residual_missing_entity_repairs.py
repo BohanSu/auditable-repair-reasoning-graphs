@@ -920,7 +920,7 @@ def main() -> int:
             [
                 "# Missing-Entity Repair Audit",
                 "",
-                "Provider-free audit for residual closeout. This package does not edit graphs,",
+                "Provider-free audit for current-version residual repair. This package does not edit graphs,",
                 "does not call judges, and does not rewrite canonical accounting.",
                 "",
                 f"- Selected rows: {summary['selected_rows']}",

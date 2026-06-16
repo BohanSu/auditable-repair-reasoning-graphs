@@ -1,49 +1,46 @@
-# Review Closeout Method Design
+# Current Version Method Design
 
 This document explains the method implemented by the `review_closeout_350`
-package. It describes a separate review package built after the locked
-standard-flow result. It does not redefine the locked standard-flow record.
+package. It describes a current-version package built after the original-version result. It does not redefine the original-version result.
 
 ## Starting Point
 
-The closeout starts from the locked standard-flow state:
+The current version starts from the original-version state:
 
 | State | Strict rows | Residual rows |
 |---|---:|---:|
-| locked standard flow | 300/350 | 50 |
+| original version | 300/350 | 50 |
 
 The 50 residual rows are not dropped. They are the input to a separate residual
 review process.
 
 ## Objective
 
-The closeout asks a narrower question than the standard flow:
+The current version asks a narrower question than the original version:
 
 > Can the remaining residual rows be repaired and verified under the same
 > EC/CG + REA strict gate, while preserving row identity and source support?
 
-The final output is a separate review package:
+The final output is a separate current-version package:
 
 | State | Strict rows | Residual rows | Boundary |
 |---|---:|---:|---|
-| separate review package | 350/350 | 0 | locked standard record unchanged |
+| current version | 350/350 | 0 | original-version result unchanged |
 
-## Why This Is Separate From the Standard Flow
+## Why This Is Separate From the Original Version
 
-The standard flow is a high-throughput path that produces the locked 300/350
-record. The residual closeout is a targeted review process for rows that did
+The original version is a high-throughput path that produces the original 300/350 result. The current-version residual repair is a targeted review process for rows that did
 not pass that path.
 
-The distinction matters because the residual closeout uses additional evidence
+The distinction matters because the current-version residual repair uses additional evidence
 guards, merge review, and source-support checks. It can support a separate
-350/350 review package, but it should not be described as the locked standard
-record being overwritten.
+350/350 current-version package, but it should not be described as overwriting the original-version result.
 
 ## Inputs
 
-The review closeout uses:
+The current version uses:
 
-- typed residual rows from the standard flow;
+- typed residual rows from the original version;
 - residual failure labels;
 - candidate repair material;
 - fresh EC/CG and REA evaluation results;
@@ -58,7 +55,7 @@ Primary input evidence:
 
 ## Closeout Pipeline
 
-The closeout pipeline is:
+The current-version pipeline is:
 
 ```text
 typed residual rows
@@ -68,7 +65,7 @@ typed residual rows
 -> fresh EC/CG + REA evaluation
 -> row-level ANS guard
 -> strict merge review
--> separate 350-row review accounting
+-> separate 350-row current-version accounting
 -> batch ANS guard
 ```
 
@@ -79,7 +76,7 @@ Each stage has a different role. No single stage is enough by itself.
 The controller prevents all residuals from being treated as one generic retry
 bucket. It routes rows based on the residual label and available evidence.
 
-The original standard-flow residual split is:
+The original-version residual split is:
 
 | Failure type | Count |
 |---|---:|
@@ -96,12 +93,12 @@ Before the final merge, the controller reaches an intermediate checkpoint:
 | remaining residual rows | 23 |
 | final merge candidates | 23 |
 
-This checkpoint is not a new dataset and not a final standard-flow result. It
+This checkpoint is not a new dataset and not a final original-version result. It
 only explains why the final review queue contains 23 rows.
 
 ## Targeted Repair Lanes
 
-The closeout uses targeted lanes because the residual failure modes differ.
+The current version uses targeted lanes because the residual failure modes differ.
 
 | Lane | Used when | Design intent |
 |---|---|---|
@@ -127,14 +124,14 @@ Fresh evaluation evidence:
 
 ## Source-Support Guard
 
-Fresh EC/CG and REA are necessary but not sufficient for the review package.
-The closeout also checks Atomic Node Support so that a candidate cannot reach
+Fresh EC/CG and REA are necessary but not sufficient for the current-version package.
+The current version also checks Atomic Node Support so that a candidate cannot reach
 strict graph metrics by deleting difficult content or adding unsupported claims.
 
 ANS has two roles:
 
 - row-level non-regression for final merge candidates;
-- batch-level guard for the full 350-row review package.
+- batch-level guard for the full 350-row current-version package.
 
 Batch ANS evidence:
 
@@ -145,8 +142,8 @@ The final batch guard is:
 
 | Item | Value |
 |---|---:|
-| locked standard-flow ANS floor | 0.8033815290684022 |
-| review 350-row ANS | 0.8085113065326633 |
+| original-version ANS floor | 0.8033815290684022 |
+| current-version 350-row ANS | 0.8085113065326633 |
 | margin | +0.005129777464261132 |
 | guard passed | true |
 
@@ -156,7 +153,7 @@ ANS is a source-support guard, not a replacement for EC/CG and REA.
 
 Only controller-approved, fresh-evaluated, ANS-guarded candidates enter the
 merge review. The merge review checks that candidate rows can replace residual
-rows in the separate review package without changing row identity or corrupting
+rows in the current-version state without changing row identity or corrupting
 the accounting state.
 
 Evidence files:
@@ -166,7 +163,7 @@ Evidence files:
 - `results/REVIEW_FULL_350_ACCOUNTING.csv`
 - `results/REVIEW_FULL_350_SUMMARY.json`
 
-Final review state:
+Final current-version state:
 
 | Item | Value |
 |---|---:|
@@ -176,34 +173,34 @@ Final review state:
 | final EC/CG average | 1.0 |
 | final REA average | 1.0 |
 | merged row count | 23 |
-| locked-record write | false |
+| original-version overwrite | false |
 
 ## Reporting Boundary
 
 Report this directory as:
 
 ```text
-separate review package: 350/350 strict rows, 0 residual rows,
-with locked standard record unchanged
+current version: 350/350 strict rows, 0 residual rows,
+with the original-version result unchanged
 ```
 
 Do not report it as:
 
 ```text
-locked standard flow = 350/350
+original version = 350/350
 ```
 
-The locked standard-flow record remains:
+The original-version result remains:
 
 ```text
-locked standard flow = 300/350 strict rows, 50 typed residual rows
+original version = 300/350 strict rows, 50 typed residual rows
 ```
 
 ## What This Directory Does Not Claim
 
 This directory does not claim:
 
-- the locked standard-flow record was overwritten;
+- the original-version result was overwritten;
 - the 327 checkpoint is a separate benchmark result;
 - ANS replaces EC/CG and REA;
 - provider failures can be treated as semantic failures or semantic successes;

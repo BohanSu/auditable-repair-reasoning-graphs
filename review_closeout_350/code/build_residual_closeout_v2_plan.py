@@ -801,7 +801,7 @@ def render_markdown(summary: dict[str, Any], pilot_rows: list[dict[str, Any]]) -
             "",
             "## Contribution Boundary",
             "",
-            "The intended contribution is not just applying a RAG evaluator. The PEARL-specific contribution is a residual closeout state machine that treats fixed-anchor CG, fresh REA, source tuples, and ANS as separate contracts, then selects candidates on the Pareto frontier rather than optimizing one metric at a time.",
+            "The intended contribution is not just applying a RAG evaluator. The PEARL-specific contribution is a current-version residual repair state machine that treats fixed-anchor CG, fresh REA, source tuples, and ANS as separate contracts, then selects candidates on the Pareto frontier rather than optimizing one metric at a time.",
             "",
             "## Next Execution Step",
             "",

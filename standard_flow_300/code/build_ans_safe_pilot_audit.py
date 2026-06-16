@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a provider-free ANS/coverage audit for one residual closeout row.
+"""Build a provider-free ANS/coverage audit for one current-version residual repair row.
 
 The audit is intentionally diagnostic. It reads existing ANS node results,
 graph JSON artifacts, and strict-merge candidate metadata, then writes a compact

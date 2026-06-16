@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build provider-free ANS-safe hybrid candidates for residual closeout rows.
+"""Build provider-free ANS-safe hybrid candidates for current-version residual repair rows.
 
 This batch generator is a conservative expansion of the single-row
 `materialize_ans_safe_step2_hybrid_candidate.py` pilot. It reads the current

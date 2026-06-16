@@ -534,8 +534,8 @@
     }
   ],
   "summary": {
-    "scope": "350-row review closeout package",
-    "locked_record_write": false,
+    "scope": "350-row current-version package",
+    "original_version_overwrite": false,
     "accounted_rows": 350,
     "strict_success_rows": 350,
     "typed_residual_rows": 0,
@@ -588,5 +588,5 @@
     "verified_merge_candidate_count": 23,
     "merged_row_count": 23
   },
-  "locked_record_write": false
+  "original_version_overwrite": false
 }

@@ -3,7 +3,7 @@
   "results": [
     {
       "result_id": "FULL",
-      "result_name": "Full PEARL standard flow",
+      "result_name": "Full PEARL original version",
       "location": "01_final_accounting/FULL_350_ACCOUNTING.csv",
       "rows_total": 350,
       "provider_failure_rows": 0,
@@ -160,7 +160,7 @@
       },
       "scope": "350-row subset excluding gpt_5_4 and gpt_5_5",
       "result_id": "FULL",
-      "result_name": "Full PEARL standard flow"
+      "result_name": "Full PEARL original version"
     },
     "A0": {
       "rows": 350,

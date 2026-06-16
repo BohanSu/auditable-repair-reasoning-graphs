@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the residual closeout design ledger for claim-level reconstruction."""
+"""Build the current-version residual repair design ledger for claim-level reconstruction."""
 
 from __future__ import annotations
 
@@ -322,7 +322,7 @@ def render_markdown(summary: dict[str, Any]) -> str:
             "",
             "## Design Constraints from Literature",
             "",
-            "The closeout module should not be a blind full-regeneration step. Recent factuality work consistently points to claim-level or atomic-unit verification, evidence-aware checking, and explicit separation between verifiable factual claims and structural text.",
+            "The current version module should not be a blind full-regeneration step. Recent factuality work consistently points to claim-level or atomic-unit verification, evidence-aware checking, and explicit separation between verifiable factual claims and structural text.",
             "",
         ]
     )

@@ -1,5 +1,5 @@
 result_id,result_name,rows_total,provider_failure_rows,strict_success,avg_EC_CG,avg_REA,delta_strict_vs_full,delta_EC_CG_vs_full,delta_REA_vs_full,status
-FULL,Full PEARL standard flow,350,0,300,0.896055452484024,0.9062380952380953,0,0.0,0.0,reference_350_benchmark
+FULL,Full PEARL original version,350,0,300,0.896055452484024,0.9062380952380953,0,0.0,0.0,reference_350_benchmark
 A0,Raw extraction only,350,0,1,0.5243861218146932,0.3222677368656719,-299,-0.3716693306693307,-0.5839703583724234,reported_350_benchmark
 A2,Root only / no iterative feedback,350,0,300,0.7978182056039199,0.8547236372585273,0,-0.09823724688010405,-0.051514457979567996,reported_350_benchmark
 A3,No root generation,350,0,300,0.7356219019076162,0.9047619047619048,0,-0.16043355057640774,-0.0014761904761905198,reported_350_benchmark

@@ -853,7 +853,7 @@ def write_markdown_packet(path: Path, payload: Dict[str, Any]) -> None:
         "",
         "## Scope",
         "",
-        "This packet is for the 350-row residual closeout only. It does not rewrite current 350 accounting; successful outputs must still pass fresh final CG=1.0 and REA=1.0 before merge.",
+        "This packet is for the 350-row current-version residual repair only. It does not rewrite current 350 accounting; successful outputs must still pass fresh final CG=1.0 and REA=1.0 before merge.",
         "",
         "## Selected Rows",
         "",

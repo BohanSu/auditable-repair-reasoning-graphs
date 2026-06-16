@@ -1,20 +1,20 @@
-# Review Closeout Documentation
+# Current Version Documentation
 
-This directory documents the review closeout state for the 350-row benchmark.
-The closeout is separate from the locked standard-flow record.
+This directory documents the current-version state for the 350-row benchmark.
+The current version is separate from the original-version result.
 
 ## Result Boundary
 
 | State | Strict rows | Residual rows | Role |
 |---|---:|---:|---|
-| locked standard flow | 300/350 | 50 | Reportable standard-flow record |
-| intermediate review checkpoint | 327/350 | 23 | Checkpoint before final review merge |
-| separate review package | 350/350 | 0 | Audited closeout package |
+| original version | 300/350 | 50 | Reportable original-version result |
+| intermediate review checkpoint | 327/350 | 23 | Checkpoint before final current-version merge |
+| separate current-version package | 350/350 | 0 | Audited current-version package |
 
-The locked standard-flow record is not overwritten. The review closeout keeps
-`locked_record_write = false`.
+The original-version result is not overwritten. The current version keeps
+`original_version_overwrite = false`.
 
-## Final Review State
+## Final Current-Version State
 
 | Metric | Value |
 |---|---:|
@@ -23,15 +23,15 @@ The locked standard-flow record is not overwritten. The review closeout keeps
 | final EC/CG average | 1.0 |
 | final REA average | 1.0 |
 | final merge rows | 23 |
-| review ANS | 0.8085113065326633 |
-| locked standard-flow ANS floor | 0.8033815290684022 |
+| current-version ANS | 0.8085113065326633 |
+| original-version ANS floor | 0.8033815290684022 |
 | ANS margin | +0.005129777464261132 |
 
 ## Documents
 
 - `REVIEW_CLOSEOUT_METHOD_DESIGN.md`: plain method design for the residual
-  review closeout and its relation to the locked 300/350 standard-flow record.
-- `DESIGN_DOCUMENT.md`: closeout framework and module design.
+  current version and its relation to the original 300/350 state.
+- `DESIGN_DOCUMENT.md`: current-version framework and module design.
 - `VALIDATION_SUMMARY.md`: validation results and acceptance contract.
 - `REPRODUCTION_COMMANDS.md`: commands for checking the lightweight release and
   rerunning scripts when external artifacts are available.
@@ -49,7 +49,7 @@ The locked standard-flow record is not overwritten. The review closeout keeps
 
 ## Acceptance Contract
 
-Every final review merge row must satisfy fresh `EC/CG = 1.0`, fresh
+Every final current-version merge row must satisfy fresh `EC/CG = 1.0`, fresh
 `REA = 1.0`, no provider or judge contamination, row-level ANS non-regression,
-and inclusion in the controller-filtered merge set. The full review state must
+and inclusion in the controller-filtered merge set. The full current-version state must
 also pass the batch ANS guard.

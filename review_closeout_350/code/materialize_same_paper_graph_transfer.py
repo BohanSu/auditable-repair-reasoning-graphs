@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Materialize same-paper graph transfer candidates for residual closeout.
+"""Materialize same-paper graph transfer candidates for current-version residual repair.
 
 This is a provider-free staging utility. It takes a verified graph_spec for one
 paper and re-stages the same graph against other residual rows for the same

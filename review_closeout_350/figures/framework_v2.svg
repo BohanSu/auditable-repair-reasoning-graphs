@@ -54,19 +54,19 @@
   <rect class="bg" width="1800" height="1120"/>
 
   <text class="title" x="900" y="55" text-anchor="middle">PEARL 350/350 Closure Framework</text>
-  <text class="subtitle" x="900" y="88" text-anchor="middle">Original standard flow, plus the residual closeout layer that made the last rows close without ANS regression</text>
+  <text class="subtitle" x="900" y="88" text-anchor="middle">Original original version, plus the current-version residual repair layer that made the last rows close without ANS regression</text>
 
   <!-- Legend -->
   <rect x="1280" y="32" width="22" height="14" class="blue-fill blue-stroke" stroke-width="2"/>
-  <text class="tiny muted" x="1310" y="45">original standard flow</text>
+  <text class="tiny muted" x="1310" y="45">original original version</text>
   <rect x="1280" y="58" width="22" height="14" class="amber-fill amber-stroke" stroke-width="2"/>
-  <text class="tiny muted" x="1310" y="71">new residual closeout modules</text>
+  <text class="tiny muted" x="1310" y="71">new current-version residual repair modules</text>
   <rect x="1280" y="84" width="22" height="14" class="orange-fill orange-stroke" stroke-width="2"/>
   <text class="tiny muted" x="1310" y="97">strict evaluation gates</text>
 
   <!-- Lanes -->
   <rect x="55" y="130" width="1690" height="235" class="lane blue-fill blue-stroke"/>
-  <text class="lane-title blue-text" x="88" y="164">A. Original Standard Flow</text>
+  <text class="lane-title blue-text" x="88" y="164">A. Original Original Version</text>
 
   <rect x="55" y="410" width="1690" height="285" class="lane amber-fill amber-stroke"/>
   <text class="lane-title amber-text" x="88" y="444">B. Residual Closeout Control Layer</text>
@@ -75,7 +75,7 @@
   <text class="lane-title orange-text" x="88" y="774">C. Verification, Accounting, and Closure Layer</text>
 
   <!-- Standard flow boxes -->
-  <g id="standard-flow">
+  <g id="original-version">
     <rect x="105" y="195" width="235" height="125" class="box blue-fill blue-stroke"/>
     <text class="num blue-text" x="126" y="226">1</text>
     <text class="box-title blue-text" x="222" y="232" text-anchor="middle">Raw Graph</text>
@@ -191,9 +191,9 @@
     <text class="tiny muted" x="553" y="925" text-anchor="middle">23 ready candidates only</text>
 
     <rect x="755" y="825" width="245" height="125" class="box amber-fill amber-stroke"/>
-    <text class="box-title amber-text" x="878" y="867" text-anchor="middle">Review</text>
+    <text class="box-title amber-text" x="878" y="867" text-anchor="middle">Current</text>
     <text class="box-title amber-text" x="878" y="894" text-anchor="middle">State</text>
-    <text class="tiny muted" x="878" y="925" text-anchor="middle">locked write = false</text>
+    <text class="tiny muted" x="878" y="925" text-anchor="middle">original overwrite = false</text>
 
     <rect x="1080" y="825" width="245" height="125" class="box orange-fill orange-stroke"/>
     <text class="box-title orange-text" x="1203" y="867" text-anchor="middle">Batch ANS Guard</text>
@@ -226,6 +226,6 @@
   <!-- Explanation strip -->
   <rect x="105" y="1030" width="1560" height="55" rx="18" fill="#0b0f12" stroke="#2c3b48" stroke-width="2"/>
   <text class="box-sub muted" x="130" y="1064">
-    Read left to right. The blue lane is the locked standard flow. The amber/orange lanes are the closeout layer: type failures, choose repair lanes, verify fresh 1/1, guard ANS, build a review state, then run the batch ANS guard.
+    Read left to right. The blue lane is the original version. The amber/orange lanes are the current-version layer: type failures, choose repair lanes, verify fresh 1/1, guard ANS, build a current-version state, then run the batch ANS guard.
   </text>
 </svg>

@@ -5,8 +5,8 @@ This checklist records the GitHub-readiness checks for this package.
 ## Package Scope
 
 - Release root: `github_ready/pearl_300_350_code_release_20260608`
-- Locked standard-flow code set: `standard_flow_300`
-- Review closeout code set: `review_closeout_350`
+- Original-version code set: `standard_flow_300`
+- Current-version code set: `review_closeout_350`
 - Full run directories are intentionally excluded.
 - No soft links are used.
 
@@ -14,13 +14,13 @@ This checklist records the GitHub-readiness checks for this package.
 
 | State | Evidence | Verified value |
 |---|---|---:|
-| locked strict rows | `standard_flow_300/results/STRICT_ACCEPTED_350.csv` | 300 |
-| locked typed residual rows | `standard_flow_300/results/TYPED_RESIDUAL_350.csv` | 50 |
-| review accounting rows | `review_closeout_350/results/REVIEW_FULL_350_ACCOUNTING.csv` | 350 |
-| review non-strict rows | `review_closeout_350/results/REVIEW_FULL_350_ACCOUNTING.csv` | 0 |
+| original-version strict rows | `standard_flow_300/results/STRICT_ACCEPTED_350.csv` | 300 |
+| original-version typed residual rows | `standard_flow_300/results/TYPED_RESIDUAL_350.csv` | 50 |
+| current-version accounting rows | `review_closeout_350/results/REVIEW_FULL_350_ACCOUNTING.csv` | 350 |
+| current-version non-strict rows | `review_closeout_350/results/REVIEW_FULL_350_ACCOUNTING.csv` | 0 |
 | final merge verification rows | `review_closeout_350/results/STRICT_MERGE_CANDIDATE_VERIFICATION.csv` | 23 |
-| review locked-record write | `review_closeout_350/results/REVIEW_FULL_350_SUMMARY.json` | false |
-| review batch ANS guard | `review_closeout_350/results/REVIEW_BATCH_ANS_GUARD.json` | passed |
+| current-version overwrites original version | `review_closeout_350/results/REVIEW_FULL_350_SUMMARY.json` | false |
+| current-version batch ANS guard | `review_closeout_350/results/REVIEW_BATCH_ANS_GUARD.json` | passed |
 
 ## Content Checks
 
