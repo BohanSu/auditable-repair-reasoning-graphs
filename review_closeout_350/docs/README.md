@@ -29,13 +29,17 @@ The original-version result is not overwritten. The current version keeps
 
 ## Documents
 
-- `REVIEW_CLOSEOUT_METHOD_DESIGN.md`: plain method design for the residual
-  current version and its relation to the original 300/350 state.
-- `DESIGN_DOCUMENT.md`: current-version framework and module design.
+- `METHOD_ARCHITECTURE.md`: current-version pipeline, controller logic, repair
+  lanes, guard layers, and script anchors.
+- `ACCEPTED_RUN_SETTINGS.md`: locked claim settings and recoverable closeout defaults.
+- `RUN_CONFIGURATION_MATRIX.md`: script-by-script configuration inventory for the released closeout package.
 - `VALIDATION_SUMMARY.md`: validation results and acceptance contract.
+- `FILE_MAP.md`: public file inventory for this acceptance package.
 - `REPRODUCTION_COMMANDS.md`: commands for checking the lightweight release and
   rerunning scripts when external artifacts are available.
 - `SOURCE_POINTERS.md`: external artifact boundary and release policy.
+
+The shared source snapshot for this release lives in `../../code_snapshot/`.
 
 ## Key Result Files
 

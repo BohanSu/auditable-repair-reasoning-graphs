@@ -81,6 +81,40 @@ The final 23 rows are not silently blended into the original-version result.
 They are represented in a separate current-version package with controller,
 fresh-evaluation, merge-audit, and ANS-guard evidence.
 
+## Method Split
+
+The release keeps one shared code snapshot, but the audited logic is split into
+two processing paths.
+
+Original version:
+
+```text
+raw graph extraction
+-> structure repair
+-> PEARL semantic repair
+-> fresh EC/CG + REA evaluation
+-> strict accounting
+-> 300/350
+```
+
+Current version:
+
+```text
+50 typed residual rows
+-> failure-typed controller
+-> targeted repair lanes
+-> candidate preflight
+-> fresh EC/CG + REA evaluation
+-> row-level ANS guard
+-> strict merge review
+-> batch ANS guard
+-> 350/350
+```
+
+The `327/350` checkpoint is part of the current-version path. It is the state
+after earlier residual repairs have been accepted and before the final 23-row
+merge review is closed.
+
 ## Residual Failure Types
 
 The original 300/350 result leaves 50 residual rows:

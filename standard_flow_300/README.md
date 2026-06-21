@@ -18,9 +18,9 @@ set and are recorded as typed residuals. In this state, the residual count is
 
 ## Contents
 
-- `code/`: Python source snapshot for graph evaluation, residual extraction,
-  repair packet construction, ANS checks, merge proposal construction, and
-  figure generation.
+- `../code_snapshot/`: shared Python source snapshot for graph evaluation,
+  residual extraction, repair packet construction, ANS checks, merge proposal
+  construction, and figure generation.
 - `results/`: public result summaries and per-record tables for the 300/350
   original-version state.
 - `docs/`: scope, metric, and reporting notes for this state.
@@ -30,9 +30,14 @@ set and are recorded as typed residuals. In this state, the residual count is
 
 1. `docs/STANDARD_FLOW_METHOD_DESIGN.md`: method design and module roles.
 2. `docs/CURRENT_RESULT.md`: 300/350 result summary and residual breakdown.
-3. `docs/SCOPE_AND_REPORTING.md`: how to report this directory without
+3. `docs/ACCEPTED_RUN_SETTINGS.md`: locked original-version claim settings and
+   recoverable runner defaults.
+4. `docs/RUN_CONFIGURATION_MATRIX.md`: script-by-script configuration matrix
+   for this released package.
+5. `docs/SCOPE_AND_REPORTING.md`: how to report this directory without
    conflating it with the current-version package.
-4. `docs/FILE_MAP.md`: what each public result file contains.
+6. `docs/FILE_MAP.md`: what each public result file contains.
+7. `../code_snapshot/README.md`: shared script inventory for both audited states.
 
 ## Key Result Files
 

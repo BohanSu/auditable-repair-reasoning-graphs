@@ -7,7 +7,7 @@ evidence, and evaluator artifacts expected by the source scripts.
 Run commands from the release root:
 
 ```bash
-cd github_ready/pearl_300_350_code_release_20260608
+cd deliverables/github_ready/pearl_300_350_code_release_20260608
 ```
 
 ## Check Original-Version Summary
@@ -150,7 +150,7 @@ margin = 0.005129777464261132
 
 ## Provider-Calling Scripts
 
-Some scripts in `code/` can call external providers. They require credentials in
-environment variables outside the repository. Provider or quota errors should be
-treated as execution failures, not as semantic graph failures, and should not be
-merged into review results.
+Some scripts in `code_snapshot/` can call external providers. They require
+credentials in environment variables outside the repository. Provider or quota
+errors should be treated as execution failures, not as semantic graph failures,
+and should not be merged into review results.

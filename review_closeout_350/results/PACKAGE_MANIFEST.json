@@ -2,6 +2,8 @@
   "package": "current_version_350",
   "release_policy": "lightweight GitHub package; full run directories are external artifacts",
   "contains_soft_links": false,
+  "contains_duplicated_code_snapshot": false,
+  "shared_code_snapshot": "../code_snapshot",
   "original_version_overwrite": false,
   "result_boundary": {
     "original_version": "300/350",
@@ -9,9 +11,8 @@
     "final_merge_rows": 23
   },
   "directories": {
-    "code": "full source-code snapshot copied as real files",
     "results": "GitHub-safe summary and audit tables",
-    "docs": "public design, validation, and reproduction notes",
+    "docs": "public architecture, validation, and reproduction notes",
     "figures": "final vector overview"
   }
 }

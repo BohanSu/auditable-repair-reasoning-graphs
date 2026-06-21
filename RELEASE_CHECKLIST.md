@@ -4,9 +4,12 @@ This checklist records the GitHub-readiness checks for this package.
 
 ## Package Scope
 
-- Release root: `github_ready/pearl_300_350_code_release_20260608`
-- Original-version code set: `standard_flow_300`
-- Current-version code set: `review_closeout_350`
+- Release root: `deliverables/github_ready/pearl_300_350_code_release_20260608`
+- Shared code snapshot: `code_snapshot/`
+- Original-version result state: `standard_flow_300/`
+- Current-version result state: `review_closeout_350/`
+- Duplicate `code/` copies were removed; both states now point to the same
+  exported source snapshot.
 - Full run directories are intentionally excluded.
 - No soft links are used.
 
@@ -24,12 +27,12 @@ This checklist records the GitHub-readiness checks for this package.
 
 ## Content Checks
 
-- Package size: about 3.9 MB.
-- File count: 174 files.
-- Python source files: 63 in `standard_flow_300/code`, 63 in `review_closeout_350/code`.
-- Method-design docs are present in both public code sets:
+- Package size: about 2.2 MB.
+- File count: 110 files.
+- Python source files: 63 in `code_snapshot/`.
+- Canonical method-design docs are present for both audited states:
   `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` and
-  `review_closeout_350/docs/REVIEW_CLOSEOUT_METHOD_DESIGN.md`.
+  `review_closeout_350/docs/METHOD_ARCHITECTURE.md`.
 - No files larger than 10 MB.
 - No `.pyc`, `.DS_Store`, `.log`, `.tmp`, `.bak`, or editor backup files in the release directory.
 - No symlinks in the release directory.
@@ -43,8 +46,7 @@ The code snapshots were syntax-checked with:
 ```bash
 PYTHONPYCACHEPREFIX="$(mktemp -d)" \
 python3 -m compileall -q \
-  github_ready/pearl_300_350_code_release_20260608/standard_flow_300/code \
-  github_ready/pearl_300_350_code_release_20260608/review_closeout_350/code
+  deliverables/github_ready/pearl_300_350_code_release_20260608/code_snapshot
 ```
 
 The syntax check passed. `PYTHONPYCACHEPREFIX` was used so bytecode was not

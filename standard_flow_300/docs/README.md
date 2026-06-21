@@ -7,8 +7,12 @@ This directory documents the PEARL original-version state for the fixed
 
 1. `STANDARD_FLOW_METHOD_DESIGN.md`: method design, module roles, and data path.
 2. `CURRENT_RESULT.md`: 300/350 summary and residual breakdown.
-3. `SCOPE_AND_REPORTING.md`: reporting language and metric boundaries.
-4. `FILE_MAP.md`: public file inventory.
+3. `ACCEPTED_RUN_SETTINGS.md`: locked claim settings and recoverable batch defaults.
+4. `RUN_CONFIGURATION_MATRIX.md`: script-by-script parameter inventory for the released original-version package.
+5. `SCOPE_AND_REPORTING.md`: reporting language and metric boundaries.
+6. `FILE_MAP.md`: public file inventory.
+
+The shared source snapshot for this release lives in `../../code_snapshot/`.
 
 The benchmark contains five model groups with 70 input records each:
 

@@ -1,7 +1,8 @@
 # PEARL Current Version 350/350 Code Set
 
-This directory contains the code snapshot and lightweight audit evidence for the
-350-row current-version state.
+This directory contains the lightweight audit evidence for the 350-row
+current-version state. The shared Python source snapshot for this state lives in
+`../code_snapshot/`.
 
 ## What This State Means
 
@@ -19,22 +20,23 @@ original-version overwrite: false
 
 ## Contents
 
-- `code/`: current-version repair and audit Python source snapshot.
 - `results/`: controller queue, strict merge candidates, merge audit,
   current-version accounting state, and ANS guard.
-- `docs/`: public design document, validation summary, reproduction notes, and
-  source-boundary notes.
+- `docs/`: public architecture notes, validation summary, reproduction notes,
+  and source-boundary notes.
 - `figures/`: final vector overview.
 
 ## Recommended Reading Order
 
-1. `docs/REVIEW_CLOSEOUT_METHOD_DESIGN.md`: how the current-version residual repair works and
-   why it is separate from the original-version result.
-2. `docs/DESIGN_DOCUMENT.md`: detailed current-version framework and acceptance
-   contract.
-3. `docs/VALIDATION_SUMMARY.md`: validation results for the 350/350 current-version state.
-4. `docs/REPRODUCTION_COMMANDS.md`: lightweight audit commands.
-5. `docs/SOURCE_POINTERS.md`: included/excluded artifact boundary.
+1. `docs/METHOD_ARCHITECTURE.md`: current-version pipeline, stage boundaries,
+   and main script anchors.
+2. `docs/ACCEPTED_RUN_SETTINGS.md`: locked claim settings and recoverable closeout defaults.
+3. `docs/RUN_CONFIGURATION_MATRIX.md`: script-by-script parameter matrix for the released closeout package.
+4. `docs/VALIDATION_SUMMARY.md`: validation results for the 350/350 current-version state.
+5. `docs/FILE_MAP.md`: public file inventory for the acceptance package.
+6. `docs/REPRODUCTION_COMMANDS.md`: lightweight audit commands.
+7. `docs/SOURCE_POINTERS.md`: included/excluded artifact boundary.
+8. `../code_snapshot/README.md`: shared source inventory for both audited states.
 
 ## Key Result Files
 

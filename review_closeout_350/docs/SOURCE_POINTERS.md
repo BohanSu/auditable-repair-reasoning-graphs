@@ -5,7 +5,7 @@ tables. It does not include the full per-paper run artifacts.
 
 ## Included
 
-- Python source snapshots under `code/`.
+- Shared Python source snapshot under `../../code_snapshot/`.
 - Public summary JSON files and slim row-level CSV files under `results/`.
 - Lightweight figures under `figures/`.
 - Public documentation under `docs/`.

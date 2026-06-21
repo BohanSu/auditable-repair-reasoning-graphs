@@ -1,8 +1,8 @@
 # Auditable Repair for Scientific Reasoning Graph Extraction
 
 This is a GitHub-ready code and audit release for the PEARL 350-row benchmark.
-It keeps the source-code snapshots and lightweight result evidence needed to
-explain two distinct states:
+It keeps one shared Python source snapshot and two separate audited result
+states:
 
 - `standard_flow_300/`: the original-version result. It contains 300 strict
   successes out of 350 rows, 50 typed residual rows, and zero provider-failure
@@ -18,22 +18,25 @@ original-version result; the second is a separately audited current-version stat
 ## Layout
 
 ```text
+code_snapshot/
+  Shared Python source snapshot used by both audited states
+
 standard_flow_300/
-  code/       Original-version and residual-audit Python source snapshot
   results/    GitHub-safe result summaries and row-level tables
   docs/       Public scope, metric, and reporting notes
   figures/    Lightweight figures for the 350-row benchmark
 
 review_closeout_350/
-  code/       Closeout Python source snapshot
   results/    Controller, merge, current-version accounting, and ANS-guard evidence
-  docs/       Public design, validation, and reproduction notes
+  docs/       Public architecture, validation, and reproduction notes
   figures/    Final vector framework overview
 ```
 
-The full run directories, provider logs, local caches, and machine-specific
-paths are intentionally excluded. The release contains real files only; no soft
-links are used.
+The two old `code/` copies were identical. They have been collapsed into
+`code_snapshot/` so the release has one canonical source snapshot instead of two
+parallel copies. The full run directories, provider logs, local caches, and
+machine-specific paths are intentionally excluded. The release contains real
+files only; no soft links are used.
 
 ## Result Boundary
 
@@ -54,15 +57,50 @@ coverage/grounding and reasoning-edge validity. `ANS` is a FActScore-style
 atomic node support audit used as a grounding guard; it is not a replacement for
 the strict EC/CG and REA gate.
 
+## Method Architecture
+
+The package has one evaluation contract but two distinct processing paths.
+
+Original version:
+
+```text
+raw graph extraction
+-> structure repair
+-> PEARL semantic repair
+-> fresh EC/CG + REA evaluation
+-> strict accounting
+-> 300/350
+```
+
+Current version:
+
+```text
+50 typed residual rows
+-> failure-typed controller
+-> targeted repair lanes
+-> candidate preflight
+-> fresh EC/CG + REA evaluation
+-> row-level ANS guard
+-> strict merge review
+-> batch ANS guard
+-> 350/350
+```
+
+The intermediate `327/350` checkpoint belongs to the current-version path. It
+explains why the final merge set contains 23 rows; it is not a third benchmark
+claim.
+
 ## Main Entry Points
 
 - Read `METRICS_AND_WORKFLOW.md` first for the metric definitions and stage
   logic.
+- Read `code_snapshot/README.md` for the shared source inventory and script
+  grouping.
 - Read `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` for the original-version method: raw graph extraction, structure repair, PEARL semantic
   repair, fresh EC/CG+REA evaluation, and accounting.
-- Read `review_closeout_350/docs/REVIEW_CLOSEOUT_METHOD_DESIGN.md` for the
-  current-version residual repair method: controller routing, targeted residual repair,
-  fresh evaluation, merge review, and ANS guard.
+- Read `review_closeout_350/docs/METHOD_ARCHITECTURE.md` for the
+  current-version residual repair method: controller routing, targeted repair
+  lanes, fresh evaluation, merge review, and ANS guard.
 - Use `standard_flow_300/results/FULL_350_SUMMARY.json` for the original 300/350 summary.
 - Use `review_closeout_350/results/REVIEW_FULL_350_SUMMARY.json` for the
   350/350 current-version summary.
