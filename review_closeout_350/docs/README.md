@@ -33,7 +33,7 @@ The original-version result is not overwritten. The current version keeps
   lanes, guard layers, and script anchors.
 - `ACCEPTED_RUN_SETTINGS.md`: locked claim settings and recoverable closeout defaults.
 - `RUN_CONFIGURATION_MATRIX.md`: script-by-script configuration inventory for the released closeout package.
-- `PARAMETER_REFERENCE.md`: exhaustive CLI parameter reference for the released `350/350` pipeline scripts.
+- `PARAMETER_REFERENCE.md`: exhaustive script-by-script parameter and fixed-setting reference for the released `350/350` current-version path.
 - `VALIDATION_SUMMARY.md`: validation results and acceptance contract.
 - `FILE_MAP.md`: public file inventory for this acceptance package.
 - `REPRODUCTION_COMMANDS.md`: commands for checking the lightweight release and

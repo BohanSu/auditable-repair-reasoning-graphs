@@ -32,7 +32,7 @@ original-version overwrite: false
    and main script anchors.
 2. `docs/ACCEPTED_RUN_SETTINGS.md`: locked claim settings and recoverable closeout defaults.
 3. `docs/RUN_CONFIGURATION_MATRIX.md`: script-by-script parameter matrix for the released closeout package.
-4. `docs/PARAMETER_REFERENCE.md`: full CLI parameter reference for the `350/350` pipeline scripts.
+4. `docs/PARAMETER_REFERENCE.md`: full script-by-script parameter and fixed-setting reference for the `350/350` current-version path.
 5. `docs/VALIDATION_SUMMARY.md`: validation results for the 350/350 current-version state.
 6. `docs/FILE_MAP.md`: public file inventory for the acceptance package.
 7. `docs/REPRODUCTION_COMMANDS.md`: lightweight audit commands.
