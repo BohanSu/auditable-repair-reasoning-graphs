@@ -23,6 +23,7 @@ directory. It describes the lightweight acceptance package only.
 | `docs/METHOD_ARCHITECTURE.md` | Canonical current-version method architecture. |
 | `docs/ACCEPTED_RUN_SETTINGS.md` | Locked claim settings and recoverable closeout defaults. |
 | `docs/RUN_CONFIGURATION_MATRIX.md` | Script-by-script configuration inventory for the closeout package. |
+| `docs/PARAMETER_REFERENCE.md` | Exhaustive CLI parameter reference for the released `350/350` pipeline scripts. |
 | `docs/VALIDATION_SUMMARY.md` | Final acceptance checks and validated counts. |
 | `docs/FILE_MAP.md` | This public file inventory. |
 | `docs/REPRODUCTION_COMMANDS.md` | Lightweight audit commands for the public package. |
