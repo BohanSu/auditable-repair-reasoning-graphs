@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=qwen3_5_397b_a17b:s41467-025-56814-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The research introduces a miniaturized, aqueous-compatible optoelectrochemical synapse—a single-component n-type OMIEC (p(C2F-z)) organic electrochemical transistor whose light-absorbing, ion-tunable channel converts multispectral (UV-visible-NIR) optical and electrical stimuli into adjustable synaptic responses—thereby emulating biological synaptic plasticity and enabling in-sensor neuromorphic functions such as.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(19,0,0) Here we develop an organic ion-tunable optoelectrochemical synapse by using a single-component OMIEC as the OECT channel that responds to both light and voltage stimuli applied through an aqueous electrolyte (Fig. 1a)."];
+  "E2" [label="(7,0,0) Organic mixed ionic-electronic charge conductors (OMIECs) are ideal electronic materials for developing artificial circuits as they can emulate the ion-mediated mechanisms of biological synapses  ,  ,  ,  ,  ,."];
+  "E3" [label="(20,0,0) The OMIEC we designed is an n-type, all electron-accepting copolymer consisting of bisistain-lactone and bithiazole (p(C2F-z)) (Fig. 1b), synthesized through the green Aldol polymerization technique."];
+  "E4" [label="(9,0,0) Organic electrochemical transistors (OECTs) leverage the mixed conductivity of OMIECs by incorporating their solution-processed films in microscale channels and translating ionic, biological information in aqueous media into amplified electronic signals  ,."];
+  "E5" [label="(6,0,0) Rendering these devices light responsive requires additional circuit elements whose operational mechanisms are fundamentally different than those found in biological systems."];
+  "E6" [label="(4,0,0) Optoelectronic synapses have been instrumental in the progression of such neuromorphic devices that can decode images  ,  ,  or enable artificial vision."];
+  "E7" [label="(17,0,0) Furthermore, mimicking the human visual system demands multi-functional materials that are responsive to both light and electrical stimuli, as visual memory and recognition rely on photoreceptor cells that capture visual information and afferent neurons tha."];
+  "E8" [label="(16,0,0) Moreover, while current organic synaptic transistors have demonstrated light signal processing capability, they can process information at only one wavelength or a restricted range of wavelengths  ,  ,."];
+  "E9" [label="(11,0,0) OECTs have been shown to exhibit both long-term and short-term plasticity behavior, with high potential for integration as artificial synapses  ,."];
+  "E10" [label="(1,0,0) The conversion of external information into biological signals by the sensory nervous system is at the core of how living organisms interact with their environment  ,  ,."];
+  "E11" [label="(25,0,0) By building a synaptic array based on an 8 \\(\\times\\) 8 array of these devices on a 9.4 \\(\\times\\) 6.6 mm 2 area, we show this aquoues electrolyte compatible device’s capability for image recognition, preprocessing, and memory."];
+  "E12" [label="(27,0,0) Lastly, our synaptic device performs temporal summation under high-frequency electrical pulses, which we leverage for motion recognition."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+}

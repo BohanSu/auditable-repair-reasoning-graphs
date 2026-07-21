@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56729-6
+  rankdir="TB";
+  "C4" [label="(0,0,0) abduction-reasoning: Observed phenomenon suppressive immune functions in RRP (S9), and knowledge that immunotherapy induces missing cytotoxic response (I4), so HPV-specific immunotherapy has therapeutic potential to control/eliminate papillomas."];
+  "C5" [label="(0,0,0) induction-reasoning: From specific cases of prior DNA immunotherapies inducing potent cytotoxic T-cell responses and infiltration (S10), and common pattern of immune-based impact from other platforms (S11), so DNA immunotherapies are promising for RRP. (Referenced in I5 rule.)"];
+  "I4" [label="(0,0,0) Knowledge: If patients exhibit suppressive/regulatory immune functions instead of cytotoxic response against HPV, then HPV-specific immunotherapy has therapeutic potential to control/eliminate papillomas by generating immunity."];
+  "NROOT" [label="(0,0,0) This paper evaluates INO-3107, a DNA immunotherapy encoding HPV-6 and HPV-11 antigens plus an IL-12 adjuvant, as a clinical treatment for recurrent respiratory papillomatosis by reporting completed Phase 1/2 safety, efficacy, and HPV-specific immune-response results.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R5" [label="(0,0,0) INO-3107 is a DNA immunotherapy encoding antigens from HPV-6 and HPV-11 together with an IL-12 immune adjuvant, placing it within the class of DNA immunotherapies considered promising for recurrent respiratory papillomatosis."];
+  "R6" [label="(0,0,0) The study reports full results from a completed Phase 1/2 trial of INO-3107 for recurrent respiratory papillomatosis, including safety, efficacy, and HPV-specific immune-response findings."];
+  "S10" [label="(10,0,0) Currently there is our previous studies of DNA immunotherapies against HPV demonstrated induction of potent immune responses (cytotoxic T-cells, CD8+ infiltration) in HPV-6 RRP pilot trial and other HPV diseases."];
+  "S11" [label="(11,0,0) Common pattern: Other groups conducted clinical studies of RRP treatment via antibody and T-cell platforms with results supporting immune-based impact on disease state."];
+  "S12" [label="(12,0,0) Currently there is INO-3107 is a DNA immunotherapy encoding antigens from both HPV-6 and HPV-11 as well as encoding for an IL-12 immune adjuvant."];
+  "S13" [label="(13,0,0) deduction-reasoning: Currently there is INO-3107 is the candidate for the trial (C6), and if the background establishes the need for improved treatment with promising DNA immunotherapy (I6), so we report full study results from a completed Phase 1/2 trial demonstrating the safety, efficacy, and immune responses of INO-3107."];
+  "S9" [label="(9,0,0) Observed phenomenon: Patients suffering from RRP exhibit suppressive or regulatory immune-related functions within papillomas as opposed to mounting a cytotoxic response against HPV infected cells."];
+  "S9" -> "C4" [label="abduction-phenomenon"];
+  "I4" -> "C4" [label="abduction-knowledge"];
+  "S10" -> "C5" [label="induction-case"];
+  "S11" -> "C5" [label="induction-common"];
+  "S12" -> "R5" [label="induction-case"];
+  "C5" -> "R5" [label="induction-common"];
+  "S13" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "C4" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

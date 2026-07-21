@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56697-x
+  rankdir="TB";
+  "N1" [label="(5,1,0) Currently an activator-containing RNAP-promoter open complex (RPo) is referred to as a transcription activation complex (TAC)."];
+  "N10" [label="(40,1,0) deduction-reasoning: Given if PhoP specifically recognizes promoter PHO boxes as a dimer, then PhoP functions through diverse and complex transcription activation mechanisms, and currently structural comparisons show that PhoP specifically recognizes promoter PHO boxes as a dimer, therefore PhoP functions through diverse and complex transcription activation mechanisms."];
+  "N11" [label="(0,0,0) If competitive binding of the PhoP dimer to the upstream PHO box significantly distorts the DNA double-strands, then this distortion creates substantial steric hinderances to impede the binding of a third GlnR dimer."];
+  "N12" [label="(42,2,0) Currently competitive binding of the PhoP dimer to the upstream PHO box significantly distorts the DNA double-strands at the following spacer."];
+  "N2" [label="(0,0,0) Complexes formed by repressors inhibiting transcription are termed transcription repression complexes (TRC)."];
+  "N3" [label="(8,1,0) induction-reasoning: Given an activator-containing RNAP-promoter open complex (RPo) is referred to as a transcription activation complex (TAC), and complexes formed by repressors inhibiting transcription are termed transcription repression complexes (TRC), therefore a transcription repression complex (TRC) is the complex formed when transcription repressors inhibit transcription initiation."];
+  "N6" [label="(14,2,0) Mtb PhoP remodels the transcriptional network of Mycobacterium tuberculosis (Mtb)."];
+  "N8" [label="(37,1,0) Currently structural comparisons show that PhoP specifically recognizes promoter PHO boxes as a dimer."];
+  "N9" [label="(0,0,0) If PhoP specifically recognizes promoter PHO boxes as a dimer, then PhoP functions through diverse and complex transcription activation mechanisms."];
+  "NROOT" [label="(0,0,0) The study aims to use cryo-EM and structural analyses of Mycobacterium tuberculosis PhoP with RNA polymerase at PHO-box-containing promoters, together with modeling of competition with the nitrogen regulator GlnR on upstream DNA, to test how PhoP oligomeric assemblies can promote open-complex formation by substituting for σ^A –35-element contacts and can repress GlnR-dependent regulation by distorting DNA, thereby clarifying dual mechanisms of this OmpR/PhoB-family response regulator.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When structural or mechanistic evidence links a bacterial transcription factor to both promoter activation and interference with another regulator's DNA binding, it motivates studying how that factor switches between activation and repression."];
+  "R2" [label="(0,0,0) TAC and TRC terminology distinguishes RNAP-promoter complexes associated with transcription activation from complexes associated with transcription repression."];
+  "R3" [label="(0,0,0) Because Mtb PhoP remodels the transcriptional network of Mycobacterium tuberculosis and TAC/TRC terminology frames activation and repression complexes, PhoP's possible roles in activation and repression are a motivated subject for mechanistic investigation."];
+  "R5" [label="(0,0,0) Competitive binding of a PhoP dimer to the upstream PHO box distorts the adjacent DNA double strands in a way expected to create steric hindrance that impedes binding of a third GlnR dimer."];
+  "R6" [label="(0,0,0) PhoP is therefore implicated in both PHO-box-dependent transcription activation mechanisms and upstream-DNA distortion that can interfere with GlnR binding."];
+  "R7" [label="(0,0,0) The combination of PhoP-associated activation mechanisms and PhoP-mediated interference with GlnR binding supports investigating PhoP as a dual transcriptional regulator in Mycobacterium tuberculosis."];
+  "N1" -> "N3" [label="induction-case"];
+  "N2" -> "N3" [label="induction-common"];
+  "N9" -> "N10" [label="deduction-rule"];
+  "N8" -> "N10" [label="deduction-case"];
+  "N1" -> "R2" [label="induction-case"];
+  "N2" -> "R2" [label="induction-common"];
+  "N6" -> "R3" [label="abduction-phenomenon"];
+  "R2" -> "R3" [label="abduction-knowledge"];
+  "N11" -> "R5" [label="deduction-rule"];
+  "N12" -> "R5" [label="deduction-case"];
+  "N10" -> "R6" [label="induction-case"];
+  "R5" -> "R6" [label="induction-common"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "R3" -> "R7" [label="abduction-knowledge"];
+  "N3" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56842-6
+  rankdir="TB";
+  "Confirmed_Models_con" [label="(0,0,0) induction: Given Marks_Proposal_con and S15, therefore both models confirmed in core-shell decahedral MTPs with extra high-index planes."];
+  "Distortion_con" [label="(0,0,0) deduction: Given S6 and S7, therefore internal distortion is required to form MTPs."];
+  "Importance_con" [label="(0,0,0) induction: Given S1 and S2, therefore MTPs with fivefold symmetry are of significant scientific interest."];
+  "Marks_Proposal_con" [label="(0,0,0) induction: Given S13 and S14, therefore Ino and Marks proposed extra planes to reduce surface energy by exposing (100) faces or re-entrant planes."];
+  "NROOT" [label="(0,0,0) This paper proposes and demonstrates, using three-dimensional atomic coordinates of Au-Pd icosahedral multiply twinned nanoparticles, that the fivefold angular deficiency is accommodated by a Janus-like strain-relief mechanism: edge dislocations and amorphization in selected tetrahedra on one hemisphere compensate lattice misfit while the opposite hemisphere remains close to ideal fcc order.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A direct three-dimensional atomic-coordinate reconstruction can link the long-standing problem of local strain in fivefold twinned icosahedra to specific defect and disorder mechanisms that compensate inherent lattice misfit."];
+  "R27" [label="(0,0,0) For Au-Pd fivefold twinned icosahedral nanoparticles, determining three-dimensional atomic coordinates supplies the structural information needed to connect lattice-misfit strain with the reported compensation by edge dislocations and amorphization of tetrahedral regions."];
+  "Recent_3D_Studies_con" [label="(0,0,0) induction: Given S25 and S26, therefore recent studies show qualitative 3D defect observation in MTPs."];
+  "S1" [label="(1,0,0) Twinning of tetrahedra to form decahedra or icosahedra with fivefold symmetry is common in multiply twinned particles (MTPs)."];
+  "S13" [label="(13,0,0) Ino and Marks proposed extra crystal planes on the classical decahedron models to reduce surface energy."];
+  "S14" [label="(14,0,0) They achieved the energy balance either by exposing more (100) faces or introducing re-entrant planes on the twin boundaries."];
+  "S15" [label="(15,0,0) Both models have been recently confirmed in core-shell decahedral MTPs, where extra high-index crystal planes at the corners or edges further reduce the surface energy."];
+  "S2" [label="(2,0,0) Fivefold twinned structures in nanoparticles have attracted continuous attention in the field not only of crystal growth, but also of cluster physics, crystallography, physical chemistry, surface science, and materials."];
+  "S25" [label="(25,0,0) Chen et al. observed the 3D core structure of edge and screw dislocations releasing strain in Pt decahedral MTP."];
+  "S26" [label="(26,0,0) More recently, Peltz et al. studied the transient 3D structures of a Pd MTP, in which a large number of defects have been revealed qualitatively including disordered regions present mostly on the particle surface."];
+  "S28" [label="(28,0,0) Here, by determining the 3D atomic coordinates of gold-palladium MTPs, we show that the 3D angular deficiency in fivefold twinned icosahedral nanoparticles (ICNPs) is compensated by the insertion of edge dislocations and amorphization of several tetrahedra."];
+  "S5" [label="(5,0,0) The distinct physical and chemical properties of MTPs are largely due to their chemical sites and associated lattice-misfit strain, which makes the knowledge of their full atomic structures essential."];
+  "S6" [label="(6,0,0) Face-centered cubic crystals have co-planar twin planes enclosing an angle of 70.53° and can form fivefold twinned structures including decahedron and icosahedron."];
+  "S7" [label="(7,0,0) To fill the concomitant space gaps between two adjacent (111) faces of the fcc regular tetrahedron with an angle of 70.53°, internal distortion needs to be incorporated to form decahedral or icosahedral MTPs."];
+  "S1" -> "Importance_con" [label="induction-case"];
+  "S2" -> "Importance_con" [label="induction-common"];
+  "S6" -> "Distortion_con" [label="deduction-rule"];
+  "S7" -> "Distortion_con" [label="deduction-case"];
+  "S13" -> "Marks_Proposal_con" [label="induction-case"];
+  "S14" -> "Marks_Proposal_con" [label="induction-common"];
+  "Marks_Proposal_con" -> "Confirmed_Models_con" [label="induction-case"];
+  "S15" -> "Confirmed_Models_con" [label="induction-common"];
+  "S25" -> "Recent_3D_Studies_con" [label="induction-case"];
+  "S26" -> "Recent_3D_Studies_con" [label="induction-common"];
+  "S5" -> "R27" [label="deduction-rule"];
+  "S28" -> "R27" [label="deduction-case"];
+  "Confirmed_Models_con" -> "NROOT" [label="induction-case"];
+  "Distortion_con" -> "NROOT" [label="induction-case"];
+  "Importance_con" -> "NROOT" [label="induction-case"];
+  "R27" -> "NROOT" [label="induction-case"];
+  "Recent_3D_Studies_con" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

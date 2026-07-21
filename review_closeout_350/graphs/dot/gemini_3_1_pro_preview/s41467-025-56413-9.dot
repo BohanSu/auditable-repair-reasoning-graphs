@@ -1,0 +1,28 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N1" [label="(3,1,0) Currently, achieving currents above 100 pA using SECS accurate to within a relative uncertainty better than 10^-7 remains a very challenging goal."];
+  "N10" [label="(17,1,0) If the PQCG was developed to address this issue, then the result of PQCG accuracy was obtained at the expense of corrections of the order of a few parts in 10^7."];
+  "N2" [label="(7,1,0) For all mesoscopic current sources, the control of charge fluctuations remains a crucial issue."];
+  "N3" [label="(0,0,0) induction-reasoning: Given SECS face accuracy challenges and all mesoscopic sources struggle with charge fluctuations, therefore mesoscopic current sources currently struggle to provide highly accurate realizations of the ampere."];
+  "N4" [label="(8,1,0) If mesoscopic sources struggle, then another route to the SI realization consists of applying Ohm’s law to the Josephson voltage and quantum Hall resistance standards."];
+  "N6" [label="(14,1,0) If applying Ohm's law to quantum standards is pursued as an alternative route, then the main issue is to implement the accurate series connection of the two quantum standards while realizing a true current source."];
+  "N8" [label="(15,1,0) If the main issue is implementing an accurate series connection, then the programmable quantum current generator (PQCG) addresses the issue of accurate series connection of quantum standards."];
+  "NROOT" [label="(0,0,0) Develop and experimentally validate a next-generation programmable quantum current generator for SI ampere realization, using a three-terminal connection between Josephson voltage and quantum Hall resistance standards to generate low-noise, correction-free currents quantized as nJe fJ across the microampere-to-milliampere range with relative uncertainties below 10^-8.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A correction-free Ohm’s-law implementation can realize quantized current when a Josephson voltage standard is accurately applied to a quantum Hall resistance standard through a connection scheme that preserves the quantized resistance and minimizes implementation error."];
+  "R2" [label="(0,0,0) Mesoscopic current sources face accuracy limitations, while applying Ohm’s law to the Josephson voltage standard and the quantum Hall resistance standard is identified as another route to SI ampere realization."];
+  "R3" [label="(0,0,0) For the Ohm’s-law route using Josephson voltage and quantum Hall resistance standards, the main implementation issue is an accurate series connection of the two quantum standards while realizing a true current source."];
+  "R4" [label="(0,0,0) The programmable quantum current generator addresses the accurate series-connection issue of the Josephson voltage and quantum Hall resistance standards."];
+  "R5" [label="(0,0,0) In the earlier programmable quantum current generator implementation, the achieved accuracy relied on corrections of the order of a few parts in 10^7."];
+  "N1" -> "N3" [label="induction-case"];
+  "N2" -> "N3" [label="induction-common"];
+  "N3" -> "R2" [label="induction-case"];
+  "N4" -> "R2" [label="induction-common"];
+  "N6" -> "R3" [label="deduction-rule"];
+  "R2" -> "R3" [label="deduction-case"];
+  "N8" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "N10" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

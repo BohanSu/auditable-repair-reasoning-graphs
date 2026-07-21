@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study proposes evaluating INO-3107, a DNA immunotherapy encoding HPV-6 and HPV-11 antigens together with an IL-12 adjuvant, in patients with recurrent respiratory papillomatosis to determine whether it can safely induce HPV-specific immune responses and reduce disease burden in a completed Phase 1/2 trial.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When HPV-6- and HPV-11-related recurrent respiratory papillomatosis has clinically burdensome repeated-surgery management and a rationale for HPV-specific immunotherapy, a paper-level study can evaluate a specific HPV-targeted DNA immunotherapy candidate, including its encoded antigens, immune adjuvant design, clinical safety, immune responses, and effects on disease burden in a Phase 1/2 trial."];
+  "Node_1A_rule" [label="(0,0,0) If lesions occur in the respiratory tract, then rarely, papillomas can undergo malignant transformation in the pulmonary tract."];
+  "Node_1D" [label="(3,0,0) Currently RRP lesions can occur in the oropharynx, larynx, and elsewhere in the respiratory tract, significantly impacting voice production and even breathing in severe cases."];
+  "Node_2A" [label="(7,0,0) deduction: Given repeated surgical removal results in significant morbidity, therefore the risk of laryngeal injury increases with each surgery."];
+  "Node_2D" [label="(0,0,0) If the risk of laryngeal injury increases with each surgery, then current treatments for RRP are not safe and effective long-term."];
+  "R1" [label="(0,0,0) RRP lesions can occur in the respiratory tract, and under the stated pulmonary-risk rule, papillomas can rarely undergo malignant transformation in the pulmonary tract."];
+  "R6" [label="(0,0,0) Because the risk of laryngeal injury increases with each repeated surgery, repeated-surgery-based RRP management has important long-term safety limitations."];
+  "Node_1A_rule" -> "R1" [label="deduction-rule"];
+  "Node_1D" -> "R1" [label="deduction-case"];
+  "Node_2D" -> "R6" [label="deduction-rule"];
+  "Node_2A" -> "R6" [label="deduction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

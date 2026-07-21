@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56873-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to investigate P33, a cell-entry AMP-like designer peptide selected from conserved aggregation-prone transmembrane-protein regions, as a way to induce bacterial protein aggregation and proteostasis collapse and thereby test broad-spectrum antibacterial activity against ESKAPE pathogens while limiting resistance development.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(20,0,0) A multi-APR strategy aims to reduce the impact of single resistance-conferring mutations and causes widespread aggregation leading to proteostatic collapse."];
+  "R3" [label="(0,0,0) AMP mechanisms are diverse and can involve intracellular targets, supporting their potential as candidate therapeutics against drug-resistant microbes."];
+  "R4" [label="(0,0,0) Recently designed antimicrobial peptides induce aggregation of a target protein, thereby causing loss of function."];
+  "R5" [label="(0,0,0) APR-based peptide design includes beta-lactamase-targeting peptides that show conditional knock-out activity, and a separate multi-APR strategy aims to reduce single-resistance-mutation impact and cause widespread aggregation leading to proteostatic collapse."];
+  "R6" [label="(0,0,0) P33 is a suitable peptide case for studying aggregation-dependent antibacterial effects because it was identified for disrupting membrane protein folding in an E. coli APR screen, the screen aimed to aggregate multiple proteins and disrupt protein homeostasis, and P33 mechanism depends on protein aggregation."];
+  "aggr_know" [label="(14,0,0) Abduction-knowledge: APRs within peptides can drive misfolding and aggregation of proteins containing homologous APRs; most proteins have at least one APR; APRs are typically in hydrophobic cores or transmembrane regions where mutation rates are intrinsically low."];
+  "aggr_phen" [label="(13,0,0) Abduction-phenomenon: We recently designed antimicrobial peptides with a novel mechanism of action that induces aggregation of a target protein, thereby causing loss of function [S13]."];
+  "amp_know" [label="(11,0,0) AMP mechanisms are diverse, can involve intracellular targets, and this enhances their potential as candidate therapeutics against drug-resistant microbes."];
+  "amp_phen" [label="(7,0,0) Antimicrobial peptides are explored as promising candidates against ESKAPE pathogens; naturally occurring AMPs are integral components of innate immunity, and natural and synthetic AMPs are valued for fast bactericidal activity."];
+  "apr_case" [label="(17,0,0) Induction-case: Peptides targeting beta-lactamases show knock-out phenotype (conditional toxicity) and can differentiate related classes differing by few amino acids; alternative design uses APRs occurring in multiple proteome proteins to target broader range [S17-S19]."];
+  "apr_common" [label="(20,0,0) Targeting multiple APRs aims to reduce the impact of single resistance-conferring mutations and causes widespread aggregation leading to proteostatic collapse."];
+  "need_case" [label="(0,0,0) Currently there is: Drug-resistant pathogens represent a major global health challenge with enormous mortality."];
+  "need_concl" [label="(0,0,0) deduction-reasoning: Given the deduction-rule and deduction-case, therefore Currently there is major global health challenge from drug-resistant pathogens, and if such challenge exists, then new approaches to develop effective antibiotics are urgently needed."];
+  "need_rule" [label="(5,0,0) If drug-resistant pathogens represent a major global health challenge with enormous mortality and evade antibiotics via multiple mechanisms, then new approaches to develop effective antibiotics against these pathogens are urgently needed."];
+  "p33_case" [label="(21,0,0) Induction-case: The paper turned to P33 for disrupting membrane protein folding; P33 was identified in an E. coli APR screen; P33 is based on an APR from the transmembrane region of E. coli RhtA."];
+  "p33_common" [label="(0,0,0) Induction-common: Bacterial membrane homeostasis is a known broad-spectrum antibiotic target; the study explored disruption of membrane protein folding for ESKAPE activity, P33 emerged as a potent hit, and P33 mechanism depends on protein aggregation."];
+  "p33_name_leaf" [label="(22,0,0) Source leaf: The study turned to a peptide called P33 that had been identified in an E. coli APR screen [S22]."];
+  "p33_uptake_leaf" [label="(26,0,0) Source leaf: Arginine residues are critical for bacterial cell uptake and hence the overall antibiotic effect [S26]."];
+  "need_rule" -> "need_concl" [label="deduction-rule"];
+  "need_case" -> "need_concl" [label="deduction-case"];
+  "amp_phen" -> "R3" [label="abduction-phenomenon"];
+  "amp_know" -> "R3" [label="abduction-knowledge"];
+  "aggr_phen" -> "R4" [label="abduction-phenomenon"];
+  "aggr_know" -> "R4" [label="abduction-knowledge"];
+  "apr_case" -> "R5" [label="induction-case"];
+  "apr_common" -> "R5" [label="induction-common"];
+  "p33_case" -> "R6" [label="induction-case"];
+  "p33_common" -> "R6" [label="induction-common"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "need_concl" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "p33_name_leaf" -> "R6" [label="induction-case"];
+  "p33_uptake_leaf" -> "R6" [label="induction-case"];
+}

@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56880-0
+  rankdir="TB";
+  "N1" [label="(1,3,0) Living tissues actively remodel their shape during embryo development."];
+  "N10" [label="(16,1,0) How the lateral actomyosin network is spatio-temporally controlled is still unknown."];
+  "N12" [label="(43,2,0) The relocation of the nucleus spatio-temporally organizes the cell cytoskeleton."];
+  "N2" [label="(2,1,0) Tissue remodeling relies on the ability of epithelial cells to generate mechanical forces."];
+  "N3" [label="(0,0,0) induction-reasoning: Given that living tissues actively remodel their shape and tissue remodeling relies on generating mechanical forces, therefore tissue remodeling is a force-driven process."];
+  "N4" [label="(3,1,0) Cells remodel their cytoskeleton in an orchestrated fashion to generate mechanical forces and acquire new shape and position."];
+  "N6" [label="(4,3,0) Composite morphogenesis is the process by which an epithelial tissue undergoes multiple and simultaneous shape transformations."];
+  "N8" [label="(5,1,0) Epithelia can simultaneously fold and extend to drive embryo gastrulation."];
+  "NROOT" [label="(0,0,0) This study is motivated to investigate whether basal migration of the nucleus in the Drosophila mesoderm compartmentalizes the cell cortex to redistribute RhoGEF2 and actomyosin, thereby coordinating formation of a lateral actomyosin–E-cadherin junctional tier that supports cell intercalation together with apical constriction during composite tissue morphogenesis.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When simultaneous tissue shape changes require cytoskeletal force coordination and lateral actomyosin control remains unexplained, mechanisms that reorganize nuclear and cytoskeletal architecture are plausible targets for investigation."];
+  "R2" [label="(0,0,0) Because cells remodel their cytoskeleton to generate mechanical forces, cytoskeletal remodeling is an important contributor to force generation during tissue remodeling."];
+  "R3" [label="(0,0,0) Composite morphogenesis, involving multiple simultaneous epithelial shape transformations, is expected to require coordinated cytoskeletal remodeling and force generation."];
+  "R4" [label="(0,0,0) Because epithelia can simultaneously fold and extend during gastrulation, gastrulation provides a relevant context for investigating coordinated cytoskeletal remodeling during composite morphogenesis."];
+  "R5" [label="(0,0,0) The unknown spatio-temporal control of the lateral actomyosin network motivates investigating gastrulation-associated folding and extension as a context for studying cytoskeletal spatio-temporal control."];
+  "R6" [label="(0,0,0) Nuclear relocation is a plausible candidate mechanism to test in studies of how the lateral actomyosin network and broader cytoskeleton are spatio-temporally organized during gastrulation-associated morphogenesis."];
+  "N1" -> "N3" [label="induction-case"];
+  "N2" -> "N3" [label="induction-common"];
+  "N4" -> "R2" [label="abduction-phenomenon"];
+  "N3" -> "R2" [label="abduction-knowledge"];
+  "N6" -> "R3" [label="abduction-phenomenon"];
+  "R2" -> "R3" [label="abduction-knowledge"];
+  "N8" -> "R4" [label="abduction-phenomenon"];
+  "R3" -> "R4" [label="abduction-knowledge"];
+  "N10" -> "R5" [label="abduction-phenomenon"];
+  "R4" -> "R5" [label="abduction-knowledge"];
+  "N12" -> "R6" [label="abduction-phenomenon"];
+  "R5" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

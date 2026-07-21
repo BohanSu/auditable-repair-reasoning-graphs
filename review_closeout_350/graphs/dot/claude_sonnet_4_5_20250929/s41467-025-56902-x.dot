@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=claude_sonnet_4_5_20250929:s41467-025-56902-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This research posits that designing non-covalent quinoline analogues that extend into the previously untargeted Val70 Ub pocket adjacent to the BL2 groove of SARS-CoV-2 papain-like protease will yield inhibitors (e.g., Jun13296) with superior binding, enzymatic potency, and oral in-vivo antiviral efficacy compared with earlier leads like Jun12682.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(13,0,0) Several additional M pro inhibitors are at different stages of clinical trials, including Pfizer’s second-generation inhibitor PF-07817883 (Ibuzatrelvir)  and Merck’s MK-7845."];
+  "E2" [label="(27,0,0) In addition, Jun12682 extends to a previously unexplored binding site, Val70 Ub , which accounts for its high potency."];
+  "E3" [label="(29,0,0) The X-ray crystal structures of PL pro with six lead compounds reveal interesting findings: while five compounds, Jun13317, Jun13306, Jun13307, Jun13308, and Jun13296 have their 2-aryl substituent occupying the Val70 Ub site as expected, Jun12665 adopts a f."];
+  "E4" [label="(19,0,0) The SARS-CoV-2 papain-like protease (PL pro) is the second cysteine protease expressed by SARS-CoV-2 in addition to M pro during viral replication."];
+  "E5" [label="(1,0,0) The COVID-19 pandemic has accelerated antiviral and vaccine development."];
+  "E6" [label="(30,0,0) The in vivo lead Jun13296 displays more potent enzymatic inhibition and antiviral activity than the previously reported biarylphenyl inhibitor Jun12682."];
+  "E7" [label="(16,0,0) Nevertheless, nirmatrelvir-resistant mutants have been identified from in vitro viral passage and enzymatic assay experiments , , ,."];
+  "E8" [label="(8,0,0) Similarly, the SARS-CoV-2 main protease (M pro) inhibitor nirmatrelvir has broad-spectrum antiviral activity against SARS-CoV, MERS-CoV, SARS-CoV-2, and common human coronaviruses HCoV-OC43, 229E, NL63, and HKU1 ,."];
+  "E9" [label="(31,0,0) In a SARS-CoV-2 infection mouse model, oral treatment of Jun13296 displays improved in vivo antiviral efficacy than Jun12682."];
+  "E10" [label="(25,0,0) Our recent study revealed a first-in-class rationally designed noncovalent inhibitor Jun12682 showing in vivo antiviral efficacy in a mouse model of SARS-CoV-2 infection."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-common"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

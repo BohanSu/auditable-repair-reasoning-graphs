@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56283-1
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) By iteratively resizing particles and minimizing energy at fixed packing fractions above the jamming threshold, we create “hyperuniform glasses” whose density fluctuations scale as χv(q) ~ q⁴ (class-I hyperuniformity), and comparison with conventionally prepared over-jammed and marginally jammed packings shows that simultaneous hyperuniform suppression of both density and contact-number fluctuations exists only ex.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(25,0,0) To address these issues, the work creates hyperuniform glasses using an iterative algorithm that combines particle resizing with energy minimization at a fixed packing fraction well above the jamming threshold."];
+  "E2" [label="(1,0,0) Hyperuniform systems  ,  are characterised by a vanishing density spectrum χ v ( q ) at low wavenumbers ( q ), setting them apart from ordinary liquids and disordered solids."];
+  "E3" [label="(3,0,0) Hyperuniform states can be classified into three classes based on the power-law scaling of the density spectrum χ v ( q → 0) ~ q α: class I with α > 1, class II with α = 1, and class III with 0 < α < 1."];
+  "E4" [label="(26,0,0) The density spectrum χ v ( q ) of HG exhibits ideal power-law scaling with α = 4, categorising them as class I hyperuniformity."];
+  "E5" [label="(9,0,0) Additionally, hyperuniformity can emerge from numerical procedures, such as collective-coordinate optimisation  and tessellation-based methods."];
+  "E6" [label="(15,0,0) The jamming transition  occurs when the packing fraction ϕ exceeds a threshold known as the jamming point, ϕ J, at which rigidity emerges."];
+  "E7" [label="(16,0,0) For marginally jammed states formed by decompressing instantaneously quenched over-jammed packings or compressing ordinary liquids, the density spectrum shows linear scaling at intermediate wavenumber ranges (i.e. 0.08 < q /2 π < 0.4)  ,  ,  ,  ,  ,  ,  ,."];
+  "E8" [label="(17,0,0) This deviation either saturates to a constant  ,  or transitions to a new power-law scaling with α ≈ 0.25  ,."];
+  "E9" [label="(33,0,0) Thus, density and contact-number fluctuations both exhibit hyperuniformity only at the jamming point but become independent as the system moves away from the critical point."];
+  "E10" [label="(8,0,0) Others involve conserved fields, as seen in systems governed by electrostatic interactions  , , hydrodynamic interactions  ,  , , centre-of-mass conservation , and mass conservation."];
+  "E11" [label="(38,0,0) Our findings indicate the presence of a distinct, stable, disordered solid state that is more stable than a hypothetical ideal glass."];
+  "E12" [label="(5,0,0) These unique characteristics provide exceptional electronic, transport, and optical properties, such as isotropic photonic band gaps  ,."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56769-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The study systematically mines public RNA-seq libraries from Oryza species using homology-based viral metagenomics and homology-independent viral metagenomics to characterize RNA viruses, viral diversity, and viral abundance in rice plants.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(26,1,0) The study conducted a large-scale analysis of 17,115 RNA-seq libraries."];
+  "E2" [label="(26,2,0) The analysis encompassed 24 Oryza species."];
+  "E3" [label="(26,3,0) The analysis aimed to explore viral diversity in rice plants."];
+  "E4" [label="(27,1,0) The study employed both homology-based and homology-independent approaches."];
+  "E5" [label="(27,2,0) The study identified 810 complete or near-complete viruses in rice plants."];
+  "E6" [label="(27,3,0) The study identified an additional 49 RdRPs in rice plants."];
+  "E7" [label="(28,2,0) The study estimated viral abundance in rice samples."];
+  "E8" [label="(28,3,0) The analysis facilitated screening of 427 viruses closely associated with rice plants."];
+  "E9" [label="(11,3,0) Viral metagenomics facilitates characterization of viral diversity."];
+  "E10" [label="(15,1,0) RNA viruses are characterized by the hallmark gene RNA-dependent RNA polymerase."];
+  "E11" [label="(23,3,0) Rice research has accumulated vast publicly available RNA-seq data."];
+  "R1" [label="(0,0,0) Convergent study observations can synthesize the paper-level conclusion."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-common"];
+}

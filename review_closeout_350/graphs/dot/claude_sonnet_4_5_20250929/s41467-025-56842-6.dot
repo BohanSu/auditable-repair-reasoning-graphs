@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56842-6
+  rankdir="TB";
+  "I13" [label="(0,0,0) Abduction: Quantitative 3D measurements lacking, and absence of measurements precludes understanding, therefore quantitative 3D characterization is the critical missing piece"];
+  "I6" [label="(0,0,0) Deduction: Surface and volume energies exist, and their balance determines symmetry, therefore energy balance controls MTP structure"];
+  "I8" [label="(0,0,0) Abduction: Faulted islands and grooves observed, and curved surfaces lower energy and relieve strain, therefore surface modifications serve as strain relief mechanisms"];
+  "I9" [label="(0,0,0) Abduction: 3D structures remain unclear despite studies, and structural complexity with imaging limitations cause this, therefore current methods are insufficient"];
+  "N15" [label="(11,0,0) Surface and volume energy contributions exist in MTPs"];
+  "N16" [label="(11,0,0) If surface and volume energies balance, then final crystallographic symmetry is determined"];
+  "N19" [label="(16,0,0) Faulted islands and grooves observed during icosahedra growth"];
+  "N20" [label="(17,0,0) If curved surfaces form, then they lower surface energy and relieve strain"];
+  "N21" [label="(18,0,0) Despite extensive studies on formation, stability, and defects, 3D atomic structures and local strain of icosahedra remain unclear"];
+  "N22" [label="(18,0,0) If internal structures are complex and conventional imaging is limited, then embedded structures remain unclear"];
+  "N25" [label="(23,0,0) Experimental observations predominantly based on 2D projections"];
+  "N26" [label="(23,0,0) If observations are 2D projections, then internal 3D structures are not obtained"];
+  "N30" [label="(27,0,0) Strains are inhomogeneous in fivefold MTPs but quantitative 3D measurements lacking"];
+  "N31" [label="(27,0,0) If quantitative 3D atomic misfit and strain measurements are absent, then thorough understanding is precluded"];
+  "NROOT" [label="(0,0,0) Determine quantitative 3D atomic structures and strain in fivefold twinned Au–Pd icosahedral nanoparticles to test how angular-deficiency strain is relieved by a Janus-like ordered/disordered duality, in which edge dislocations and amorphization–expansion of several tetrahedra on one hemisphere compensate the mismatch while the opposite hemisphere remains nearly ideal fcc.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R6" [label="(0,0,0) For the cited experimental observations that were predominantly based on 2D projections, the internal 3D structures were not obtained."];
+  "N15" -> "I6" [label="deduction-case"];
+  "N16" -> "I6" [label="deduction-rule"];
+  "N19" -> "I8" [label="abduction-phenomenon"];
+  "N20" -> "I8" [label="abduction-knowledge"];
+  "N21" -> "I9" [label="abduction-phenomenon"];
+  "N22" -> "I9" [label="abduction-knowledge"];
+  "N30" -> "I13" [label="abduction-phenomenon"];
+  "N31" -> "I13" [label="abduction-knowledge"];
+  "N26" -> "R6" [label="deduction-rule"];
+  "N25" -> "R6" [label="deduction-case"];
+  "I13" -> "NROOT" [label="induction-case"];
+  "I6" -> "NROOT" [label="induction-case"];
+  "I8" -> "NROOT" [label="induction-case"];
+  "I9" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

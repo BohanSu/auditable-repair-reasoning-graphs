@@ -1,0 +1,23 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56618-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The study provides a benchmark and review of machine learning methods that predict in silico spatially resolved gene expression from H&E histopathology images; general reviews had surveyed and categorised these methods without benchmarking, so this work provides systematic benchmarking and systematic review context through evaluation categories and evaluation metrics for spatial and biological characteristics of predicted genes; the cited methods' performance had not yet been comprehensively benchmarked; robustness is represented by the article's stated lack of comprehensive understanding of performance, stability and broader applicability of individual methods; the work assesses limitations and generalisability of translational potential; in the clinical applicability context, H&E images are routinely used in clinical practice and SGE prediction from H&E has potential clinical usage and potential clinical translation.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(13,0,0) While there exist general reviews on various aspects of SRT analysis  ,  ,  , they have only surveyed and categorised methods predicting SGE from H&E without any benchmarking."];
+  "E2" [label="(7,0,0) To date, several approaches have been developed to predict in silico spatially resolved gene expression (SGE) patterns using H&E data alone (Fig. 1a , Supplementary Table 1)."];
+  "E3" [label="(4,0,0) In contrast, haematoxylin-and-eosin-stained (H&E) histopathology images are more cost-effective and are routinely used in clinical practice."];
+  "E4" [label="(14,0,0) Fig. 1: Overview of the benchmarking process and the key aspects of the evaluation."];
+  "E5" [label="(2,0,0) It has enabled the identification of key genes and pathways involved in intricate mechanisms underlying diverse biological processes and complex cellular phenomena  ,  ,  ,."];
+  "E6" [label="(31,0,0) These include metrics that focus on the evaluation of spatial and biological characteristics of genes that are predicted effectively."];
+  "E7" [label="(12,0,0) As these methods were recently published in the last 3 years and are continuously evolving, their performance has not yet been comprehensively benchmarked."];
+  "E8" [label="(34,0,0) Importantly, we provide a vital assessment of the limitations and generalisability of their translational potential."];
+  "E9" [label="(22,0,0) For instance, ST-Net  , DeepSpaCE  , DeepPT  and TCGN  evaluated the performance of their models on external The Cancer Genome Atlas (TCGA)  data to determine the generalisability of their models."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-common"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+}

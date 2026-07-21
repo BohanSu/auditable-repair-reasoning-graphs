@@ -1,0 +1,19 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56609-z
+  rankdir="TB";
+  "N11" [label="(0,0,0) Deduction-rule: If a measurement technique reduces errors from varying conditions, then it can address temperature-induced baseline drift in sensors"];
+  "N12" [label="(10,0,0) Deduction-case: Ratiometry reduces errors from varying conditions, and baseline drift from temperature is such a varying condition Deduction-reasoning: Given ratiometry reduces errors from varying conditions, and such technique can address temperature drift, therefore incorporating ratiometry into gas sensors presents a promising strategy"];
+  "N18" [label="(14,0,0) Gas sensors typically depend on defects for sensing activity"];
+  "N20" [label="(0,0,0) Induction-common: Materials requiring both defects (for gas sensing) and defect minimization (for photoelectric performance) face contradictory design requirements"];
+  "NROOT" [label="(0,0,0) Develop an AgBDT organic–inorganic hybrid covalent superlattice for ratiometric gas sensing of NO2, using its chemiresistive gas-induced resistance change together with a photoelectric light-induced signal as an internal reference so that the sensor self-compensates temperature drift and enables ultra-low-ppb, temperature-independent NO2 detection.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A single material suitable for ratiometric gas sensing should combine a gas-responsive chemiresistive channel with a photoelectric reference channel, while the ratio between the gas-induced resistance change and the light-induced signal suppresses common temperature-dependent drift."];
+  "R15" [label="(0,0,0) Because ratiometric measurement reduces errors from varying experimental conditions and temperature-induced baseline drift is such a varying condition, ratiometry can mitigate temperature-induced baseline drift in sensor measurements."];
+  "R2" [label="(0,0,0) Gas-sensing activity that benefits from defects and photoelectric performance that benefits from defect minimization create a design tension for combining gas sensing and photoelectric functionality in one material."];
+  "N18" -> "R2" [label="induction-case"];
+  "N20" -> "R2" [label="induction-common"];
+  "N11" -> "R15" [label="deduction-rule"];
+  "N12" -> "R15" [label="deduction-case"];
+  "R15" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

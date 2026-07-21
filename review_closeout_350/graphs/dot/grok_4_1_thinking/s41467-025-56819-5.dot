@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56819-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes and demonstrates an optical floating-gate transistor (O-FGT) that replaces the conventional metal control gate with a dielectric 2D photoconductive (NH4)BiI3 photosensitive control-gate layer. The material has high density of states, low exciton binding energy, and long exciton lifetime, allowing light-driven write and erase operations without gate-voltage assistance. The resulting O-FGT uses ultra-short, ultra-dim, low-energy light pulses to generate and nonvolatilely store many resistive synaptic weight states, combines low-power optical training with electrical inference, and supports ANN and YOLOv8 device-array demonstrations for neuromorphic computing.", fillcolor="lightyellow", style="filled"];
+  "E4" [label="(4,0,0) Using optical signals for training and converting them into non-volatile electrical signals for inference combines the strengths of both signal types."];
+  "E6" [label="(6,0,0) Non-volatile optoelectronic memories are expected to modulate many non-volatile resistive states using ultra-short and ultra-dim light pulses with high accuracy, fast computing speed, and low energy consumption."];
+  "E8" [label="(8,0,0) A floating-gate transistor is an ideal device structure for non-volatile optoelectronic memory."];
+  "E14" [label="(14,0,0) The authors propose using a 2D photoconductive material as the photosensitive control gate, instead of the commonly used metal control gate, to construct a floating-gate transistor."];
+  "E15" [label="(15,0,0) In the proposed device, light plays a role similar to gate voltage in traditional floating-gate transistors, so the device is called an optical floating-gate transistor."];
+  "E17" [label="(17,0,0) Low exciton binding energy and long exciton lifetime allow exciton separation inside the photosensitive control gate without additional gate voltage and allow writing into or erasing out of the floating-gate layer."];
+  "E20" [label="(20,0,0) The authors synthesize dielectric 2D photoconductive (NH4)BiI3 with high density of states, low exciton binding energy, and long exciton lifetime."];
+  "E21" [label="(21,0,0) The O-FGT constructed with (NH4)BiI3 as the photosensitive control gate exhibits adjustable synaptic weights using light without gate-voltage assistance and achieves non-volatile storage, meeting training and inference demands."];
+  "E22" [label="(22,0,0) The O-FGT shows ultra-low training energy consumption of about 5.25 fJ to generate a non-volatile state and provides up to 360 resistive states."];
+  "E23" [label="(23,0,0) An artificial neural network implemented by on-chip trained weights of a one-transistor-one-memory device array achieves about 99% accuracy in nonlinear localization tasks."];
+  "E24" [label="(24,0,0) The device array shows comparable performance to a graphics processing unit in YOLOv8 while greatly reducing energy consumption."];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E14" -> "NROOT" [label="induction-common"];
+  "E15" -> "NROOT" [label="induction-case"];
+  "E17" -> "NROOT" [label="induction-case"];
+  "E20" -> "NROOT" [label="induction-case"];
+  "E21" -> "NROOT" [label="induction-case"];
+  "E22" -> "NROOT" [label="induction-case"];
+  "E23" -> "NROOT" [label="induction-case"];
+  "E24" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,13 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56765-2
+  rankdir="TB";
+  "I_case_und" [label="(0,0,0) Common pattern across experimental surface studies and DFT: N₂ dissociation is rate-limiting and strongly facilitated at step sites (e.g., B5)."];
+  "N13" [label="(13,0,0) N₂ dissociation is limiting the rate and this elementary reaction is facilitated by the presence of step sites, such as the B₅ site."];
+  "NROOT" [label="(0,0,0) The paper proposes to develop and evaluate first-principles kinetic models of Ru nanoparticles for ammonia synthesis that include inherent strain and diverse surface sites, in order to test whether strain-enhanced kinetic coupling between N2 dissociation and NHx hydrogenation on communicating sites can explain high catalytic activity, relax conventional scaling limitations, and guide improved Ru catalysts.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When conventional surface models and experiments cannot fully resolve how nanoparticle structure, strain, and site-specific reaction steps control ammonia-synthesis kinetics, a cautious combined modeling-and-design study is warranted."];
+  "R1" [label="(0,0,0) Across well-defined Ru surface studies and DFT potential-energy-surface evaluations, the present understanding is that N2 dissociation is often rate-limiting in ammonia synthesis and is facilitated by step sites such as B5 sites."];
+  "N13" -> "R1" [label="induction-case"];
+  "I_case_und" -> "R1" [label="induction-common"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

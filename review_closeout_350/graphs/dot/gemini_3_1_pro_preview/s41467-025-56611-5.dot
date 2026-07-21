@@ -1,0 +1,35 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56611-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes investigating how a bubble trapped under the top boundary of a vertically vibrated fluid can use resonance between vibration modes to undergo symmetry breaking and self-propulsion, producing tunable galloping motion, including rectilinear, orbital, and run-and-tumble trajectories, as a basis for controllable bubble manipulation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A resonantly self-propelled bubble mechanism in a vertically vibrated fluid provides a common bridge between fundamental symmetry-breaking dynamics and practical control of bubble motion."];
+  "N_201" [label="(20,3,0) [deduction-reasoning]: Given if unremoved bubbles near the heat source can significantly reduce heat transfer efficiency, then harnessing the dynamics of bubbles holds significant potential rewards, and currently unremoved bubbles near the heat source can significantly reduce heat transfer efficiency, therefore harnessing the dynamics of bubbles holds significant potential rewards."];
+  "N_202" [label="(0,0,0) The potential rewards of harnessing bubble dynamics are best realized by developing new methods for producing, sorting, and navigating bubbles."];
+  "N_301" [label="(0,0,0) If unremoved bubbles near the heat source can significantly reduce heat transfer efficiency, then harnessing the dynamics of bubbles holds significant potential rewards."];
+  "N_302" [label="(24,3,0) [induction-reasoning]: Given the absence of buoyancy in micro-gravity settings complicates bubble evacuation, and the complication of bubble evacuation in micro-gravity shares the common characteristic that unremoved bubbles persist and reduce heat transfer efficiency, therefore currently unremoved bubbles near the heat source can significantly reduce heat transfer efficiency."];
+  "N_304" [label="(0,0,0) Spontaneous symmetry breaking in a vibrated fluid chamber is best explained by the bubble being self-propelled through a resonant interaction between its vibration modes."];
+  "N_401" [label="(25,3,0) The absence of buoyancy in micro-gravity settings complicates bubble evacuation."];
+  "N_402" [label="(0,0,0) The complication of bubble evacuation in micro-gravity shares the common characteristic that unremoved bubbles persist and reduce heat transfer efficiency."];
+  "N_403" [label="(0,0,0) If bubbles exhibit complex and autonomous behaviors, then a bubble inside a vertically vibrated fluid chamber may spontaneously break symmetry."];
+  "N_501" [label="(2,2,0) Da Vinci observed that rising bubbles spontaneously abandon straight paths for mesmerizing helices."];
+  "N_502" [label="(0,0,0) The spontaneous deviation of rising bubbles shares the common characteristic that bubbles often appear to behave autonomously."];
+  "R1" [label="(0,0,0) Da Vinci's observation of rising bubbles abandoning straight paths for helical trajectories provides a specific example of complex, autonomous-looking bubble motion."];
+  "R2" [label="(0,0,0) Within the stated conditional framework, a specific example of complex, autonomous-looking bubble behavior motivates considering spontaneous symmetry breaking in vertically vibrated bubble systems as a possibility, rather than establishing it from the historical rising-bubble observation alone."];
+  "R3" [label="(0,0,0) If spontaneous symmetry breaking occurs for a bubble in a vertically vibrated fluid chamber, the proposed best explanation is that the bubble becomes self-propelled through a resonant interaction between its vibration modes."];
+  "R7" [label="(0,0,0) Because harnessing bubble dynamics has significant potential rewards, developing new methods for producing, sorting, and navigating bubbles is a plausible route for realizing those rewards."];
+  "N_401" -> "N_302" [label="induction-case"];
+  "N_402" -> "N_302" [label="induction-common"];
+  "N_301" -> "N_201" [label="deduction-rule"];
+  "N_302" -> "N_201" [label="deduction-case"];
+  "N_501" -> "R1" [label="induction-case"];
+  "N_502" -> "R1" [label="induction-common"];
+  "N_403" -> "R2" [label="deduction-rule"];
+  "R1" -> "R2" [label="deduction-case"];
+  "R2" -> "R3" [label="abduction-phenomenon"];
+  "N_304" -> "R3" [label="abduction-knowledge"];
+  "N_201" -> "R7" [label="abduction-phenomenon"];
+  "N_202" -> "R7" [label="abduction-knowledge"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

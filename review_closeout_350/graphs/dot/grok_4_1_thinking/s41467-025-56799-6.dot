@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56799-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to investigate A-DA’D-A small-molecule acceptors bearing asymmetric alkyl/thienyl outer side chains, especially BTP-C11-TBO and BTP-BO-TBO, to test whether this side-chain design promotes backbone planarization and stronger intermolecular packing, reduces electron-vibrational coupling and non-radiative energy loss, facilitates exciton dissociation, and improves the power-conversion efficiency of PM6-based organic solar cells.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Asymmetric side-chain engineering in A-DA’D-A small-molecule acceptors can connect molecular conformation and intermolecular packing with suppressed vibrational loss pathways and improved charge-generation behavior."];
+  "N_case_ind" [label="(16,0,0) Currently, breaking the symmetry of the alkyl chains is also an effective way to boost photovoltaic performance."];
+  "N_case_side" [label="(13,0,0) Currently, modifications of the side chains such as the variation of length, topology (linear or branched), branching points, and dimension are the most frequently employed approaches for precisely modulating the solubility, molecular crystallization, and stacking behavior of SMAs."];
+  "N_common_ind" [label="(0,0,0) In general, asymmetric side-chain designs in A-DA’D-A SMAs (including different branching positions, linear-to-branched replacement, and hybrid cycloalkyl-alkyl) lead to altered molecular stacking, better packing, reduced energy loss, improved charge transport, and boosted PV performance."];
+  "N_know_abd" [label="(19,0,0) Knowledge: Reducing the electron-vibrational coupling has been demonstrated as an effective strategy to suppress the non-radiative recombination, thus leading to suppressed non-radiative energy loss."];
+  "N_phen_abd" [label="(24,0,0) Phenomenon: the asymmetric alkyl/thienyl outer side chains can subtly modulate the D/A interfacial energetics and inhibit molecular vibration, thereby expediting exciton dissociation and mitigating energetic disorder, resulting in enhanced charge generation efficiency and reduced charge recombination."];
+  "N_rule_side" [label="(11,0,0) If modulating the chemical structures of A-DA’D-A type SMAs by regulating the three fundamental building blocks (central fused ring core unit, electron-withdrawing end unit, and solubilizing side chains) is extensively utilized, then modifications of the side chains such as the variation of length, topology, branching points, and dimension are the most frequently employed approaches for precisely modulating the solubility, molecular crystallization, and stacking behavior of SMAs."];
+  "R10" [label="(0,0,0) In A-DA’D-A small-molecule acceptors, solubilizing side chains are among the fundamental building blocks available for chemical-structure modulation, and side-chain modifications are frequently used to tune solubility, crystallization, molecular stacking, and intermolecular coupling behavior."];
+  "R11" [label="(0,0,0) A plausible explanation for reduced recombination and non-radiative energy loss in asymmetric alkyl/thienyl side-chain acceptors is that the asymmetric side chains inhibit molecular vibration, thereby reducing electron-vibrational coupling and helping expedite exciton dissociation."];
+  "R4" [label="(0,0,0) Inductively, the reported effectiveness of breaking alkyl-chain symmetry, together with the broader pattern that asymmetric side-chain designs in A-DA’D-A small-molecule acceptors alter stacking, improve packing, and reduce losses, supports asymmetric side-chain development as a plausible route for improving photovoltaic performance."];
+  "N_case_ind" -> "R4" [label="induction-case"];
+  "N_common_ind" -> "R4" [label="induction-common"];
+  "N_rule_side" -> "R10" [label="deduction-rule"];
+  "N_case_side" -> "R10" [label="deduction-case"];
+  "N_phen_abd" -> "R11" [label="abduction-phenomenon"];
+  "N_know_abd" -> "R11" [label="abduction-knowledge"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

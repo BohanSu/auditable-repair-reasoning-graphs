@@ -1,0 +1,19 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56635-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) In square-lattice iridates, enhanced higher-order spin interactions from spatially extended 5d orbitals and increased virtual charge fluctuations due to a small charge gap underlie strong deviation from the NN Heisenberg model; exchange symmetries and symmetry-distinct orders provide the context in which heterointerfacing different types of magnetism in superlattices may induce magnetic frustration through proximity coupling; enhanced long-range, multi-spin interactions competing with NN Heisenberg exchange can destabilize Néel AF order in favor of more exotic phases; spinon-dominated excitation continua are represented by broad continua in square-lattice antiferromagnets that have been attributed to spinon excitations; spinons are well-established quasiparticles in one-dimensional systems, while their presence in dimensions higher than one and in two-dimensional Heisenberg antiferromagnets remains contentious.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(12,0,0) This allows for the possibility of heterointerfacing different types of magnetism in a superlattice, which may induce magnetic frustration through proximity coupling of symmetry-distinct orders."];
+  "E2" [label="(10,0,0) Similarly, in square-lattice iridates, enhanced higher-order spin interactions from spatially extended 5d orbitals and increased virtual charge fluctuations due to a small charge gap  underlie the strong deviation of the single-layer (SL) Sr2IrO4 from the N."];
+  "E3" [label="(5,0,0) Theoretically, their weights should increase in systems with enhanced long-range, multi-spin interactions competing with nearest-neighbor (NN) Heisenberg exchange (J) , , such as four-spin exchanges (Q) , , , which can destabilize the Néel AF order in favor."];
+  "E4" [label="(9,0,0) This leads to a variety of theoretical predictions for novel quantum magnets, including Kitaev spin liquid in honeycomb compounds , , , , , U(1) or Z2 quantum spin liquid in hyperkagome compounds ,."];
+  "E5" [label="(1,0,0) Spinons are well-established quasiparticles in one-dimensional (1D) systems , , but their presence in dimensions higher than one remains a contentious topic ,."];
+  "E6" [label="(4,0,0) Indeed, the broad continua observed across many copper-based square-lattice AFs , , , known as the ‘(π, 0) anomaly’, have been attributed to spinon excitations."];
+  "E7" [label="(3,0,0) Despite the presence of Néel AF orders and the absence of apparent frustrations in these systems, earlier theoretical and experimental works have indicated that they can accommodate gapped spinon modes , ,."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+}

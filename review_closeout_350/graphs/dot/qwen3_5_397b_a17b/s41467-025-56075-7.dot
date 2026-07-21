@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56075-7
+  rankdir="TB";
+  "Imp1" [label="(0,0,0) Deduction-reasoning: Currently there is Nickel-rich NMC materials with high specific capacity hold great potential for high-energy lithium batteries, and if cycling stability is unsatisfactory, then potential is limited, so NMC potential is limited by stability."];
+  "Imp2" [label="(0,0,0) Deduction-reasoning: Currently there is NMC potential is limited by stability, and if severe structural degradation results in capacity decay, then stability is low, so degradation causes stability limits."];
+  "Imp7" [label="(0,0,0) Deduction-reasoning: Currently there is researchers have introduced heteroatoms into the NMC lattice, and if it is unlikely to make zero-strain layered positive electrode materials, then doping has limits, so doping cannot fully eliminate strain."];
+  "NROOT" [label="(0,0,0) Investigate rapid quenching of nickel-rich LiNiₓMnᵧCo_zO₂ from the calcination peak as a dopant-sparing thermal-processing strategy intended to drive lithium outward diffusion, form a reduced-Ni surface layer, suppress surface degradation, homogenize bulk charge distribution, and improve high-voltage cycling stability without relying on additional dopants.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A dopant-sparing thermal-processing strategy is scientifically motivated when it can alter elemental or microstructural distributions in nickel-rich NMC electrodes and thereby target both surface degradation and bulk charge-distribution heterogeneity."];
+  "R21" [label="(0,0,0) Within Ni-rich/NMC positive-electrode research, controlling microstructures without excessive dopants is an attractive strategy, and reported thermal-processing observations show that cooling-rate regulation from the calcination peak manipulates elemental distribution in NMC polycrystalline particles while quenching treatment can enhance electrochemical performance in Ni-rich positive electrodes; therefore, quenching or cooling-rate control is a candidate dopant-sparing thermal lever for NMC microstructure and composition control."];
+  "S1" [label="(1,1,0) Currently there is Nickel-rich NMC materials with high specific capacity hold great potential for high-energy lithium batteries."];
+  "S12" [label="(12,1,0) Currently there is researchers have introduced heteroatoms into the NMC lattice."];
+  "S13" [label="(13,1,0) If it is unlikely to make zero-strain layered positive electrode materials, then doping has limits."];
+  "S18" [label="(18,1,0) If controlling materials microstructures without excessively using dopants has become an attractive strategy, then we should pursue microstructure control."];
+  "S2" [label="(2,1,0) If cycling stability is unsatisfactory, then potential is limited."];
+  "S27" [label="(27,1,0) Currently there is we manipulate elemental distribution in NMC polycrystalline particles by regulating the cooling rate from the peak of calcination temperature."];
+  "S3" [label="(3,1,0) If severe structural degradation results in capacity decay, then stability is low."];
+  "S1" -> "Imp1" [label="deduction-case"];
+  "S2" -> "Imp1" [label="deduction-rule"];
+  "Imp1" -> "Imp2" [label="deduction-case"];
+  "S3" -> "Imp2" [label="deduction-rule"];
+  "S12" -> "Imp7" [label="deduction-case"];
+  "S13" -> "Imp7" [label="deduction-rule"];
+  "S27" -> "R21" [label="induction-case"];
+  "S18" -> "R21" [label="induction-common"];
+  "Imp2" -> "NROOT" [label="induction-case"];
+  "Imp7" -> "NROOT" [label="induction-case"];
+  "R21" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

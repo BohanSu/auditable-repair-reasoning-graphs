@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56722-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) In Huntington's disease, mutant Huntingtin is produced by abnormal CAG repeat expansion in HTT, direct and indirect striatal neurons are highly vulnerable to the HD mutation, the molecular underpinning of striatal neuron selective vulnerability in HD remains elusive, earlier analyses left unclear whether HD-vulnerable neurons undergo accelerated epigenetic aging including accelerated de-repression of developmental genes, epigenetic de-repression of developmental genes is dramatically accelerated, the mechanism involves PRC1 paralog switching among PRC1-CBX genes, and bulk HD striatal tissue shows downregulation of striatal identity genes, consistent with loss of neuronal identity.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(2,0,0) The disease is caused by an abnormal expansion of CAG trinucleotide repeats in the Huntingtin (HTT) gene, which produces mutant HTT with polyglutamine expansion (polyQ) ,."];
+  "E2" [label="(9,0,0) However, due to lack of cellular and temporal resolutions of earlier analyses, it was unclear whether HD vulnerable neurons undergo accelerated epigenetic aging, including accelerated de-repression of developmental genes."];
+  "E3" [label="(3,0,0) Specific neurons, particularly direct and indirect spiny projection neurons (dSPN and iSPN, respectively) in the striatum, representing >95% of striatal neurons, are highly vulnerable to the HD mutation ,."];
+  "E4" [label="(15,0,0) Particularly, epigenetic de-repression of developmental genes is dramatically accelerated and our data indicate that the mechanism involves PRC1 through paralog switching among PRC1-CBX genes."];
+  "E5" [label="(7,0,0) Histone modifications, including the active mark H3K27 acetylation (H3K27ac) and the repressive mark H3K27 trimethylation (H3K27me3), were used as proxy to assess exdifferentiation, which is characterized by de-repression of non-lineage-specific genes, part."];
+  "E6" [label="(8,0,0) Epigenomic analyses in bulk HD striatal tissue show early loss of H3K27ac at striatal super-enhancers -broad enhancers regulating cellular identity genes, which results in transcriptional downregulation of their targets, striatal identity genes , , , ,."];
+  "E7" [label="(4,0,0) Molecular underpinning of striatal neuron vulnerability in HD remains elusive."];
+  "E8" [label="(1,0,0) Huntington’s disease (HD) is a genetic, progressive neurodegenerative disease, which manifests with characteristic motor, cognitive, and psychiatric symptoms that arise generally at midlife and progress during 10 to 15 years, with subtle signs that can appe."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-common"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+}

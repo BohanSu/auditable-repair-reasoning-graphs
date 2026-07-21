@@ -1,0 +1,39 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56799-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper investigates asymmetric alkyl/thienyl side-chain engineering in A-DA′D-A small-molecule acceptors, including BTP-C11-TBO and BTP-BO-TBO, as a route to improve molecular planarity and π–π packing, reduce electron-vibrational coupling and non-radiative voltage losses, enhance exciton dissociation, mitigate charge recombination, and develop PM6-based organic solar cells approaching 20% efficiency.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When OSCs have remaining efficiency and energy-loss limitations, source-grounded molecular design strategies that reduce voltage loss, suppress non-radiative recombination, and improve charge generation motivate developing higher-efficiency A-DA′D-A acceptor-based organic solar cells."];
+  "R3" [label="(0,0,0) Because current OSCs still have room for photovoltaic-performance improvement relative to inorganic photovoltaics, and minimizing non-radiative voltage loss is essential for enhancing open-circuit voltage and photovoltaic properties, non-radiative voltage-loss reduction is a justified target for further improving OSC performance."];
+  "R4" [label="(0,0,0) Since low donor-acceptor energy offset and high photoluminescence yield are key factors for minimizing voltage losses, and voltage-loss reduction is a justified target for further OSC improvement, these material and energetic factors motivate strategies aimed at lowering voltage losses in OSCs."];
+  "R6" [label="(0,0,0) Reducing electron-vibrational coupling is a relevant coupling-related objective for suppressing non-radiative recombination and non-radiative energy loss, consistent with the broader strategy of manipulating intermolecular interactions to control intermolecular coupling properties."];
+  "R7" [label="(0,0,0) Asymmetric alkyl/thienyl outer side chains, by modulating D/A interfacial energetics, inhibiting molecular vibration, enhancing charge generation efficiency, and reducing charge recombination, plausibly support reduced non-radiative loss through coupling-related control."];
+  "R8" [label="(0,0,0) Because the asymmetric alkyl/thienyl outer side-chain strategy supports reduced non-radiative loss and improved charge generation, it is a feasible approach for boosting OSC efficiency and provides an instructive guideline for further development of high-performance organic photovoltaic materials."];
+  "node_1" [label="(1,0,0) It is common that organic solar cells (OSCs) have distinct merits and have become one of the most promising green energy technologies."];
+  "node_10" [label="(10,0,0) If synergistically improving luminescence efficiencies and optimizing morphological structure is key but challenging, then manipulating the intermolecular interactions to control intermolecular coupling properties becomes a more viable strategy to realize suppressed energy loss and improved fill factor."];
+  "node_12" [label="(19,0,0) Currently reducing the electron-vibrational coupling has been demonstrated as an effective strategy to suppress the non-radiative recombination, thus leading to suppressed non-radiative energy loss."];
+  "node_15" [label="(24,0,0) Currently the asymmetric alkyl/thienyl outer side chains can subtly modulate the D/A interfacial energetics and inhibit molecular vibration, resulting in enhanced charge generation efficiency and reduced charge recombination."];
+  "node_17" [label="(0,0,0) If a strategy effectively reduces non-radiative energy loss and improves charge generation, then it is a feasible approach for boosting the efficiency of OSCs and provides an instructive guideline for further development."];
+  "node_2" [label="(2,0,0) Currently the power conversion efficiency of single junction OSCs has exceeded 19% thanks to advances in A-DA'D-A type small-molecule acceptors."];
+  "node_3" [label="(0,0,0) induction-reasoning: Given the power conversion efficiency of single junction OSCs has exceeded 19%, and it is common that OSCs have distinct merits and are promising, therefore OSCs, especially those based on A-DA'D-A SMAs, are highly promising and have achieved significant efficiency milestones."];
+  "node_4" [label="(0,0,0) We know that inorganic photovoltaic technologies still exhibit higher efficiencies and lower energy losses than current OSCs."];
+  "node_5" [label="(3,0,0) abduction-reasoning: Given OSCs have achieved significant efficiency milestones, and inorganic photovoltaic technologies still exhibit higher efficiencies and lower energy losses than current OSCs, therefore there is still considerable room for further improvement in the photovoltaic performance of OSCs due to the relatively higher energy loss and lower fill factor."];
+  "node_6" [label="(4,0,0) If we want to enhance the open-circuit voltage and photovoltaic properties of OSCs, then minimizing the non-radiative voltage loss is essential."];
+  "node_8" [label="(6,0,0) Currently a low energy offset between donor and acceptor molecular states and high photoluminescence yield of the low bandgap material are the two key factors for minimizing the voltage losses of OSCs."];
+  "node_2" -> "node_3" [label="induction-case"];
+  "node_1" -> "node_3" [label="induction-common"];
+  "node_3" -> "node_5" [label="abduction-phenomenon"];
+  "node_4" -> "node_5" [label="abduction-knowledge"];
+  "node_5" -> "R3" [label="abduction-phenomenon"];
+  "node_6" -> "R3" [label="abduction-knowledge"];
+  "node_8" -> "R4" [label="abduction-phenomenon"];
+  "R3" -> "R4" [label="abduction-knowledge"];
+  "node_12" -> "R6" [label="abduction-phenomenon"];
+  "node_10" -> "R6" [label="abduction-knowledge"];
+  "node_15" -> "R7" [label="abduction-phenomenon"];
+  "R6" -> "R7" [label="abduction-knowledge"];
+  "node_17" -> "R8" [label="deduction-rule"];
+  "R7" -> "R8" [label="deduction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56921-8
+  rankdir="TB";
+  "A3" [label="(0,0,0) Abduction-reasoning: Given that atomic-scale mechanism and compositional origins are understood through γ-phase analysis, and if mechanisms are understood then predictive rules can be developed, therefore a generalized predictive rule for MAX phase behavior can be established."];
+  "I1" [label="(0,0,0) Induction-reasoning: Given that irradiation induces lattice displacement and provides driving force, and has been used across diverse materials, therefore irradiation is an established and broadly applicable method for probing phase transformation dynamics."];
+  "I3" [label="(0,0,0) Induction-reasoning: Given that the method works for MAX phases through intermediate phase analysis, and similar complex ceramics share mechanistic principles, therefore this method can be extended to other complex ceramics undergoing multi-stage phase transformations."];
+  "N12" [label="(12,0,0) Prior analyses mainly focused on initial hexagonal phases and provided only phenomenological descriptions of irradiation-induced phase behaviors."];
+  "N16" [label="(16,0,0) Cr₂AlC shows anomalous behavior, not following the common hex-γ-fcc pathway like V₂AlC and Nb₂AlC."];
+  "N17" [label="(17,0,0) Cr₂AlC follows hex-γ-amorphous transition pathway without forming fcc-phase."];
+  "N21" [label="(21,0,0) A generalized rule is developed for predicting extreme environment phase transition behaviors of MAX phases based on atomic radius and electronegativity."];
+  "N9" [label="(9,0,0) Understanding mechanisms by only analyzing initial phases is a challenge."];
+  "NROOT" [label="(0,0,0) This paper aims to develop and evaluate a predictive understanding of irradiation-induced multi-stage transformations in M₂AlC MAX phases by integrating in-situ ion-irradiation TEM with first-principles calculations of intermediate γ-phase energetics, testing how composition-dependent γ-phase stability leads to hex→γ→fcc or hex→γ→amorphous pathways, and relating the resulting predictive rule to M-element atomic radius and electronegativity.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A combined experimental-computational account of irradiation-induced MAX-phase transformations can connect direct pathway observation, γ-phase energetics, composition-dependent stability, and atomic-property-based prediction."];
+  "R3" [label="(0,0,0) Prior MAX-phase analyses that mainly focus on initial hexagonal phases and provide phenomenological descriptions face a challenge in fully resolving complete multi-stage transformation mechanisms."];
+  "R31" [label="(0,0,0) The retained and repaired conclusions jointly support a research program to investigate irradiation-driven multi-stage transformations in M₂AlC MAX phases by combining in-situ ion-irradiation TEM with first-principles analysis of intermediate γ-phase energetics, comparing hex→γ→fcc and hex→γ→amorphous pathways across compositions, and formulating a cautious predictive rule based on M-element atomic radius and electronegativity."];
+  "R6" [label="(0,0,0) In the studied M₂AlC examples under irradiation, Cr₂AlC follows a hex→γ→amorphous pathway without forming an fcc phase, whereas V₂AlC and Nb₂AlC follow the common hex→γ→fcc pathway, showing a composition-associated difference in observed transformation pathways."];
+  "R9" [label="(0,0,0) The reported generalized rule for MAX phases links predicted phase-transition behavior under extreme environments to M-element atomic radius and electronegativity, without extending the claim beyond the stated MAX-phase scope."];
+  "N9" -> "R3" [label="deduction-rule"];
+  "N12" -> "R3" [label="deduction-case"];
+  "N17" -> "R6" [label="induction-case"];
+  "N16" -> "R6" [label="induction-common"];
+  "N21" -> "R9" [label="abduction-phenomenon"];
+  "A3" -> "R9" [label="abduction-knowledge"];
+  "I1" -> "R31" [label="induction-case"];
+  "I3" -> "R31" [label="induction-common"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R31" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

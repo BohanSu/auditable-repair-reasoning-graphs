@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56734-9
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes and evaluates EXPERT as a prime-editing system that pairs an upstream cis-nick-inducing sgRNA with an extended pegRNA to expand editing range on both sides of the pegRNA nick, including challenging edits such as large inserts, while aiming for high-purity editing with low indel and low off-target rates and addressing range and fidelity limitations of single-pegRNA and dual-pegRNA prime editors.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A prime-editing method that overcomes upstream editing constraints and avoids trans-nick-associated risks can motivate a broader editing toolbox with improved range and fidelity."];
+  "Node_1" [label="(5,2,0) Currently existing prime editing systems cannot modify the upstream genomic region of the pegRNA nick."];
+  "Node_10" [label="(0,0,0) If EXPERT can efficiently perform editing on both sides of the ext-pegRNA nick, then it represents an effective gene-editing tool that complements the PE toolbox and holds significant value in life sciences."];
+  "Node_2" [label="(0,0,0) If existing prime editing systems cannot modify the upstream genomic region, then there is a need to expand the editable region particularly for editing sites located upstream from the nick."];
+  "Node_3" [label="(14,3,0) Deductive: Given existing prime editing systems cannot modify the upstream genomic region, therefore there is a need to expand the editable region particularly for editing sites located upstream from the nick."];
+  "Node_4" [label="(0,0,0) If there is a need to expand the editable region upstream, then two-pegRNA systems were developed but their trans nicks are associated with an elevated probability of inducing double-strand breaks (DSBs)."];
+  "Node_5" [label="(16,3,0) Deductive: Given there is a need to expand the editable region upstream, therefore two-pegRNA systems were developed but their trans nicks are associated with an elevated probability of inducing double-strand breaks (DSBs)."];
+  "Node_6" [label="(0,0,0) If two-pegRNA systems risk DSBs due to trans nicks, then EXPERT uses an upstream sgRNA to generate a cis nick to avoid this risk and achieve higher product purity."];
+  "Node_8" [label="(0,0,0) If EXPERT uses an upstream sgRNA to generate a cis nick to avoid risks and achieve higher product purity, then it can efficiently perform editing on both sides of the ext-pegRNA nick."];
+  "R3" [label="(0,0,0) Because two-pegRNA systems use trans nicks that are associated with elevated DSB risk, this motivates EXPERT's upstream sgRNA cis-nick strategy as a way to avoid that trans-nick risk and support higher product purity, rather than by itself proving superior product purity."];
+  "R4" [label="(0,0,0) Given EXPERT's upstream sgRNA cis-nick strategy for avoiding trans-nick risks and supporting higher product purity, the stated design rule supports that EXPERT can efficiently perform editing on both sides of the extended pegRNA nick."];
+  "R5" [label="(0,0,0) Because EXPERT can efficiently perform editing on both sides of the extended pegRNA nick, EXPERT represents an effective gene-editing tool that complements the prime-editing toolbox and has potential value for life-science applications."];
+  "Node_1" -> "Node_3" [label="deduction-case"];
+  "Node_2" -> "Node_3" [label="deduction-rule"];
+  "Node_3" -> "Node_5" [label="deduction-case"];
+  "Node_4" -> "Node_5" [label="deduction-rule"];
+  "Node_6" -> "R3" [label="deduction-rule"];
+  "Node_5" -> "R3" [label="deduction-case"];
+  "Node_8" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "Node_10" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56846-2
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes moDON, a single-set-stapled modular DNA origami platform with a re-routable scaffold for many orthogonal shape-matching xy connection variants and a single-sequence three-strand z-connector, to enable one-pot, high-yield assembly and selective disassembly of fully addressable 3D superstructures.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A modular DNA origami platform can address the gap between low cost and structural versatility when its monomers share a common staple set while using programmable, orthogonal connection geometries to build larger superstructures."];
+  "Node_C1" [label="(6,1,0) Currently researchers aim to mimic natural higher-order structures on a molecular level as synthetic biology progresses."];
+  "Node_R1" [label="(0,0,0) If researchers aim to mimic natural higher-order structures, then there is a need for modular building blocks capable of controllably assembling into higher-order structures."];
+  "Node_R2" [label="(0,0,0) If there is a need for modular building blocks capable of controllably assembling into higher-order structures, then a variety of different strategies are reported to increase DNA origami nanostructure sizes."];
+  "Node_R3" [label="(0,0,0) If a variety of different strategies have been reported to increase DNA origami nanostructure sizes, then it is found that each method has at least one major drawback."];
+  "Node_R4" [label="(0,0,0) If each method to increase DNA origami nanostructure sizes has at least one major drawback, then concepts combining both low cost and high structural versatility are currently missing."];
+  "Node_R5" [label="(0,0,0) If concepts combining both low cost and high structural versatility are currently missing, then a new structure like moDON is developed capable of folding into tens of thousands of different connection configurations."];
+  "Node_R6" [label="(0,0,0) If moDON is capable of folding into tens of thousands of different connection configurations, then the combination of xy-connections and z-connections allows for the construction of over 50,000 unique moDON monomers."];
+  "Node_R7" [label="(0,0,0) If the combination of xy-connections and z-connections allows for the construction of over 50,000 unique moDON monomers, then superstructures can be assembled in one-step reactions from monomers."];
+  "R1" [label="(0,0,0) [deductive]: Given that researchers aim to mimic natural higher-order structures on a molecular level, there is a need for modular building blocks capable of controllably assembling into higher-order structures."];
+  "R2" [label="(0,0,0) [deductive]: Given the need for modular building blocks capable of controllably assembling into higher-order structures, a variety of different strategies have been reported to increase DNA origami nanostructure sizes."];
+  "R3" [label="(0,0,0) [deductive]: Given that a variety of different strategies have been reported to increase DNA origami nanostructure sizes, each method has at least one major drawback."];
+  "R4" [label="(0,0,0) [deductive]: Given that each method to increase DNA origami nanostructure sizes has at least one major drawback, concepts combining both low cost and high structural versatility in DNA origami nanostructures are currently missing."];
+  "R5" [label="(0,0,0) [deductive]: Given that concepts combining both low cost and high structural versatility are currently missing, a new structure like moDON is developed that is capable of folding into tens of thousands of different connection configurations."];
+  "R6" [label="(0,0,0) [deductive]: Given the moDON-like structure's capability to fold into tens of thousands of different connection configurations, the combination of xy-connections and z-connections allows construction of over 50,000 unique moDON monomers."];
+  "R7" [label="(0,0,0) [deductive]: Given that the combination of xy-connections and z-connections allows construction of over 50,000 unique moDON monomers, superstructures can be assembled in one-step reactions from monomers."];
+  "Node_R1" -> "R1" [label="deduction-rule"];
+  "Node_C1" -> "R1" [label="deduction-case"];
+  "Node_R2" -> "R2" [label="deduction-rule"];
+  "R1" -> "R2" [label="deduction-case"];
+  "Node_R3" -> "R3" [label="deduction-rule"];
+  "R2" -> "R3" [label="deduction-case"];
+  "Node_R4" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "Node_R5" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "Node_R6" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "Node_R7" -> "R7" [label="deduction-rule"];
+  "R6" -> "R7" [label="deduction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

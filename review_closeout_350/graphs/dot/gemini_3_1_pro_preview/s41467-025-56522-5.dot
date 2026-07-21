@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56522-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This work introduces an untrained deep image-prior neural network (DENN) that embeds an experimentally calibrated empirical transmission matrix as its differentiable forward model, enabling single-shot optical phase retrieval through complex scattering multiple-input multiple-output systems such as multimode fibers and ground glass without analytical theory, labeled data, or prior training, while contrasting with conventional supervised methods that require large input-output data pairs.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(2,0,0) As a typical type of DL, supervised learning excels at learning a complex relationship from large amounts of input and output data pairs for an unknown system in an end-to-end manner  , which has shown its capability in overcome critical challenges in compu."];
+  "E2" [label="(17,0,0) An experimentally calibrated empirical transmission matrix (TM) describing the forward mapping relationship of the MIMO system is integrated to the DNN for the back propagation of the neural network."];
+  "E3" [label="(4,0,0) Unsupervised and self-supervised learning have been proposed to release the heavy effort of registering data pairs  ,  ,  ,  ,  ,  ,  , while sufficiently large amounts of data are still need."];
+  "E4" [label="(5,0,0) Therefore, there is a growing pursuit of developing untrained deep neural networks (DNNs) for acquiring the mapping function of unknown systems, where physics-enhanced DNNs have been proposed to overcome the challenge of big data by integrating physical pri."];
+  "E5" [label="(1,0,0) Deep learning (DL) has become a revolutionary paradigm for solving inverse problems in science and technology  ,  ,  , including physics  ,  ,  ,  , biology  ,  , chemistry  ,  , information science  and engineering  ,."];
+  "E6" [label="(21,0,0) As a proof of principle, seeing through a multimode fiber (MMF) and a ground glass are achieved using a single-shot speckle intensity at their output."];
+  "E7" [label="(9,0,0) The weights and biases of a physics-enhanced DNN can be updated using a loss function based on the analytical theory."];
+  "E8" [label="(3,0,0) In order to learn a mapping function of the unknown system, large-scale labeled data and extensive training are indispensable prerequisites  , which are time-consuming and energy-intensive."];
+  "E9" [label="(7,0,0) In particular, there are several variants of the DIP for optical phase retrieval in diffraction optics  ,  ,  ,  , where physics consistency is forced by minimizing the loss function between the estimated results and the actual measurement."];
+  "E10" [label="(6,0,0) Inspired by the concept of deep image prior (DIP)  , untrained neural networks have been widely used in metrology  , holography  ,  ,  ,  ,  , and imaging  ,  ,  ,  ,."];
+  "E11" [label="(2,0,0) Conventional supervised methods learn complex relationships from large amounts of input and output data pairs for unknown systems."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-common"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+}

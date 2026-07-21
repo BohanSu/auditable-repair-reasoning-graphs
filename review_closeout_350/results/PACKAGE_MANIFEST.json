@@ -1,6 +1,6 @@
 {
   "package": "current_version_350",
-  "release_policy": "lightweight GitHub package; full run directories are external artifacts",
+  "release_policy": "GitHub package with accepted terminal DOT graphs; full run directories remain external artifacts",
   "contains_soft_links": false,
   "contains_duplicated_code_snapshot": false,
   "shared_code_snapshot": "../code_snapshot",
@@ -12,6 +12,7 @@
   },
   "directories": {
     "results": "GitHub-safe summary and audit tables",
+    "graphs": "350 accepted current-version DOT graphs plus integrity manifests",
     "docs": "public architecture, validation, and reproduction notes",
     "figures": "final vector overview"
   }

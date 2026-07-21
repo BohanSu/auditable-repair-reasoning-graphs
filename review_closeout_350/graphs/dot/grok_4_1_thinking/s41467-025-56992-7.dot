@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56992-7
+  rankdir="TB";
+  "N17" [label="(17,0,0) Although the studies on cold tolerance at the early stages have provided valuable insights, understanding the molecular mechanisms of cold tolerance at the booting stage is crucial due to its direct impact on grain yield."];
+  "N18" [label="(18,0,0) However, fewer genes for cold tolerance at the booting stage have been identified."];
+  "N25" [label="(25,0,0) In Arabidopsis, AtSR1, AtCAMTA1, AtCAMTA2 and AtCAMTA5 positively regulate freezing tolerance and can respond to low temperatures and activate the expression of AtDREB1 (CBF) genes and other cold-inducible genes."];
+  "N31" [label="(31,0,0) However, whether CAMTA family transcription factors play a role in rice cold acclimatization remains unknown."];
+  "NROOT" [label="(0,0,0) This paper aims to identify and mechanistically evaluate how a Chinese wild-rice-derived CTB3 allele, encoding a CAMTA/calmodulin-binding transcription-factor candidate, can enhance booting-stage cold tolerance in japonica rice, including testing links to OsTCP19-mediated repression, OsTPP1, Tre6P, sugar-transporter genes, panicle sugar accumulation, and adaptation to high-latitude cold environments.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When a crop has an important cold-sensitive developmental stage with few identified tolerance genes, and a related transcription-factor family has precedent in cold-response regulation, the evidence supports a study that identifies candidate alleles and tests their molecular mechanisms in that stage."];
+  "R2" [label="(0,0,0) Because several Arabidopsis CAMTA transcription factors positively regulate freezing tolerance while the role of CAMTA family transcription factors in rice cold acclimatization remains unknown, these premises motivate investigating whether CAMTA family transcription factors contribute to rice cold responses."];
+  "R3" [label="(0,0,0) The scarcity of identified genes for cold tolerance at the rice booting stage, together with the plausibility that CAMTA family transcription factors may participate in rice cold responses, motivates a focused investigation of CAMTA-related molecular mechanisms for booting-stage cold tolerance in rice."];
+  "phenomenon" [label="(0,0,0) induction: Given induction-case (However, fewer genes for cold tolerance at the booting stage have been identified.) and induction-common (Although the studies on cold tolerance at the early stages have provided valuable insights, understanding the molecular mechanisms of cold tolerance at the booting stage is crucial due to its direct impact on grain yield.), therefore fewer genes for cold tolerance at the booting stage have been identified, making molecular understanding at booting crucial despite known genes like bZIP73, CTB4a, CTB2, Ctb1, qCTB7, OsLEA9."];
+  "N18" -> "phenomenon" [label="induction-case"];
+  "N17" -> "phenomenon" [label="induction-common"];
+  "N31" -> "R2" [label="abduction-phenomenon"];
+  "N25" -> "R2" [label="abduction-knowledge"];
+  "phenomenon" -> "R3" [label="abduction-phenomenon"];
+  "R2" -> "R3" [label="abduction-knowledge"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

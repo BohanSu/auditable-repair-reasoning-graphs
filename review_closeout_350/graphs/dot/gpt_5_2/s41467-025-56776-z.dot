@@ -1,0 +1,46 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56776-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to develop and evaluate a global, standardized analysis of respiratory-virus resurgence after COVID-19 non-pharmaceutical interventions, testing whether asynchronous virus-specific onset and peak timing is globally consistent or region-specific and using interval comparisons and mixed-effects modelling to support preparedness-relevant interpretation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When clinically important respiratory viruses show variable circulation and asynchronous rebound patterns, and when standardized timing definitions, interval comparisons, and mixed-effects modelling can address an unresolved global-versus-regional question, these elements jointly motivate a global study of respiratory-virus resurgence timing after COVID-19 interventions."];
+  "R4" [label="(0,0,0) The clinical importance of influenza virus and respiratory syncytial virus, together with geographically and environmentally varying seasonal circulation of common respiratory viruses, establishes respiratory-virus circulation timing as a relevant public-health background issue."];
+  "R5" [label="(0,0,0) The out-of-season RSV resurgence after NPI relaxation is plausibly explained by increased population susceptibility associated with depleted immunity."];
+  "R6" [label="(0,0,0) Descriptive pooling of inter-onset intervals and site-matched comparisons of virus-pair timing differences can be used to compare relative timing between respiratory viruses as measures of asynchronous resurgence."];
+  "R7" [label="(0,0,0) The study is motivated to investigate whether asynchronous resurgence of common respiratory viruses after COVID-19 disruptions is globally consistent or region-specific by quantifying virus-specific onset and peak timing relationships across sites, comparing timing intervals, and synthesising heterogeneous site data with a GLMM framework."];
+  "cB" [label="(0,0,0) deduction: Given the global-vs-regional consistency is unclear and a rule that resolving this requires comparable multi-site timing estimates, therefore the needed research task is to quantify onset/peak timing relationships across viruses globally using unified definitions."];
+  "cD" [label="(0,0,0) induction: Given multiple country/site examples show non-simultaneous resurgence and an inductive rule that repeated observations across settings support a general pattern, therefore asynchronous resurgence is a widespread phenomenon worth formal global quantification."];
+  "cE" [label="(0,0,0) deduction: Given the problem is to synthesise timing intervals across many heterogeneous sites and a rule that GLMMs account for site variability while estimating common timing relationships, therefore GLMM is a suitable framework for synthesising onset/peak interval relationships across viruses globally."];
+  "i_bg2" [label="(0,0,0) If the scientific question is whether an observed pattern is globally consistent, then compiling multi-country data and applying a unified onset/peak definition enables comparable cross-site inference."];
+  "i_bg3" [label="(0,0,0) If observations include heterogeneous sites and data sources, then a mixed-effects model is an appropriate synthesis tool because it can account for between-site variability while estimating common timing relationships."];
+  "i_bg4" [label="(0,0,0) If one has epidemic onset/peak times for multiple viruses across sites, then one can compute intervals between onsets/peaks and compare relative timing between virus pairs (to quantify asynchrony)."];
+  "n1" [label="(1,0,0) Currently influenza virus (IV) and respiratory syncytial virus (RSV) are important causes of severe respiratory infections."];
+  "n11" [label="(11,0,0) Currently a GLMM framework can be used to synthesise time intervals between epidemic onsets and peaks of different respiratory viruses during the COVID-19 pandemic."];
+  "n15" [label="(15,0,0) Currently two analysis approaches can be implemented: (1) descriptive pooling of inter-onset intervals pre/post pandemic; (2) analytical site-matched comparison of timing differences between virus pairs’ resurgence."];
+  "n2" [label="(2,0,0) Currently many common respiratory viruses show distinct seasonal circulation patterns, with global variation by geography and environment."];
+  "n4" [label="(4,0,0) Currently after NPI relaxation, RSV resurged out-of-season in several countries, likely due to depleted population immunity."];
+  "n6" [label="(6,0,0) Currently (New South Wales example), viruses showed different rebound timing: RV/AdV least affected, RSV resurged in Sep 2020, PIV/MPV limited until mid-2021, IV stayed very low through end-2021."];
+  "n7" [label="(7,0,0) Currently other countries also showed asynchronous resurgence with varied NPI timing/strength."];
+  "n8" [label="(8,0,0) Currently it is unclear whether variations in resurgence timing are region-specific or globally consistent; resolving this matters for preparedness and public health strategy."];
+  "r8o11" [label="(4,8,11) If population susceptibility increases (e.g., due to depleted immunity), then the risk of RSV rebound increases over time."];
+  "n6" -> "cD" [label="induction-case"];
+  "n7" -> "cD" [label="induction-common"];
+  "i_bg2" -> "cB" [label="deduction-rule"];
+  "n8" -> "cB" [label="deduction-case"];
+  "i_bg3" -> "cE" [label="deduction-rule"];
+  "n11" -> "cE" [label="deduction-case"];
+  "n1" -> "R4" [label="induction-case"];
+  "n2" -> "R4" [label="induction-common"];
+  "n4" -> "R5" [label="abduction-phenomenon"];
+  "r8o11" -> "R5" [label="abduction-knowledge"];
+  "i_bg4" -> "R6" [label="deduction-rule"];
+  "n15" -> "R6" [label="deduction-case"];
+  "cB" -> "R7" [label="induction-case"];
+  "i_bg2" -> "R7" [label="induction-common"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "cD" -> "NROOT" [label="induction-case"];
+  "cE" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

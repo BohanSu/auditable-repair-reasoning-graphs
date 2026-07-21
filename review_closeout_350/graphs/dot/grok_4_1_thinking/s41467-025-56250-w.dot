@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56250-w
+  rankdir="TB";
+  "Common_Cooperative" [label="(0,0,0) Commonly, strong light-mediated interactions at high densities in atomic arrays produce cooperative non-local responses that enable controlled light propagation beyond isolated-atom limits."];
+  "NROOT" [label="(0,0,0) This paper proposes achieving negative refraction of light by exploiting cooperative, non-local optical interactions in high-density subwavelength atomic arrays, using microscopic atom-by-atom simulations to show high-transmission beam deflection opposite to normal refraction as an alternative to artificial resonator-based or extreme-parameter approaches.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A viable route to optical negative refraction can be established when a microscopic light-scattering mechanism in a structured medium predicts a beam deflection opposite to ordinary refraction and does so without relying on lossy artificial resonators."];
+  "R10" [label="(0,0,0) The simulations show propagating light beams deflected in the opposite direction to normal refraction, and this observation is consistent with a demonstrated high-transmission negative-refraction response."];
+  "R11" [label="(0,0,0) The paper identifies engineered resonance bands with in-plane group velocities antiparallel to excitation quasimomenta as a mechanism for negative refraction that aligns with transverse Bloch-band collective resonances."];
+  "R8" [label="(0,0,0) In high-density subwavelength atomic arrays, strong light-mediated interactions can produce cooperative, non-local optical responses that enable controlled light propagation beyond isolated-atom behavior."];
+  "S15" [label="(15,1,0) The simulations uncover a distinct deflection of propagating light beams in the opposite direction to what normally occurs."];
+  "S17" [label="(17,1,0) High-transmission negative refraction is demonstrated that is resilient to lattice imperfections such as missing atoms and position uncertainty."];
+  "S18" [label="(18,0,0) Our findings reveal that such refraction aligns with the simple phenomenology of transverse Bloch band collective resonances."];
+  "S19" [label="(19,1,0) Negative refraction can be realised by engineering and exciting such resonance bands whose in-plane group velocities are antiparallel to the excitation quasimomenta."];
+  "S8" [label="(8,3,0) Cooperative, non-local atom responses arise from strong light-mediated interactions at high densities."];
+  "S8" -> "R8" [label="induction-case"];
+  "Common_Cooperative" -> "R8" [label="induction-common"];
+  "S15" -> "R10" [label="abduction-phenomenon"];
+  "S17" -> "R10" [label="abduction-knowledge"];
+  "S18" -> "R11" [label="abduction-phenomenon"];
+  "S19" -> "R11" [label="abduction-knowledge"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

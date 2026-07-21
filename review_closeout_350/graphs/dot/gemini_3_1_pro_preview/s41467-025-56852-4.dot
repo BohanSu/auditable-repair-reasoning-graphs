@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56852-4
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This work introduces HoloVAM, a tomographic volumetric additive manufacturing method that replaces conventional amplitude-modulated projections with phase-encoded holographic patterns computed with the Gerchberg–Saxton algorithm and implemented on a DMD through Lee holograms. Phase encoding improves light efficiency, enables depth control and point-spread-function control, and provides speckle reduction through tiled holograms with PSF modification. The approach achieves rapid millimeter-scale printing in less than 60 s with 30 µm-resolution in acrylate resins and cell-laden GelMA hydrogels.", fillcolor="lightyellow", style="filled"];
+  "E24" [label="(24,0,0) Digital micromirror devices are used as reflective binary amplitude modulators in light-based 3D printers including TVAM."];
+  "E27" [label="(27,0,0) The authors term the phase-property tomographic VAM technique HoloVAM."];
+  "E28" [label="(28,0,0) Phase encoding of tomographic projections offers multiple advantages over amplitude modulation."];
+  "E29" [label="(29,0,0) Phase-encoding improves light efficiency because all pixels of the display can contribute to the projected intensity pattern."];
+  "E32" [label="(32,0,0) Phase-encoding allows point-spread-function modification in the same hologram and 3D digital light-beam control, including increased depth of focus."];
+  "E37" [label="(37,0,0) The Gerchberg–Saxton iterative algorithm calculates a two-dimensional input phase pattern that results in a desired intensity distribution pattern."];
+  "E38" [label="(38,0,0) Binary holograms computed with the Gerchberg-Saxton algorithm and encoded with Lee holograms have been used to control multiple foci."];
+  "E39" [label="(39,0,0) The approach demonstrates phase encoding in tomographic VAM by printing millimeter-scale objects in acrylate-based resin and cell-laden GelMA hydrogel."];
+  "E40" [label="(40,0,0) The demonstration prints in less than 60 s and reliably reaches negative features of 31.35 µm, about 30 µm resolution."];
+  "E43" [label="(43,0,0) The hologram pipeline uses tiled holograms with PSF modification to reduce speckle noise, and the Lee Hologram method allows use of the DMD as a fast phase modulator."];
+  "E24" -> "NROOT" [label="induction-case"];
+  "E27" -> "NROOT" [label="induction-common"];
+  "E28" -> "NROOT" [label="induction-case"];
+  "E29" -> "NROOT" [label="induction-case"];
+  "E32" -> "NROOT" [label="induction-case"];
+  "E37" -> "NROOT" [label="induction-case"];
+  "E38" -> "NROOT" [label="induction-case"];
+  "E39" -> "NROOT" [label="induction-case"];
+  "E40" -> "NROOT" [label="induction-case"];
+  "E43" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N10" [label="(9,0,0) If mechanisms are analyzed by only analyzing the initial phases, then it is a challenge to understand the mechanisms."];
+  "N17" [label="(16,0,0) The anomalous case of Cr2AlC does not follow the common hex-gamma-fcc phase transition pathway."];
+  "N18" [label="(17,0,0) Cr2AlC follows a hex-gamma-amorphous transition pathway."];
+  "N19" [label="(0,0,0) induction-reasoning: Given Cr2AlC does not follow common pathway and Cr2AlC follows hex-gamma-amorphous pathway, therefore distinct phase transformation pathways exist based on composition."];
+  "N9" [label="(8,0,0) Currently almost all analyses to date were based on the initial phase or structure."];
+  "NROOT" [label="(0,0,0) Research Proposal: Use in situ or real-time ion-irradiation studies of representative MAX phases, together with analysis of intermediate gamma-phase energetics and structural disordering, to explain irradiation-induced multi-stage phase transformations, including hex → gamma → fcc behavior and the Cr2AlC hex → gamma → amorphous pathway, and to formulate a composition-dependent predictive rule for MAX-phase irradiation responses.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A valid paper-level bridge is that observed irradiation pathways, anomalous composition-specific behavior, and a documented need for intermediate-phase analysis together motivate a predictive research program for MAX-phase phase transformations."];
+  "R13" [label="(0,0,0) Because almost all prior analyses were based on the initial phase or structure, analyzing mechanisms only through initial phases makes the transformation mechanisms challenging to understand."];
+  "N17" -> "N19" [label="induction-case"];
+  "N18" -> "N19" [label="induction-common"];
+  "N10" -> "R13" [label="deduction-rule"];
+  "N9" -> "R13" [label="deduction-case"];
+  "N19" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -20,6 +20,11 @@ directory. It describes the lightweight acceptance package only.
 | `results/REVIEW_BATCH_ANS_GUARD.json` | Batch ANS guard for the `350/350` current-version state. |
 | `results/REVIEW_BATCH_ANS_GUARD.csv` | Flat batch ANS guard table. |
 | `results/PACKAGE_MANIFEST.json` | Lightweight manifest describing the public acceptance package. |
+| `graphs/dot/<model>/<paper>.dot` | All 350 accepted current-version terminal DOT graphs, separated by model. |
+| `graphs/manifest.csv` | Per-graph key, path, SHA-256, size, node/edge counts, and validation flags. |
+| `graphs/summary.json` | Set-level provenance, count, and validation summary for the 350 DOT files. |
+| `graphs/cross_stage_audit.json` | Key and SHA-256 comparison against the locked 300/350 graph set. |
+| `graphs/README.md` | Graph selection rule, layout, and verification boundary. |
 | `docs/METHOD_ARCHITECTURE.md` | Canonical current-version method architecture. |
 | `docs/ACCEPTED_RUN_SETTINGS.md` | Locked claim settings and recoverable closeout defaults. |
 | `docs/RUN_CONFIGURATION_MATRIX.md` | Script-by-script configuration inventory for the closeout package. |
@@ -29,5 +34,6 @@ directory. It describes the lightweight acceptance package only.
 | `docs/REPRODUCTION_COMMANDS.md` | Lightweight audit commands for the public package. |
 | `docs/SOURCE_POINTERS.md` | Included and excluded artifact boundary. |
 
-The full per-paper graphs, evaluator directories, provider logs, and local
-caches are intentionally outside this GitHub-ready package.
+The accepted terminal DOT graph for each of the 350 current-version rows is
+included. Intermediate candidates, evaluator directories, provider logs, and
+local caches remain outside this GitHub-ready package.

@@ -1,0 +1,47 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56657-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study motivates investigating how C. albicans hyphal morphogenesis and hypha-associated proteins contribute to invasive infection, intestinal inflammation, and host immune responses, with the aim of identifying fungal protein mechanisms that could modulate pathogenesis.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When C. albicans hyphal morphogenesis is linked to invasive behavior and intestinal inflammation, and hypha-associated proteins are linked to inflammatory pathology, these findings motivate studies of hypha-specific fungal factors in host-pathogenesis mechanisms."];
+  "R1" [label="(0,0,0) C. albicans opportunistic disease in susceptible patients involves host tissue invasion, a process associated with the yeast-to-hyphal transition."];
+  "R2" [label="(0,0,0) Hyphal morphogenesis is an important process linked to the shift between C. albicans gut commensalism and invasive infection."];
+  "R3" [label="(0,0,0) Hyphal formation by high-damaging C. albicans strains is associated with exacerbated intestinal inflammation and supports hyphal morphogenesis as a contributor to invasive disease potential."];
+  "R4" [label="(0,0,0) Hypha-associated proteins, including candidalysin and Als proteins, are plausible contributors to C. albicans intestinal pathology and proinflammatory mucosal immunity."];
+  "R5" [label="(0,0,0) Together, the links between C. albicans hyphal formation, intestinal inflammation, and hypha-associated proteins motivate investigating hypha-specific proteins as targets for modulating pathogenesis and immune responses."];
+  "node_10" [label="(10,0,0) If Als proteins, well-known as adhesins and invasins, not only induce intestinal adaptive immune responses but also exacerbate intestinal colitis and colon damage, then hypha-associated proteins are key drivers of intestinal pathology."];
+  "node_2" [label="(2,0,0) In patients with ulcerative colitis, high-damaging C. albicans strains form hyphae and exacerbate intestinal inflammation."];
+  "node_3" [label="(3,0,0) In immunocompromised and critically ill patients, C. albicans transitions from a commensal organism in the gut to an opportunistic pathogen that causes disseminated candidiasis."];
+  "node_5" [label="(5,0,0) Hyphal morphogenesis controls the balance between gut commensalism and invasive infection."];
+  "node_6" [label="(6,0,0) C. albicans invades host tissues through a process associated with yeast-to-hyphal transition."];
+  "node_9" [label="(9,0,0) Currently C. albicans candidalysin, a hypha-secreted pore-forming toxin, damages epithelial cells and fuels proinflammatory immunity in the mucosa and gut."];
+  "ANS_SRC_1" [label="(23,0,0) Currently, Here, we show that hyphal Als3 interacts with the DEDs of FADD and caspase-8 to modulate immune responses and cell death pathways."];
+  "ANS_SRC_2" [label="(13,0,0) Currently, Death effector domains (DEDs), protein-protein interaction domains identified in proteins such as Fas-associated death domain (FADD), caspase-8, and cellular FLICE-inhibitory protein (cFLIP), regulate inflammation and cell death including apoptosis, pyroptosis, and necroptosis [13], [14], [15]."];
+  "ANS_SRC_3" [label="(14,0,0) Currently, FADD initiates caspase-8 oligomerization via DED-DED interactions, forming a FADD/caspase-8 complex that regulates cell death pathways [16], [17]."];
+  "ANS_SRC_4" [label="(20,0,0) Currently, vFLIPs inhibit death ligand-induced apoptosis by interacting with FADD and/or caspase-8 via DED-DED interaction [21]."];
+  "ANS_SRC_5" [label="(15,0,0) Currently, Genetic ablation of either Caspase-8 or Fadd in intestinal epithelial cells (IECs) results in necroptosis and caspase-8-gasdermin-D-mediated pyroptosis-like death, leading to spontaneous ileitis and/or colitis [18], [19], [20]."];
+  "ANS_SRC_6" [label="(11,0,0) Currently, Among Als family proteins, Als3 is the most abundant and hypha-specific protein."];
+  "ANS_SRC_7" [label="(25,0,0) Currently, Although there is increasing interest in studying the recognition of fungal extracellular proteins/peptides [24], [25], this intracellular recognition mechanism extends our understanding of innate immune recognition."];
+  "ANS_SRC_8" [label="(21,0,0) Currently, C. albicans DNA packaged in extracellular vesicles triggers type I IFN signaling through the intracellular cGAS-STING pathway [23]."];
+  "node_6" -> "R1" [label="induction-case"];
+  "node_3" -> "R1" [label="induction-common"];
+  "node_6" -> "R2" [label="induction-case"];
+  "node_5" -> "R2" [label="induction-common"];
+  "node_2" -> "R3" [label="induction-case"];
+  "node_5" -> "R3" [label="induction-common"];
+  "node_9" -> "R4" [label="abduction-phenomenon"];
+  "node_10" -> "R4" [label="abduction-knowledge"];
+  "R3" -> "R5" [label="abduction-phenomenon"];
+  "R4" -> "R5" [label="abduction-knowledge"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "ANS_SRC_1" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_2" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_3" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_4" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_5" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_6" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_7" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_8" -> "NROOT" [label="induction-case"];
+}

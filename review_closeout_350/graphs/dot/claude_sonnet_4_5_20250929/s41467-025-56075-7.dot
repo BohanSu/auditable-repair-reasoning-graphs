@@ -1,0 +1,35 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56075-7
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Rapid quenching of nickel-rich LiNixMnyCozO2 cathode particles from calcination peak temperature is proposed to promote lithium outward diffusion forming a Li-rich Ni-reduced surface layer, limit interfacial degradation, homogenize bulk redox reactions, and improve high-voltage cycling stability of high-capacity NMC materials.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(1,1,0) Nickel-rich LiNixMnyCozO2 NMC materials have high specific capacity."];
+  "E2" [label="(3,1,0) Structural and chemo-mechanical degradation causes rapid capacity decay in nickel-rich positive electrode materials."];
+  "E3" [label="(8,2,0) A surface coating layer can suppress undesired side reactions with electrolyte."];
+  "E4" [label="(19,2,0) Calcination can drive mass transport and reaction kinetics."];
+  "E5" [label="(21,1,0) Quenching can produce materials far from equilibrium."];
+  "E6" [label="(23,1,0) Prior studies adopted quenching treatment for Ni-rich positive electrode materials."];
+  "E7" [label="(23,2,0) Ni-rich positive electrodes delivered enhanced electrochemical performance after quenching."];
+  "E8" [label="(26,1,0) Quenching is reported as a strategy to mitigate surface structural degradation."];
+  "E9" [label="(26,2,0) Quenching is reported as a strategy to address bulk charge distribution heterogeneity."];
+  "E10" [label="(27,1,0) Elemental distribution in NMC polycrystalline particles is manipulated by cooling rate from peak calcination temperature."];
+  "E11" [label="(28,1,0) Substantial lithium diffusion from bulk to surface is observed in NMC polycrystalline particles."];
+  "E12" [label="(28,2,0) Lithium diffusion creates a surface Ni reduction layer."];
+  "E13" [label="(29,2,0) Improved surface stability allows redox reactions to proceed more homogeneously throughout polycrystalline particles."];
+  "E14" [label="(29,3,0) Improved surface stability results in more favorable capacity retention when cycled to high voltages."];
+  "R1" [label="(0,0,0) These source claims jointly support the paper-level quenching synthesis."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+  "E13" -> "NROOT" [label="induction-case"];
+  "E14" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-common"];
+}

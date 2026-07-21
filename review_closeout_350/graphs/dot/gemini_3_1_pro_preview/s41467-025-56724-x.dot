@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56724-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This work demonstrates that multi-parameter robust phase estimation fails to reach Heisenberg scaling unless all gate diagonal phases are matched, and introduces a shallow-circuit quantum metrology protocol that sidesteps this constraint, is resilient to time-dependent noise, and yields up to two orders-of-magnitude greater precision in quantum gate calibration than current techniques.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(8,0,0) RPE, along with its extensions like Floquet calibration, can achieve the Heisenberg limit under ideal conditions and are robust against state preparation and measurement (SPAM) errors across both single and multi-qubit gates  ,  ,."];
+  "E2" [label="(2,0,0) While a variety of quantum metrology strategies  ,  ,  successfully adhere to the Heisenberg scaling, the real challenge lies in achieving or even addressing optimality in the scaling coefficients with realistic constraints."];
+  "E3" [label="(19,0,0) In this work, we show that the RPE-based multi-parameter phase estimation method requires an additional phase-matching condition: the diagonal elements of the gates must share the same phase."];
+  "E4" [label="(21,0,0) In this work, we propose a metrology protocol that is, by design, robust against realistic time-dependent errors and only requires shallow (<10) circuits to achieve up to two orders of magnitudes of improvement over existing methods in the precision of gate."];
+  "E5" [label="(13,0,0) Randomized benchmarking requires extensive circuit depth to accurately estimate parameters and lacks sensitivity to coherent rotation errors."];
+  "E6" [label="(18,0,0) Realizing optimality in both aspects requires refining classical post-processing techniques and the quantum circuit designs used in quantum gate calibration."];
+  "E7" [label="(11,0,0) Though recent progress  ,  refine the multiplicative overhead of RPE cost, they focus on the asymptotic regime rather than physically short-depth and noise-robust implementation."];
+  "E8" [label="(20,0,0) If the phase-matching condition is violated, the RPE-based multi-parameter method fails to achieve Heisenberg scaling when there is more than one phase to learn."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-common"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+}

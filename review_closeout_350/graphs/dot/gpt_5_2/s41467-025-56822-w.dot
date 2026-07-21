@@ -1,0 +1,35 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56822-w
+  rankdir="TB";
+  "N19" [label="(13,0,0) Currently, some lung cancer risk model training schemes require costly bounding-box annotations, making large-scale training datasets infeasible."];
+  "N20" [label="(0,0,0) If a modeling approach requires costly expert annotations, then scaling to large real-world datasets becomes difficult, hindering broad deployment. (callable rule)"];
+  "N21" [label="(0,0,0) deduction-reasoning: Annotation-heavy schemes are hard to scale; current risk models need costly bounding boxes; therefore current risk-model training is a scalability bottleneck for large-scale LCS AI."];
+  "N25" [label="(0,0,0) abduction-knowledge: If a problem needs unified handling of multiple modalities and multiple tasks, then adopting a foundation-model paradigm is a plausible solution direction. (callable explanatory hypothesis)"];
+  "N34" [label="(0,0,0) induction-common: If multiple independent obstacles (data curation difficulty, architecture/compute constraints) prevent existing FMs from working in a domain, then a domain-specific solution must address both dataset curation/alignment and scalable architecture/training. (callable generalization rule)"];
+  "N35" [label="(0,0,0) induction-case: Currently, for LCS, existing FMs fail and the cited obstacles include data curation difficulty and architecture/compute constraints for 3D CT."];
+  "N37" [label="(23,0,0) Currently, this work presents an integrated scalable data curation approach aligning high-dimensional images with other clinical datasets for LCS, covering 17 tasks and 49 data elements."];
+  "N5" [label="(5,0,0) If a method improves LCS quality and efficiency, then it can help address key LCS implementation challenges. (callable rule)"];
+  "N6" [label="(5,0,0) Currently, AI promises to significantly improve the quality and efficiency of LCS."];
+  "NROOT" [label="(0,0,0) Develop and evaluate an integrated data-curation strategy and the Medical Multimodal Multitask Foundation Model (M3FM) for scalable lung-cancer screening across multiscale 3D LDCT scans, heterogeneous clinical data, and multiple LCS workflow tasks.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When LCS has clinically important mortality impact but existing workflows, data curation, annotation, and 3D-CT modeling constraints limit current approaches, the paper-level response is to develop and evaluate an integrated, scalable multimodal multitask LCS framework."];
+  "R1" [label="(0,0,0) Given that AI promises to improve the quality and efficiency of lung cancer screening, AI is a plausible tool for helping address key LCS implementation challenges."];
+  "R10" [label="(0,0,0) The multimodal, multitask nature of the LCS setting addressed by this work makes a foundation-model approach a plausible direction for LCS AI."];
+  "R8" [label="(0,0,0) Because this LCS work involves aligning high-dimensional images with other clinical datasets across many screening tasks, a foundation-model paradigm is a plausible solution direction."];
+  "R9" [label="(0,0,0) An effective LCS foundation-model solution should address both scalable data curation and model-architecture or compute constraints for volumetric 3D CT."];
+  "N20" -> "N21" [label="deduction-rule"];
+  "N19" -> "N21" [label="deduction-case"];
+  "N5" -> "R1" [label="deduction-rule"];
+  "N6" -> "R1" [label="deduction-case"];
+  "N37" -> "R8" [label="abduction-phenomenon"];
+  "N25" -> "R8" [label="abduction-knowledge"];
+  "N35" -> "R9" [label="induction-case"];
+  "N34" -> "R9" [label="induction-common"];
+  "N37" -> "R10" [label="abduction-phenomenon"];
+  "N25" -> "R10" [label="abduction-knowledge"];
+  "N21" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

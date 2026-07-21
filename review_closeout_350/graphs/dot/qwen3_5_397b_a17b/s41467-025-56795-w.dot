@@ -1,0 +1,19 @@
+digraph ReasoningTree {
+  // paper_id=qwen3_5_397b_a17b:s41467-025-56795-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper reports a new single-crystal ruthenium-tetraammine [RuSO2] complex, trans-[Ru(SO2)(NH3)4(4-bromopyridine)](tosylate)2, that exhibits thermally reversible macroscopic cracking optical actuation and 100% SO2 linkage photoisomerisation to temperature-controlled metastable eta1-OSO and eta2-(OS)O photoisomers, enabling a visible-light- and temperature-controlled ternary molecular switch.", fillcolor="lightyellow", style="filled"];
+  "E8" [label="(8,0,0) The authors sought a new single-crystal optical actuator by developing ruthenium-tetraammine complexes that undergo SO2-linkage photoisomerisation."];
+  "E17" [label="(17,0,0) The paper reports a new [RuSO2] complex, trans-[Ru(SO2)(NH3)4(4-bromopyridine)]tosylate2, that exhibits thermally reversible cracking single-crystal optical actuation."];
+  "E18" [label="(18,0,0) The eta1-SO2 dark-state crystal structure undergoes 100% SO2-linkage photoisomerisation to create a pure eta1-OSO photoisomer at 90 K or a pure eta2-(OS)O photoisomer at 100 K."];
+  "E19" [label="(19,0,0) Each photoisomer is metastable at its stated temperature and the crystal strain diminishes as the complex thermally recovers its dark-state crystal structure."];
+  "E20" [label="(20,0,0) Ternary switching arises from photostructural changes caused by 100% SO2 linkage photoisomerisation under 505 nm light at low temperature."];
+  "E23" [label="(23,0,0) The three distinct 100%-converted SO2-linkage isomeric species reveal the possibility of high-purity ternary photonic signatures in single-crystal optical actuators."];
+  "E25" [label="(25,0,0) The findings show that ternary molecular switching can be controlled by temperature and visible light."];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E17" -> "NROOT" [label="induction-common"];
+  "E18" -> "NROOT" [label="induction-case"];
+  "E19" -> "NROOT" [label="induction-case"];
+  "E20" -> "NROOT" [label="induction-case"];
+  "E23" -> "NROOT" [label="induction-case"];
+  "E25" -> "NROOT" [label="induction-case"];
+}

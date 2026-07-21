@@ -1,0 +1,43 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56815-9
+  rankdir="TB";
+  "N10" [label="(11,0,0) In all-in-one in-sensor computing in 2D devices, one layer in heterostructures is expected to be a sensing layer sensitive to external stimuli and effectively transferring signals to neighboring layers, or a multifunctional layer to reduce layer number and simplify structure."];
+  "N11" [label="(12,0,0) Deeply engineering the dielectric layer by rendering it multifunctional (beyond dielectric) is worth exploring."];
+  "N12" [label="(13,0,0) Traditional dielectrics prepared by gas-to-solid method are limited in material types and functions when used in 2D devices because of restricted gaseous precursors or transferable prerequisite."];
+  "N13" [label="(14,0,0) Metal oxides obtained from liquid-to-solid approach (wet chemistry) are low-cost, massively prepared, and versatile in category and function, being widely used in thin-film electronics, displays, sensors, capacitors and batteries."];
+  "N15" [label="(0,0,0) Induction: Given that transfer technique with single-crystal perovskites (SrTiO3) shows transferred oxides with nanogaps can work as good dielectrics despite moderate bandgaps, therefore the transfer approach can overcome conventional dielectric integration limitations in 2D devices."];
+  "N19" [label="(0,0,0) Induction: Given that transfer technique enables separation of dielectric fabrication and integration, and nanogaps in transferred oxides suppress leakage currents, therefore if wet-chemistry metal oxides can be made transferrable and vdW integrable, they could serve as compatible dielectrics for 2D devices."];
+  "N4" [label="(4,0,0) The vdW surface of 2D semiconductors leads to the challenge of integrating high-quality, high-k dielectrics."];
+  "N5" [label="(5,0,0) For conventional amorphous high-k dielectrics (HfO2, Al2O3), absence of dangling bonds on 2D surfaces results in poor nucleation during ALD, leading to suboptimal interface quality with increased defects and undesirable doping."];
+  "N7" [label="(8,0,0) Using the transfer technique allows separation of fabrication and integration of dielectrics, loosening restrictions in dielectric elements and synthesis temperatures but requiring transferrable features."];
+  "N8" [label="(9,0,0) Single-crystal perovskite SrTiO3 with high static permittivity can be fabricated on sacrificial layers by pulsed laser deposition and transferred as freestanding flakes to be incorporated into TMDs devices."];
+  "N9" [label="(10,0,0) The omnipresent nanogap between TMDs and transferred oxides denies physical contact with channel materials and suppresses gate leakage currents, allowing metal oxides with moderate bandgaps (3.3 eV for SrTiO3, 3.8 eV for Sr2Nb3O10) as good dielectrics."];
+  "NROOT" [label="(0,0,0) The paper proposes and evaluates a wet-chemistry route for transferable amorphous copper calcium titanate thin films that can be van-der-Waals-integrated with TMD semiconductors as a high-k dielectric/optical layer, aiming to form low-defect interfaces for 2D FETs with sub-70 mV dec^-1 subthreshold swing and approximately 1 mV (MV cm^-1) hysteresis while also enabling optically writable, electrically erasable logic-in-sensor functionality.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When conventional high-k dielectric integration on 2D semiconductors is limited, a transferable wet-chemistry oxide layer that is vdW-compatible and multifunctional provides a coherent research strategy for improving dielectric interfaces and expanding device functions."];
+  "R10" [label="(0,0,0) The need for alternative high-k dielectric integration in 2D semiconductors, together with the broader material and functional versatility of wet-chemistry metal oxides, motivates investigating solution-processed metal oxides as compatible dielectrics for 2D devices."];
+  "R2" [label="(0,0,0) Because gas-to-solid dielectrics for 2D devices are limited in material types and functions while wet-chemistry metal oxides are versatile and widely used in thin-film electronics, wet-chemistry metal oxides motivate exploration as a broader dielectric material/function space for 2D technology."];
+  "R7" [label="(0,0,0) For 2D in-sensor computing, dielectric layers that are engineered to be multifunctional and responsive to external stimuli are a plausible design direction for integrating sensing, memory, and computation in simplified heterostructures."];
+  "R8" [label="(0,0,0) The difficulty of integrating high-quality high-k dielectrics on van-der-Waals 2D semiconductor surfaces, including poor ALD nucleation and defect-prone interfaces, motivates alternative dielectric integration approaches."];
+  "R9" [label="(0,0,0) Because 2D in-sensor computing expects heterostructure layers to sense external stimuli and transfer signals, engineering dielectric layers to be multifunctional beyond ordinary dielectric behavior is worth exploring."];
+  "N7" -> "N15" [label="induction-case"];
+  "N8" -> "N15" [label="induction-case"];
+  "N9" -> "N15" [label="induction-common"];
+  "N7" -> "N19" [label="induction-case"];
+  "N9" -> "N19" [label="induction-case"];
+  "N15" -> "N19" [label="induction-common"];
+  "N12" -> "R2" [label="induction-case"];
+  "N13" -> "R2" [label="induction-common"];
+  "N10" -> "R7" [label="abduction-phenomenon"];
+  "N11" -> "R7" [label="abduction-knowledge"];
+  "N5" -> "R8" [label="deduction-rule"];
+  "N4" -> "R8" [label="deduction-case"];
+  "N10" -> "R9" [label="abduction-phenomenon"];
+  "N11" -> "R9" [label="abduction-knowledge"];
+  "R8" -> "R10" [label="abduction-phenomenon"];
+  "R2" -> "R10" [label="abduction-knowledge"];
+  "N19" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

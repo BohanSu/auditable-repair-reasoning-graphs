@@ -28,6 +28,7 @@ standard_flow_300/
 
 review_closeout_350/
   results/    Controller, merge, current-version accounting, and ANS-guard evidence
+  graphs/     The 350 accepted current-version DOT graphs and integrity manifests
   docs/       Public architecture, validation, and reproduction notes
   figures/    Final vector framework overview
 ```
@@ -106,6 +107,8 @@ claim.
   350/350 current-version summary.
 - Use `review_closeout_350/results/STANDARD_FLOW_350_CLOSURE_TRACE.csv` to see
   how the 300/350, 327/350, and 350/350 states relate.
+- Use `review_closeout_350/graphs/manifest.csv` to map each accepted
+  paper-model row to its released DOT file and SHA-256 digest.
 
 ## Environment
 

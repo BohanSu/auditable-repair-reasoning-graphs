@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56798-7
+  rankdir="TB";
+  "N1" [label="(1,0,0) Currently, piezoceramics are widely used in many vital technical applications."];
+  "N4" [label="(4,0,0) induction-reasoning: Given the trade-off stems from different contributions and the conflicting structural preferences, therefore the trade-off relationship between piezoelectricity and its temperature stability poses a significant challenge."];
+  "N6" [label="(6,0,0) Currently, the trade-off relationship between two properties stems from their different contributions."];
+  "N7" [label="(7,0,0) High piezoelectricity is usually obtained by introducing structural instability, while high temperature stability prefers a stable structure."];
+  "NROOT" [label="(0,0,0) The paper proposes that Pb0.92Ba0.08[Zr0.50+xTi0.48-x(Nb0.5Sb0.5)0.02]O3 ceramics can be designed by simultaneously tuning the Zr/Ti ratio to approach a morphotropic phase boundary and using tape-casting, lamination, and hot-pressing to obtain a dense low-defect microstructure, thereby pursuing high piezoelectric performance together with improved temperature stability and thermal robustness.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Phase-boundary composition design and dense, low-defect ceramic processing target complementary limitations: the Zr/Ti ratio and morphotropic phase boundary address piezoelectric response, while tape-casting, lamination, and hot-pressing can be used as processing routes toward dense low-defect microstructures that support temperature stability and thermal robustness."];
+  "N_Imp1" [label="(0,0,0) If developing piezoceramics with both properties is a cutting-edge task, then regulating the Zr/Ti ratio to approach the MPB is a method to promote these properties."];
+  "R3" [label="(0,0,0) The widespread use of piezoceramics together with the significant trade-off between piezoelectricity and temperature stability makes developing piezoceramics that address both properties a cutting-edge task."];
+  "R4" [label="(0,0,0) Because developing piezoceramics with both piezoelectricity and temperature stability is a cutting-edge task, regulating the Zr/Ti ratio to approach the morphotropic phase boundary is a proposed method to promote these properties."];
+  "N6" -> "N4" [label="induction-case"];
+  "N7" -> "N4" [label="induction-common"];
+  "N4" -> "R3" [label="induction-case"];
+  "N1" -> "R3" [label="induction-common"];
+  "N_Imp1" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

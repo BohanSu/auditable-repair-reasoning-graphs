@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56616-0
+  rankdir="TB";
+  "N1" [label="(1,0,0) Induction-common: MPEAs have garnered attention in recent years due to excellent mechanical and physical properties stemming from their unique chemical complexity (including being composed of multiple elements in high concentration unlike conventional alloys)."];
+  "N2" [label="(3,0,0) Induction-case: MPEAs comprising 3d transition metals have been widely explored due to their extraordinary strength and ductility at room and cryogenic temperatures owing to their low stacking fault energies and consequent additional deformation mechanisms."];
+  "N21" [label="(13,0,0) Currently there is: These additional elements may lead to the formation of brittle intermetallics, which can result in significant cracking during solidification as they cannot accommodate the high residual stresses in AM."];
+  "N22" [label="(0,0,0) deduction-rule: If additional elements lead to brittle intermetallics, then they cannot accommodate high residual stresses, resulting in significant cracking during solidification in AM."];
+  "N23" [label="(0,0,0) deduction-reasoning: Given the deduction-case of additional elements lead to brittle intermetallics, and the deduction-rule if ... then cracking, therefore the method of introducing secondary phases may lead to cracking in AM."];
+  "N24" [label="(14,0,0) Currently there is: The underlying mechanism by which phase transformation leads to grain refinement remains elusive due to challenges with measuring and interpreting the spatiotemporal evolution of microstructures and defects during and after solidification has finished."];
+  "N25" [label="(0,0,0) abduction-knowledge: Phase transformation is known to lead to grain refinement by introducing secondary phases in MPEAs."];
+  "N26" [label="(0,0,0) abduction-reasoning: Given the abduction-phenomenon that the mechanism by which phase transformation leads to grain refinement is elusive due to measurement challenges, and the abduction-knowledge that phase transformation leads to grain refinement, therefore the underlying mechanism remains elusive and requires new studies to illuminate it."];
+  "N28" [label="(19,0,0) Currently there is: Instead, we increase the Mn content to destabilize the primary fcc phase during solidification to enable microstructure control in a direct energy deposition (DED) system where the microstructure generally tends to be more columnar due to its lower scanning speeds compared to powder-bed fusion (PBF)."];
+  "N3" [label="(0,0,0) induction-reasoning: Given the induction-common that MPEAs garner attention for excellent properties from chemical complexity, and the induction-case of 3d MPEAs having extraordinary strength and ductility due to low SFE, therefore MPEAs are promising materials with extraordinary properties."];
+  "N32" [label="(0,0,0) deduction-rule: If increasing Mn destabilizes fcc for microstructure control, then the FeMnCoCr system can shed light on the relationships to achieve crack-free refined microstructure."];
+  "NROOT" [label="(0,0,0) This paper proposes to test whether deliberately increasing Mn content to x = 40–50 at.% in additively manufactured Fe80-xMnxCo10Cr10 multiprincipal element alloys destabilizes the solidifying fcc phase, promotes in-situ phase transformations that interrupt columnar grain growth, and thereby produces crack-free microstructures with grain refinement, with the mechanism evaluated through coupled thermodynamic modeling, operando X-ray diffraction, and multiscale characterization.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(20,0,0) Composition-driven changes in phase stability during additive manufacturing can alter solidification and transformation pathways, so Mn-tuned FeMnCoCr alloys provide a route to connect fcc destabilization, in-situ phase transformations, columnar-growth disruption, crack avoidance, and grain refinement."];
+  "R11" [label="(20,0,0) For a DED FeMnCoCr system, the stated increased-Mn strategy to destabilize the primary fcc phase during solidification can be used to examine composition-phase-stability-process-microstructure relationships relevant to crack-free, grain-refined AM microstructures."];
+  "N15_METHODS" [label="(15,0,0) Induction-case: The study aims to illuminate a new grain refinement mechanism in MPEAs by combining thermodynamic modeling, operando X-ray diffraction studies, and multiscale microstructural evaluation during additive manufacturing."];
+  "N1" -> "N3" [label="induction-common"];
+  "N2" -> "N3" [label="induction-case"];
+  "N21" -> "N23" [label="deduction-case"];
+  "N22" -> "N23" [label="deduction-rule"];
+  "N24" -> "N26" [label="abduction-phenomenon"];
+  "N25" -> "N26" [label="abduction-knowledge"];
+  "N32" -> "R11" [label="deduction-rule"];
+  "N28" -> "R11" [label="deduction-case"];
+  "N23" -> "NROOT" [label="induction-case"];
+  "N26" -> "NROOT" [label="induction-case"];
+  "N3" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "N15_METHODS" -> "NROOT" [label="induction-case"];
+}

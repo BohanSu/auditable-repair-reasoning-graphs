@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56797-8
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper motivates developing and evaluating the hypothesis that the ribosome-coupled ATPase OLA1/YchF supports efficient translation of aspartate/glutamate-rich mRNAs by associating with split ribosomal subunits and modulating ribosome reassociation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Common pattern: ribosome-coupled ATPase activity, candidate translation-disruption substrates, and split-ribosome reassociation can be integrated into a cautious mechanistic research hypothesis about translation rescue or efficiency."];
+  "Node_1" [label="(4,0,0) induction-case: OLA1 and its bacteria homolog YchF belong to the TRAFAC class, Obg family, and YchF subfamily of P-loop GTPases."];
+  "Node_12" [label="(26,0,0) deduction-rule: If rescuing stalled ribosomes requires numerous ribosome-associated proteins to release the nascent peptide and split the ribosome, then preventing re-association of split ribosomes is crucial for efficient rescue."];
+  "Node_13" [label="(19,0,0) deduction-case: Currently available data suggest that YchF/OLA1 binds independently to the small and large ribosomal subunits."];
+  "Node_2" [label="(6,0,0) induction-common: The G4 motif in the YchF subfamily exhibits a unique sequence, leading to the members losing GTP specificity and preferentially hydrolyzing ATP rather than GTP."];
+  "Node_3" [label="(0,0,0) induction-reasoning: Given that OLA1/YchF belong to the TRAFAC class but have a unique G4 motif, therefore they are ATPases rather than typical GTPases."];
+  "Node_4" [label="(20,0,0) abduction-phenomenon: The 70S ribosome has been reported to stimulate the ATPase activity of YchF."];
+  "Node_5" [label="(0,0,0) abduction-reasoning: Given that OLA1/YchF are ATPases and the 70S ribosome stimulates their activity, therefore OLA1/YchF's ATP hydrolysis is functionally coupled to the ribosome."];
+  "Node_6" [label="(31,0,0) deduction-rule: If ATP hydrolysis-coupled structural rearrangement is critical for handling ribosome stalling caused by nascent peptides, then ribosome-coupled ATPases likely handle such stalling."];
+  "Node_8" [label="(25,0,0) deduction-rule: If disruption in translation can be caused by mRNA with specific structures/sequences, then specific factors are needed to rescue stalled ribosomes on these mRNAs."];
+  "Node_9" [label="(32,0,0) deduction-case: Currently there is limited research on D/E-rich mRNA, which may cause translation disruption."];
+  "R3" [label="(0,0,0) abduction-reasoning: Because OLA1/YchF ATP hydrolysis appears functionally coupled to the ribosome, and ATP hydrolysis-coupled structural rearrangements are relevant to handling ribosome stalling, OLA1/YchF is a plausible candidate to investigate in ribosome-associated stalling or rescue processes."];
+  "R4" [label="(0,0,0) abduction-reasoning: Since D/E-rich mRNA is little studied and may cause translation disruption, and specific mRNA structures or sequences can require specific factors to rescue stalled ribosomes, D/E-rich mRNA is a plausible class of messages to test for translation disruption and factor dependence."];
+  "R5" [label="(0,0,0) abduction-reasoning: If OLA1/YchF is a plausible ribosome-associated stalling or rescue candidate and D/E-rich mRNA is a plausible factor-dependent translation-disruption class, then it is reasonable to test whether OLA1/YchF promotes efficient translation of D/E-rich mRNAs."];
+  "R6" [label="(0,0,0) abduction-reasoning: Because stalled-ribosome rescue involves ribosome splitting and prevention of split-ribosome reassociation, and available data suggest YchF/OLA1 binds independently to small and large ribosomal subunits, OLA1/YchF is a plausible candidate to investigate as a factor that associates with split ribosomal subunits and influences reassociation."];
+  "R7" [label="(0,0,0) abduction-reasoning: The linked hypotheses that OLA1/YchF may promote efficient translation of D/E-rich mRNAs and may associate with split ribosomal subunits to influence reassociation motivate testing a mechanism in which OLA1/YchF supports D/E-rich mRNA translation by modulating split-ribosome reassociation."];
+  "Node_1" -> "Node_3" [label="induction-case"];
+  "Node_2" -> "Node_3" [label="induction-common"];
+  "Node_4" -> "Node_5" [label="abduction-phenomenon"];
+  "Node_3" -> "Node_5" [label="abduction-knowledge"];
+  "Node_5" -> "R3" [label="abduction-phenomenon"];
+  "Node_6" -> "R3" [label="abduction-knowledge"];
+  "Node_9" -> "R4" [label="abduction-phenomenon"];
+  "Node_8" -> "R4" [label="abduction-knowledge"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "R3" -> "R5" [label="abduction-knowledge"];
+  "Node_13" -> "R6" [label="abduction-phenomenon"];
+  "Node_12" -> "R6" [label="abduction-knowledge"];
+  "R5" -> "R7" [label="abduction-phenomenon"];
+  "R6" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

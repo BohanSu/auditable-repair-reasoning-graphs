@@ -1,0 +1,23 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56797-8
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The authors propose that the conserved ATP-dependent GTPase OLA1/YchF binds the large ribosomal subunit at the uL14/bL19 site via its helical domain, prevents re-association of split ribosomes, and promotes efficient translation of aspartate/glutamate-rich (D/E-rich) mRNAs.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(18,0,0) Ribosome binding of OLA1/YchF has been observed in E.coli , , , , yeast , Trypanosoma , plants , and human cells."];
+  "E2" [label="(4,0,0) OLA1 and its bacteria homolog YchF belong to the TRAFAC class, Obg (spo0B-associated GTP-binding protein) family, and YchF subfamily of P-loop GTPases ,."];
+  "E3" [label="(19,0,0) The available data suggest that YchF/OLA1 binds not only to fully assembled ribosomes but also independently to the small and large ribosomal subunits."];
+  "E4" [label="(34,0,0) OLA1/YchF binds to the large subunit at the uL14/bL19 position via its helical domain, preventing the re-association of split ribosomes."];
+  "E5" [label="(5,0,0) The OLA1/YchF proteins possess a core ATPase domain, a C-terminal TGS domain, and an inserted helical domain (Supplementary Fig. 1) and are ubiquitously expressed in a majority of organisms, including bacteria, plants, and humans, sharing more than 40% sequ."];
+  "E6" [label="(26,0,0) Rescuing stalled ribosomes on these mRNAs requires numerous ribosome-associated proteins to release the nascent peptide and split the ribosome."];
+  "E7" [label="(24,0,0) Here, we report that OLA1/YchF binds to the ribosomal large subunit and promotes efficient translation on D/E-rich mRNA."];
+  "E8" [label="(32,0,0) Currently, there is limited research on D/E-rich mRNA."];
+  "E9" [label="(33,0,0) Structural analysis, Ribo-seq data, and a constructed reporter support that OLA1/YchF enhances translation on D/E-rich mRNA."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-common"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,26 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes and evaluates a boundary-layer shear-flow photoelectrochemical strategy for seawater carbon utilization: tandem BiVO4 photoanodes acidify bicarbonate in situ to generate a confined molecular flux of CO2(aq), which is conveyed to downstream Si photocathodes for reduction, aiming to avoid external CO2 bubbling, suppress diffusion-induced pH and transport losses, and improve solar-to-fuel efficiency and carbon product selectivity.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When dissolved inorganic carbon in seawater is converted into a locally supplied CO2(aq) flux and immediately delivered to reduction catalysts under boundary-layer flow, photoelectrochemical CO2 reduction can be investigated without relying on externally bubbled CO2 and with reduced diffusion-related losses."];
+  "Node_1" [label="(2,2,0) Currently, direct air capture is costly."];
+  "Node_10" [label="(0,0,0) If challenges in reaction engineering and CO2 reduction catalysis motivate new ways of managing diffusion-based transport losses, then an understudied regime of molecular flux catalysis is demonstrated, in which CO2 (aq) reactants continuously flow to the catalysts within a boundary layer flow."];
+  "Node_2" [label="(0,0,0) If direct air capture is costly, then alternative carbon sinks like seawater, which potentially supports trillion-ton-scale CO2 capture, should be utilized."];
+  "Node_4" [label="(0,0,0) If seawater potentially supports trillion-ton-scale CO2 capture, utilization, and sequestration via engineering solutions, then an integrated photoelectrochemical process for the direct utilization of dissolved carbon is expected to be more economically viable than the stepwise approach."];
+  "Node_6" [label="(0,0,0) If an integrated photoelectrochemical process for the direct utilization of dissolved carbon for solar fuel production is expected to be more economically viable than the stepwise approach, then its implementation in conventional static electrolytes leads to insufficient reactant for photoelectrochemical CO2 reduction."];
+  "Node_9" [label="(42,1,0) [deduction-reasoning]: Given there is insufficient reactant for photoelectrochemical CO2 reduction, therefore challenges in reaction engineering and CO2 reduction catalysis motivate new ways of managing diffusion-based transport losses."];
+  "R1" [label="(0,0,0) Given that direct air capture is costly, alternative carbon sinks such as seawater, which may support trillion-ton-scale CO2 capture, warrant engineering investigation for CO2 capture, utilization, and sequestration."];
+  "R2" [label="(0,0,0) Because seawater is a potentially large alternative carbon sink, an integrated photoelectrochemical process that directly utilizes dissolved carbon for solar fuel production is motivated as a potentially more economical alternative to a stepwise capture-and-conversion approach."];
+  "R3" [label="(0,0,0) For integrated photoelectrochemical utilization of dissolved carbon, implementation in conventional reactor configurations can suffer from insufficient CO2 reactant availability for photoelectrochemical CO2 reduction."];
+  "R5" [label="(0,0,0) Challenges in reaction engineering and CO2 reduction catalysis motivate the paper's focus on an understudied molecular-flux catalysis regime in which CO2(aq) reactants continuously flow to catalysts within a boundary-layer flow."];
+  "Node_2" -> "R1" [label="deduction-rule"];
+  "Node_1" -> "R1" [label="deduction-case"];
+  "Node_4" -> "R2" [label="deduction-rule"];
+  "R1" -> "R2" [label="deduction-case"];
+  "Node_6" -> "R3" [label="deduction-rule"];
+  "R2" -> "R3" [label="deduction-case"];
+  "Node_10" -> "R5" [label="deduction-rule"];
+  "Node_9" -> "R5" [label="deduction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

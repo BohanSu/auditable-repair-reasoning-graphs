@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workflow_state": "current_version",
+  "claim": "350/350 strict rows; 0 residual rows; original-version overwrite disabled",
+  "generated_at": "2026-07-21T20:31:43+08:00",
+  "source_accounting_file": "PROPOSED_FULL_350_ACCOUNTING.json",
+  "source_accounting_sha256": "fddc9de5e86998b7752e21055237d7338fa6b6ba09b75f5446ee392ee0b90f5f",
+  "verified_key_tables": [
+    {
+      "file": "REVIEW_FULL_350_ACCOUNTING.csv",
+      "sha256": "3116eb90b1d762d39e4e082139854f0d984a6006bfc8aa3badeae1ac08d73b90"
+    },
+    {
+      "file": "RESIDUAL_CLOSEOUT_STAGE_ACCOUNTING_350.csv",
+      "sha256": "3116eb90b1d762d39e4e082139854f0d984a6006bfc8aa3badeae1ac08d73b90"
+    },
+    {
+      "file": "corrected_graph_manifest.csv",
+      "sha256": "737725415c451b734c211f1d35ee7416b06118a00d0df6aeeadaf11a28fdf5d6"
+    }
+  ],
+  "graph_count": 350,
+  "unique_paper_spec_count": 350,
+  "paper_count": 70,
+  "model_count": 5,
+  "graphs_by_model": {
+    "claude_sonnet_4_5_20250929": 70,
+    "gemini_3_1_pro_preview": 70,
+    "gpt_5_2": 70,
+    "grok_4_1_thinking": 70,
+    "qwen3_5_397b_a17b": 70
+  },
+  "graphs_per_paper_histogram": {
+    "5": 70
+  },
+  "source_resolution_counts": {
+    "direct": 48,
+    "materialized_curated_relocation": 302
+  },
+  "total_dot_bytes": 2315817,
+  "all_dot_parseable": true,
+  "all_strict_structure_ok": true,
+  "all_source_destination_hashes_match": true,
+  "manifest_file": "manifest.csv",
+  "manifest_sha256": "5b53b6ca11d650304864e5c179fc9018cc07c09239cd868ca0e195181253b628"
+}

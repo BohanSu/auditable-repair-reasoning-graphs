@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=qwen3_5_397b_a17b:s41467-025-56822-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study proposes and validates a Medical Multimodal Multitask Foundation Model (M3FM) that, after systematic curation and alignment of large-scale multimodal lung-cancer-screening data, employs a multiscale 3D CT Vision Transformer, text transformer and task-specific heads to jointly learn 17 screening-workflow tasks—thereby outperforming existing single-task or single-modality approaches and enabling scalable,.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(24,0,0) Then, we develop a Medical Multimodal Multitask Foundation Model (M3FM) that perceives multimodal data including 3D CT volumes and various other clinical data, and performs multiple tasks involved in the LCS workflow."];
+  "E2" [label="(25,0,0) Figure 1 illustrates the M3FM architecture, along with its training and inference processes."];
+  "E3" [label="(21,0,0) Second, there is no scalable and adaptable foundation model dedicated to effectively interpreting multimodal LCS data, especially 3D CT images at different scales, and effectively performing diverse LCS-related tasks."];
+  "E4" [label="(22,0,0) Due to the high dimensionality of volumetric CT images, existing efforts only used small 2D/3D convolutional neural networks  and small vision Transformer models  at affordable computational costs."];
+  "E5" [label="(28,0,0) a M3FM architecture consists of four components: Computed Tomography Vision Transformer (CTViT), Text Transformer, Task Encoder, and Predictors."];
+  "E6" [label="(16,0,0) Inspired by these breakthroughs, increasing efforts have been made to develop medical foundation models, such as biomedical language models , , , , , , medical vision-language models , , , and generalist medical AI models , ,."];
+  "E7" [label="(12,0,0) Although promising, these LCS-related AI models were developed with relatively small single-modality datasets for individual tasks, limiting their performance and utility in the multitask LCS workflow."];
+  "E8" [label="(10,0,0) Recently, the Sybil model  was developed for lung cancer risk prediction using a single LDCT scan."];
+  "E9" [label="(13,0,0) Additionally, the training schemes of current lung cancer risk models ,  require costly bounding box annotations, which makes building large-scale training datasets infeasible."];
+  "E10" [label="(2,0,0) Lung cancer screening (LCS) with low-dose computed tomography (LDCT) reduces lung cancer mortality by 20% in comparison with two-dimensional (2D) chest radiography in the National Lung Screening Trial (NLST)  and by 24% in comparison with no screening in th."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56887-7
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This research demonstrates that DarTG1-resistant Tevenvirinae phages, such as T4, counter bacterial DarT1-mediated DNA ADP-ribosylation by encoding a conserved NADAR-domain protein, AdfN, whose ADP-ribosylhydrolase activity is both necessary and sufficient to reverse the toxin’s modification and thus constitutes an independently co-opted phage enzymatic counter-defense.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(9,0,0) One family of toxin-antitoxin (TA) systems, the DarTG systems, were recently shown to provide robust phage defense."];
+  "E2" [label="(27,0,0) Using an expanded set of Tevenvirinae from the BASEL phage collection , we find that neither the presence of AdfA in the genomes of these phages, nor its allele type (active or inactive), correlate with DarTG1 susceptibility."];
+  "E3" [label="(4,0,0) Such direct, but non-enzymatic defenses consist of phage counter-defense elements that function by directly blocking the bacterial defense system via binding of the defense effector protein  ,  , titrating an intermediate signaling molecule  ,  , or structu."];
+  "E4" [label="(11,0,0) DarT1 and DarT2 are DNA ADP-ribosyltransferase toxins that modify single-stranded DNA (ssDNA), targeting guanosine and thymidine, respectively  ,  ,."];
+  "E5" [label="(13,0,0) Two different types of DarTG systems have been identified: DarTG1 systems, in which the antitoxin, DarG1, is a protein of the NADAR (NAD and ADP-ribose) superfamily , and DarTG2 systems, in which the antitoxin DarG2 contains a macrodomain, another type of A."];
+  "E6" [label="(33,0,0) Phylogenetic analyses indicate that phages have likely independently co-opted NADAR domain proteins multiple times from different bacterial or archaeal sources, and that these NADAR proteins function as orphan antitoxins to reverse the activity of a TA-asso."];
+  "E7" [label="(30,0,0) This element, which we have termed anti-DarT factor NADAR (AdfN), is both necessary and sufficient for phage counter-defense."];
+  "E8" [label="(7,0,0) Examples of enzymatic counter-defense elements include proteins that either degrade small molecule alarmone signals or produce competing decoy small molecules  ,  ,  , covalently modify a protein target  ,  , or replenish a molecule degraded by the defense."];
+  "E9" [label="(3,0,0) Most phage counter-defense mechanisms described to date are non-enzymatic in nature."];
+  "E10" [label="(31,0,0) AdfN T4 is a NADAR superfamily protein with enzymatic activity that removes ADP-ribose from DNA."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-common"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

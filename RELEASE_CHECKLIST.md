@@ -24,11 +24,13 @@ This checklist records the GitHub-readiness checks for this package.
 | final merge verification rows | `review_closeout_350/results/STRICT_MERGE_CANDIDATE_VERIFICATION.csv` | 23 |
 | current-version overwrites original version | `review_closeout_350/results/REVIEW_FULL_350_SUMMARY.json` | false |
 | current-version batch ANS guard | `review_closeout_350/results/REVIEW_BATCH_ANS_GUARD.json` | passed |
+| current-version accepted DOT files | `review_closeout_350/graphs/manifest.csv` | 350 |
+| parseable and strict-structure-valid DOT files | `review_closeout_350/graphs/summary.json` | 350 |
+| source-to-release SHA-256 mismatches | `review_closeout_350/graphs/summary.json` | 0 |
+| original 300 graph hashes changed in current version | `review_closeout_350/graphs/cross_stage_audit.json` | 0 |
 
 ## Content Checks
 
-- Package size: about 2.2 MB.
-- File count: 110 files.
 - Python source files: 63 in `code_snapshot/`.
 - Canonical method-design docs are present for both audited states:
   `standard_flow_300/docs/STANDARD_FLOW_METHOD_DESIGN.md` and

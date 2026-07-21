@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56821-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper motivates and undertakes bulk and single-cell transcriptomic characterization of alternative splicing in pituitary neuroendocrine tumors to investigate tumor heterogeneity and improve molecular insight for subtype classification.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R1" [label="(0,0,0) Pituitary neuroendocrine tumors are a prevalent anterior-pituitary tumor context in which hormone-gene and lineage-specific transcription-factor expression are relevant classification features."];
+  "R3" [label="(0,0,0) Variation in cellular functions and tumorigenesis among same-lineage tumors, together with complex hormone secretion profiles and variable clinical outcomes, motivates the need for more precise PitNET subtype classification."];
+  "R4" [label="(0,0,0) The coexistence of complex classification challenges with poorly understood subtype pathogenesis and lacking genomic markers supports the need for improved molecular characterization of PitNET subtypes."];
+  "R6" [label="(0,0,0) Because prior PitNET studies have overlooked co-transcriptional regulation, alternative splicing represents a relevant underexplored dimension for investigating PitNET heterogeneity."];
+  "R7" [label="(0,0,0) The underexplored role of alternative splicing in PitNETs, together with evidence that alternative splicing informs tumor heterogeneity in other cancers, motivates investigating the PitNET alternative-splicing landscape."];
+  "R9" [label="(0,0,0) The study proposes to characterize the alternative-splicing landscape of PitNETs using bulk and full-length single-cell transcriptome sequencing in order to evaluate alternative splicing as a source of PitNET heterogeneity and classification insight."];
+  "as_case" [label="(15,0,0) Currently there is that AS has been extensively studied in various human tumors beyond PitNETs, offering invaluable resources for better understanding of inter-tumor heterogeneity and developing new therapies."];
+  "as_con" [label="(0,0,0) deduction-reasoning: Currently there is AS studied in other tumors offering resources for heterogeneity and therapies, and if AS is an essential process diversifying proteins, then it can provide resources for understanding heterogeneity and therapies, so AS offers invaluable resources for better understanding of inter-tumor heterogeneity and developing new therapies."];
+  "as_rule" [label="(14,0,0) If alternative splicing is an essential cellular process in eukaryotes that generates multiple transcripts diversifying final protein products, then it can provide resources for understanding inter-tumor heterogeneity and developing new therapies."];
+  "bg_case" [label="(2,0,0) Currently there is that Pituitary neuroendocrine tumors are among the most prevalent intracranial tumors originating from the anterior pituitary gland."];
+  "bg_rule" [label="(3,0,0) If the pathological classification of PitNETs incorporates the expression of specific hormone genes and three lineage-specific transcription factors (PIT1, TPIT, SF1), then the tumors are classified into lineages with specific hormone secretion profiles."];
+  "ch_case" [label="(11,0,0) Currently there is that the complex hormone secretion profiles and highly variable clinical outcomes of these tumors present both requirements and challenges for more precise subtype classification."];
+  "path_case" [label="(12,0,0) Currently there is that the complex profiles present requirements and challenges for precise subtype classification."];
+  "proposal_case" [label="(17,0,0) Currently there is that we characterize the alternative splicing landscape of PitNETs using the PitNETs cohort with transcriptome sequencing, including bulk (n = 268 patients) and full-length single-cell RNA-seq (n = 195,720 cells) datasets from tumor tissues."];
+  "sg_case" [label="(16,0,0) Currently there is that previous studies have overlooked co-transcriptional regulations."];
+  "var_con" [label="(0,0,0) induction-reasoning: From the common that same-lineage tumors exhibit uniform functions, and the case that they show variations despite identical TF expressions, so even same-lineage tumors exhibit variations in cellular functions and tumorigenesis."];
+  "as_rule" -> "as_con" [label="deduction-rule"];
+  "as_case" -> "as_con" [label="deduction-case"];
+  "bg_case" -> "R1" [label="abduction-phenomenon"];
+  "bg_rule" -> "R1" [label="abduction-knowledge"];
+  "var_con" -> "R3" [label="abduction-phenomenon"];
+  "ch_case" -> "R3" [label="abduction-knowledge"];
+  "ch_case" -> "R4" [label="abduction-phenomenon"];
+  "path_case" -> "R4" [label="abduction-knowledge"];
+  "sg_case" -> "R6" [label="abduction-phenomenon"];
+  "as_con" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "as_con" -> "R7" [label="abduction-knowledge"];
+  "proposal_case" -> "R9" [label="abduction-phenomenon"];
+  "R7" -> "R9" [label="abduction-knowledge"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -22,6 +22,8 @@ original-version overwrite: false
 
 - `results/`: controller queue, strict merge candidates, merge audit,
   current-version accounting state, and ANS guard.
+- `graphs/`: byte-for-byte copies of all 350 accepted current-version DOT
+  graphs, organized by model, with integrity and cross-stage audits.
 - `docs/`: public architecture notes, validation summary, reproduction notes,
   and source-boundary notes.
 - `figures/`: final vector overview.
@@ -48,6 +50,12 @@ original-version overwrite: false
 - `results/STRICT_MERGE_REVIEW_AUDIT.csv`: row-level merge audit.
 - `results/REVIEW_BATCH_ANS_GUARD.json`: batch ANS guard for the current-version state.
 - `results/STANDARD_FLOW_350_CLOSURE_TRACE.csv`: compact state transition trace.
+- `graphs/manifest.csv`: one row per accepted paper-model graph, including its
+  repository path, SHA-256 digest, byte size, and parsed node/edge counts.
+- `graphs/summary.json`: set-level provenance, count, parsing, structure, and
+  source-to-copy hash checks.
+- `graphs/cross_stage_audit.json`: verifies that all 300 original-version
+  graph keys remain byte-identical and that the current version adds 50 keys.
 
 ## Reporting Boundary
 

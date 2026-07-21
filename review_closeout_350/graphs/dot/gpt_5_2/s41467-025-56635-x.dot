@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N17" [label="(13,0,0) Currently, the article demonstrates a heterostructure-based strategy to frustrate Néel AF order in square-lattice iridates."];
+  "N18" [label="(0,0,0) If one can engineer magnetic frustration that suppresses/destabilizes Néel order, then the system is pushed toward regimes where spinon continua are more likely/observable, enabling a decisive test for square-lattice spinons."];
+  "N19" [label="(0,0,0) deduction-reasoning: Given a heterostructure strategy can frustrate Néel order in square-lattice iridates and if engineered frustration suppresses Néel order and favors regimes where spinon signatures are enhanced, therefore heterostructure-induced frustration in iridates is a viable route to test for spinons."];
+  "N2" [label="(4,0,0) Currently, many copper-based square-lattice AFs show a broad excitation continuum at (π,0) (the '(π,0) anomaly'), which has been attributed to spinon excitations."];
+  "N20" [label="(14,0,0) Currently, time-resolved RXD measures quantum fluctuations via the recovery dynamics of AF order after optical-pump suppression; recovery slows significantly with enhanced frustration."];
+  "N21" [label="(0,0,0) If the post-pump recovery of AF order slows down, then quantum fluctuations/frustration are enhanced, so time-resolved RXD can quantify the degree of engineered frustration."];
+  "N22" [label="(0,0,0) induction-reasoning: Given RXD recovery slows in cases with enhanced frustration and slowed recovery commonly indicates stronger quantum fluctuations/frustration, therefore RXD recovery dynamics can serve as an empirical metric of engineered frustration/quantum fluctuations in the heterostructure."];
+  "N24" [label="(16,0,0) Currently, the spectra are dominated by isotropic continua, which provide compelling evidence for spinons in a square-lattice Heisenberg AF."];
+  "N3" [label="(7,0,10) Currently, experiments on a square-lattice Heisenberg AF report an isotropic excitation continuum at the (π,0) anomaly explained by fractional S=1/2 quasiparticles (2D analogues of 1D spinons), even without frustration."];
+  "N4" [label="(0,0,0) If a magnetic excitation spectrum shows an isotropic broad continuum rather than sharp single-magnon modes, then a plausible explanation is deconfined fractional S=1/2 spinon excitations."];
+  "N5" [label="(0,0,0) abduction-reasoning: Given an isotropic/broad continuum is observed in square-lattice AF spectra (especially at (π,0)) and isotropic continua are plausibly explained by deconfined S=1/2 spinons, therefore spinons are a plausible origin of the observed continuum, motivating targeted tests in square lattices."];
+  "NROOT" [label="(0,0,0) The paper proposes to develop and evaluate square-lattice iridate heterostructures as a tunable route to frustrate Néel antiferromagnetic order, quantify the resulting frustration with time-resolved RXD, and test whether polarization-resolved/high-resolution RIXS reveals spinon-like continua in a quasi-two-dimensional Heisenberg antiferromagnet.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When a candidate spinon signature is plausible but experimentally unsettled, a useful research strategy is to engineer a tunable magnetic platform, quantify the induced frustration, and test the excitation spectrum with spin-sensitive probes."];
+  "R8" [label="(0,0,0) The observation that the spectra are dominated by isotropic continua supports interpreting the square-lattice iridate excitation spectrum as spinon-like, by analogy with isotropic continua attributed to fractional S=1/2 quasiparticles in square-lattice Heisenberg antiferromagnets."];
+  "N2" -> "N5" [label="abduction-phenomenon"];
+  "N4" -> "N5" [label="abduction-knowledge"];
+  "N18" -> "N19" [label="deduction-rule"];
+  "N17" -> "N19" [label="deduction-case"];
+  "N20" -> "N22" [label="induction-case"];
+  "N21" -> "N22" [label="induction-common"];
+  "N24" -> "R8" [label="induction-case"];
+  "N3" -> "R8" [label="induction-common"];
+  "N19" -> "NROOT" [label="induction-case"];
+  "N22" -> "NROOT" [label="induction-case"];
+  "N5" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

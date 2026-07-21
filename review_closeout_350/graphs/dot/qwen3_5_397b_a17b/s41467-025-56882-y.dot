@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56882-y
+  rankdir="TB";
+  "N10" [label="(0,0,0) induction-reasoning: Instances show quasiparticles control transport, and pattern shows manipulation enables applications, therefore engineering quasiparticles offers insights"];
+  "N2" [label="(2,0,0) People later found that Dirac physics can be accessed in crystals with band degeneracies called Dirac points"];
+  "N23" [label="(13,0,0) The Dirac cones in the authors study are intrinsically non-Hermitian"];
+  "N24" [label="(14,0,0) The Dirac quasiparticles are governed by non-Hermitian Dirac Hamiltonians with a valley-dependent background imaginary term"];
+  "N26" [label="(0,0,0) If valley-dependent imaginary terms are used, then intrinsically non-Hermitian Dirac cones are created"];
+  "N3" [label="(3,0,0) In the low-energy limit, the states around a Dirac point behave as Dirac quasiparticles"];
+  "N38" [label="(0,0,0) Pattern: Valley-dependent lifetimes lead to unidirectional propagation and suppressed flipping"];
+  "N4" [label="(0,0,0) Pattern: Crystal band degeneracies allow effective quasiparticle descriptions"];
+  "N5" [label="(0,0,0) induction-reasoning: Instances show Dirac points exist in crystals, and pattern shows crystals allow quasiparticles, therefore Dirac quasiparticles exist in crystals"];
+  "N6" [label="(4,0,0) Other types of quasiparticles can emerge in certain band degeneracies beyond Dirac"];
+  "N7" [label="(5,0,0) These quasiparticles are responsible for many topological phenomena and offer new insights for controlling the transport in crystals"];
+  "N8" [label="(6,0,0) Dirac quasiparticles in graphene give rise to the quantum Hall effect and their valley contrasting physics forms the basis for valleytronics"];
+  "N9" [label="(0,0,0) Pattern: Manipulating quasiparticle properties enables new transport control applications"];
+  "NROOT" [label="(0,0,0) Propose and experimentally realize a graphene-based circuit lattice with non-reciprocal, non-Hermitian next-nearest-neighbor couplings that generate a complex-conjugate pair of intrinsically non-Hermitian Dirac cones, producing valley-dependent imaginary energies that suppress one cone over time and enable effective single-Dirac-cone physics together with unidirectional, valley-selective topological transport.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Pattern: In a non-Hermitian Dirac platform, valley-dependent imaginary-energy or lifetime contrast can select one valley or cone dynamically and bias topological kink-state propagation."];
+  "R16" [label="(0,0,0) Across the circuit realization, the non-Hermitian graphene-lattice design yields a complex-conjugate pair of intrinsically non-Hermitian Dirac cones with valley-dependent imaginary terms; the resulting lifetime contrast suppresses one cone or valley at long times and supports valley-selective, effectively unidirectional kink-state propagation."];
+  "R9" [label="(0,0,0) Because the Dirac quasiparticles are governed by non-Hermitian Dirac Hamiltonians with valley-dependent background imaginary terms, the system realizes intrinsically non-Hermitian Dirac cones rather than a trivial uniform-loss version of graphene."];
+  "N2" -> "N5" [label="induction-case"];
+  "N3" -> "N5" [label="induction-case"];
+  "N4" -> "N5" [label="induction-common"];
+  "N6" -> "N10" [label="induction-case"];
+  "N7" -> "N10" [label="induction-case"];
+  "N8" -> "N10" [label="induction-case"];
+  "N9" -> "N10" [label="induction-common"];
+  "N26" -> "R9" [label="deduction-rule"];
+  "N24" -> "R9" [label="deduction-case"];
+  "N23" -> "R16" [label="induction-case"];
+  "N38" -> "R16" [label="induction-common"];
+  "N10" -> "NROOT" [label="induction-case"];
+  "N5" -> "NROOT" [label="induction-case"];
+  "R16" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

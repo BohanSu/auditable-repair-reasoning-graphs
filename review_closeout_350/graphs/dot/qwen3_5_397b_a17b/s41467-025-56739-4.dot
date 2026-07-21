@@ -1,0 +1,22 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56739-4
+  rankdir="TB";
+  "N1" [label="(1,0,0) AI/ML models are increasingly complex and large."];
+  "N2" [label="(2,0,0) Model computation growth exceeds efficiency gains from technology scaling."];
+  "N24" [label="(24,0,0) Diversity in implementations comes at the cost of portability and standardization."];
+  "N25" [label="(25,0,0) Benchmarks require common infrastructure that unites tooling for implementation."];
+  "NI1" [label="(0,0,0) Induction Common: Disproportionate growth leads to computational limits."];
+  "NI6" [label="(0,0,0) Deduction Rule: If diversity limits portability, then common infrastructure is required."];
+  "NROOT" [label="(0,0,0) This paper proposes NeuroBench as an open-source, community-driven benchmark framework for neuromorphic computing, organized around dual-track benchmarking of algorithms and systems, with task-level, hardware-agnostic algorithm metrics and hardware-deployed system metrics to enable fair comparison of neuromorphic algorithms and neuromorphic hardware, support algorithm-system co-design, and accelerate resource-efficient brain-inspired computing.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A benchmark framework can guide an emerging computing field when it combines inclusive task definitions, shared open tooling, hardware-independent algorithm evaluation, hardware-deployed system evaluation, and mechanisms for feedback between algorithm and hardware development."];
+  "R27" [label="(0,0,0) Because diversity in implementations comes at the cost of portability and standardization, common infrastructure is required."];
+  "N1" -> "NI1" [label="induction-case"];
+  "N2" -> "NI1" [label="induction-common"];
+  "N24" -> "NI6" [label="deduction-case"];
+  "N25" -> "NI6" [label="deduction-rule"];
+  "NI6" -> "R27" [label="deduction-rule"];
+  "N24" -> "R27" [label="deduction-case"];
+  "NI1" -> "NROOT" [label="induction-case"];
+  "R27" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

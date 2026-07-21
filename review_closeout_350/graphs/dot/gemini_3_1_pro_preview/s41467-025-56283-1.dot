@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56283-1
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The study creates hyperuniform glasses by iterative particle resizing and energy minimization at packing fractions above the jamming threshold, also called the jamming point. Their density spectra exhibit class-I hyperuniformity, χv(q) ∝ q⁴. After decompression of hyperuniform glasses and conventional over-jammed packings to the jamming point, the resulting universal critical state has density spectra that converge to preparation-independent χv(q) ∝ q^0.25 low-q scaling, and density and contact-number fluctuations both exhibit hyperuniformity only at the jamming point. The findings indicate a distinct, stable, disordered solid state that is more stable than a hypothetical ideal glass.", fillcolor="lightyellow", style="filled"];
+  "E3" [label="(3,0,0) Hyperuniform states are classified by the low-wavenumber density-spectrum scaling χv(q -> 0) ~ q^alpha."];
+  "E15" [label="(15,0,0) The jamming transition occurs when the packing fraction exceeds a threshold known as the jamming point."];
+  "E18" [label="(18,0,0) The low-q hyperuniform scaling resembles the critical state observed in Manna-class absorbing phase transitions."];
+  "E24" [label="(24,0,0) The study asks whether hyperuniformity can persist in over-jammed states and what anomalous properties it can impart."];
+  "E25" [label="(25,0,0) The authors create hyperuniform over-jammed packings, called hyperuniform glasses, using an iterative algorithm that combines particle resizing with energy minimisation at a fixed packing fraction well above the jamming point."];
+  "E26" [label="(26,0,0) The density spectrum χv(q) of hyperuniform glasses exhibits ideal power-law scaling with alpha = 4, categorising them as class I hyperuniformity."];
+  "E27" [label="(27,0,0) For comparison, the authors produce conventional over-jammed packings, denoted conventional glasses, by quenching the equilibrium liquid state heated from hyperuniform glasses."];
+  "E28" [label="(28,0,0) The authors obtain marginally jammed states decompressed from hyperuniform glasses and conventional glasses, with jamming points of phi = 0.666 and 0.648."];
+  "E30" [label="(30,0,0) At low wavenumbers, χv(q) for both JCG and JHG converges to power-law scaling with alpha approximately 0.25, appearing independent of preparation protocols."];
+  "E31" [label="(31,0,0) The contact-number structure factors for both JCG and JHG exhibit power-law scaling in the same low-wavenumber region."];
+  "E33" [label="(33,0,0) Density fluctuations and contact-number fluctuations both exhibit hyperuniformity only at the jamming point."];
+  "E35" [label="(35,0,0) Hyperuniform glasses exhibit exceptional stability across vibrational, kinetic, thermodynamic, and mechanical properties."];
+  "E38" [label="(38,0,0) The findings indicate a distinct, stable, disordered solid state that is more stable than a hypothetical ideal glass."];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E15" -> "NROOT" [label="induction-case"];
+  "E18" -> "NROOT" [label="induction-case"];
+  "E24" -> "NROOT" [label="induction-case"];
+  "E25" -> "NROOT" [label="induction-common"];
+  "E26" -> "NROOT" [label="induction-case"];
+  "E27" -> "NROOT" [label="induction-case"];
+  "E28" -> "NROOT" [label="induction-case"];
+  "E30" -> "NROOT" [label="induction-case"];
+  "E31" -> "NROOT" [label="induction-case"];
+  "E33" -> "NROOT" [label="induction-case"];
+  "E35" -> "NROOT" [label="induction-case"];
+  "E38" -> "NROOT" [label="induction-case"];
+}

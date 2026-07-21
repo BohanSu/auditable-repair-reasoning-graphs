@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=qwen3_5_397b_a17b:s41467-025-56769-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper combines publicly available RNA-seq libraries from 24 Oryza species, homology-based and homology-independent RNA-virus detection, viral genome assembly context, and viral abundance screening to identify complete or near-complete viruses and rice-associated viruses, characterize hidden viral diversity, and support surveillance and disease-control strategies for rice viral epidemics.", fillcolor="lightyellow", style="filled"];
+  "E23" [label="(23,0,0) Rice research has produced vast amounts of publicly available RNA-seq data submitted by scientists worldwide."];
+  "E24" [label="(24,0,0) The publicly available rice RNA-seq data had not undergone systematic analysis for virus identification."];
+  "E26" [label="(26,0,0) The study analyzed 17,115 RNA-seq libraries encompassing 24 Oryza species to explore viral diversity in rice plants."];
+  "E27" [label="(27,0,0) The study employed homology-based and homology-independent RNA-virus detection approaches and identified 810 complete or near-complete viruses plus 49 additional RdRPs."];
+  "E22" [label="(22,0,0) Fragmentary RdRP information from Serratus supports screening RNA-seq libraries for virus identification and lays groundwork for viral genome assembly, annotation, and classification."];
+  "E28" [label="(28,0,0) The study analyzed SRA metadata, estimated viral abundance in rice samples, and screened 427 viruses closely associated with rice plants."];
+  "E11" [label="(11,0,0) Viral metagenomics can uncover hidden viruses, reconstruct complete or near-complete viral genomes, and characterize viral diversity."];
+  "E29" [label="(29,0,0) The findings can advance viral research, enhance surveillance against viral diseases, and support measures to mitigate viral epidemics in rice plants."];
+  "E23" -> "NROOT" [label="induction-case"];
+  "E24" -> "NROOT" [label="induction-case"];
+  "E26" -> "NROOT" [label="induction-common"];
+  "E27" -> "NROOT" [label="induction-case"];
+  "E22" -> "NROOT" [label="induction-case"];
+  "E28" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E29" -> "NROOT" [label="induction-case"];
+}

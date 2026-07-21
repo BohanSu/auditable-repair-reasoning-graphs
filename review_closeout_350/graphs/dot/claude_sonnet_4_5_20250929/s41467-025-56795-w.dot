@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56795-w
+  rankdir="TB";
+  "N10" [label="(11,1,0) Induction-case: Single-crystal optical actuation has been reported in one [RuSO2] complex."];
+  "N11" [label="(13,2,0) Induction-case: The photoconversion level of the η1-OSO isomer was incomplete at 52%."];
+  "N12" [label="(15,1,0) Induction-case: Complete η1-OSO photoconversion had only been reported in two [RuSO2] complexes."];
+  "N13" [label="(15,2,0) Induction-case: The two complexes with complete η1-OSO photoconversion do not display macroscopic optical actuation."];
+  "N14" [label="(16,2,0) Abduction-phenomenon: The η2-(OS)O photoisomer has never been structurally isolated with 100% photoconversion."];
+  "N16" [label="(14,1,0) A [RuSO2] complex ideally supports 100% SO2-linkage photoisomerisation."];
+  "N18" [label="(0,0,0) Deduction-rule: If a material can achieve 100% photoconversion with distinct states, then it can provide integer encodings for photonic applications."];
+  "N20" [label="(0,0,0) Induction-common: If multiple [RuSO2] complexes show incomplete photoconversion or lack macroscopic actuation when complete photoconversion occurs, then there is a general limitation in achieving both 100% photoconversion and macroscopic optical actuation simultaneously."];
+  "N21" [label="(0,0,0) Induction-reasoning: Previous [RuSO2] complexes show incomplete photoconversion (52%) or complete photoconversion without macroscopic actuation, and this pattern suggests a general limitation, therefore existing [RuSO2] complexes cannot simultaneously achieve 100% photoconversion and macroscopic optical actuation."];
+  "N22" [label="(0,0,0) Abduction-knowledge: If a photoisomer cannot be isolated with 100% photoconversion and co-exists with other isomers, then there are structural or energetic barriers preventing complete conversion."];
+  "N26" [label="(0,0,0) Abduction-knowledge: If existing materials show limitations in achieving ideal properties, then designing new materials with modified structures may overcome these limitations."];
+  "N30" [label="(0,0,0) Induction-case: Single crystals provide pure solid-state medium and ordered photonic signatures."];
+  "N31" [label="(0,0,0) Induction-common: If materials provide pure medium and ordered signatures, then they are preferred platforms for photonic control."];
+  "NROOT" [label="(0,0,0) The study develops and evaluates single crystals of trans-[Ru(SO2)(NH3)4(4-bromopyridine)](tosylate)2 as a [RuSO2] platform for reversible SO2-linkage photoisomerisation, aiming to access η1-OSO and η2-(OS)O photoisomeric states from the η1-SO2 dark state and thereby test a temperature-controlled ternary molecular switch with single-crystal optical actuation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When existing [RuSO2] systems are limited, single crystals offer photonic-control advantages, and complete multi-state SO2-linkage photoisomerisation would enable useful photonic signatures, these points jointly motivate developing and evaluating a new single-crystal [RuSO2] molecular actuator or switch."];
+  "R2" [label="(0,0,0) Single crystals provide properties, including a pure solid-state medium and ordered photonic signatures, that make them useful platforms for photonic control."];
+  "R5" [label="(0,0,0) The η2-(OS)O photoisomer's lack of prior 100% structural isolation and its co-existence with η1-OSO in some cases indicate structural or energetic barriers to complete η2-(OS)O photoconversion."];
+  "R6" [label="(0,0,0) Because existing [RuSO2] complexes show limitations in combining 100% photoconversion with macroscopic actuation, designing new [RuSO2] materials with modified structures may help overcome these limitations."];
+  "R7" [label="(0,0,0) A [RuSO2] complex that supports 100% SO2-linkage photoisomerisation across multiple distinguishable states would be valuable for photonic integer or ternary signatures."];
+  "N10" -> "N21" [label="induction-case"];
+  "N11" -> "N21" [label="induction-case"];
+  "N12" -> "N21" [label="induction-case"];
+  "N13" -> "N21" [label="induction-case"];
+  "N20" -> "N21" [label="induction-common"];
+  "N30" -> "R2" [label="induction-case"];
+  "N31" -> "R2" [label="induction-common"];
+  "N14" -> "R5" [label="induction-case"];
+  "N22" -> "R5" [label="induction-common"];
+  "N21" -> "R6" [label="abduction-phenomenon"];
+  "N26" -> "R6" [label="abduction-knowledge"];
+  "N16" -> "R7" [label="induction-case"];
+  "N18" -> "R7" [label="induction-common"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

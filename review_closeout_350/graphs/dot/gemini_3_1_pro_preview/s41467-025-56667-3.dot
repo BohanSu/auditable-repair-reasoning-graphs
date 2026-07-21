@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56667-3
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Investigate laser-driven proton acceleration using petawatt femtosecond irradiation of structured, laser-tailored polymer foils: reduced-transverse-size foils enhance target normal sheath acceleration, and laser-tailored foils enhance Coulomb repulsion so energetic protons are accelerated by a hybrid mechanism of radiation pressure and Coulomb repulsion.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) High temporal contrast is a prerequisite for petawatt femtosecond laser experiments on structured targets, and petawatt-laser temporal contrast, pointing stability, and polymer-foil transverse shape were controlled in the experiment."];
+  "Node_10" [label="(22,3,0) Coulomb repulsion is enhanced in laser-tailored foils by suppressing the conduction of cold electrons, which combined with radiation pressure forms a hybrid acceleration mechanism."];
+  "Node_4" [label="(0,0,0) If employing conduction-restricted nanometre targets is an effective design to increase proton energy, then applying a multi-petawatt femtosecond laser to such targets will further enhance proton acceleration."];
+  "R2" [label="(0,0,0) Abduction-Conclusion: Enhanced proton acceleration in conduction-restricted nanometre targets is explained by laser-tailored foils enhancing Coulomb repulsion through suppressing cold-electron conduction."];
+  "ANS_SRC_1" [label="(16,0,0) High temporal contrast of laser is a prerequisite for experiments on structured targets because prepulse intensity should be suppressed below the target damage threshold [S16]."];
+  "ANS_SRC_2" [label="(20,0,0) The temporal contrast and pointing stability of the petawatt laser were well controlled, and the transverse shape of the polymer foils was tailored with a 100-kHz microjoule femtosecond laser [S20]."];
+  "ANS_SRC_3" [label="(13,0,0) Foils with a reduced transverse size can enhance target normal sheath acceleration of protons because laterally spreading electrons reflect around foil edges and can be reaccelerated to higher energies under a sub-picosecond driving laser [S13]."];
+  "ANS_SRC_4" [label="(5,0,0) radiation-pressure acceleration: However, limitations, including the lack of a long acceleration structure , deflection of protons by the self-generated magnetic field , and dephasing of the fastest protons during acceleration , lead to a proton energy below 100 MeV in experiments , ,  except one."];
+  "ANS_SRC_5" [label="(22,0,0) enhanced Coulomb repulsion: With the help of two- and three-dimensional (3D) particle-in-cell (PIC) simulations, we revealed that such energetic protons were accelerated by a hybrid mechanism of radiation pressure and Coulomb repulsion, the latter of which was enhanced in laser-tailored foils by."];
+  "ANS_SRC_6" [label="(13,0,0) The second scheme uses foils with a reduced transverse size to enhance target normal sheath acceleration of protons because laterally spreading electrons are reflected around foil edges and can be reaccelerated to higher energies if a sub-picosecond driving laser is employed."];
+  "ANS_SRC_7" [label="(15,0,0) irradiation: The major challenge in further improving the proton energy by irradiating a petawatt femtosecond laser on structured targets is to preserve the nano- or micro-structures before the arrival of the main pulse. Viewpoints: A major challenge in improving proton energy by irradiating a pe."];
+  "Node_4" -> "R2" [label="abduction-phenomenon"];
+  "Node_10" -> "R2" [label="abduction-knowledge"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "ANS_SRC_1" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_2" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_3" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_4" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_5" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_6" -> "NROOT" [label="induction-case"];
+  "ANS_SRC_7" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "I4" [label="(0,0,0) abduction: Given [currently, DMDs are typically used as reflective binary amplitude modulators in TVAM/light-based printers] and [currently, the work presents a hologram pipeline ... Lee holograms enable using a DMD as a fast phase modulator], therefore [a DMD driven with Lee holograms is a plausible fast hardware path to implement phase-encoded holographic projections for TVAM]."];
+  "N19" [label="(19,0,0) Currently, implementations image a 2D SLM into a cylindrical vial and rely on depth of focus to keep quasi-collimation."];
+  "N20" [label="(20,0,0) If vial diameter >> depth of focus, then blurring artifacts appear and compromise resolution."];
+  "N24" [label="(24,0,0) Currently, DMDs are typically used as reflective binary amplitude modulators in TVAM/light-based printers."];
+  "N43" [label="(43,0,0) Currently, the work presents a hologram pipeline: tiled holograms + PSF modification reduce speckle/increase contrast; Lee holograms enable using a DMD as a fast phase modulator."];
+  "NROOT" [label="(0,0,0) This paper proposes and evaluates HoloVAM: a phase-holographic, DMD-based tomographic volumetric additive-manufacturing light engine intended to improve projection efficiency and optical control while enabling rapid, high-resolution millimetre-scale printing, including cell-laden hydrogel demonstrations, using low-power 405 nm illumination.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent TVAM research proposal can be supported by identifying current optical and computational limitations, proposing a phase-holographic light-engine mechanism to address them, and evaluating the resulting system in relevant fabrication demonstrations."];
+  "R2" [label="(0,0,0) When TVAM implementations image a 2D spatial light modulator into a cylindrical vial and rely on depth of focus to maintain quasi-collimated propagation, a vial diameter much larger than the depth of focus can introduce blurring artifacts that compromise resolution."];
+  "N24" -> "I4" [label="abduction-phenomenon"];
+  "N43" -> "I4" [label="abduction-knowledge"];
+  "N20" -> "R2" [label="deduction-rule"];
+  "N19" -> "R2" [label="deduction-case"];
+  "I4" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N24" [label="(21,2,0) Induction-case: The role of biophysical cues (shear stress, solid stress, matrix stiffness) is increasingly recognized as critical in CD8+ T cell activation."];
+  "N25" [label="(21,2,8) Induction-case: ECM viscoelasticity regulates T-cell phenotype and function via the activator-protein-1 signaling pathway."];
+  "N28" [label="(23,1,0) Induction-case: Membrane potential depolarization in T cells affects receptor mobility."];
+  "N32" [label="(23,4,35) Induction-case: Electrostatic force plays critical roles in TCR signaling."];
+  "N36" [label="(16,1,0) Induction-case: Electrical stimulation utilizing piezoelectric materials accelerates bone regeneration."];
+  "N37" [label="(16,1,22) Induction-case: Physiological electric potential plays an indispensable role in maintaining bone volume and quality."];
+  "N5" [label="(6,1,0) Deduction-case: Currently, accumulating evidence indicates that the ex vivo activation and expansion phase can influence therapeutic efficacy of tumor-specific CD8+ T cells."];
+  "N7" [label="(7,1,0) Abduction-knowledge: Optimizing culture conditions is critical for broadening the clinical utility of ACT immunotherapy."];
+  "NROOT" [label="(0,0,0) The paper proposes to develop and evaluate external electrical stimulation delivered via a charged substrate during ex vivo expansion of CD8+ T cells as a biophysical strategy to augment TCR signaling and EGR1-mediated chromatin accessibility, promote a highly proliferative and less virtual-memory phenotype, and thereby improve antitumor efficacy in adoptive cell therapy and CAR-T therapy.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Mechanistic knowledge about TCR signaling, transcription-factor regulation, EGR1 activity, biophysical cues, and ex vivo culture effects can jointly motivate testing a biophysical intervention to improve CD8+ T cell immunotherapy."];
+  "R10" [label="(0,0,0) Electrical stimulation and physiological electric potentials can modulate cellular processes in bone tissue."];
+  "R3" [label="(0,0,0) Because the ex vivo activation and expansion phase can influence the therapeutic efficacy of tumor-specific CD8+ T cells, optimizing ex vivo culture conditions is a plausible way to improve adoptive cell therapy."];
+  "R6" [label="(0,0,0) Biophysical cues such as ECM viscoelasticity and fluid shear stress can modulate T cell phenotype, activation, and function through mechanical signaling pathways."];
+  "R7" [label="(0,0,0) Electrical and electrostatic effects can influence T cell receptor signaling and activation, including effects on receptor mobility, TCR signaling regulation, and receptor clustering."];
+  "N5" -> "R3" [label="abduction-phenomenon"];
+  "N7" -> "R3" [label="abduction-knowledge"];
+  "N25" -> "R6" [label="induction-case"];
+  "N24" -> "R6" [label="induction-common"];
+  "N28" -> "R7" [label="induction-case"];
+  "N32" -> "R7" [label="induction-common"];
+  "N36" -> "R10" [label="induction-case"];
+  "N37" -> "R10" [label="induction-common"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

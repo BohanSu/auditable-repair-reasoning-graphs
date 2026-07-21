@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "baseline_branch": "300-350_workshop",
+  "baseline_manifest": "standard_flow_300/graphs/manifest.csv",
+  "baseline_manifest_sha256": "d34e18f0b26ee8532eb733d4bdefff8a0d54f58030c61a80396349958f876724",
+  "current_branch": "350_full",
+  "current_manifest": "review_closeout_350/graphs/manifest.csv",
+  "current_manifest_sha256": "5b53b6ca11d650304864e5c179fc9018cc07c09239cd868ca0e195181253b628",
+  "baseline_key_count": 300,
+  "current_key_count": 350,
+  "baseline_keys_are_subset": true,
+  "shared_key_count": 300,
+  "shared_sha256_equal_count": 300,
+  "shared_sha256_changed_count": 0,
+  "new_current_key_count": 50
+}

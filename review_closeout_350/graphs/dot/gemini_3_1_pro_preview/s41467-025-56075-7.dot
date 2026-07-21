@@ -1,0 +1,38 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56075-7
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Elemental distribution in NMC polycrystalline particles is manipulated by regulating the cooling rate from the peak of calcination temperature. Substantial lithium outward diffusion from the bulk to the surface creates a surface Ni reduction layer that decreases surface reactivity. Improved surface stability allows homogeneous bulk redox behavior and results in more favorable capacity retention cycled to high voltages. Controlling materials microstructures without excessive extra dopants is an attractive strategy for long-term manufacturing reliability.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(1,1,0) Nickel-rich LiNixMnyCozO2 layered positive electrode materials have high specific capacity."];
+  "E2" [label="(2,2,0) Cycling stability of nickel-rich positive electrode material is especially unsatisfactory at high voltages."];
+  "E3" [label="(4,1,0) Surface stability plays a vital role in nickel-rich positive electrode materials."];
+  "E4" [label="(5,1,0) Surface stability of NMCs is related to bulk chemo-mechanical stability during cycling."];
+  "E5" [label="(18,1,0) Controlling materials microstructures without excessively using dopants has become an attractive strategy for long-term manufacturing reliability."];
+  "E6" [label="(21,1,0) Quenching can produce materials far from equilibrium."];
+  "E7" [label="(23,1,0) Some studies adopted a quenching treatment for Ni-rich positive electrode materials."];
+  "E8" [label="(23,2,0) Ni-rich positive electrodes could deliver enhanced electrochemical performance after quenching treatment."];
+  "E9" [label="(27,1,0) Elemental distribution in NMC polycrystalline particles is manipulated by regulating the cooling rate from the peak of calcination temperature."];
+  "E10" [label="(28,1,0) Substantial lithium diffusion from the bulk to the surface of NMC polycrystalline particles is observed."];
+  "E11" [label="(28,2,0) Lithium diffusion creates a Ni-reduced surface layer."];
+  "E12" [label="(28,3,0) The surface Ni reduction layer decreases surface reactivity."];
+  "E13" [label="(29,2,0) Improved surface stability allows redox reactions to proceed more homogeneously throughout polycrystalline particles."];
+  "E14" [label="(29,3,0) Improved surface stability results in more favorable capacity retention cycled to high voltages."];
+  "R1" [label="(0,0,0) Substantial lithium diffusion from the bulk to the surface is observed in NMC polycrystalline particles."];
+  "R2" [label="(0,0,0) Lithium diffusion from the bulk to the surface creates a Ni-reduced surface layer."];
+  "E11" -> "R2" [label="deduction-rule"];
+  "E10" -> "R2" [label="deduction-case"];
+  "E9" -> "NROOT" [label="induction-common"];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+  "E13" -> "NROOT" [label="induction-case"];
+  "E14" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+}

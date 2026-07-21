@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=qwen3_5_397b_a17b:s41467-025-56622-2
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This research proposes UNITO, an image-segmentation deep learning framework that converts cytometry bivariate density maps into images and uses convolutional networks to learn expert-annotated hierarchical pre-gating and gating, thereby automatically and adaptively delineating cell populations across diverse samples and cytometric modalities without manual intervention.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(38,0,0) Therefore, to address this challenge together with the biological and technical variance, we propose and validate UNITO, a method employing image segmentation for automated gating."];
+  "E2" [label="(36,0,0) This versatility led to their adaptation for image segmentation tasks."];
+  "E3" [label="(11,0,0) Thus, algorithms have been developed that attempt to automate this task, including unsupervised clustering to identify cell subtypes , , , , supervised deep learning methods , , , , as well as some density-based gating methods ,."];
+  "E4" [label="(2,0,0) Flow cytometry, introduced in the 1960s to separate and count immune cell subtypes, underwent a critical evolution with increased speed and parameters  ,  ,  ,."];
+  "E5" [label="(40,0,0) Furthermore, with the ability to perform pixel-level prediction, UNITO intuitively defines the region of interest on the bivariate density maps for cytometric gating."];
+  "E6" [label="(33,0,0) While existing methods are suboptimal to accommodate biological variance within the protein expression data, deep neural networks with convolutional kernels have the ability to address such data challenges, using the properties of translational invariance a."];
+  "E7" [label="(20,0,0) Currently, no software can configure a series of bivariate pre-gating (and gating) tasks where gates are set in a hierarchical order."];
+  "E8" [label="(7,0,0) The most important and widely used method of subtyping cell populations is referred to as gating, which is usually a boundary or polygon defined on a bivariate density map of the entire cell population (2D density map represented by two selected protein mea."];
+  "E9" [label="(6,0,0) Although flow cytometry and mass cytometry aim for similar functionality with labeled antibodies, they do not have similar strategies to detect cell aggregates."];
+  "E10" [label="(41,0,0) By validating UNITO on three independent study cohorts and two cytometric modalities, we hypothesize that the framework can learn any pre-gating and gating tasks from human annotation, and then adaptively draw contours and assign labels to cells from indepe."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-common"];
+}

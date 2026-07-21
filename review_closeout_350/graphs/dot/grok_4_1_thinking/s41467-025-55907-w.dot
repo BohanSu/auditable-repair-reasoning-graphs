@@ -1,0 +1,39 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-55907-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to generate capillary waves using ultrasound at a gas-water interface pinned to a superhydrophobic micro-pillar array, investigate how contact-line density and pillar height govern wave propagation, and evaluate whether the resulting dispersion signatures can serve as a remote, non-optical probe of the plastron wetting state.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A literature gap in microstructure-pinned capillary-wave propagation, combined with the need for remote plastron wetting-state monitoring, motivates experiments that use mechanically generated waves as diagnostic signals."];
+  "N_case13" [label="(19,0,0) Currently there is: Abundant literature constitutes in-depth knowledge of water waves but all assume air/gas phase above interface is boundary-free and inviscid."];
+  "N_case21" [label="(21,0,0) Currently there is: Such microstructure-pinned conditions could be facilitated by the superhydrophobic state exhibiting superior water repellency."];
+  "N_case23" [label="(23,0,0) Currently there is: Superhydrophobicity is enabled by surface chemistry and nano-micro topography preventing liquid entry and impalement."];
+  "N_case27" [label="(27,0,0) Currently there is: The plastron can experience depletion as a result of gas dissolution or pressure-induced impalement (Ref 23 opinion 11: flow enhances dissolution of air into water)."];
+  "N_case31" [label="(31,0,0) Currently there is: Mechanical waves carry their propagation medium’s properties, making them useful tools for investigating optically opaque or contamination-sensitive media (e.g., Earth’s crust, biological tissues)."];
+  "N_case_gap" [label="(20,0,0) Currently there is: Capillary waves have been extensively studied in free conditions and constrained conditions (shallow water/narrow channel), but systematic studies on capillary waves at an interface constrained by pinning to an array of microstructures are still lacking."];
+  "N_common21" [label="(0,0,0) It is common that nature offers examples (lotus, salvinia, arthropods, feathers) inspiring superhydrophobic surfaces with Cassie/plastron state."];
+  "R14" [label="(0,0,0) The cited background supports a literature gap: capillary waves have been studied in free, shallow-water, and narrow-channel settings, but systematic studies of capillary waves at gas-water interfaces constrained by microstructure pinning are still lacking."];
+  "R15" [label="(0,0,0) Superhydrophobic Cassie/plastron states are a plausible route for creating water-repellent microstructure-pinned conditions."];
+  "R16" [label="(0,0,0) Superhydrophobic Cassie/plastron surfaces rely on surface chemistry and nano-micro topography to resist liquid entry and impalement."];
+  "R17" [label="(0,0,0) Even for superhydrophobic plastron states that resist impalement, plastron condition can be altered by gas dissolution or pressure-induced impalement, producing wetting-state degradation concerns."];
+  "R18" [label="(0,0,0) Because plastrons can deplete and mechanical waves carry properties of their propagation medium, mechanical-wave measurements are a plausible remote, non-optical way to investigate plastron condition."];
+  "R20" [label="(0,0,0) The prior literature’s boundary-free gas-phase assumption, together with the explicit absence of systematic microstructure-pinned capillary-wave studies, motivates treating microstructure-pinned capillary waves as an open research gap."];
+  "R21" [label="(0,0,0) For superhydrophobic microstructure-pinned conditions, examining mechanically driven interface dynamics is motivated as a remote, non-optical approach to monitor plastron condition and wetting state."];
+  "N_case_gap" -> "R14" [label="induction-case"];
+  "N_case13" -> "R14" [label="induction-common"];
+  "N_case21" -> "R15" [label="induction-case"];
+  "N_common21" -> "R15" [label="induction-common"];
+  "N_case23" -> "R16" [label="induction-case"];
+  "R15" -> "R16" [label="induction-common"];
+  "N_case27" -> "R17" [label="induction-case"];
+  "R16" -> "R17" [label="induction-common"];
+  "N_case27" -> "R18" [label="abduction-phenomenon"];
+  "N_case31" -> "R18" [label="abduction-knowledge"];
+  "N_case_gap" -> "R20" [label="induction-case"];
+  "N_case13" -> "R20" [label="induction-common"];
+  "N_case21" -> "R21" [label="induction-case"];
+  "R18" -> "R21" [label="induction-common"];
+  "R14" -> "NROOT" [label="induction-case"];
+  "R17" -> "NROOT" [label="induction-case"];
+  "R20" -> "NROOT" [label="induction-case"];
+  "R21" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

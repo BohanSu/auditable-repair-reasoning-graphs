@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-55999-4
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The repaired graph supports a research proposal to investigate metal-organic framework confinement as a stabilising platform for double-helical phosphorus chain motifs containing P8 units, rather than claiming that a specific MFM-300(In)-hosted product has already been synthesized.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "NodeC1" [label="(16,0,0) abduction-knowledge: Metal-organic frameworks (MOFs) have a rich host-guest chemistry, tuneable porosity, high crystallinity, and potential stability."];
+  "NodeD1" [label="(0,0,0) deduction-rule: If helical and double-helical chains containing [P8] cages are predicted to be more stable than P4, then they are excellent target structures for new polymeric forms."];
+  "NodeD2" [label="(10,4,0) deduction-case: Currently, helical and double-helical chains containing [P8] cages have been predicted to be more stable than P4."];
+  "R3" [label="(0,0,0) Because metal-organic frameworks have rich host-guest chemistry, tuneable porosity, high crystallinity, and potential stability, they are plausible host materials to investigate for stabilising predicted double-helical phosphorus chain targets containing P8 cages."];
+  "R4" [label="(0,0,0) Double-helical chains containing P8 cages are attractive target structures for new polymeric phosphorus forms when those double-helical P8-chain structures are predicted to be more stable than P4."];
+  "NodeD2" -> "R3" [label="abduction-phenomenon"];
+  "NodeC1" -> "R3" [label="abduction-knowledge"];
+  "NodeD1" -> "R4" [label="deduction-rule"];
+  "NodeD2" -> "R4" [label="deduction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

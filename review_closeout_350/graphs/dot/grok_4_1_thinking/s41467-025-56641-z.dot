@@ -1,0 +1,43 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56641-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes, develops, and evaluates ultrastructural membrane expansion microscopy (umExM): an ExM-based method using rationally designed membrane-anchoring or membrane-labeling probes and optimized ExM chemistry to obtain dense, high-signal labeling of cellular membranes in fixed mouse brain tissue, enabling ultrastructural membrane visualization, segmentation, and tracing at about 60 nm resolution with standard confocal microscopy and with higher physical magnification through iterative expansion.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Together, ExM physical expansion, iterative expansion, and optimized membrane-labeling chemistry motivate a microscopy workflow for visualizing densely labeled cellular membranes in fixed tissue at nanoscale resolution with standard optical instrumentation."];
+  "N_case_gap" [label="(7,0,0) Induction case: While several ExM methods have been reported for membrane or lipid labeling and visualization, achieving dense labeling in fixed tissues has remained challenging."];
+  "N_case_ideal" [label="(0,0,0) Currently there is: the need in the context of fixed tissues for membrane labeling with ExM."];
+  "N_case_iter" [label="(3,1,0) Currently there is: An iterative form of expansion microscopy allows the expanded sample to be expanded a second time."];
+  "N_case_mech" [label="(2,0,0) Currently there is: As the hydrogel swells, the anchored biomolecules and/or their labels are pulled apart from each other isotropically, typically to a physical magnification of ~4-10x in each linear dimension."];
+  "N_concl_iter" [label="(3,0,0) deduction-reasoning: Currently there is the iterative form allowing second expansion, and if second expansion then beyond 10x, so the expanded sample can be expanded a second time, resulting in an overall physical magnification of beyond 10x in each linear dimension."];
+  "N_rule_ben" [label="(9,0,0) Deductive rule: If a membrane labeling method enables uniform and continuous labeling with high S/B, then it would enable imaging of proteins with nanoscale registration relevant to membrane landmarks and facilitate the segmentation and tracing of membranous structures such as axons and dendrites on a confocal microscope."];
+  "N_rule_design" [label="(11,0,0) Deductive rule: If innovative membrane labeling probes are rationally and systematically designed and the ExM protocol is optimized, then dense labeling of membranes, including plasma membranes, with ExM can be achieved."];
+  "N_rule_ideal" [label="(8,0,0) Deductive rule: If uniform and continuous membrane labeling yielding a high signal-to-background ratio is enabled, then ultrastructure is preserved alongside visualization of associated proteins in fixed tissues."];
+  "N_rule_iter" [label="(3,2,0) Deductive rule: If the expanded sample is expanded a second time, then the overall physical magnification is beyond 10x in each linear dimension."];
+  "N_rule_mech" [label="(1,1,7) Deductive rule: If covalently anchoring labels to the polymer network, then labels spaced closer than the optical diffraction limit can be isotropically separated."];
+  "N_rule_name" [label="(13,0,0) Deductive rule: If the protocol achieves dense membrane labeling while preserving ultrastructure in the context of ExM, then it can be named ultrastructural membrane expansion microscopy (umExM), using the word ultrastructure in the same sense as an earlier protocol in the expansion microscopy community called ultrastructure expansion microscopy."];
+  "R1" [label="(0,0,0) When labels or biomolecules are covalently anchored to the polymer network, hydrogel swelling can isotropically pull them apart by approximately 4-10x, physically separating labels that were initially closer than the optical diffraction limit."];
+  "R4" [label="(0,0,0) Because dense membrane or lipid labeling in fixed tissues remains challenging despite reported ExM membrane-labeling methods, there is a scientific need for improved ExM-compatible membrane labeling in fixed tissues."];
+  "R5" [label="(0,0,0) For membrane labeling with ExM in fixed tissues, enabling uniform and continuous membrane labeling with a high signal-to-background ratio would support ultrastructure preservation alongside visualization of associated proteins."];
+  "R6" [label="(0,0,0) A fixed-tissue ExM membrane-labeling method that provides uniform, continuous, high-S/B labeling would be expected to support nanoscale registration of proteins to membrane landmarks and facilitate segmentation and tracing of membranous structures."];
+  "R7" [label="(0,0,0) The challenge of dense membrane labeling in fixed tissues motivates developing a strategy aimed at uniform, continuous, high-signal membrane labeling that preserves ultrastructure and supports nanoscale protein registration, segmentation, and tracing."];
+  "R8" [label="(0,0,0) A plausible strategy to address this fixed-tissue membrane-labeling need is to rationally design innovative membrane-labeling probes and optimize the ExM protocol to achieve dense membrane labeling while preserving ultrastructural utility."];
+  "R9" [label="(0,0,0) This rationally designed and optimized ExM membrane-labeling protocol can be framed as developing and evaluating ultrastructural membrane expansion microscopy, or umExM, as a strategy for dense membrane labeling with preserved ultrastructural information."];
+  "N_case_iter" -> "N_concl_iter" [label="deduction-case"];
+  "N_rule_iter" -> "N_concl_iter" [label="deduction-rule"];
+  "N_rule_mech" -> "R1" [label="deduction-rule"];
+  "N_case_mech" -> "R1" [label="deduction-case"];
+  "N_case_gap" -> "R4" [label="abduction-phenomenon"];
+  "R1" -> "R4" [label="abduction-knowledge"];
+  "N_rule_ideal" -> "R5" [label="deduction-rule"];
+  "N_case_ideal" -> "R5" [label="deduction-case"];
+  "N_rule_ben" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "R4" -> "R7" [label="abduction-phenomenon"];
+  "R6" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "R8" [label="abduction-phenomenon"];
+  "N_rule_design" -> "R8" [label="abduction-knowledge"];
+  "N_rule_name" -> "R9" [label="deduction-rule"];
+  "R8" -> "R9" [label="deduction-case"];
+  "N_concl_iter" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

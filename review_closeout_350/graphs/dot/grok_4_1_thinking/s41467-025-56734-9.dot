@@ -1,0 +1,44 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56734-9
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper advances the research proposal of developing and experimentally evaluating the EXPERT prime-editing system, in which an upstream cis-nick-generating sgRNA and an extended pegRNA are used to test whether prime editing capability can be extended across upstream and downstream regions of the nick, thereby addressing editable-range limitations while measuring product purity, indel rates, and off-target rates relative to existing single-pegRNA and dual-pegRNA approaches.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When existing single-pegRNA and dual-pegRNA prime-editing approaches have constrained editable range or safety limitations, a mechanistically motivated design that changes nick placement and pegRNA architecture can be proposed for experimental evaluation rather than assumed to have already achieved superior outcomes."];
+  "R10" [label="(0,0,0) In two-pegRNA prime-editing approaches, a reported arrangement is that at least some editable regions are positioned between the downstream directions of the two pegRNA nicks."];
+  "R15" [label="(0,0,0) If many prime-editing systems retain useful efficiency only within an approximately 10 bp downstream range from the nick, then further expansion of the editable range remains needed, even in a field where prior range-expansion strategies have been reported."];
+  "c_perf1" [label="(0,0,0) induction-reasoning: From the specific case of adding motifs and the common that performance has been enhanced, so performance has been enhanced through pegRNA motifs."];
+  "c_perf2" [label="(0,0,0) induction-reasoning: From the specific case of protein engineering and the common that performance has been enhanced, so performance has been enhanced through protein engineering."];
+  "c_range1" [label="(0,0,0) induction-reasoning: From the specific case of FnCas9 substitution and the common that efforts have been made, so efforts to expand the editing range have succeeded in cases like FnCas9."];
+  "c_range2" [label="(0,0,0) induction-reasoning: From the specific case of CPE and TJ-PE and the common that efforts have been made, so efforts to expand the editing range have succeeded in cases like CPE and TJ-PE."];
+  "c_two1" [label="(0,0,0) induction-reasoning: From the specific case of in-trans nicks and the common momentum, so two-pegRNA systems are associated with elevated DSB probability."];
+  "case_perf1" [label="(11,0,0) Specific case: adding motifs (evopreQ1, Csy4, G-quadruplexes, xrRNA, MS2) to the 3′ extension of the pegRNA improves stability and consequently PE efficiency."];
+  "case_perf2" [label="(12,0,0) Specific case: protein engineering (altering NLS, point mutations, additional domains, MLH1dn mutant to inhibit MMR) is effective in improving PE efficiency."];
+  "case_range1" [label="(8,0,0) Specific case: substituting SpyCas9 nickase (H840A) with Francisella novicida Cas9 nickase (H969A) expands the editing range of PE."];
+  "case_range2" [label="(9,0,0) Specific case: the circular RNA-mediated prime editor (CPE) combining Cas12a with circular RNA and template-jumping prime editing (TJ-PE) inspired by retrotransposons also expand the editing range."];
+  "case_two1" [label="(16,0,0) Specific case: in these two-pegRNA systems the two nicks are located on the complementary strands (in trans), associated with elevated probability of inducing double-strand breaks (DSBs)."];
+  "case_two2" [label="(17,0,0) Specific case: the editable region is positioned in between the downstream direction of these two-pegRNA nicks."];
+  "common_perf" [label="(10,0,0) In general, the performance of PE has been enhanced through other strategies."];
+  "common_range" [label="(7,0,0) In general, efforts have been made to expand the editing range of PE."];
+  "common_two" [label="(15,0,0) In general, the use of two-pegRNA has gained momentum in expanding the editing range of PE and improving its efficiency."];
+  "common_range" -> "c_range1" [label="induction-common"];
+  "case_range1" -> "c_range1" [label="induction-case"];
+  "common_range" -> "c_range2" [label="induction-common"];
+  "case_range2" -> "c_range2" [label="induction-case"];
+  "common_perf" -> "c_perf1" [label="induction-common"];
+  "case_perf1" -> "c_perf1" [label="induction-case"];
+  "common_perf" -> "c_perf2" [label="induction-common"];
+  "case_perf2" -> "c_perf2" [label="induction-case"];
+  "common_two" -> "c_two1" [label="induction-common"];
+  "case_two1" -> "c_two1" [label="induction-case"];
+  "case_two2" -> "R10" [label="induction-case"];
+  "common_two" -> "R10" [label="induction-common"];
+  "case_range1" -> "R15" [label="induction-case"];
+  "common_range" -> "R15" [label="induction-common"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R15" -> "NROOT" [label="induction-case"];
+  "c_perf1" -> "NROOT" [label="induction-case"];
+  "c_perf2" -> "NROOT" [label="induction-case"];
+  "c_range1" -> "NROOT" [label="induction-case"];
+  "c_range2" -> "NROOT" [label="induction-case"];
+  "c_two1" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

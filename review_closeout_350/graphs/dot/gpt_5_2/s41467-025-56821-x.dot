@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56821-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper aims to develop and evaluate a comprehensive bulk and single-cell transcriptomic framework for profiling alternative splicing across pituitary neuroendocrine tumor subtypes, identifying subtype-specific splicing signatures and RBP regulatory networks, and testing whether these AS features improve PitNET heterogeneity assessment and classification beyond transcription-factor expression, especially in TPIT-lineage tumors.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When PitNET heterogeneity and classification limitations coincide with under-characterized alternative splicing, comprehensive transcriptomic profiling can be used to investigate AS-based subtype structure and regulatory networks."];
+  "R4" [label="(0,0,0) Because PitNET heterogeneity may involve under-characterized co-transcriptional regulation, mapping alternative-splicing patterns and their regulators is expected to yield molecular stratification features beyond transcription-factor expression."];
+  "R5" [label="(0,0,0) Given that PitNET splicing changes remain insufficiently characterized, transcriptomic computational analysis provides a justified way to systematically characterize the PitNET alternative-splicing landscape."];
+  "R6" [label="(0,0,0) An AS-focused molecular profiling approach that captures transcriptomic heterogeneity better than transcription-factor expression and reveals a clinically relevant TPIT-lineage splicing pattern can support enhanced PitNET classification."];
+  "R7" [label="(0,0,0) The study is therefore motivated to use bulk and full-length single-cell transcriptomes across PitNET subtypes to characterize alternative-splicing landscapes, build subtype-specific splicing and RBP regulatory profiles, and test their value for molecular stratification."];
+  "n10" [label="(16,0,0) Currently, the global landscape of splicing changes in PitNETs has not been thoroughly investigated."];
+  "n13" [label="(15,0,0) Currently, in many human tumors, AS studies help explain inter-tumor heterogeneity and support development of new therapies."];
+  "n14" [label="(5,5,0) Currently, computational analysis of transcriptomic data enables systematic characterization of alternative splicing in cancer."];
+  "n15" [label="(0,0,0) If co-transcriptional regulation (e.g., AS) drives tumor heterogeneity and is under-characterized in a tumor type, then mapping AS patterns and their regulators should yield new molecular stratification features beyond TF-based lineage labels."];
+  "n16" [label="(0,0,0) abduction-reasoning: Given that PitNETs show major heterogeneity within TF-defined lineages and prior studies overlooked co-transcriptional regulation, therefore a plausible explanation is that additional molecular mechanisms beyond TF expression (such as co-transcriptional regulation/AS) generate divergent phenotypes."];
+  "n18" [label="(0,0,0) induction-reasoning: Given that across many cancers AS analysis has been useful for understanding heterogeneity and identifying therapeutic/regulatory features, therefore it is reasonable to generalize that AS analysis may also improve molecular stratification in PitNETs."];
+  "n21" [label="(17,0,0) Currently, the study characterizes the AS landscape in PitNETs using a cohort with bulk RNA-seq (268 patients) and full-length scRNA-seq (195,720 cells)."];
+  "n23" [label="(19,0,0) Currently, compared to TF expression, the AS-focused analysis more faithfully captures transcriptomic diversity and better demonstrates inter-tumor heterogeneity."];
+  "n26" [label="(0,0,0) If a molecular profiling approach more faithfully captures transcriptomic diversity/heterogeneity than TF markers and yields clinically relevant subtype patterns, then it can serve as an enhanced classification approach."];
+  "n4" [label="(4,0,0) Currently, tumors within the same lineage share identical TF expression but differ in cellular function and tumorigenesis."];
+  "n5" [label="(9,0,0) Currently, even within the same PitNET subtype, clinical manifestations can be diverse."];
+  "n6" [label="(10,0,0) Currently, functional corticotroph tumors show Cushing symptoms due to ACTH oversecretion, whereas silent corticotroph tumors express ACTH without Cushing symptoms and behave more aggressively."];
+  "n7" [label="(11,0,0) Currently, complex hormone secretion and variable outcomes create requirements and challenges for more precise PitNET subtype classification."];
+  "n9" [label="(13,0,0) Currently, prior PitNET studies emphasized genetics/overall gene expression and overlooked co-transcriptional regulation."];
+  "n6" -> "n7" [label="induction-case"];
+  "n5" -> "n7" [label="induction-common"];
+  "n4" -> "n16" [label="abduction-phenomenon"];
+  "n9" -> "n16" [label="abduction-knowledge"];
+  "n13" -> "n18" [label="induction-case"];
+  "n15" -> "n18" [label="induction-common"];
+  "n15" -> "R4" [label="deduction-rule"];
+  "n16" -> "R4" [label="deduction-case"];
+  "n14" -> "R5" [label="deduction-rule"];
+  "n10" -> "R5" [label="deduction-case"];
+  "n23" -> "R6" [label="induction-case"];
+  "n26" -> "R6" [label="induction-common"];
+  "n21" -> "R7" [label="induction-case"];
+  "n15" -> "R7" [label="induction-common"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "n18" -> "NROOT" [label="induction-case"];
+  "n7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,17 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56945-0
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study proposes to use the ancestrally diverse All of Us cohort to evaluate how published polygenic risk scores for coronary artery disease, type 2 diabetes, and major depressive disorder disagree in assigning individuals to high genetic risk, and to test whether the PRSmix method can improve prediction and stabilize high-risk classification across scores.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When multiple published polygenic risk scores for complex diseases produce variable individual-level high-risk classification, evaluating them in a large ancestrally diverse cohort and integrating their partially orthogonal information with PRSmix is a coherent strategy for assessing disagreement, prediction, and classification stability."];
+  "R1" [label="(0,0,0) Because genome-wide association studies have continued to expand in size, reaching millions of participants, the incorporation of multi-ancestry and multi-trait GWAS data is expected to further improve polygenic risk score prediction in diverse ancestral groups."];
+  "R2" [label="(0,0,0) If the expected improvements in polygenic risk score prediction in diverse ancestral groups are realized, the available premise supports only the expectation that PRS will increasingly be delivered to patients by third-party genetic testing companies and healthcare systems."];
+  "node_1" [label="(0,0,0) If genome-wide association studies (GWAS) continue to expand in size, then the incorporation of multi-ancestry and multi-trait GWAS data will further improve PRS prediction in diverse ancestral groups."];
+  "node_2" [label="(3,0,0) Currently, genome-wide association studies (GWAS) have continued to expand in size, reaching millions of participants."];
+  "node_4" [label="(0,0,0) If PRS prediction has improved in diverse ancestral groups, then PRS will increasingly be delivered to patients by third-party companies and healthcare systems."];
+  "node_1" -> "R1" [label="deduction-rule"];
+  "node_2" -> "R1" [label="deduction-case"];
+  "node_4" -> "R2" [label="deduction-rule"];
+  "R1" -> "R2" [label="deduction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,34 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56697-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper aims to use cryo-EM structures of Mycobacterium tuberculosis PhoP bound to promoters to compare activation complexes containing tandem PhoP dimers with a GlnR-associated repression complex, testing how distinct PhoP DNA-binding assemblies may replace σA−35 contacts and engage RNAP during activation or distort spacer DNA to block GlnR binding during repression, thereby explaining PhoP control of transcription.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Mechanistic uncertainty about dual-function transcription regulators can motivate structural comparison of promoter-bound regulatory assemblies to explain how related DNA-binding complexes activate or repress transcription."];
+  "R1" [label="(0,0,0) Principal σ-factor recognition of promoter -10 and -35 elements provides core σ-DNA contacts, but formation of an active RNAP-promoter open complex is described as requiring additional enhancing RNAP-promoter contacts rather than following from σ recognition alone."];
+  "R3" [label="(0,0,0) For transcription factors acting as repressors at promoters, transcription initiation can be inhibited through repressor complexes that occlude DNA, loop DNA, or lock RNAP or activators, rather than being inferred from an activation complex."];
+  "R4" [label="(0,0,0) Because transcription factors, including OmpR/PhoB-family response regulators, can act as activators or repressors at different promoters, PhoP-like regulators are reasonably framed as dual-function transcription regulators whose promoter context determines activation or repression."];
+  "R6" [label="(0,0,0) If PhoP-like OmpR/PhoB-family regulators are dual-function transcription regulators and the molecular details of their control of complex promoters remain unclear, then the determinants of PhoP differential transcriptional activation versus repression remain an open mechanistic question."];
+  "R7" [label="(0,0,0) The open question of how PhoP differentially regulates transcription, together with structural knowledge that PhoP-family regulators bind promoter DNA as dimers or tandem dimers, motivates determining promoter-bound PhoP structural assemblies to investigate mechanisms of activation and repression."];
+  "n_case_sigma" [label="(2,0,0) Currently there is: The principal σ factor specifically recognizes the promoter consensus -10 and -35 elements through its conserved domains, σR2 and σR4, respectively."];
+  "n_case_struct1" [label="(23,0,0) Specific case: The co-crystal structure of PhoP bound to a PHO box-containing promoter DNA reveals that a PhoP dimer interacts with the PHO box through conserved winged helices, akin to other transcription regulators in the OmpR/PhoB family."];
+  "n_common_dual" [label="(0,0,0) The common pattern is: Transcription factors (including OmpR/PhoB family RRs in TCSs regulating stress genes in pathogens) can function as activators or repressors at different promoters."];
+  "n_common_struct" [label="(0,0,0) The common pattern is: OmpR/PhoB family regulators (with conserved REC/DBD, phosphorylation-enhanced binding, and PHO boxes) bind as dimers or tandem dimers (tetramer/hexamer) to multiple PHO boxes."];
+  "n_concl_struct" [label="(0,0,0) induction: Given the case that the co-crystal structure of PhoP bound to a PHO box-containing promoter DNA reveals that a PhoP dimer interacts with the PHO box through conserved winged helices, akin to other transcription regulators in the OmpR/PhoB family, and the common pattern that OmpR/PhoB family regulators (with conserved REC/DBD, phosphorylation-enhanced binding, and PHO boxes) bind as dimers or tandem dimers (tetramer/hexamer) to multiple PHO boxes, therefore the generalization is that PhoP-like regulators use dimer or tandem dimers for efficient control of complex promoters."];
+  "n_rule_gap" [label="(26,0,0) If the molecular details on how these PhoP-like OmpR/PhoB family regulators efficiently control such complex promoters remain to be elucidated, then what determines PhoP to differentially act as a dual transcriptional regulator remain inadequately understood."];
+  "n_rule_rpo" [label="(3,0,0) If these interactions are further enhanced by the conserved σR2-β‘ clamp helices (β‘ CH), σR4-β flap interactions, and potential αCTD-DNA or/and αCTD-σR4 interactions, then the formation of an active RNAP-promoter open complex (RPo) to initiate transcription."];
+  "n_rule_trc" [label="(7,0,0) If transcription initiation can be inhibited by transcription repressors that utilize mechanisms such as occlusion, DNA looping, or locking of RNAP to impede the function of either RNAP or the activators, then the complex formed in this scenario is termed a transcription repression complex (TRC)."];
+  "n_case_struct1" -> "n_concl_struct" [label="induction-case"];
+  "n_common_struct" -> "n_concl_struct" [label="induction-common"];
+  "n_rule_rpo" -> "R1" [label="deduction-rule"];
+  "n_case_sigma" -> "R1" [label="deduction-case"];
+  "n_rule_trc" -> "R3" [label="deduction-rule"];
+  "n_common_dual" -> "R3" [label="deduction-case"];
+  "R3" -> "R4" [label="induction-case"];
+  "n_common_dual" -> "R4" [label="induction-common"];
+  "n_rule_gap" -> "R6" [label="deduction-rule"];
+  "R4" -> "R6" [label="deduction-case"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "n_concl_struct" -> "R7" [label="abduction-knowledge"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

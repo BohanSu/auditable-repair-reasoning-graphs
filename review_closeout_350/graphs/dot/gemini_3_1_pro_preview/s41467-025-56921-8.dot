@@ -1,0 +1,46 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56921-8
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes to combine real-time TEM ion-irradiation experiments on Cr2AlC, V2AlC, and Nb2AlC with ab-initio calculations to investigate how the energetics and electronic–structural characteristics of an irradiation-generated intermediate γ-phase govern MAX-phase multi-stage transformation pathways, including hex→γ→fcc and hex→γ→amorphous behavior, and to motivate a predictive rule based on M-site atomic radius and electronegativity for forecasting phase-transformation behavior across MAX phases and related ceramics.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R3" [label="(0,0,0) Pyrochlore-structured complex oxides provide a specific example in which irradiation produces a staged phase transformation, supporting irradiation-induced polymorphism as a useful way to probe transformation mechanisms in at least some materials."];
+  "R5" [label="(0,0,0) Because analyses of MAX-phase transformations have mostly emphasized the initial phase or structure while intermediate phases have rarely been studied, irradiation-induced polymorphism motivates a more comprehensive study of intermediate-stage transformation behavior in MAX phases."];
+  "R6" [label="(0,0,0) The need for a comprehensive understanding of intermediate-stage transformation behavior in MAX phases motivates investigating distinct phase-transformation behaviors of representative M2AlC MAX phases, including Cr2AlC, V2AlC, and Nb2AlC, under in situ ion irradiation."];
+  "R7" [label="(0,0,0) Within a motivated investigation of representative MAX phases under irradiation, the anomalous Cr2AlC hex→γ→amorphous pathway, rather than the common hex→γ→fcc pathway, identifies a distinct γ-phase-mediated transformation contrast that needs to be explained."];
+  "R8" [label="(0,0,0) A phase-energetics description that captures the role of the intermediate γ-phase is a plausible route for developing an atomic-scale mechanism to explain the observed irradiation-induced phase behavior."];
+  "R9" [label="(0,0,0) A generalized prediction rule for MAX-phase irradiation behavior based on atomic radius and electronegativity, together with a γ-phase-centered energetic route toward an atomic-scale mechanism, motivates extending the approach to related complex ceramics with multi-stage transformation behavior."];
+  "node_1" [label="(0,0,0) If understanding phase transformations is a crucial task of materials science, then studying how materials respond to irradiation is important to elucidate transformation mechanisms."];
+  "node_10" [label="(8,1,0) Almost all analyses of phase transformation in MAX phases were based on the initial phase or structure, and the role of intermediate phases has been rarely studied."];
+  "node_12" [label="(0,0,0) If there is a clear need for a comprehensive understanding of the multi-stage phase transformation behavior in MAX phases, then investigating distinct phase transformation behaviors of representative MAX phases under in situ ion irradiation is necessary."];
+  "node_14" [label="(16,1,0) The anomalous case of Cr2AlC does not follow the common hex-γ-fcc phase transition pathway, but follows a hex-γ-amorphous transition pathway."];
+  "node_16" [label="(0,0,0) If this improved description of phase energetics captures the key role of the intermediate γ-phase in mediating the radiation response, then an atomic-scale mechanism for the observed phase behavior can be developed."];
+  "node_18" [label="(21,1,0) A generalized rule is developed for the prediction of extreme environment phase transition behaviors of MAX phases based on atomic radius and electronegativity."];
+  "node_2" [label="(1,3,0) Currently understanding phase transformations is a crucial task of materials science."];
+  "node_3" [label="(0,0,0) deduction-reasoning: Given understanding phase transformations is a crucial task of materials science, therefore studying how materials respond to irradiation is important to elucidate transformation mechanisms."];
+  "node_4" [label="(2,2,0) Irradiation is a common means of probing phase transformation dynamics."];
+  "node_5" [label="(0,0,0) abduction-reasoning: Irradiation is a common means of probing phase transformation dynamics, so studying how materials respond to irradiation can elucidate transformation mechanisms."];
+  "node_6" [label="(4,2,0) Pyrochlore-structured complex oxides transition first to disordered defect-fluorite structures under irradiation."];
+  "materials_leaf" [label="(16,0,0) Source leaf: Cr2AlC, V2AlC, and Nb2AlC show distinct irradiation phase-transition pathways [S16]."];
+  "energetics_leaf" [label="(20,0,0) Source leaf: Energetics and lattice/electronic structures of the intermediate γ-phase explain the observed phase behavior [S20]."];
+  "node_1" -> "node_3" [label="deduction-rule"];
+  "node_2" -> "node_3" [label="deduction-case"];
+  "node_4" -> "node_5" [label="abduction-phenomenon"];
+  "node_3" -> "node_5" [label="abduction-knowledge"];
+  "node_6" -> "R3" [label="induction-case"];
+  "node_5" -> "R3" [label="induction-common"];
+  "node_10" -> "R5" [label="abduction-phenomenon"];
+  "node_5" -> "R5" [label="abduction-knowledge"];
+  "node_12" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "node_14" -> "R7" [label="abduction-phenomenon"];
+  "R6" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "R8" [label="abduction-phenomenon"];
+  "node_16" -> "R8" [label="abduction-knowledge"];
+  "node_18" -> "R9" [label="induction-case"];
+  "R8" -> "R9" [label="induction-common"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "materials_leaf" -> "NROOT" [label="induction-case"];
+  "energetics_leaf" -> "NROOT" [label="induction-case"];
+}

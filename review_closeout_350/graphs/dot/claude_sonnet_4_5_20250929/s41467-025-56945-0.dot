@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56945-0
+  rankdir="TB";
+  "N11" [label="(11,0,0) Consistency in risk classification is important for clinical decision-making"];
+  "N12" [label="(11,0,0) Risk prediction models for complex diseases inherently have variability in high-risk classification"];
+  "N16" [label="(14,0,0) Introduction of new models leads to significant reclassification of high-risk patients"];
+  "N19" [label="(17,0,0) Different studies and companies use different PRS for the same traits"];
+  "N21" [label="(19,0,0) Variability of individual-level 'high genetic risk' classification using different PRS remains largely untested"];
+  "N23" [label="(20,0,0) Previous efforts focused on population-level metrics, not individual-level consistency"];
+  "N25" [label="(22,0,0) There is a need to aggregate orthogonal data from available PRS while overcoming correlation"];
+  "N5" [label="(5,0,0) Each PRS iteration captures unique information contingent on source GWAS, method, and training dataset"];
+  "N6" [label="(6,0,0) PRS are increasingly being delivered to patients"];
+  "N8" [label="(8,0,0) eMERGE consortium developed PRS reports for 10 diseases"];
+  "NROOT" [label="(0,0,0) This paper proposes to use the ancestrally diverse All of Us cohort to investigate how high-risk classifications differ across published polygenic risk scores for coronary artery disease, type 2 diabetes, and major depressive disorder, and to evaluate whether the PRSmix approach can reduce those discrepancies.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When high-risk classifications from published PRS are inconsistent, clinically relevant, insufficiently benchmarked, and empirically assessable, a study should evaluate both agreement across PRS and whether integration can reduce instability."];
+  "R10" [label="(0,0,0) Multiple PRS exist for the same traits and can differ by source GWAS, method, and training dataset."];
+  "R11" [label="(0,0,0) PRS are increasingly entering patient-facing and clinical delivery contexts."];
+  "R12" [label="(0,0,0) Inconsistent or changing risk tools can create clinical decision challenges through reclassification of high-risk patients."];
+  "R13" [label="(0,0,0) Individual-level benchmarking of PRS high-risk classification consistency remains lacking."];
+  "R5" [label="(0,0,0) Variability in high-risk classification by risk prediction models motivates investigating approaches that aggregate orthogonal PRS information while accounting for correlation."];
+  "N5" -> "R10" [label="deduction-rule"];
+  "N19" -> "R10" [label="deduction-case"];
+  "N6" -> "R11" [label="deduction-rule"];
+  "N8" -> "R11" [label="deduction-case"];
+  "N16" -> "R12" [label="induction-case"];
+  "N11" -> "R12" [label="induction-common"];
+  "N23" -> "R13" [label="deduction-rule"];
+  "N21" -> "R13" [label="deduction-case"];
+  "N12" -> "R5" [label="abduction-phenomenon"];
+  "N25" -> "R5" [label="abduction-knowledge"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R12" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

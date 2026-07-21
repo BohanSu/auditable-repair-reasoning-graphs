@@ -1,0 +1,46 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56522-5
+  rankdir="TB";
+  "AbductCon_Untrained" [label="(0,0,0) abduction-reasoning: Phenomenon is data requirement/time cost in supervised+unsupervised (from DedCon_Data/DedCon_Unsup), knowledge is physics-enhanced overcomes big data (S5), so hypothesis: growing pursuit of untrained DNNs with physics-enhanced."];
+  "DedCon_Data" [label="(0,0,0) deduction-reasoning: Currently there is supervised learning for mapping unknown system (S2), and if mapping learning then large data/time-consuming (S3), so supervised learning requires large labeled data and is time/energy-intensive."];
+  "DedCon_Unsup" [label="(0,0,0) deduction-reasoning: Currently there is unsupervised/self-supervised proposed (S4), and if used then still large data needed (S4), so even unsupervised/self-supervised require large data."];
+  "GenCommon" [label="(0,0,0) Induction-common: Feasibility/superiority verified by simulation/experiment for single-shot speckle MIMO phase retrieval (S21-S24)."];
+  "NROOT" [label="(0,0,0) Develop and evaluate a Deep Empirical Neural Network for single-shot optical phase retrieval through strongly scattering, analytically intractable media by embedding an experimentally calibrated differentiable transmission matrix into a deep-image-prior convolutional network, eliminating paired training data and benchmarking against conventional supervised methods for accuracy and efficiency.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A differentiable empirically calibrated forward model can replace an analytically derived scattering model inside an untrained neural-network inverse solver, enabling phase retrieval without paired training data when the scattering medium can be calibrated."];
+  "R10" [label="(0,0,0) For DENN, integrating an experimentally calibrated empirical transmission matrix into the neural-network backpropagation path is presented as the mechanism that eliminates the need for paired labeled training data and conventional training."];
+  "R11" [label="(0,0,0) The demonstrated feasibility and superiority of DENN for single-shot speckle MIMO phase retrieval, together with the calibratability of empirical transmission matrices for different scattering media, supports applicability of the DENN-TM combination to calibrated scattering media within the demonstrated phase-retrieval setting."];
+  "R7" [label="(0,0,0) Because DIP-based optical phase retrieval over scattering media remains challenging, and a differentiable empirical real-system response model is proposed as a promising way to update an untrained network by backpropagation, a supported hypothesis is to try an empirical-model-driven untrained network for phase retrieval over scattering media."];
+  "R9" [label="(0,0,0) Analytical-model-based physics-enhanced DNN approaches are limited for scattering scenarios in which strong scattering or lack of analytical theory prevents use of the required forward analytical model."];
+  "S11" [label="(11,0,0) Abduction-knowledge: Generating estimated results using empirical model (real system response, differentiable for backprop) is promising open attempt to update neural network untrained."];
+  "S12" [label="(12,0,0) Deduction-rule: If analytical models (e.g. beam propagation) are used, then they can only be applied where strongly optical scattering is absent (viewpoint + Ref52/53/54 opinions on weak scattering)."];
+  "S14" [label="(14,0,0) Deduction-case: Physics-enhanced DNNs based on the analytical theory are inapplicable in scattering scenarios without analytical theory."];
+  "S15" [label="(15,0,0) Abduction-phenomenon: Leveraging DIP concept for optical phase retrieval over scattering medium remains alluring but challenging prospect."];
+  "S17" [label="(17,0,0) Deduction-rule: If experimentally calibrated empirical TM (forward mapping of MIMO) is integrated to DNN for back propagation, then need of labeled data/training for DENN eliminated."];
+  "S2" [label="(2,0,0) Currently there is: Supervised learning (typical DL type) learns mapping of unknown systems end-to-end and overcomes challenges in CV/NLP/medical/weather (for both induction-case and deduction-case roles)."];
+  "S20" [label="(20,0,0) Deduction-case (supporting): Need of labeled data and training for DENN eliminated by empirical model integration with convnet."];
+  "S25" [label="(25,0,0) Induction-case: Empirical TM can be calibrated for different scattering media (combination with neural network applicative for various media)."];
+  "S3" [label="(3,0,0) Deduction-rule: If to learn a mapping function of the unknown system, then large-scale labeled data and extensive training are indispensable prerequisites which are time-consuming and energy-intensive."];
+  "S4" [label="(4,0,0) Deduction-rule: If unsupervised/self-supervised learning is used to release data-pair effort, then sufficiently large amounts of data are still needed."];
+  "S5" [label="(5,0,0) Abduction-knowledge: Physics-enhanced DNNs have been proposed to overcome big data challenge by integrating physical prior (viewpoint + Ref33/34 opinions on untrained PhysenNet)."];
+  "S3" -> "DedCon_Data" [label="deduction-rule"];
+  "S2" -> "DedCon_Data" [label="deduction-case"];
+  "S4" -> "DedCon_Unsup" [label="deduction-rule"];
+  "S4" -> "DedCon_Unsup" [label="deduction-case"];
+  "DedCon_Data" -> "AbductCon_Untrained" [label="abduction-phenomenon"];
+  "S5" -> "AbductCon_Untrained" [label="abduction-knowledge"];
+  "S15" -> "R7" [label="abduction-phenomenon"];
+  "S11" -> "R7" [label="abduction-knowledge"];
+  "S12" -> "R9" [label="deduction-rule"];
+  "S14" -> "R9" [label="deduction-case"];
+  "S17" -> "R10" [label="deduction-rule"];
+  "S20" -> "R10" [label="deduction-case"];
+  "S25" -> "R11" [label="induction-case"];
+  "GenCommon" -> "R11" [label="induction-common"];
+  "AbductCon_Untrained" -> "NROOT" [label="induction-case"];
+  "DedCon_Unsup" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

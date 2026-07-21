@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56887-7
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This research posits that DarTG1 resistance in T4 and most Tevenvirinae phages arises from a conserved NADAR-family protein, AdfN, which acts as an enzymatic orphan antitoxin by hydrolyzing DarT1-installed ADP-ribose from DNA, thereby constituting a second, necessary and sufficient anti-DarTG1 counter-defense distinct from the previously described AdfA.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(29,0,0) By co-infecting with a sensitive and resistant phage and characterizing the resulting chimeric viruses that have acquired DarTG1 resistance, we identified a second anti-DarTG1 counter defense element that is conserved within the T-even subfamily of phages."];
+  "E2" [label="(4,0,0) Such direct, but non-enzymatic defenses consist of phage counter-defense elements that function by directly blocking the bacterial defense system via binding of the defense effector protein  ,  , titrating an intermediate signaling molecule  ,  , or structu."];
+  "E3" [label="(27,0,0) Using an expanded set of Tevenvirinae from the BASEL phage collection , we find that neither the presence of AdfA in the genomes of these phages, nor its allele type (active or inactive), correlate with DarTG1 susceptibility."];
+  "E4" [label="(24,0,0) We previously found that while the T4 phage encodes an active DarT1-blocking AdfA allele, a T4 ∆ adfA phage remains resistant to DarTG1, even though this protein restores RB69 infectivity of DarTG1 cells when ectopically expressed."];
+  "E5" [label="(30,0,0) This element, which we have termed anti-DarT factor NADAR (AdfN), is both necessary and sufficient for phage counter-defense."];
+  "E6" [label="(31,0,0) AdfN T4 is a member of the NADAR superfamily, which also includes the DarG1 antitoxin, and we show that like DarG1, AdfN T4 has enzymatic activity that allows it to remove ADP-ribose from DNA."];
+  "E7" [label="(11,0,0) DarT1 and DarT2 are DNA ADP-ribosyltransferase toxins that modify single-stranded DNA (ssDNA), targeting guanosine and thymidine, respectively  ,  ,."];
+  "E8" [label="(7,0,0) Examples of enzymatic counter-defense elements include proteins that either degrade small molecule alarmone signals or produce competing decoy small molecules  ,  ,  , covalently modify a protein target  ,  , or replenish a molecule degraded by the defense."];
+  "E9" [label="(18,0,0) To date, three phage counter-defense strategies have been discovered for phage evasion of DarTG-mediated defense ,."];
+  "E10" [label="(20,0,0) The other two known anti-DarTG counter-defenses, termed AdfA and AdfB, were identified in E. coli phage RB69 and Vibrio cholera phage ICP1, respectively, via escape mutant analyses."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-common"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

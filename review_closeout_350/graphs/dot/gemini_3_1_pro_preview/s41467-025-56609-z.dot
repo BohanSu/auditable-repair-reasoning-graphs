@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56609-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes developing and evaluating an AgBDT organic-inorganic hybrid covalent superlattice as the basis of a ratiometric chemiresistive gas-sensing strategy, using its photoelectric response as an internal reference to gas-induced resistance changes to enable temperature-compensated NO2 detection down to the reported ppb-level limit of 3.06 ppb.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A gas-sensing strategy that combines a temperature-drift-compensating ratiometric reference with a material capable of balanced gas-sensitive and photoelectric responses can motivate temperature-compensated chemiresistive sensing."];
+  "R2" [label="(0,0,0) Because the presented sensing approach is ratiometric and uses a material's photoelectric response as an internal reference to its gas-sensitive response, it is motivated as a strategy to help compensate temperature-related baseline-drift accuracy loss."];
+  "R3" [label="(0,0,0) Since temperature variations compromise gas-sensor precision and the photoelectric-referenced ratiometric approach is motivated to help compensate temperature-related baseline drift, applying this approach is a plausible strategy for improving precision under temperature variation."];
+  "R4" [label="(0,0,0) AgBDT, described as an organic-inorganic hybrid covalent superlattice material for high-efficiency ratiometric gas sensing, is positioned to provide a useful balance between gas sensitivity and photoelectric performance."];
+  "R5" [label="(0,0,0) Given that materials with balanced dual responses can implement the photoelectric ratiometric approach, AgBDT is a suitable candidate material for implementing that approach."];
+  "R6" [label="(0,0,0) AgBDT is therefore a plausible material platform to develop and evaluate photoelectric-referenced ratiometric gas sensing aimed at temperature-compensated precision."];
+  "node_1" [label="(4,2,0) If there is a drift in the baseline resistance of R0, then it compromises the precision of gas sensors."];
+  "node_11" [label="(0,0,0) If a material provides balanced dual responses for ratiometric sensing, then it can be used to implement the photoelectric ratiometric approach."];
+  "node_2" [label="(4,1,0) Currently temperature variations will cause a drift in the baseline resistance of R0."];
+  "node_3" [label="(0,0,0) deduction-reasoning: Given temperature variations cause baseline drift and drift compromises precision, therefore temperature variations compromise the precision of gas sensors."];
+  "node_4" [label="(10,2,0) If ratiometry measurement is used, then it helps to overcome device accuracy loss due to baseline drift from temperature changes."];
+  "node_5" [label="(12,1,0) Currently a ratiometric approach is presented that employs the photoelectric response of a material as an internal reference to its gas-sensitive response."];
+  "node_8" [label="(16,2,0) If a material is an organic-inorganic hybrid covalent superlattice, then it is poised to redefine the balance between gas sensitivity and photoelectric performance."];
+  "node_9" [label="(21,1,0) Currently the organic-inorganic hybrid covalent superlattice material AgBDT functions as a high-efficiency ratiometric gas sensing material."];
+  "node_1" -> "node_3" [label="deduction-rule"];
+  "node_2" -> "node_3" [label="deduction-case"];
+  "node_4" -> "R2" [label="deduction-rule"];
+  "node_5" -> "R2" [label="deduction-case"];
+  "node_3" -> "R3" [label="abduction-phenomenon"];
+  "R2" -> "R3" [label="abduction-knowledge"];
+  "node_8" -> "R4" [label="deduction-rule"];
+  "node_9" -> "R4" [label="deduction-case"];
+  "node_11" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "R3" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

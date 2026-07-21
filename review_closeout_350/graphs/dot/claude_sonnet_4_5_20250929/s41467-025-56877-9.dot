@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=claude_sonnet_4_5_20250929:s41467-025-56877-9
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study posits that incorporating the silane coupling agent 3-aminopropyl triethoxysilane (APTES) retards the early hydration of Ca₃SiO₅ by forming a molecular “shield” that converts the otherwise spontaneous dissolution of surface calcium ions into a non-spontaneous process, a mechanism revealed via ab initio metadynamics simulations and corroborated by hydration-kinetics experiments showing lowered Ca²⁺ conce.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(14,0,0) A study noted that incorporation of 3-aminopropyl triethoxysilane (APTES) into the montmorillonite partial substituted system significantly improved the fluidity of the cement paste, increasing it from 26.89% to 65.25%, and induced the formation of acicular."];
+  "E2" [label="(3,0,0) One effective strategy to improve the impermeability of concrete is the incorporation of silane coupling agents (SCAs)."];
+  "E3" [label="(42,0,0) Secondly, the early hydration kinetics of silane-treated cement paste were examined through hydration experiments, which not only corroborated the interactions between Ca3SiO5 particles and APTES molecules but also demonstrated that the reduced concentratio."];
+  "E4" [label="(38,0,0) Recently, it has been reported that the combination of AIMD and MetaD successfully drew a full picture of the calcium dissolution from the Ca3SiO5 and Ca2SiO4 surface , , which sheds light on the understanding of the effect of SCAs on Ca3SiO5 dissolution."];
+  "E5" [label="(15,0,0) Recent reports have also confirmed that silane modification improves the flexural performance of cement paste."];
+  "E6" [label="(41,0,0) The results indicated that the shielding effect of SCAs causes the dissolution of calcium ions to shift from a spontaneous to a non-spontaneous process."];
+  "E7" [label="(23,0,0) More recent findings indicated that silane hydrolysates can form complexes with calcium ions, potentially accounting for the delayed hydration."];
+  "E8" [label="(36,0,0) As theoretical methods continue to advance, ab initio molecular dynamics (AIMD) simulations have been increasingly adopted to accurately probe chemical reactions involving electron transfer, including key transformations in cement hydration such as adsorpti."];
+  "E9" [label="(4,0,0) SCAs typically have a bifunctional structure consisting of organic and inorganic components , which can be expressed as \\({\\left({{\\rm{RO}}}\\right)}_{3}-{{\\rm{Si}}}-{{\\rm{X}}}\\)."];
+  "E10" [label="(9,0,0) In surface treatment, the hydrolyzed silane monomers diffuse into the concrete through capillary pores, driven by a concentration gradient."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-common"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

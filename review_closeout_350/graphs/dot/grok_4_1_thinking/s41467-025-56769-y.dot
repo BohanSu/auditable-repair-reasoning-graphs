@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56769-y
+  rankdir="TB";
+  "Impl_Common_Meta" [label="(0,0,0) General pattern: Viral metagenomics successfully explores and expands viral diversity across diverse environments and public databases."];
+  "Impl_FinalRule" [label="(0,0,0) If xxxx (reassessment/gap exists + metagenomics tools/Serratus screening are powerful + data opportunity available), then yyyy (a large-scale analysis of public rice RNA-seq libraries should be conducted to explore viral diversity)."];
+  "Impl_Know_Reservoir" [label="(0,0,0) Background knowledge: Wild plants can serve as reservoirs/intermediates for crop viruses (including spillover cases like RTIV)."];
+  "Impl_Rule_Gap" [label="(0,0,0) If xxxx (known viruses limited to ~20, novel insect-like found, previous studies small-scale), then yyyy (current understanding of rice viral diversity falls short and reassessment is required)."];
+  "Impl_Rule_Imp" [label="(0,0,0) If xxxx (a crop is cultivated in >100 countries), then yyyy (it is of global agricultural importance requiring pathogen studies)."];
+  "Impl_Rule_MetaTool" [label="(0,0,0) If xxxx (metagenomics is potent/successful and RdRP strategies/sRNA detection exist), then yyyy (it enables comprehensive uncovering of hidden/divergent RNA viruses in any system)."];
+  "Impl_Rule_Opportunity" [label="(0,0,0) If xxxx (vast rice RNA-seq data exists but unanalyzed + fungi/insect viruses offer prevention insights), then yyyy (large-scale systematic analysis is warranted)."];
+  "Impl_Rule_Serratus" [label="(0,0,0) If xxxx (SRA data + fragmentary but valuable Serratus RdRP available), then yyyy (screening of rice RNA-seq libraries for associated viruses is feasible)."];
+  "Impl_Rule_Viral" [label="(0,0,0) If xxxx (pathogen research is critical and viral insect-borne viruses cause epidemics/havoc/asymptomatic spread), then yyyy (viral threats to rice are a major concern)."];
+  "NROOT" [label="(0,0,0) This paper aims to systematically mine public RNA-seq libraries from Oryza species using homology-based and homology-independent metagenomic approaches, followed by viral genome assembly, genome annotation, and abundance estimation, to reveal hidden diversity of rice-associated viral genomes across global rice ecosystems.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When an important crop has an unresolved viral-diversity gap and public transcriptomic data plus viral metagenomic tools are available, a systematic RNA-seq mining study is scientifically motivated to discover and characterize associated viruses."];
+  "R1" [label="(0,0,0) Because rice is cultivated in more than 100 countries and regions, rice is a globally important crop whose pathogens warrant study."];
+  "R10" [label="(0,0,0) Given the reassessment gap, the availability of metagenomic/RdRP-based screening tools, and the opportunity in public rice RNA-seq data, the study is motivated to conduct a large-scale analysis of 17,115 rice RNA-seq libraries spanning Oryza species to explore rice-associated viral diversity through complementary metagenomic discovery, genome assembly, genome annotation, and abundance estimation."];
+  "R3" [label="(0,0,0) Rice's global importance and the need to study its pathogens, together with knowledge that viral insect-borne diseases can cause epidemics and asymptomatic spread, motivate treating viral threats to rice as a major concern for investigation."];
+  "R4" [label="(0,0,0) Given concern about viral threats to rice and background knowledge that wild plants can serve as reservoirs or intermediates for crop viruses, wild plants are plausible reservoirs of unknown viruses capable of spilling over to cultivated rice."];
+  "R5" [label="(0,0,0) Because wild-plant spillover is plausible and existing rice-virus knowledge is limited by few known viruses and small-scale prior studies, current understanding of rice viral diversity falls short and warrants reassessment."];
+  "R6" [label="(0,0,0) The need to reassess rice viral diversity fits the broader pattern that viral metagenomics can expand viral discovery across diverse environments and public databases, making metagenomics a plausible approach for this reassessment."];
+  "R7" [label="(0,0,0) For reassessing rice viral diversity, metagenomic approaches that use RdRP conservation and related strategies are plausible tools for uncovering hidden or divergent RNA viruses."];
+  "R8" [label="(0,0,0) Because RdRP-oriented metagenomic approaches can help uncover hidden RNA viruses, SRA/Serratus-style resources make targeted screening of rice RNA-seq libraries for associated viruses feasible to investigate."];
+  "R9" [label="(0,0,0) Feasible screening of rice RNA-seq libraries, together with the opportunity represented by large public rice transcriptomic datasets and the value of fungal or insect virus insights, motivates a large-scale systematic analysis of rice RNA-seq data."];
+  "S1" [label="(1,0,0) Currently there is: Rice (Oryza sativa) is one of the most important crops, cultivated in more than 100 countries and regions."];
+  "Impl_Rule_Imp" -> "R1" [label="deduction-rule"];
+  "S1" -> "R1" [label="deduction-case"];
+  "R1" -> "R3" [label="abduction-phenomenon"];
+  "Impl_Rule_Viral" -> "R3" [label="abduction-knowledge"];
+  "R3" -> "R4" [label="abduction-phenomenon"];
+  "Impl_Know_Reservoir" -> "R4" [label="abduction-knowledge"];
+  "Impl_Rule_Gap" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "R5" -> "R6" [label="induction-case"];
+  "Impl_Common_Meta" -> "R6" [label="induction-common"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "Impl_Rule_MetaTool" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "R8" [label="abduction-phenomenon"];
+  "Impl_Rule_Serratus" -> "R8" [label="abduction-knowledge"];
+  "R8" -> "R9" [label="abduction-phenomenon"];
+  "Impl_Rule_Opportunity" -> "R9" [label="abduction-knowledge"];
+  "Impl_FinalRule" -> "R10" [label="deduction-rule"];
+  "R9" -> "R10" [label="deduction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

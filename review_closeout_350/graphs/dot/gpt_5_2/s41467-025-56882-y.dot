@@ -1,0 +1,43 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56882-y
+  rankdir="TB";
+  "C1" [label="(0,0,0) deduction-reasoning: Given that low-energy states around a Dirac point are governed by the Dirac equation and that such low-energy Dirac-governed states can be treated as Dirac quasiparticles, therefore Dirac quasiparticles can emerge in crystals near Dirac points."];
+  "I1" [label="(0,0,0) If a crystal has a Dirac point and the low-energy theory near it is governed by the Dirac equation, then the low-energy excitations can be treated as Dirac quasiparticles described by an effective Dirac Hamiltonian."];
+  "I3" [label="(0,0,0) If one valley has a more negative imaginary eigenvalue (shorter lifetime) than the other, then at long times that valley’s contribution decays away, yielding effective single-valley / single-cone behavior and valley-selective excitation without tailored preparation."];
+  "I4" [label="(0,0,0) If a platform can implement a target non-Hermitian lattice Hamiltonian (e.g., via a circuit lattice), then it can be used to experimentally test the resulting non-Hermitian Dirac quasiparticles and associated valley/interface transport phenomena."];
+  "I6" [label="(0,0,0) If massive non-Hermitian Dirac cones are used to form mass-flipping interfaces, then interface kink states can appear whose transport properties reflect (inherit) the non-Hermitian bulk characteristics."];
+  "N14" [label="(10,1,0) If Dirac points survive via symmetry protection, then the resulting Dirac quasiparticles still obey the conventional Hermitian Dirac equation."];
+  "N15" [label="(11,1,0) It is currently unclear whether conventional band degeneracies like Dirac points can yield unique non-Hermitian physics."];
+  "N20" [label="(17,1,0) A circuit lattice is fabricated to implement the theoretical non-Hermitian graphene model."];
+  "N21" [label="(18,2,0) In the long-time limit, the system effectively exhibits single Dirac cone physics."];
+  "N24" [label="(21,1,0) Massive non-Hermitian Dirac cones are used to construct mass-flipping interfaces."];
+  "N3" [label="(3,1,0) In the low-energy limit, states around a Dirac point are effectively governed by the Dirac equation."];
+  "N5" [label="(4,1,0) Beyond Dirac, other quasiparticles can emerge from certain band degeneracies (e.g., Weyl or exotic crystal-symmetry fermions)."];
+  "N7" [label="(5,3,0) Such quasiparticles offer new insights for controlling transport in crystals."];
+  "NROOT" [label="(0,0,0) The paper proposes to design, experimentally realize, and evaluate a non-Hermitian graphene-like circuit lattice that supports non-Hermitian Dirac quasiparticles, long-time effective single-cone valley behavior, and non-Hermitian valley kink-state phenomena.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent research program can be formed when general motivation for quasiparticles, a need for non-Hermitian Dirac designs, specific predicted or observed valley/interface effects, and an experimental implementation platform all support the same proposed system."];
+  "R2" [label="(0,0,0) Because band degeneracies can produce emergent quasiparticles and such quasiparticles can provide transport-control opportunities, engineering new band-degeneracy-based quasiparticles is a motivated route for studying topological and transport phenomena."];
+  "R3" [label="(0,0,0) Since conventional Dirac points in non-Hermitian settings either raise unclear prospects for unique non-Hermitian physics or remain governed by the conventional Hermitian Dirac equation when symmetry-protected, the study is motivated to seek a non-Hermitian Dirac-point design beyond merely symmetry-protected conventional Dirac points."];
+  "R4" [label="(0,0,0) The reported long-time single-Dirac-cone behavior is explained by valley-dependent imaginary eigenvalues that make one valley decay faster than the other, leaving an effective single-valley contribution at long times."];
+  "R5" [label="(0,0,0) Mass-flipping interfaces constructed from massive non-Hermitian Dirac cones can support valley kink states whose transport properties inherit non-Hermitian bulk characteristics."];
+  "R6" [label="(0,0,0) A fabricated circuit lattice that implements the theoretical non-Hermitian graphene model can be used to experimentally test its non-Hermitian Dirac quasiparticles and associated valley or interface phenomena."];
+  "I1" -> "C1" [label="deduction-rule"];
+  "N3" -> "C1" [label="deduction-case"];
+  "N5" -> "R2" [label="induction-case"];
+  "N7" -> "R2" [label="induction-common"];
+  "N15" -> "R3" [label="abduction-phenomenon"];
+  "N14" -> "R3" [label="abduction-knowledge"];
+  "N21" -> "R4" [label="abduction-phenomenon"];
+  "I3" -> "R4" [label="abduction-knowledge"];
+  "I6" -> "R5" [label="deduction-rule"];
+  "N24" -> "R5" [label="deduction-case"];
+  "I4" -> "R6" [label="deduction-rule"];
+  "N20" -> "R6" [label="deduction-case"];
+  "C1" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N102" [label="(0,0,0) Deduction-reasoning: Given that PSMTs have significant applications and fundamental importance, but lack direct atomic-scale evidence and have never occurred between different materials, and if PSMTs have these characteristics then there is a critical research gap, therefore there is a critical research gap in PSMT research requiring investigation."];
+  "N105" [label="(0,0,0) Deduction-reasoning: Given that surface reconstruction is critical for research and applications, but photoinduced surface reconstruction is scarcely reported despite advantages, and if these conditions exist then photoinduced surface reconstruction represents an underexplored opportunity, therefore photoinduced surface reconstruction represents an underexplored opportunity."];
+  "N114" [label="(0,0,0) Deduction-reasoning: Given that there are critical PSMT research gaps, underexplored photoinduced surface reconstruction opportunities, and Cu2Se as an ideal material platform, and if these conditions exist then investigating photoinduced surface transitions in this material that address all gaps would constitute a significant research contribution, therefore such investigation is warranted and would be significant."];
+  "N12" [label="(12,0,0) Regulating and understanding surface reconstruction is critical for both fundamental and applied research."];
+  "N14" [label="(14,0,0) Photoinduced surface reconstruction is scarcely reported, despite its high controllability, remote operability, and possible interoperability with other photo-related techniques."];
+  "N19" [label="(19,0,0) This study presents atomic-scale evidence for a photoinduced transition from a Cu2Se layer on top of Cu(111) to a single-atomic Cu layer."];
+  "N5" [label="(5,0,0) PSMTs can induce changes in atomic structures (e.g., Peierls distortion in TiSe2 and VO2) or alter electronic structures."];
+  "N9" [label="(9,0,0) There has been no precedent for PSMTs between two different materials."];
+  "NROOT" [label="(0,0,0) This paper aims to develop and evaluate atomic-scale evidence, using STM/STS measurements and DFT calculations, that light irradiation on Cu(111) can reversibly drive a semiconductor-to-metal photoinduced phase change by converting a Cu2Se monolayer into a close-packed metallic Cu layer through photo-excited interlayer Se/Cu rearrangement, thereby testing a PSMT between distinct materials.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A motivated research gap plus material-specific atomic-scale evidence can jointly support a cautious paper-level aim about demonstrating and explaining a photoinduced material transition."];
+  "R13" [label="(0,0,0) When PSMT research gaps, underexplored photoinduced surface reconstruction, and a plausible Cu2Se platform align, a combined investigation is scientifically motivated."];
+  "R16" [label="(0,0,0) The study investigates and supports an atomic-scale photoinduced transition on Cu(111), in which light irradiation transforms a semiconducting Cu2Se surface layer into a close-packed metallic Cu layer through Se sinking/subsurface interlayer rearrangement, using STM/STS measurements together with DFT calculations and framing the result as a PSMT between distinct materials."];
+  "R7" [label="(0,0,0) Because known PSMTs can be transient or sustained and can alter atomic or electronic structures, the lack of a reported PSMT between two different materials marks a meaningful research gap."];
+  "R9" [label="(0,0,0) The combination of surface reconstruction's research importance and the scarce reporting of photoinduced surface reconstruction supports treating photoinduced surface reconstruction as an underexplored opportunity."];
+  "N5" -> "R7" [label="deduction-rule"];
+  "N9" -> "R7" [label="deduction-case"];
+  "N12" -> "R9" [label="deduction-rule"];
+  "N14" -> "R9" [label="deduction-case"];
+  "N102" -> "R13" [label="induction-case"];
+  "N105" -> "R13" [label="induction-common"];
+  "N19" -> "R16" [label="induction-case"];
+  "N114" -> "R16" [label="induction-common"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R16" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

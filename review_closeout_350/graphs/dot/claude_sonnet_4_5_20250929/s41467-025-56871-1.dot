@@ -1,0 +1,47 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56871-1
+  rankdir="TB";
+  "N1" [label="(0,0,0) If bacteria constantly experience fluctuating conditions that cause cellular stress, then appropriate sensing and adaptation to stressors is important for survival and growth."];
+  "N2" [label="(1,1,0) Currently, bacteria constantly experience various fluctuating conditions in nature that cause cellular stress."];
+  "N26" [label="(49,2,0) Currently, heme-binding RsbR orthologs in Vibrio species sense oxygen."];
+  "N27" [label="(0,0,0) If some RsbR paralogs sense specific signals (blue light, oxygen), then RsbR proteins may have sensory functions."];
+  "N3" [label="(0,0,0) Deduction: Currently bacteria constantly experience fluctuating conditions causing cellular stress, and if bacteria experience such conditions then appropriate sensing and adaptation is important for survival, therefore appropriate sensing and adaptation to stressors is important for bacterial survival and growth."];
+  "N33" [label="(51,1,0) Currently, substitutions in the linker of RsbRA impacted steady-state output but not stress sensitivity."];
+  "N34" [label="(51,2,0) Currently, specific point mutations in the N-terminal domain had similar results."];
+  "N35" [label="(52,2,0) Currently, reduced σB signaling occurs even in mutant strains with unphosphorylatable RsbS."];
+  "N36" [label="(0,0,0) If previous studies found that mutations expected to affect sensing did not eliminate stress responses, then the sensory mechanism remains unclear."];
+  "N37" [label="(0,0,0) Induction: Currently substitutions in RsbRA linker and N-terminal domain did not eliminate stress sensitivity, and reduced signaling occurs even with unphosphorylatable RsbS, and if mutations expected to affect sensing did not eliminate stress responses then the sensory mechanism remains unclear, therefore the sensory mechanism of RsbR remains unclear."];
+  "N41" [label="(55,1,0) Currently, the N-terminal regions of RsbR proteins might include amino acid residues important for environmental stress sensing."];
+  "N42" [label="(0,0,0) If the N-terminal regions might include residues important for stress sensing, then systematically testing substitutions in this region could reveal sensory residues."];
+  "N43" [label="(0,0,0) Abduction: Currently the N-terminal regions of RsbR proteins might include amino acid residues important for environmental stress sensing, and if the N-terminal regions might include important residues then systematically testing substitutions could reveal sensory residues, therefore systematically testing substitutions in the N-terminal region could reveal sensory residues."];
+  "N45" [label="(56,1,0) Currently, substitutions influenced the magnitude and duration of the σB response to ethanol."];
+  "N47" [label="(0,0,0) If substitutions influenced σB response but none was critical for stress sensing, then RsbR N-terminal domain modulates but does not directly sense stress."];
+  "N52" [label="(58,1,0) Currently, cells deleted for stressosomes retained an environmental stress-inducible σB response."];
+  "N54" [label="(0,0,0) If stressosome-deleted cells retain stress-inducible σB response that depends on RsbT, then RsbT can sense environmental stress independently of the stressosome."];
+  "NROOT" [label="(0,0,0) This paper proposes to test in Bacillus subtilis whether the kinase RsbT, rather than the N-terminal sensor regions of RsbR proteins, can function as the primary environmental stress sensor, with the stressosome complex mainly tuning the magnitude and timing of the resulting σB general stress response.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When candidate RsbR N-terminal sensor regions are not required for stress sensitivity, stressosome removal still permits an RsbT-dependent environmental-stress-inducible σB response, and RsbR-region substitutions alter σB response magnitude or duration, the research focus shifts to testing RsbT-centered sensing and stressosome-dependent modulation."];
+  "R18" [label="(0,0,0) Induction: Substitutions in the RsbR N-terminal region influenced the magnitude and duration of the σB response to ethanol, but none of the substitutions was critical for stress sensing; therefore the RsbR N-terminal domain is supported as a modulator of σB response output rather than as an essential direct stress sensor."];
+  "R2" [label="(0,0,0) Induction: Heme-binding RsbR orthologs in Vibrio species sense oxygen, and this supports the broader possibility that RsbR-family proteins can have sensory functions."];
+  "R20" [label="(0,0,0) Induction: Stressosome-deleted cells retained an environmental stress-inducible σB response, and that response strictly depended on RsbT; under the stated conditional linking an RsbT-dependent residual response to stress sensing, this supports RsbT as mediating environmental stress sensing independently of the stressosome."];
+  "N1" -> "N3" [label="deduction-rule"];
+  "N2" -> "N3" [label="deduction-case"];
+  "N33" -> "N37" [label="induction-case"];
+  "N34" -> "N37" [label="induction-case"];
+  "N35" -> "N37" [label="induction-case"];
+  "N36" -> "N37" [label="induction-common"];
+  "N41" -> "N43" [label="abduction-phenomenon"];
+  "N42" -> "N43" [label="abduction-knowledge"];
+  "N26" -> "R2" [label="induction-case"];
+  "N27" -> "R2" [label="induction-common"];
+  "N45" -> "R18" [label="induction-case"];
+  "N47" -> "R18" [label="induction-common"];
+  "N52" -> "R20" [label="induction-case"];
+  "N54" -> "R20" [label="induction-common"];
+  "N3" -> "NROOT" [label="induction-case"];
+  "N37" -> "NROOT" [label="induction-case"];
+  "N43" -> "NROOT" [label="induction-case"];
+  "R18" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R20" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

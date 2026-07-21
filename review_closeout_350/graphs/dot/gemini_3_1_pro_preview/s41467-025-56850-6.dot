@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56850-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The research tests the hypothesis that high-throughput whole-brain imaging of c-Fos expression in mice, analyzed with explainable machine-learning methods, can reliably distinguish among multiple psychedelic and related psychoactive compounds and thus function as a practical screening platform for identifying promising therapeutic candidates in preclinical drug discovery.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(23,0,0) More recently, technological advances in tissue clearing, light sheet fluorescence microscopy, and automated detection of nuclei have enabled high-throughput mapping of the expression of immediate early genes such as c-Fos in the whole mouse brain ,."];
+  "E2" [label="(22,0,0) Taking classic psychedelics as an example, drug administration induces robust increases in the expression of immediate early genes ,, including c-Fos, that can be detected starting in as few as 30 minutes in multiple brain regions ,."];
+  "E3" [label="(15,0,0) Simple characterizations such as changes in animal movement patterns may be automated to increase throughput and accuracy ,."];
+  "E4" [label="(28,0,0) We developed a pipeline for analysis and classification based on explainable machine learning, determining performance in one-versus-rest and one-versus-one classification tasks."];
+  "E5" [label="(2,0,0) These compounds have recently gained widespread interest as potential therapeutics for neuropsychiatric disorders ,."];
+  "E6" [label="(1,0,0) Psychedelics include classic serotonergic psychedelics, such as psilocybin and 5-methoxy-N,N-dimethyltryptamine (5-MeO-DMT), and related psychoactive compounds, such as ketamine and 3,4-methyl enedioxy methamphetamine (MDMA)."];
+  "E7" [label="(5,0,0) The research efforts culminated in the approval of esketamine nasal spray by the FDA in the United States for treatment-resistant depression ,."];
+  "E8" [label="(24,0,0) We and others have applied this method to characterize the impact of psilocybin and ketamine ,,, joining a rapidly growing number of studies using brain-wide imaging of fluorescence signals to study drugs ,,,,,,,,,,,."];
+  "E9" [label="(17,0,0) The development of a new screening method may complement current molecular and behavioral approaches to accelerate preclinical drug discovery."];
+  "E10" [label="(27,0,0) The study measured brain-wide c-Fos expression in male and female mice for 8 drug conditions, including psychedelics, related psychoactive compounds, and vehicle control."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-common"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

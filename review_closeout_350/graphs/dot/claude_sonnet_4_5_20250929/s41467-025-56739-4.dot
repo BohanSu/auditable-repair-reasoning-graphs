@@ -1,0 +1,28 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes NeuroBench as a community-driven, dual-track benchmark suite with open-source tooling and hierarchical task-level metrics to provide a standardized and extensible evaluation method for neuromorphic algorithms and hardware systems, thereby helping guide neuromorphic co-design.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When a promising research area faces definitional, implementation, evolution, metric, and infrastructure challenges, a standardized, extensible benchmark suite with shared tools and task-level metrics can provide a practical basis for fair evaluation and co-design."];
+  "R4" [label="(0,0,0) Existing neuromorphic benchmarks and prior benchmark contributions motivate improved benchmark infrastructure that can support more general and productive neuromorphic evaluation."];
+  "R5" [label="(0,0,0) Because neuromorphic progress is impeded by the absence of fair, widely adopted objective metrics and benchmarks, standard and rigorous benchmarking is necessary for the neuromorphic community."];
+  "R6" [label="(0,0,0) Since neuromorphic computing is a promising area and standard benchmarking is necessary for the community, enabling progress through benchmarks is important."];
+  "R7" [label="(0,0,0) Challenges in adapting methods to resource-constrained edge devices motivate advancing neuromorphic research as a route for addressing computational limits."];
+  "node10" [label="(16,1,0) Currently, without benchmarks, the validity of neuromorphic solutions cannot be directly quantified"];
+  "node12" [label="(18,1,0) Currently, neuromorphic benchmarks have been proposed for various tasks"];
+  "node16" [label="(3,1,0) Currently, there are challenges in adapting methods to resource-constrained edge devices"];
+  "node18" [label="(5,1,0) Currently, neuromorphic computing has emerged as a promising area for addressing these challenges"];
+  "node24" [label="(0,0,0) If AI/ML models face computational limits and neuromorphic computing is promising, then neuromorphic research should be advanced"];
+  "node6" [label="(25,1,0) Currently, benchmarks require a common infrastructure"];
+  "node8" [label="(15,1,0) Currently, progress in neuromorphic research is impeded"];
+  "node12" -> "R4" [label="abduction-phenomenon"];
+  "node6" -> "R4" [label="abduction-knowledge"];
+  "node8" -> "R5" [label="induction-case"];
+  "node10" -> "R5" [label="induction-common"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "node18" -> "R6" [label="abduction-knowledge"];
+  "node16" -> "R7" [label="abduction-phenomenon"];
+  "node24" -> "R7" [label="abduction-knowledge"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

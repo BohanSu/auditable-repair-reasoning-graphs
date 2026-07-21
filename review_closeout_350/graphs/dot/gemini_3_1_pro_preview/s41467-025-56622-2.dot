@@ -1,0 +1,22 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The study aims to develop and evaluate UNITO, a convolutional image-segmentation framework that transforms cytometry protein-expression data into bivariate density images and uses expert-annotated examples to automate hierarchical pre-gating and gating of immune cell populations, with the goal of reproducing expert contours and working across cytometry modalities.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When manual cytometry gating is time-consuming, existing tools do not configure hierarchical bivariate pre-gating, and cytometry protein-expression data can be represented as images for convolutional deep learning, these premises motivate an automated image-segmentation approach to immune-cell gating."];
+  "Node_1" [label="(10,1,0) Currently manually defining boundaries for each cell subtype can be time-consuming."];
+  "Node_10" [label="(39,1,0) Currently UNITO converts cytometrically derived protein expression into an image of bivariate density."];
+  "Node_11" [label="(0,0,0) If UNITO converts protein expression into an image of bivariate density, then it effectively applies deep neural networks to cytometric data."];
+  "Node_2" [label="(0,0,0) If manually defining boundaries is time-consuming, then there is a critical need to automate the analysis process."];
+  "Node_3" [label="(0,0,0) deduction-reasoning: Given manually defining boundaries is time-consuming, therefore there is a critical need to automate the analysis process."];
+  "Node_4" [label="(20,1,0) Currently, no software can configure a series of bivariate pre-gating tasks where gates are set in a hierarchical order."];
+  "Node_5" [label="(0,0,0) abduction-reasoning: Given there is a critical need to automate the analysis process and no software can configure hierarchical gating tasks, therefore a new automated gating method is required to handle these complex structures."];
+  "R5" [label="(0,0,0) UNITO converts cytometrically derived protein-expression data into bivariate density images, providing an image-based representation that is compatible with applying deep neural networks to cytometric data."];
+  "Node_1" -> "Node_3" [label="deduction-case"];
+  "Node_2" -> "Node_3" [label="deduction-rule"];
+  "Node_3" -> "Node_5" [label="abduction-phenomenon"];
+  "Node_4" -> "Node_5" [label="abduction-knowledge"];
+  "Node_10" -> "R5" [label="abduction-phenomenon"];
+  "Node_11" -> "R5" [label="abduction-knowledge"];
+  "Node_5" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

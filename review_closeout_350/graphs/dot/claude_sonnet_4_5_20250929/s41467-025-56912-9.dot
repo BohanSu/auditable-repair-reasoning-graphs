@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56912-9
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) A dry-chemical strategy combining confined interlayer growth and melt infiltration synthesized ultrathin 2D metal oxide crystals; fixed galleries of a lamellar template limited product thickness; 2D MOs inherited RUB-15 layer morphology, exhibited high-crystallinity monolayers, and the method constructed sulfide/phosphide nanosheets with unique properties and TiO2 nanosheets with degradation efficiency.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(24,1,0) A confined interlayer growth strategy was developed."];
+  "E2" [label="(24,2,0) The development was combined with a melt infiltration method under dry-chemical conditions."];
+  "E3" [label="(24,3,0) This development achieved synthesis of various ultrathin 2D metal oxide crystals."];
+  "E4" [label="(21,2,0) Confinement synthesis utilizes the layer spacing of a lamellar framework."];
+  "E5" [label="(21,3,0) Confinement synthesis involves combining the lamellar framework with a template."];
+  "E6" [label="(22,1,0) Fixed spacing between template layers strictly limits the longitudinal dimension of target products."];
+  "E7" [label="(25,1,0) The synthesized 2D metal oxides presented ultrathin monolayer structures."];
+  "E8" [label="(25,2,0) These structures perfectly inherited the layer morphology of the parent compound RUB-15."];
+  "E9" [label="(26,1,0) All synthesized 2D metal oxides exhibited high crystallinity."];
+  "E10" [label="(31,1,0) The method is flexible for construction of other ultrathin 2D frameworks."];
+  "E11" [label="(31,2,0) Other ultrathin 2D frameworks include binary metal oxides, sulfide/phosphide nanosheets, or metallene nanosheets."];
+  "E12" [label="(31,3,0) The method highlights exploration of 2D crystals with unique properties."];
+  "E13" [label="(29,1,0) The obtained 2D TiO2 nanosheets demonstrated outstanding degradation efficiency."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+  "E13" -> "NROOT" [label="induction-case"];
+}

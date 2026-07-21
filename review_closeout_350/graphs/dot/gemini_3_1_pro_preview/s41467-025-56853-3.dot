@@ -1,0 +1,38 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56853-3
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to develop and evaluate a comprehensive, open comparative resource by profiling deep age-dependent proteomes across common amyloidogenic Alzheimer's disease mouse models, relating those model changes and limitations to human Alzheimer's disease, and thereby guiding appropriate model selection and investigation of shared pathogenic mechanisms.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When AD mouse models and prior proteomic resources are insufficient for understanding model advantages, limitations, and relevance to human disease, a comprehensive comparative proteomic resource is scientifically warranted."];
+  "Node_1" [label="(2,0,0) Currently AD pathology is primarily defined by the aggregation of β-amyloid peptide (Aβ) in extracellular plaques and of hyperphosphorylated tau proteins as intracellular neurofibrillary tangles."];
+  "Node_10" [label="(8,2,0) No comprehensive resources are currently available for understanding the advantages and limitations of Alzheimer's disease mouse models."];
+  "Node_12" [label="(14,0,0) Early proteomic studies in the AD mice uncovered some molecular changes but they were often limited by inadequate proteomic depth, restricted analysis of individual mouse models, and/or insufficient comparison with human AD datasets."];
+  "Node_14" [label="(0,0,0) If a deep, age-dependent proteomic analysis across multiple models is needed to overcome previous limitations, then we should present such an analysis across commonly used AD models."];
+  "Node_2" [label="(0,0,0) If a disease is defined by complex factors like Aβ and tau, then understanding its mechanisms requires suitable models."];
+  "Node_3" [label="(0,0,0) deduction-reasoning: Given AD pathology is primarily defined by the aggregation of Aβ and tau, and if a disease is defined by complex factors like Aβ and tau, then understanding its mechanisms requires suitable models, therefore understanding AD requires suitable models."];
+  "Node_4" [label="(5,0,0) The molecular mechanisms of these proteins/genes in AD development are not fully understood, often due to the lack of suitable cellular or animal models."];
+  "Node_5" [label="(0,0,0) abduction-reasoning: Given the molecular mechanisms of AD development are not fully understood due to the lack of suitable models, and understanding AD requires suitable models, therefore there is a critical need to evaluate and utilize suitable AD models."];
+  "Node_6" [label="(0,0,0) If there is a critical need to evaluate and utilize suitable AD models, then the fact that current models do not capture the full spectrum means researchers must fully understand their advantages and limitations."];
+  "Node_7" [label="(0,0,0) deduction-reasoning: Given there is a critical need to evaluate and utilize suitable AD models, and if there is a critical need to evaluate and utilize suitable AD models, then the fact that current models do not capture the full spectrum means researchers must fully understand their advantages and limitations, therefore if current models do not capture the full spectrum, researchers must fully understand their advantages and limitations."];
+  "Node_8" [label="(7,0,0) Currently none of these models capture the full spectrum of AD molecular events and pathologies as they exhibit less severe neurodegeneration compared to human patients."];
+  "Node_9" [label="(8,1,0) deduction-reasoning: Given none of these models capture the full spectrum of AD molecular events and pathologies, and if current models do not capture the full spectrum, researchers must fully understand their advantages and limitations, therefore researchers should fully understand the advantages and limitations of mouse models to select the most appropriate one."];
+  "R5" [label="(0,0,0) Because no comprehensive resources are currently available for understanding the advantages and limitations of Alzheimer's disease mouse models, and researchers need to understand those advantages and limitations to choose appropriate models, a comprehensive resource for evaluating AD mouse-model advantages and limitations is needed."];
+  "R6" [label="(0,0,0) The limited depth, restricted model coverage, and insufficient human comparison in earlier AD-mouse proteomic studies motivate a deep, age-dependent proteomic analysis across multiple commonly used AD mouse models."];
+  "R7" [label="(0,0,0) The study should present a deep, age-dependent proteomic analysis across commonly used Alzheimer's disease mouse models to address prior limitations."];
+  "Node_2" -> "Node_3" [label="deduction-rule"];
+  "Node_1" -> "Node_3" [label="deduction-case"];
+  "Node_4" -> "Node_5" [label="abduction-phenomenon"];
+  "Node_3" -> "Node_5" [label="abduction-knowledge"];
+  "Node_6" -> "Node_7" [label="deduction-rule"];
+  "Node_5" -> "Node_7" [label="deduction-case"];
+  "Node_7" -> "Node_9" [label="deduction-rule"];
+  "Node_8" -> "Node_9" [label="deduction-case"];
+  "Node_10" -> "R5" [label="abduction-phenomenon"];
+  "Node_9" -> "R5" [label="abduction-knowledge"];
+  "Node_12" -> "R6" [label="abduction-phenomenon"];
+  "Node_14" -> "R6" [label="abduction-knowledge"];
+  "Node_14" -> "R7" [label="deduction-rule"];
+  "R6" -> "R7" [label="deduction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

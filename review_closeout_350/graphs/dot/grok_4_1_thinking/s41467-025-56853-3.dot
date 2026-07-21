@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56853-3
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study tests the hypothesis that deep, age-resolved proteomic and phosphoproteomic profiling, coupled with in vivo protein-turnover measurements across several widely used Alzheimer’s mouse models and comparison with human datasets, will uncover shared disease pathways, explain transcript–protein discrepancies, and reveal that amyloid plaque formation slows the degradation of associated “amyloidome” proteins.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(13,0,0) Complementary proteomic studies in AD mice , , ,  not only corroborated transcriptomic findings, but also identified RNA-independent protein alterations , ,  and changes in protein turnover ,."];
+  "E2" [label="(11,0,0) However, RNA levels do not always align with protein levels due to posttranscriptional processes, such as translation and protein turnover."];
+  "E3" [label="(10,0,0) Transcriptomic analyses of the amyloidosis mouse models revealed changes in expression of genes linked to immune response, synaptic function, and neuronal signaling , ,."];
+  "E4" [label="(6,0,0) More than 100 genetic AD mouse models have been developed , , , , predominantly by mimicking genetic mutations linked to familial AD, such as the lines of 5xFAD , , 3xTG , and APP-KI including APP NLF (NLF) and APP NLGF (NLGF)."];
+  "E5" [label="(4,0,0) Genetic analyses of AD and control cases have elucidated three causative genes (APP, PSEN1, and PSEN2), high-risk genes (APOE4 and TREM2) and about 100 low-risk genes and loci , , , , , , , , ,."];
+  "E6" [label="(18,0,0) Thus, our comprehensive proteomic analysis identifies shared AD pathways and demonstrates altered protein turnover in amyloid plaques in AD mice."];
+  "E7" [label="(12,0,0) Indeed, notable inconsistencies between transcript and protein levels in AD and 5xFAD mice were observed ,."];
+  "E8" [label="(15,0,0) Here we present a deep, age-dependent analysis of 10,369 proteins (10,331 genes) and 12,096 phosphopeptides (10,532 phosphosites) across commonly used AD models: 5xFAD , NLF , and NLGF."];
+  "E9" [label="(17,0,0) To explore the contribution of protein degradation to the transcriptome-proteome inconsistency, we measured the turnover rates of 8492 brain proteins and found that amyloid formation delays the degradation of amyloidome components."];
+  "E10" [label="(2,0,0) AD pathology initiates decades before the onset of gross behavioral symptoms and is primarily defined by the aggregation of β-amyloid peptide (Aβ) in extracellular plaques and of hyperphosphorylated tau proteins as intracellular neurofibrillary tangles , ,."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-common"];
+  "E10" -> "NROOT" [label="induction-case"];
+}

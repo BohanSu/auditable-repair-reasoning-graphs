@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56941-4
+  rankdir="TB";
+  "N1" [label="(12,2,0) The contribution of plasma membrane-derived signals to collective cell migration remains unclear when independent of the direct link between adhesions and cytoskeleton."];
+  "N2" [label="(13,1,0) There is a lack of tools capable of dissecting the mechanical cues at the plasma membrane from the mechano-transduction through cell-cell adhesion molecules to the cytoskeleton."];
+  "N3" [label="(0,0,0) [abductive]: Given the unclear role of membrane signals and the lack of tools, therefore a new approach is needed to selectively elicit signals originating from the plasma membrane without cytoskeletal linkage."];
+  "N4" [label="(0,0,0) If a new approach is needed to selectively elicit signals without cytoskeletal linkage, then artificial photoswitchable cell-cell adhesions (Cph1) can be used."];
+  "N5" [label="(16,1,0) [deductive]: Given that a new approach is needed and Cph1 adhesions can be used, therefore artificial photoswitchable cell-cell adhesions based on cyanobacterial phytochrome 1 (Cph1) were used to selectively elicit signals that originate from within the plasma membrane."];
+  "N6" [label="(19,1,0) Currently the photoactivated increase in cell-cell adhesions resulted in an increase in membrane tension at the cellular level."];
+  "N8" [label="(17,1,0) Currently an increase in cell-cell connections leads to coordinated and collective cell movement in cells that otherwise would migrate as single cells."];
+  "N9" [label="(0,0,0) In these experiments, the increased membrane tension resulting from artificial cell-cell connections consistently leads to collective cell movement."];
+  "NROOT" [label="(0,0,0) The paper proposes to develop and evaluate photoswitchable membrane adhesions that artificially increase intercellular contacts without direct linkage to the actin cytoskeleton, in order to test whether increased membrane tension and PLD2–PA–mTOR signaling can convert single-cell movement into coordinated collective migration.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A bounded experimental proposal can be supported by showing that a designed perturbation creates membrane-level cell-cell contacts without direct cytoskeletal linkage, raises membrane tension, and is associated with collective migration behavior."];
+  "R3" [label="(0,0,0) In the Cph1 artificial photoswitchable cell-cell adhesion system used to elicit plasma-membrane signals without cytoskeletal linkage, photoactivated increases in cell-cell adhesions were observed to increase membrane tension at the cellular level."];
+  "R4" [label="(0,0,0) In these experiments, artificially increased cell-cell connections, together with the associated increase in membrane tension, are linked to a shift from otherwise single-cell migration toward coordinated collective cell movement."];
+  "R5" [label="(0,0,0) Together, the repaired findings support that photoswitchable membrane adhesions that avoid direct actin-cytoskeleton linkage can raise membrane tension and are associated with converting otherwise single-cell movement into coordinated collective migration."];
+  "N1" -> "N3" [label="abduction-knowledge"];
+  "N2" -> "N3" [label="abduction-phenomenon"];
+  "N4" -> "N5" [label="deduction-rule"];
+  "N3" -> "N5" [label="deduction-case"];
+  "N6" -> "R3" [label="induction-case"];
+  "N5" -> "R3" [label="induction-common"];
+  "N8" -> "R4" [label="induction-case"];
+  "N9" -> "R4" [label="induction-common"];
+  "R4" -> "R5" [label="deduction-rule"];
+  "R3" -> "R5" [label="deduction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

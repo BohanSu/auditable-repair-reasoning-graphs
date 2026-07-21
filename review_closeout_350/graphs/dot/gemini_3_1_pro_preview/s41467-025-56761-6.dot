@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56761-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to investigate whether Lon protease released when bacteria die degrades co-released extracellular proteins into small peptides that living cells can import, thereby enabling nutrient recycling and supporting bacterial growth in nutrient-limited environments.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A plausible mechanism that converts extracellular bacterial proteins into importable peptide nutrients can motivate experiments on nutrient recycling and bacterial growth under nutrient limitation."];
+  "Node1" [label="(0,0,0) Source (1, 0, 0) Currently there is the fact that most bacteria exhibit little growth in their natural environments, with nutrient limitation being a typical causative factor."];
+  "Node11" [label="(0,0,0) Source (0, 0, 0) Lon protease is an enzyme released from dead cells that is known to have the capability to catabolize co-released proteins."];
+  "Node2" [label="(0,0,0) Source (0, 0, 0) If nutrient limitation is a typical causative factor for limited bacterial growth in natural environments, then understanding how bacteria catabolize environmental macromolecules and import the resulting nutrients is of general importance for a broader understanding of microbial growth."];
+  "Node3" [label="(0,0,0) Source (2, 0, 0) deduction-reasoning: Currently there is the fact that most bacteria exhibit little growth due to nutrient limitation, and if nutrient limitation is a typical causative factor, then understanding macromolecule catabolism is important, so how bacteria catabolize environmental macromolecules and import the resulting nutrients is of general importance for a broader understanding of microbial growth."];
+  "Node4" [label="(0,0,0) Source (4, 0, 0) Currently there is the fact that casein degraded with enzymes (a casein hydrolysate) is used as a source of nutrients for growth in laboratory microbial culture."];
+  "Node5" [label="(0,0,0) Source (0, 0, 0) If casein hydrolysate is used as a source of nutrients for growth in laboratory microbial culture, then it should give a dose-dependent enhancement of wild type Escherichia coli growth when used as an additive to minimal media."];
+  "Node7" [label="(0,0,0) Source (3, 0, 0) Bacteria typically transport small peptides into the cell to serve as a source of fixed nitrogen and amino acids."];
+  "Node9" [label="(0,0,0) Source (0, 0, 0) If enzyme degradation produces amino acids and small peptides that can be transported into the bacterium to be used for growth, then one may expect that the proteins released from the lysis of dead bacteria in the environment must be catabolized to small peptides before they can support the growth of other live cells."];
+  "R2" [label="(0,0,0) Because enzyme-degraded casein hydrolysate is used as a nutrient source in laboratory microbial culture, it is a reasonable exogenous nutrient condition for testing or expecting dose-dependent enhancement of wild type Escherichia coli growth."];
+  "R3" [label="(0,0,0) The use of enzyme-degraded casein hydrolysate as a plausible growth-supporting nutrient condition, together with the general ability of bacteria to import small peptides, supports treating pre-degraded protein peptides as a plausible transportable nutrient source, without proving that prior degradation is strictly necessary in every context."];
+  "R4" [label="(0,0,0) If enzymatic degradation of proteins yields amino acids and small peptides that bacteria can transport and use for growth, then proteins released from lysed dead bacteria are plausibly expected to require catabolism into such transportable nutrients before supporting growth of other cells."];
+  "R5" [label="(0,0,0) Given the expectation that proteins released from lysed dead bacteria must be converted into transportable peptide nutrients, and given that Lon protease is released from dead cells and can catabolize co-released proteins, Lon protease is a plausible enzyme to investigate for producing small peptide nutrients from such extracellular proteins."];
+  "R6" [label="(0,0,0) The hypothesis that Lon protease released from dead bacterial cells processes co-released proteins into peptide nutrients motivates studying this mechanism as part of how bacteria catabolize environmental macromolecules and recycle nutrients under nutrient-limited growth conditions."];
+  "Node2" -> "Node3" [label="deduction-rule"];
+  "Node1" -> "Node3" [label="deduction-case"];
+  "Node5" -> "R2" [label="deduction-rule"];
+  "Node4" -> "R2" [label="deduction-case"];
+  "R2" -> "R3" [label="induction-case"];
+  "Node7" -> "R3" [label="induction-common"];
+  "Node9" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "Node11" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "Node3" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

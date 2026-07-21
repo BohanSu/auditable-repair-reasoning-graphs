@@ -1,0 +1,39 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56641-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes ultrastructural membrane expansion microscopy, a method combining covalently anchorable membrane probes with an optimized expansion protocol to label cellular membranes in fixed tissue while preserving ultrastructure, enabling visualization, segmentation, and tracing of membranous structures with about 60 nm resolution on standard confocal microscopy and potentially higher resolution through iterative expansion.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) ExM’s ability to isotropically separate anchored biomolecules motivates improved membrane-focused expansion approaches when fixed-tissue membrane labeling must be dense, uniform, and ultrastructure-preserving."];
+  "R4" [label="(0,0,0) Because ExM is increasingly prevalent for visualizing biomolecules including membranes or lipids, it is scientifically important to identify limitations of ExM-based membrane visualization in contexts such as fixed tissues."];
+  "R6" [label="(0,0,0) The need for uniform and continuous membrane labeling to preserve ultrastructure in fixed tissues supports pursuing rationally designed membrane-labeling probes together with an optimized ExM protocol as a strategy for dense membrane labeling."];
+  "R7" [label="(0,0,0) Implementing rationally designed membrane-labeling probes together with an optimized ExM protocol would be expected to yield a membrane ExM method that preserves ultrastructure and enables uniform, continuous visualization of membranous structures."];
+  "R8" [label="(0,0,0) A umExM method that preserves ultrastructure and enables uniform, continuous visualization of membranous structures would be anticipated to support investigations of ultrastructure, cellular compartments, and molecular content in neuroscience and biology."];
+  "node1" [label="(0,0,0) If biomolecules are anchored to a swellable polymer network and water is added to swell the hydrogel, then the anchored molecules will be pulled apart isotropically as the hydrogel swells."];
+  "node11" [label="(8,0,0) [deduction-reasoning]: Given achieving dense labeling in fixed tissues has remained challenging, therefore ideally one would enable uniform and continuous membrane labeling, yielding a high signal-to-background ratio, in order to preserve ultrastructure alongside visualization of associated proteins, in fixed tissues."];
+  "node12" [label="(0,0,0) If ideally one would enable uniform and continuous membrane labeling to preserve ultrastructure, then rationally designing innovative membrane labeling probes and optimizing the ExM protocol is a valid strategy to achieve this."];
+  "node14" [label="(0,0,0) If we rationally and systematically design innovative membrane labeling probes and optimize the ExM protocol, then the resulting method will preserve ultrastructure and enable the visualization of membranous structures with excellent uniformity and continuity."];
+  "node16" [label="(0,0,0) If umExM preserves ultrastructure and enables the visualization of membranous structures with excellent uniformity and continuity, then it will have a variety of uses in neuroscience and biology for investigating ultrastructure and cellular compartments with nanoscale precision."];
+  "node2" [label="(1,0,0) Currently, in Expansion microscopy (ExM), preserved biological specimens are physically magnified by covalently anchoring biomolecules and/or their labels to a swellable polymer network synthesized in situ, followed by chemical softening and the addition of water."];
+  "node3" [label="(2,0,0) [deduction-reasoning]: Given biomolecules are anchored to a swellable polymer network and water is added in ExM, therefore as the hydrogel swells, the anchored biomolecules and/or their labels are pulled apart from each other isotropically, typically to a physical magnification of ~4-10x."];
+  "node4" [label="(0,0,0) If biomolecules initially localized within the diffraction limit are pulled apart isotropically to a physical magnification of ~4-10x, then they can be separated in space to distances far enough to resolve them."];
+  "node5" [label="(4,0,0) [deduction-reasoning]: Given anchored biomolecules are pulled apart isotropically to a physical magnification of ~4-10x in ExM, therefore the net result of the expansion is that biomolecules and/or their labels that are initially localized within the diffraction limit of a traditional optical microscope can now be separated in space to distances far enough to resolve them."];
+  "node6" [label="(0,0,0) If a microscopy technique allows biomolecules initially within the diffraction limit to be separated and resolved, then it becomes increasingly prevalent in biology for visualizing various biomolecules."];
+  "node7" [label="(5,0,0) [deduction-reasoning]: Given ExM allows biomolecules initially within the diffraction limit to be separated and resolved, therefore Expansion microscopy protocols are increasingly prevalent in biology for visualizing proteins, nucleic acids, and membrane or lipids."];
+  "node8" [label="(0,0,0) If ExM is increasingly prevalent for visualizing membranes, then identifying its limitations in specific contexts like fixed tissues is an important next step."];
+  "node1" -> "node3" [label="deduction-rule"];
+  "node2" -> "node3" [label="deduction-case"];
+  "node4" -> "node5" [label="deduction-rule"];
+  "node3" -> "node5" [label="deduction-case"];
+  "node6" -> "node7" [label="deduction-rule"];
+  "node5" -> "node7" [label="deduction-case"];
+  "node8" -> "R4" [label="deduction-rule"];
+  "node7" -> "R4" [label="deduction-case"];
+  "node12" -> "R6" [label="deduction-rule"];
+  "node11" -> "R6" [label="deduction-case"];
+  "node14" -> "R7" [label="deduction-rule"];
+  "R6" -> "R7" [label="deduction-case"];
+  "node16" -> "R8" [label="deduction-rule"];
+  "R7" -> "R8" [label="deduction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

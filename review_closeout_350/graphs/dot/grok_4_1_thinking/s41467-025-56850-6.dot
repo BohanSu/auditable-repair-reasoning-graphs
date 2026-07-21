@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes and validates high-throughput whole-brain mapping of c-Fos expression in mice, analyzed with explainable machine-learning classifiers and SHAP interpretation, as a screening platform for distinguishing psychedelic and related compounds and prioritizing novel psychedelic-inspired therapeutics in preclinical drug discovery.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R22" [label="(0,0,0) The study paired brain-wide c-Fos expression measurements in male and female mice across eight drug conditions with an explainable machine-learning pipeline for analysis and classification."];
+  "R3" [label="(0,0,0) Because novel psychedelic-inspired analogs require efficient screening, developing a new screening method may complement current molecular and behavioral approaches and help accelerate preclinical drug discovery."];
+  "ind_case_clin1" [label="(0,0,0) Specific case: Psychedelics include classic serotonergic psychedelics such as psilocybin and 5-MeO-DMT, and related psychoactive compounds such as ketamine and MDMA, and these compounds have recently gained widespread interest as potential therapeutics."];
+  "ind_case_prior" [label="(0,0,0) Specific case: The method has been applied to psilocybin and ketamine (and other drugs) providing valuable biological insights, though only 1-2 drugs per study."];
+  "ind_concl_novel" [label="(0,0,0) induction-reasoning: In specific case of interest in mechanisms and excitement for analogs and common pattern of ideal properties with screening roadblock, therefore novel analogs require new efficient screening methods."];
+  "sent1" [label="(1,0,0) Psychedelics include classic serotonergic psychedelics such as psilocybin and 5-MeO-DMT, and related psychoactive compounds such as ketamine and MDMA."];
+  "sent17" [label="(17,0,0) The development of a new screening method may complement current molecular and behavioral approaches to accelerate preclinical drug discovery."];
+  "sent2" [label="(2,0,0) These compounds have recently gained widespread interest as potential therapeutics for neuropsychiatric disorders."];
+  "sent24" [label="(24,0,0) We and others have applied this method to characterize the impact of psilocybin and ketamine, joining a rapidly growing number of studies using brain-wide imaging of fluorescence signals to study drugs."];
+  "sent25" [label="(25,0,0) Although these early studies have provided valuable biological insights, only one or two drugs were typically included in each study thus far."];
+  "sent27" [label="(27,0,0) In this study, we measured brain-wide c-Fos expression in male and female mice for 8 drug conditions, including a variety of psychedelics, related psychoactive compounds, and vehicle control."];
+  "sent28" [label="(28,0,0) We developed a pipeline for analysis and classification based on explainable machine learning, determining performance in one-versus-rest and one-versus-one classification tasks."];
+  "sent1" -> "ind_case_clin1" [label="induction-case"];
+  "sent2" -> "ind_case_clin1" [label="induction-common"];
+  "sent24" -> "ind_case_prior" [label="induction-case"];
+  "sent25" -> "ind_case_prior" [label="induction-common"];
+  "sent17" -> "R3" [label="deduction-rule"];
+  "ind_concl_novel" -> "R3" [label="deduction-case"];
+  "sent27" -> "R22" [label="induction-case"];
+  "sent28" -> "R22" [label="induction-common"];
+  "R22" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "ind_case_clin1" -> "NROOT" [label="induction-case"];
+  "ind_case_prior" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

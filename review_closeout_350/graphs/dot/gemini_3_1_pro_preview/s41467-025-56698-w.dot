@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56698-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study develops an optimized, standardized fecal small-RNA sequencing pipeline and establishes a reproducible baseline miRNA profile in healthy mice. It demonstrates pipeline utility by analysing fecal miRNA changes due to chronic Trichuris muris infection, including wound-healing miRNA changes and barrier-integrity miRNA changes associated with fibrosis. Together, these findings support fecal miRNAs as non-invasive markers of intestinal status and biologically relevant deviations.", fillcolor="lightyellow", style="filled"];
+  "E12" [label="(12,0,0) The authors developed an optimized fecal small-RNA sequencing pipeline and performed a meta-analysis of published small RNA sequencing data from murine fecal samples."];
+  "E13" [label="(13,0,0) The authors established best practices for the technique and identified a core fecal miRNA profile that is consistent across laboratory practices."];
+  "E14" [label="(14,0,0) The current study reports the first longitudinal analysis of murine fecal miRNAs in healthy mice."];
+  "E15" [label="(15,0,0) The authors demonstrate pipeline utility in hypothesis generation by analysing changes in fecal miRNAs due to chronic Trichuris muris infection."];
+  "E19" [label="(19,0,0) Chronic infection induces differential expression of miRNAs associated with wound healing, barrier integrity, and fibrosis."];
+  "E6" [label="(6,0,0) Intestinal epithelial-cell miRNAs are detectable in extracellular vesicles in feces and offer a promising non-invasive tool to study intestinal disease."];
+  "E5" [label="(5,0,0) In the mammalian intestine, miRNAs perform essential roles in barrier integrity, metabolism, mucosal immune-response regulation, and microbial homeostasis."];
+  "E18" [label="(18,0,0) In Trichuris muris infection, a Th1-type immune response is associated with chronicity and the inability to clear the infection."];
+  "E12" -> "NROOT" [label="induction-common"];
+  "E13" -> "NROOT" [label="induction-case"];
+  "E14" -> "NROOT" [label="induction-case"];
+  "E15" -> "NROOT" [label="induction-case"];
+  "E19" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E18" -> "NROOT" [label="induction-case"];
+}

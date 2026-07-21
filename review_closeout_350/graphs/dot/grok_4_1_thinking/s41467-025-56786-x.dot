@@ -1,0 +1,23 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56786-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study characterizes autoreactive MPO-directed B-cell responses in MPO-positive ANCA-associated vasculitis patients. It shows that most circulating MPO-directed B cells are IgM-positive and provides first evidence that anti-MPO IgM antibodies may have a previously unrecognized function in disease pathogenesis. This function may relate to complement activation because anti-MPO IgM strongly determines complement-activating capacity in human serum, highlighting IgM B-cell autoreactivity as a pathogenic mechanism and a cautious therapeutic target direction relevant to future targeted therapy design.", fillcolor="lightyellow", style="filled"];
+  "E8" [label="(8,0,0) Studies of autoreactive IgG have provided the basis for emerging therapeutic approaches that target IgG."];
+  "E9" [label="(9,0,0) Anti-neutrophil cytoplasmic antibody-associated vasculitis is a prototypic human autoimmune disease mediated by B cells."];
+  "E35" [label="(35,0,0) The study sets out to characterize autoreactive, MPO-directed B cell responses in MPO-positive AAV patients."];
+  "E36" [label="(36,0,0) Previous work indicated the presence of MPO-reactive B cells in the circulation of AAV patients."];
+  "E37" [label="(37,0,0) The authors analyze the anti-IgM B cell compartment and show that most MPO-directed B cells in the circulation of MPO-positive AAV patients are IgM-positive."];
+  "E38" [label="(38,0,0) Analyzing the anti-MPO-Ig response provides first evidence that anti-MPO-IgM may have a prominent, previously unrecognized function in disease pathogenesis."];
+  "E39" [label="(39,0,0) The function of anti-MPO-IgM may relate to complement activation because complement-activating capacity of anti-MPO Ig in human serum is strongly dependent on anti-MPO IgM."];
+  "E40" [label="(40,0,0) Together, these results are relevant for future management of disease relapses and the design of targeted therapies."];
+  "E41" [label="(41,0,0) These results highlight IgM B cell autoreactivity as an important component of pathogenicity in human autoimmune diseases."];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E35" -> "NROOT" [label="induction-common"];
+  "E36" -> "NROOT" [label="induction-case"];
+  "E37" -> "NROOT" [label="induction-case"];
+  "E38" -> "NROOT" [label="induction-case"];
+  "E39" -> "NROOT" [label="induction-case"];
+  "E40" -> "NROOT" [label="induction-case"];
+  "E41" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56912-9
+  rankdir="TB";
+  "I_Case_Root" [label="(20,0,0) abduction-reasoning: Given the widespread applications of 2D MOs and the limitations of current methods, therefore seeking a versatile and facile method to fabricate 2D metal oxide crystals is an appealing endeavor."];
+  "I_MO_Value" [label="(0,0,0) deduction-reasoning: Given 2D metal oxides possess unique properties, therefore they have widespread applications ranging from catalysts and energy-storage devices to semiconductors."];
+  "I_Method_Limit" [label="(0,0,0) induction-reasoning: Given the limitations of both top-down and bottom-up strategies, therefore the formation of 2D metal oxide nanosheets via current methods is quite limited."];
+  "NROOT" [label="(0,0,0) This paper motivates developing and evaluating a confined interlayer growth strategy using lamellar-template confinement to fabricate 2D metal oxide nanosheets/crystals, addressing limits of current precursor-based synthesis routes while targeting materials whose defect sites and catalyst-relevant properties make them scientifically valuable.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When valuable 2D metal oxides are difficult to synthesize by existing methods and a lamellar confined-interlayer route has plausible template-based support, the appropriate paper-level aim is to develop and evaluate that route for 2D metal oxide fabrication."];
+  "N_Confine1" [label="(21,0,0) Currently, confinement synthesis in a fixed interlayer is the transverse growth of 2D target guest species by utilizing the layer spacing of lamellar framework in combination with template."];
+  "N_Confine2" [label="(23,0,0) The preparation of monolayer carbon within the interlayer cavity of LDHs indicates the feasibility of confined polymerization using solid templates."];
+  "N_Limit_Bottom" [label="(19,0,0) It remains a challenging task if the precursors are hydrolyzed violently or refractorily in bottom-up wet-chemical synthesis."];
+  "N_Limit_Top" [label="(11,0,0) Currently, considering that most metal oxides are not intrinsically layered, the formation of 2D metal oxide nanosheets via exfoliation is quite limited."];
+  "N_MO_Case" [label="(3,0,0) Currently, 2D metal oxides (MOs) are a large family with unique combinations of redox chemistry, abundant defect sites, rapid mass transport and high earth abundance."];
+  "N_MO_Rule" [label="(0,0,0) If a material family belongs to 2D materials and possesses unique chemical and physical properties, then it will have widespread applications."];
+  "R4" [label="(0,0,0) The definition of confined synthesis in fixed interlayers, together with a reported solid-template example, supports treating lamellar-template confinement as a plausible route to investigate for forming 2D guest species, rather than proving it is broadly versatile."];
+  "R5" [label="(0,0,0) Because current methods for 2D metal oxide nanosheets are limited and confined interlayer synthesis with lamellar templates is a plausible route to investigate, the paper is motivated to develop and evaluate a confined interlayer growth strategy for fabricating 2D metal oxide crystals."];
+  "N_RUB15_Template" [label="(25,0,0) The synthesized 2D metal oxide nanosheets inherited the layer morphology of the parent compound RUB-15."];
+  "N_MO_Rule" -> "I_MO_Value" [label="deduction-rule"];
+  "N_MO_Case" -> "I_MO_Value" [label="deduction-case"];
+  "N_Limit_Top" -> "I_Method_Limit" [label="induction-case"];
+  "N_Limit_Bottom" -> "I_Method_Limit" [label="induction-common"];
+  "I_MO_Value" -> "I_Case_Root" [label="abduction-knowledge"];
+  "I_Method_Limit" -> "I_Case_Root" [label="abduction-phenomenon"];
+  "N_Confine2" -> "R4" [label="induction-case"];
+  "N_Confine1" -> "R4" [label="induction-common"];
+  "I_Case_Root" -> "R5" [label="abduction-phenomenon"];
+  "R4" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+  "N_RUB15_Template" -> "R4" [label="induction-case"];
+}

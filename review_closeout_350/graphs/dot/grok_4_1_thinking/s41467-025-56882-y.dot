@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56882-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This work engineers and experimentally realizes a non-Hermitian graphene-like circuit lattice whose designed circuit implements nonreciprocal next-nearest-neighbor couplings through nonreciprocal capacitance. The lattice creates a time-reversal-related complex-conjugate pair of intrinsically non-Hermitian Dirac cones governed by valley-dependent imaginary potentials. The resulting lifetime contrast yields long-lived single-valley Dirac quasiparticles and unidirectional, lifetime-asymmetric valley kink states, revealing non-Hermitian Dirac physics beyond Hermitian counterparts.", fillcolor="lightyellow", style="filled"];
+  "E12" [label="(12,0,0) The work designs and experimentally realizes a non-Hermitian extension of the graphene lattice with a complex conjugate pair of Dirac cones."];
+  "E13" [label="(13,0,0) The Dirac cones in the study are intrinsically non-Hermitian."];
+  "E14" [label="(14,0,0) The Dirac quasiparticles are governed by non-Hermitian Dirac Hamiltonians with a valley-dependent background imaginary term."];
+  "E17" [label="(17,0,0) The authors fabricate a circuit lattice to implement the theoretical model."];
+  "E18" [label="(18,0,0) A sharp imaginary eigenvalue contrast wipes out the shorter-lifetime Dirac cone in the long-time limit, making the system effectively exhibit single Dirac cone physics."];
+  "E22" [label="(22,0,0) Valley kink states inherit non-Hermitian bulk properties and have valley-dependent lifetimes."];
+  "E23" [label="(23,0,0) Valley kink-state propagation is effectively unidirectional and valley flipping is suppressed by imaginary-eigenvalue differences between valleys."];
+  "E24" [label="(24,0,0) Dirac cones can be induced in non-Hermitian lattices and have non-Hermitian physics beyond Hermitian counterparts."];
+  "E25" [label="(25,0,0) A complex conjugate pair of Dirac cones at the K and K' valleys are related by time-reversal symmetry and carry imaginary eigenvalue parts."];
+  "E26" [label="(26,0,0) In the long-time limit, lifetime contrast leaves only K-valley states, giving effective single Dirac cone behavior over a large energy range."];
+  "E27" [label="(27,0,0) The designed circuit realizes the hexagonal unit cell and implements nearest-neighbor couplings through capacitors."];
+  "E28" [label="(28,0,0) The designed circuit achieves nonreciprocal next-nearest-neighbor couplings through nonreciprocal capacitance."];
+  "E29" [label="(29,0,0) The circuit lattice bulk dispersion uses imaginary eigenfrequency parts, matching the non-Hermitian circuit implementation."];
+  "E12" -> "NROOT" [label="induction-common"];
+  "E13" -> "NROOT" [label="induction-case"];
+  "E14" -> "NROOT" [label="induction-case"];
+  "E17" -> "NROOT" [label="induction-case"];
+  "E18" -> "NROOT" [label="induction-case"];
+  "E22" -> "NROOT" [label="induction-case"];
+  "E23" -> "NROOT" [label="induction-case"];
+  "E24" -> "NROOT" [label="induction-case"];
+  "E25" -> "NROOT" [label="induction-case"];
+  "E26" -> "NROOT" [label="induction-case"];
+  "E27" -> "NROOT" [label="induction-case"];
+  "E28" -> "NROOT" [label="induction-case"];
+  "E29" -> "NROOT" [label="induction-case"];
+}

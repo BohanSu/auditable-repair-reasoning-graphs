@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=grok_4_1_thinking:s41467-025-56611-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This work demonstrates a bubble confined beneath the upper wall of a vertically vibrated fluid chamber that can spontaneously gallop and self-propel through resonant coupling of vibration and shape oscillation modes. Adjusting vibration amplitude, vibration frequency, and bubble size tunes rectilinear, orbital, and run-and-tumble trajectories. The galloping bubble leverages inertial fluid forces in inviscid environments, providing a tunable inertia-based mechanism for bubble transport and bubble manipulation.", fillcolor="lightyellow", style="filled"];
+  "E9" [label="(9,0,0) A bubble inside a vertically vibrated fluid chamber may gallop along the upper wall, self-propelled through resonant interaction between its vibration modes."];
+  "E10" [label="(10,0,0) Adjusting vibrational forcing tunes galloping bubbles between rectilinear, orbital, and run-and-tumble domain exploration modes."];
+  "E11" [label="(11,0,0) Galloping bubbles leverage inertial fluid forces to advance and propel in inviscid flows where viscous traction is not possible."];
+  "E12" [label="(12,0,0) A time sequence illustrates a self-propelling bubble under the upper boundary of a vertically vibrating fluid chamber with shape oscillations reminiscent of galloping motion."];
+  "E13" [label="(13,0,0) The setup uses oscillation period T = 2*pi/omega."];
+  "E15" [label="(15,0,0) Different bubble sizes and vibrational forcings produce diverse domain exploration modes."];
+  "E16" [label="(16,0,0) A bubble may gallop in steady rectilinear motion in an infinite bath."];
+  "E18" [label="(18,0,0) Depending on bubble volume, increasing forcing amplitude can curve the bubble trajectory into orbital states or jagged run-and-tumble motion."];
+  "E19" [label="(19,0,0) A phase map at f = 40 Hz illustrates dependence of bubble dynamics on driving acceleration and bubble volume."];
+  "E24" [label="(24,0,0) Manipulating bubble motion is valuable in boiling-based heat transfer where unremoved bubbles near the heat source reduce heat transfer efficiency."];
+  "E26" [label="(26,0,0) Proof-of-concept experiments showcase galloping dynamics and inform methods for producing bubbles with tunable size, sorting and removal of bubbles, navigating fluid networks, and cleaning surfaces."];
+  "E9" -> "NROOT" [label="induction-common"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+  "E13" -> "NROOT" [label="induction-case"];
+  "E15" -> "NROOT" [label="induction-case"];
+  "E16" -> "NROOT" [label="induction-case"];
+  "E18" -> "NROOT" [label="induction-case"];
+  "E19" -> "NROOT" [label="induction-case"];
+  "E24" -> "NROOT" [label="induction-case"];
+  "E26" -> "NROOT" [label="induction-case"];
+}

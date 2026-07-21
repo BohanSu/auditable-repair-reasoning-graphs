@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56751-8
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes and evaluates an integrated protein engineering strategy that combines protein language model-guided mutant design for unknown and predefined mutation sites with an automated biofoundry build-test pipeline in a closed Design-Build-Test-Learn loop, aiming to enable rapid autonomous discovery and optimization of high-fitness enzyme variants, demonstrated on Methanocaldococcus jannaschii p-cyanophenylalanine tRNA synthetase.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When ML-guided protein engineering is limited by both modeling and experimental data-acquisition bottlenecks, integrating protein language model design with automated biofoundry build-test operations motivates a closed Design-Build-Test-Learn strategy for discovering and optimizing enzyme variants."];
+  "N_Imp_Biofoundry_Solves" [label="(0,0,0) deduction-reasoning: Given biofoundries generate large volumes of data needed for ML models, and technologies generating such data address data acquisition challenges, therefore biofoundries effectively address the data acquisition challenges in protein engineering."];
+  "N_Imp_Combined_Solution" [label="(0,0,0) induction-reasoning: Given the captured knowledge in PLMs could be applied to zero-shot optimization, and biofoundries effectively address data acquisition challenges, therefore integrating PLMs and biofoundries addresses both the modeling and data acquisition bottlenecks of ML in protein engineering."];
+  "N_Imp_Rule_Biofoundry" [label="(0,0,0) If a technology generates the large volumes of data needed to develop ML models, then it effectively addresses the data acquisition challenges in protein engineering."];
+  "N_Imp_Rule_ML" [label="(0,0,0) If a technique helps bypass local optima that trap traditional methods, then it emerges as a promising tool for exploring protein fitness landscapes."];
+  "N_Imp_Rule_PLM" [label="(0,0,0) If models learn fundamental principles of protein structure and function from extensive datasets, then their captured knowledge can be applied to zero-shot optimization of specific proteins."];
+  "N_S14" [label="(14,0,0) Currently, ML-assisted directed evolution facilitates larger jumps in protein sequence space, helping to bypass local optima."];
+  "N_S19" [label="(19,0,0) induction-reasoning: Given experimentally collecting functional data is time-consuming, and it is difficult to efficiently sample informative mutants without prior information, therefore the widespread application of ML in protein engineering remains challenging, in both acquiring and modeling protein function data."];
+  "N_S20" [label="(20,0,0) Experimentally collecting functional data is time-consuming and labor-intensive."];
+  "N_S21" [label="(21,0,0) It is generally difficult to efficiently sample and utilize informative protein mutants to train ML models without prior information."];
+  "N_S22" [label="(22,0,0) Currently, protein language models (PLMs) were trained on extensive datasets of protein sequences spanning the evolutionary tree of life, and hence learned the fundamental principles of protein structure and function."];
+  "N_S24" [label="(24,0,0) deduction-reasoning: Given PLMs learned fundamental principles of protein structure and function, and models learning such principles can be applied to zero-shot optimization, therefore the captured knowledge in PLMs could be applied to “zero-shot” optimization of specific proteins."];
+  "N_S28" [label="(28,0,0) Currently, laboratory automation aided by biofoundries would be invaluable for generating the large volumes of data needed to develop ML models for protein engineering."];
+  "R1" [label="(0,0,0) ML-assisted directed evolution, as a technique that facilitates larger jumps in protein sequence space and helps bypass local optima, emerges as a promising tool for exploring protein fitness landscapes."];
+  "R3" [label="(0,0,0) To practically use ML-assisted directed evolution as a promising fitness-landscape exploration approach, protein engineering must address difficult functional-data acquisition and mutant-sampling/modeling bottlenecks."];
+  "R7" [label="(0,0,0) A protein engineering strategy that integrates protein language model guidance with biofoundry-supported data generation is proposed to address ML-related modeling and data-acquisition bottlenecks."];
+  "N_S20" -> "N_S19" [label="induction-case"];
+  "N_S21" -> "N_S19" [label="induction-common"];
+  "N_Imp_Rule_PLM" -> "N_S24" [label="deduction-rule"];
+  "N_S22" -> "N_S24" [label="deduction-case"];
+  "N_Imp_Rule_Biofoundry" -> "N_Imp_Biofoundry_Solves" [label="deduction-rule"];
+  "N_S28" -> "N_Imp_Biofoundry_Solves" [label="deduction-case"];
+  "N_S24" -> "N_Imp_Combined_Solution" [label="induction-case"];
+  "N_Imp_Biofoundry_Solves" -> "N_Imp_Combined_Solution" [label="induction-common"];
+  "N_Imp_Rule_ML" -> "R1" [label="deduction-rule"];
+  "N_S14" -> "R1" [label="deduction-case"];
+  "N_S19" -> "R3" [label="abduction-phenomenon"];
+  "R1" -> "R3" [label="abduction-knowledge"];
+  "R3" -> "R7" [label="abduction-phenomenon"];
+  "N_Imp_Combined_Solution" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

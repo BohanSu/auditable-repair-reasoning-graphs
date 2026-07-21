@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56880-0
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) During early Drosophila gastrulation, the prospective mesoderm undergoes epithelial folding and extension; mesoderm cell nuclei undergo basal migration; the nucleus functions as a cellular compartmentalizer and intracellular organizer; nuclear relocation organizes the cell cytoskeleton and RhoGEF2 distribution; mesoderm epithelial cells establish a lateral, planar-polarized junctional tier formed by lateral actomyosin that initiates cell intercalation for convergence–extension.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(7,1,0) The study focuses on concomitant folding and extension of the prospective mesoderm during early Drosophila gastrulation."];
+  "E2" [label="(18,1,0) The prospective mesoderm simultaneously folds and extends at the onset of Drosophila gastrulation."];
+  "E3" [label="(40,1,0) During apical constriction of mesoderm epithelial cells, the cell nuclei migrate basally."];
+  "E4" [label="(43,1,0) The nucleus functions as a cellular compartmentalizer."];
+  "E5" [label="(43,2,0) The relocation of the nucleus spatio-temporally organizes the cell cytoskeleton."];
+  "E6" [label="(43,3,0) The relocation of the nucleus organizes the distribution of RhoGEF2."];
+  "E7" [label="(8,1,0) Mesoderm epithelial cells establish two junctional tiers."];
+  "E8" [label="(10,1,0) The second junctional tier is positioned laterally."];
+  "E9" [label="(10,2,0) The second junctional tier is planar cell polarized."];
+  "E10" [label="(10,3,0) The second junctional tier initiates cell intercalation for tissue convergence-extension."];
+  "E11" [label="(14,1,0) The second junctional tier is formed by coalescence of the cell lateral actomyosin network."];
+  "E12" [label="(24,1,0) The lateral pool of MyoII drives cell intercalation."];
+  "E1" -> "NROOT" [label="induction-common"];
+  "E2" -> "NROOT" [label="induction-case"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+  "E11" -> "NROOT" [label="induction-case"];
+  "E12" -> "NROOT" [label="induction-case"];
+}

@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=gemini_3_1_pro_preview:s41467-025-56295-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Bulky amide solvents were used as SDAs to create highly porous topologies, without introducing extra ligands; Large solvent molecules have previously been used as the structure-directing agents (SDAs) to synthesize crystalline MOFs with highly porous topolo; mixed imidazolate/benzimidazolate ligands: Thus, to make both meltable and highly porous crystalline MOFs, it is logical to engineer a more porous topology by using similar metal nodes and o; 12-membered-ring ZIF frameworks: For example, Shi et al. synthesized two large pore ZIF compounds with Im organic ligands, by using dibutylformamide (DBF) and dipropylformamide (DP; recrystallization: Chemical composition of the crystalline MOFs, i.e., the type of metal nodes and organic ligands, is a decisive factor in determining their melting; melting: A few types of ZIFs have been discovered with the capability to form glasses via melt-quenching; These melt-quenched MOF glasses possess similar structures to amorphous silica and display viscoelastic states at temperatures above their glass tr; high porosity: MOFs are cage-like structures containing metal nodes and organic ligands connected in infinite arrays; CO₂/CH₄/N₂ gas-separation performance: However, upon glass formation, the inherent porosity in their crystalline precursors is reduced, which would be unfavorable for possible applicatio; free-standing membranes: Moreover, a free-standing membrane was fabricated with a g AFI-, featuring record-breaking CH4/N2 and CO2/N2 separation performance.", fillcolor="lightyellow", style="filled"];
+  "E1" [label="(27,0,0) Bulky amide solvents were used as SDAs to create highly porous topologies, without introducing extra ligands."];
+  "E2" [label="(20,0,0) Large solvent molecules have previously been used as the structure-directing agents (SDAs) to synthesize crystalline MOFs with highly porous topology without introducing extra ligands."];
+  "E3" [label="(17,0,0) Thus, to make both meltable and highly porous crystalline MOFs, it is logical to engineer a more porous topology by using similar metal nodes and organic ligands to those present in reported meltable MOFs, e.g., ZIF-4, , and ZIF-62,."];
+  "E4" [label="(21,0,0) For example, Shi et al. synthesized two large pore ZIF compounds with Im organic ligands, by using dibutylformamide (DBF) and dipropylformamide (DPF) solvents as SDAs, respectively."];
+  "E5" [label="(16,0,0) Chemical composition of the crystalline MOFs, i.e., the type of metal nodes and organic ligands, is a decisive factor in determining their melting point and decomposition temperature  ,."];
+  "E6" [label="(9,0,0) A few types of ZIFs have been discovered with the capability to form glasses via melt-quenching."];
+  "E7" [label="(10,0,0) These melt-quenched MOF glasses possess similar structures to amorphous silica and display viscoelastic states at temperatures above their glass transition temperatures (Tg)."];
+  "E8" [label="(3,0,0) MOFs are cage-like structures containing metal nodes and organic ligands connected in infinite arrays."];
+  "E9" [label="(12,0,0) However, upon glass formation, the inherent porosity in their crystalline precursors is reduced, which would be unfavorable for possible applications in gas separation compared with other pure polycrystalline MOFs  ,  ,  ,  ,  ,."];
+  "E10" [label="(31,0,0) Moreover, a free-standing membrane was fabricated with a g AFI-, featuring record-breaking CH4/N2 and CO2/N2 separation performance."];
+  "E1" -> "NROOT" [label="induction-case"];
+  "E2" -> "NROOT" [label="induction-common"];
+  "E3" -> "NROOT" [label="induction-case"];
+  "E4" -> "NROOT" [label="induction-case"];
+  "E5" -> "NROOT" [label="induction-case"];
+  "E6" -> "NROOT" [label="induction-case"];
+  "E7" -> "NROOT" [label="induction-case"];
+  "E8" -> "NROOT" [label="induction-case"];
+  "E9" -> "NROOT" [label="induction-case"];
+  "E10" -> "NROOT" [label="induction-case"];
+}
