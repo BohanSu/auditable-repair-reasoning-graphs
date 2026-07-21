@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56858-y
+  rankdir="TB";
+  "Implicit2" [label="(0,0,0) Implicit: Common: In vitro conditions determine the physical characteristics T cells experience before reinfusion."];
+  "NROOT" [label="(0,0,0) Research proposal: Apply controlled electrical stimulation to CD8+ T cells during ex vivo expansion, including CAR-T manufacturing, to test whether this physical culture cue modulates TCR signaling and EGR1-associated chromatin remodeling, promotes a proliferative effector-skewed phenotype, and thereby improves antitumor efficacy of adoptive cell transfer and CAR-T therapies.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) If an ex vivo culture intervention alters TCR-linked signaling and EGR1/chromatin-associated fate programs in CD8+ T cells, it should be evaluated for shifts toward proliferative or effector-skewed phenotypes and for downstream antitumor efficacy in ACT and CAR-T contexts."];
+  "R10" [label="(0,0,0) CAR-T manufacturing exposes autologous CD8+ T cells to in vitro activation and expansion conditions whose physical characteristics are determined by the culture environment before reinfusion."];
+  "R12" [label="(0,0,0) EGR1-related CD8+ T cell response and clonal-expansion programs should be considered in the context of transcription-factor-regulated chromatin accessibility and T cell fate."];
+  "R14" [label="(0,0,0) TCR-CD3 recognition of tumor antigens initiates signaling cascades that participate in T cell activation, proliferation, and differentiation."];
+  "R3" [label="(0,0,0) Whether external electrical stimulation can modulate T cell activity in cancer therapy, and how such electrical signals would be converted into biochemical signaling, remains an unresolved research question relative to the more common biological or chemical approaches for improving T cell functionality."];
+  "S11" [label="(11,0,0) S11: Rule: Transcription factors regulate chromatin accessibility, thereby shaping T cell function and fate determination."];
+  "S18" [label="(18,0,0) S18: Case: EGR1 activation is antigen-dependent, underscoring its role in shaping CD8+ T cell responses."];
+  "S19" [label="(19,0,0) S19: Case: In most clinical settings, autologous CD8+ T cells are genetically modified... followed by in vitro activation and expansion."];
+  "S20" [label="(20,0,0) S20: Case: Efforts to improve T cell functionality typically focus on biological or chemical interventions."];
+  "S24" [label="(24,0,0) S24: Common: The mechanisms by which electrical signals are converted into biochemical signaling within T cells remain elusive."];
+  "S3" [label="(3,0,0) S3: Case: The TCR-CD3 complex mediates the recognition of tumor antigens, initiating downstream signaling essential for a robust immune response."];
+  "S8" [label="(8,0,0) S8: Rule: T cell activation, proliferation, and differentiation are orchestrated by a combination of extrinsic and intrinsic signaling cascades."];
+  "S24" -> "R3" [label="abduction-phenomenon"];
+  "S20" -> "R3" [label="abduction-knowledge"];
+  "Implicit2" -> "R10" [label="deduction-rule"];
+  "S19" -> "R10" [label="deduction-case"];
+  "S18" -> "R12" [label="induction-case"];
+  "S11" -> "R12" [label="induction-common"];
+  "S8" -> "R14" [label="deduction-rule"];
+  "S3" -> "R14" [label="deduction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R12" -> "NROOT" [label="induction-case"];
+  "R14" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

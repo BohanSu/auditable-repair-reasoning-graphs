@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56635-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Construct heterostructures of square-lattice iridates that couple symmetry-distinct magnetic environments to introduce magnetic frustration and destabilize Néel order, then evaluate the resulting two-dimensional Heisenberg antiferromagnet using time-resolved resonant x-ray diffraction of antiferromagnetic recovery and polarization-resolved/high-resolution RIXS for the loss of single-magnon peaks and continuum-like spectral weight as evidence relevant to spinon excitations.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When engineered magnetic frustration suppresses conventional Néel order, complementary dynamical probes of order-parameter recovery and magnetic excitation spectra can test whether single-magnon behavior gives way to continuum signatures associated with fractionalized spin excitations."];
+  "R11" [label="(0,0,0) Because exchange interactions in iridates vary widely within the Ruddlesden-Popper series, heterointerfacing different types of magnetism in an iridate superlattice is a plausible route to induce magnetic frustration through proximity coupling."];
+  "R12" [label="(0,0,0) A heterostructure-based strategy in square-lattice iridates is presented as an implementation of heterointerfacing different magnetic environments to frustrate Néel antiferromagnetic order."];
+  "R13" [label="(0,0,0) For the heterostructure strategy that frustrates Néel antiferromagnetic order, time-resolved resonant x-ray diffraction can be used to track antiferromagnetic recovery dynamics after optical pumping, with slower recovery associated with enhanced frustration."];
+  "R14" [label="(0,0,0) Polarization-resolved and high-energy-resolution RIXS are used to reveal the absence of single magnons over most of the Brillouin zone, while spectra dominated by isotropic continua instead of single magnons would constitute compelling evidence for spinons in a square-lattice Heisenberg antiferromagnet."];
+  "n11" [label="(11,0,0) Induction-common: In common, the nature of exchange interactions in iridates varies widely even within the Ruddlesden-Popper series Sr_{n+1}Ir_nO_{3n+1}."];
+  "n12" [label="(12,0,0) Deduction-case: Currently there is the varied nature of exchange interactions allows heterointerfacing different types of magnetism in a superlattice to induce magnetic frustration through proximity coupling."];
+  "n13" [label="(13,0,0) Abduction-knowledge: If we demonstrate a heterostructure-based strategy to frustrate the Néel AF order in square-lattice iridates, then quantum fluctuations can be measured and spinons revealed via specific x-ray techniques."];
+  "n14" [label="(14,0,0) Deduction-case: Currently there is time-resolved resonant x-ray diffraction (RXD) is used to measure quantum fluctuations via recovery dynamics of AF order after optical pump, slowing with enhanced frustration."];
+  "n15" [label="(15,0,0) Deduction-case: Currently there is polarization-resolved resonant inelastic x-ray scattering (RIXS) and high-energy-resolution RIXS are used to reveal the absence of single magnons in most part of the Brillouin zone away from the immediate vicinity of the ordering wavevector."];
+  "n16" [label="(16,0,0) Abduction-knowledge: If the spectra are dominated by isotropic continua instead of single magnons, then this provides compelling evidence for spinons in a square-lattice Heisenberg AF."];
+  "n12" -> "R11" [label="induction-case"];
+  "n11" -> "R11" [label="induction-common"];
+  "R11" -> "R12" [label="abduction-phenomenon"];
+  "n13" -> "R12" [label="abduction-knowledge"];
+  "R12" -> "R13" [label="induction-case"];
+  "n14" -> "R13" [label="induction-common"];
+  "n15" -> "R14" [label="induction-case"];
+  "n16" -> "R14" [label="induction-common"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R14" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

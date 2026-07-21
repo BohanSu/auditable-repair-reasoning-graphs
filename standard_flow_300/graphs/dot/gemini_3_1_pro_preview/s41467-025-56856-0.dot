@@ -1,0 +1,19 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56856-0
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes and motivates a cyclic synthesis-and-selection technique for hierarchical, primer-free retrieval of oligonucleotide subsets from a complex library: sequential use of reversible terminator nucleotides and irreversible terminator nucleotides on immobilized templates enables barcode reading at single-nucleotide resolution, allowing access to up to 4^N oligonucleotide subsets while addressing scalability and primer-design constraints of conventional PCR-based selection.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When PCR-based oligonucleotide subset selection is constrained by primer-region design and primer synthesis burden, a primer-free cyclic synthesis-and-selection strategy that reads barcode positions on immobilized templates can be investigated as a scalable alternative."];
+  "R1" [label="(0,0,0) Because PCR is a selective amplification method that uses specific primer sequences, target oligonucleotide subsets selected by PCR require unique primer-pair selection regions."];
+  "R4" [label="(0,0,0) Given the limited scalability of current oligo-selection methods, users must identify selection regions within the target and synthesize the corresponding primer pairs."];
+  "node1" [label="(0,0,0) If a method relies on specific primer sequences for selective amplification, then each target subset must possess a unique selection region for primer pairs."];
+  "node2" [label="(1,0,0) Currently Polymerase chain reaction (PCR) is one of the most widely used techniques for the selective amplification of target oligonucleotide molecules in complex library, identified by specific primer sequences."];
+  "node7" [label="(7,0,0) deduction-reasoning: Given If dedicating 40 nt to the selection region regardless of the number of oligo subsets is inefficient, and Currently given that the current length limit for de novo oligonucleotide synthesis is 200 nt, dedicating 40 nt to the selection region regardless of the number of oligo subsets is inefficient, therefore the scalability of current oligo-selection methods is limited."];
+  "node8" [label="(0,0,0) If the scalability of current oligo-selection methods is limited, then users must identify the selection regions within the target and synthesize the corresponding primer pairs."];
+  "node1" -> "R1" [label="deduction-rule"];
+  "node2" -> "R1" [label="deduction-case"];
+  "node8" -> "R4" [label="deduction-rule"];
+  "node7" -> "R4" [label="deduction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

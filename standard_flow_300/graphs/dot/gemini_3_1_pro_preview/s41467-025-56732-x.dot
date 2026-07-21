@@ -1,0 +1,35 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56732-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes a comprehensive, phylogenetically informed meta-analysis integrating 20,212 effect estimates to test whether insecticides, fungicides and herbicides impair growth, reproduction, behaviour and metabolic biomarkers in diverse non-target organisms across trophic levels and exposure pathways.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Evidence that pesticide exposure can affect non-target organisms, that limited model-species approaches may miss varied responses, and that large-scale synthesis is needed jointly motivates a comprehensive meta-analytic study of pesticide effects across organisms and contexts."];
+  "N_1_1_0" [label="(1,1,0) Pesticides are used globally to support agricultural production."];
+  "N_2_1_0" [label="(2,1,0) [abduction-reasoning]: Given pesticides are used globally and this leads to sufficient environmental concentrations, therefore insecticide exposure at sufficient environmental concentrations can affect non-target organisms by disrupting their survival."];
+  "N_4_5_0" [label="(4,5,0) [deduction-reasoning]: Given insecticide exposure affects non-target organisms and this implies specific impacts, therefore insecticides targeting pest herbivores may cause long-term declines in non-target insect pollinators."];
+  "N_implicit_1" [label="(0,0,0) The global use of pesticides inevitably leads to environmental concentrations sufficient to affect non-target organisms."];
+  "N_implicit_2" [label="(0,0,0) If insecticide exposure at sufficient environmental concentrations can affect non-target organisms, then specific insecticides targeting pest herbivores may cause long-term declines in non-target insect pollinators."];
+  "N_implicit_3" [label="(0,0,0) Declines in non-target insect pollinators are an instance of widespread impacts across multiple taxa."];
+  "N_implicit_4" [label="(0,0,0) If impacts of pesticide exposure appear widespread across taxa, then relying on a limited number of easily cultured model species will fail to capture the variety of responses."];
+  "N_implicit_5" [label="(0,0,0) The failure to capture the variety of responses to pesticide exposure leads to significant debate, which can only be resolved by a cross-taxa synthesis."];
+  "N_implicit_6" [label="(0,0,0) If there is a lack of a cross-taxa synthesis and previous meta-analyses have considered only particular taxonomic groups or specific habitats, then there has been no systematic and overarching synthesis of how different types of pesticides affect the diversity of multiple non-target organisms."];
+  "N_implicit_7" [label="(0,0,0) When there is no systematic and overarching synthesis of pesticide effects, integrating a large number of experimental estimates across the globe is necessary to test hypotheses about their widespread impacts."];
+  "R4" [label="(0,0,0) If pesticide impacts are considered to extend beyond a single model context, then relying on a limited number of easily cultured model species may fail to capture the variety of responses to pesticide exposure."];
+  "R5" [label="(0,0,0) A failure of limited model-species approaches to capture varied responses to pesticide exposure helps motivate a cross-taxa synthesis for resolving debate about real-world pesticide hazards."];
+  "R6" [label="(0,0,0) The identified need for a cross-taxa synthesis supports the claim that understanding pesticide effects on diverse non-target organisms requires a more systematic overarching synthesis than limited prior syntheses provide."];
+  "R7" [label="(0,0,0) To address this synthesis gap, the study integrates 20,212 estimates of pesticide effects to test hypotheses about widespread impacts."];
+  "N_1_1_0" -> "N_2_1_0" [label="abduction-phenomenon"];
+  "N_implicit_1" -> "N_2_1_0" [label="abduction-knowledge"];
+  "N_2_1_0" -> "N_4_5_0" [label="deduction-case"];
+  "N_implicit_2" -> "N_4_5_0" [label="deduction-rule"];
+  "N_implicit_4" -> "R4" [label="deduction-rule"];
+  "N_implicit_3" -> "R4" [label="deduction-case"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "N_implicit_5" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "N_implicit_6" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "N_implicit_7" -> "R7" [label="abduction-knowledge"];
+  "N_4_5_0" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

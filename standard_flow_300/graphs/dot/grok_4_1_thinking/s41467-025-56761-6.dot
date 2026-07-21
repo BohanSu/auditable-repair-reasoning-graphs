@@ -1,0 +1,36 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56761-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper investigates whether, upon bacterial cell lysis in nutrient-limited environments, released E. coli Lon protease degrades co-liberated proteins into small peptides that surviving E. coli can import and metabolise, thereby supporting post-mortem nutrient recycling.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When nutrient limitation makes macromolecule catabolism and nutrient import important, evidence that a released protease converts lysed-cell proteins into usable peptide nutrients supports studying that process as nutrient recycling."];
+  "R4" [label="(0,0,0) Enzyme-degraded protein nutrients, exemplified by casein hydrolysate, can enhance wild-type E. coli growth in minimal media by providing an accessible nutrient form."];
+  "R5" [label="(0,0,0) Because bacteria import small peptides rather than whole proteins, proteins released during bacterial cell lysis would need to be degraded into small peptides before they can support growth of surviving cells."];
+  "R6" [label="(0,0,0) The growth support from wild-type E. coli lysate, together with the failure of Lon-null lysate to support growth, implicates released Lon protease in processing co-liberated proteins into small peptide nutrients usable by surviving E. coli."];
+  "R7" [label="(0,0,0) These findings motivate investigating Lon-mediated degradation of proteins released by dead E. coli cells as a post-mortem nutrient-recycling mechanism relevant to nutrient-limited bacterial environments."];
+  "n1" [label="(1,0,0) Currently there is: Most bacteria exhibit little growth in their natural environments, with nutrient limitation being a typical causative factor."];
+  "n12" [label="(0,0,0) Abduction-phenomenon: The lysate derived from dead wild-type E. coli cells supports the growth of live E. coli cells, whereas lysate from Lon-null mutants does not, indicating the requirement for Lon protease in processing."];
+  "n2" [label="(0,0,0) If most bacteria exhibit little growth in their natural environments with nutrient limitation being a typical causative factor, then how bacteria catabolise environmental macromolecules and import the resulting nutrients is of general importance for a broader understanding of microbial growth."];
+  "n3" [label="(2,0,0) deduction-reasoning: Currently there is most bacteria exhibit little growth with nutrient limitation, and if most bacteria exhibit little growth with nutrient limitation, then understanding catabolise is important, so understanding how bacteria catabolise environmental macromolecules and import the resulting nutrients is of general importance for a broader understanding of microbial growth. Deduction-rule: If understanding how bacteria catabolise environmental macromolecules and import the resulting nutrients is of general importance for a broader understanding of microbial growth, then demonstrating the role of Lon protease in post-mortem protein catabolism to peptides and suggesting how..."];
+  "n4" [label="(3,0,0) Currently there is: Bacteria typically transport small peptides into the cell to serve as a source of fixed nitrogen and amino acids."];
+  "n5" [label="(0,0,0) If bacteria typically transport small peptides into the cell to serve as a source of fixed nitrogen and amino acids, then prior degradation of whole proteins is necessary because whole proteins are typically too large for bacterial uptake, enzyme degradation produces amino acids and small peptides that can be transported into the bacterium to be used for growth."];
+  "n6" [label="(5,0,0) deduction-reasoning: Currently there is bacteria transport small peptides..., If bacteria transport small peptides..., then prior degradation necessary, so prior degradation is necessary because whole proteins are typically too large for bacterial uptake; enzyme degradation produces amino acids and small peptides that can be transported into the bacterium to be used for growth, for example in the almost universally used LB broth culture medium. Abduction-knowledge: Prior degradation is necessary because whole proteins are typically too large for bacterial uptake; enzyme degradation produces amino acids and small peptides that can be transported into the bacterium to be used for growth."];
+  "n7" [label="(0,0,0) If bacteria typically transport small peptides into the cell to serve as a source of fixed nitrogen and amino acids, then this transport is exploited in laboratory microbial culture when casein (the predominant protein component of milk) degraded with enzymes (a casein hydrolysate) is used as a source of nutrients for growth."];
+  "n8" [label="(4,0,0) deduction-reasoning: Currently there is bacteria transport small peptides..., If bacteria transport..., then this transport is exploited..., so this transport is exploited in laboratory microbial culture when casein degraded with enzymes is used as a source of nutrients for growth. Induction-common: The transport of small peptides is exploited in laboratory microbial culture using casein hydrolysate as a nutrient source."];
+  "n9" [label="(6,0,0) Induction-case: Casein hydrolysate gives a dose-dependent enhancement of wild-type Escherichia coli growth when used as an additive to minimal media with glycerol as a carbon source."];
+  "n1" -> "n3" [label="deduction-case"];
+  "n2" -> "n3" [label="deduction-rule"];
+  "n4" -> "n6" [label="deduction-case"];
+  "n5" -> "n6" [label="deduction-rule"];
+  "n4" -> "n8" [label="deduction-case"];
+  "n7" -> "n8" [label="deduction-rule"];
+  "n9" -> "R4" [label="induction-case"];
+  "n8" -> "R4" [label="induction-common"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "n6" -> "R5" [label="abduction-knowledge"];
+  "n12" -> "R6" [label="abduction-phenomenon"];
+  "R5" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "n3" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,27 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56765-2
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes using first-principles kinetic Monte Carlo simulations to investigate ammonia synthesis on structurally complex, inherently strained Ru nanoparticle catalysts, testing whether N2 dissociation and NHx hydrogenation can occur on rapidly communicating distinct sites and whether strain-engineered Ru nanoparticles could improve activity beyond conventional scaling constraints.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When idealized Ru surface models omit nanoparticle structural complexity and inherent random strain, kMC-based investigation of site-specific reaction pathways provides a way to evaluate how real Ru nanoparticle features influence ammonia-synthesis activity."];
+  "N_L2a_common" [label="(27,1,0) Inherent random strain enhances the activity by promoting the reaction on sites for N2 dissociation."];
+  "N_L3a_know" [label="(16,1,0) The site assembly offers the possibility of kinetic couplings where different parts of the reaction occur on different sites according to the principle of least resistance."];
+  "N_L4a_case" [label="(20,1,0) [induction-reasoning]: Given ideal models lack both structural complexity and inherent strain, therefore surface models commonly used in kinetic analysis of ammonia synthesis over Ru make it challenging to describe kinetic properties."];
+  "N_L4a_rule" [label="(0,0,0) If common surface models fail to describe kinetic properties and experiments are insufficient, then advanced kMC simulations are required."];
+  "N_L6a_know" [label="(19,2,0) Modification of the d-states of Ru by strain modifies the potential energy surface of the ammonia synthesis reaction."];
+  "N_L6a_phenom" [label="(18,1,0) Technical nanoparticles (NPs) are inherently strained."];
+  "R3" [label="(0,0,0) Inherent random strain is a mechanistically relevant property for Ru nanoparticle ammonia-synthesis catalysis because technical nanoparticles are strained and strain in Ru modifies the ammonia-synthesis potential energy surface."];
+  "R5" [label="(0,0,0) The difficulty of common Ru ammonia-synthesis surface models in describing kinetic properties motivates using advanced kinetic Monte Carlo simulations to investigate Ru nanoparticle kinetics, without by itself proving that such simulations are required."];
+  "R6" [label="(0,0,0) Advanced kinetic Monte Carlo investigation of Ru nanoparticle site assemblies can test whether kinetic coupling between different sites contributes to high catalytic activity."];
+  "R7" [label="(0,0,0) Kinetic coupling across structurally distinct sites and inherent random strain can be treated as activity-enhancing contributors in Ru nanoparticle ammonia synthesis, rather than as proven necessary conditions for matching experimental turnover frequency."];
+  "N_L6a_phenom" -> "R3" [label="abduction-phenomenon"];
+  "N_L6a_know" -> "R3" [label="abduction-knowledge"];
+  "N_L4a_case" -> "R5" [label="abduction-phenomenon"];
+  "N_L4a_rule" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "N_L3a_know" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "R7" [label="induction-case"];
+  "N_L2a_common" -> "R7" [label="induction-common"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

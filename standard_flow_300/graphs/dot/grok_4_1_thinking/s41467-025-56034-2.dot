@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56034-2
+  rankdir="TB";
+  "C1" [label="(3,0,0) induction-reasoning: Given the induction-case of complex networks representing natural/artificial systems with ubiquitous properties and the induction-common of enrichment via multiplexity/high-order, therefore the richness of network modeling and analysis opens the door for a wide variety of applications across multiple disciplines (gene regulation, protein interaction, brain networks, traffic networks, social networks)."];
+  "C2" [label="(5,0,0) induction-reasoning: Given the induction-case of network science studying information flow (electrochemical signals, pathogens, flights, social media) and the induction-common of richness/applications in diverse disciplines, therefore a dynamical process is often exploited that governs the short- to long-range flow between the components."];
+  "C3" [label="(7,0,0) abduction-reasoning: Given the abduction-phenomenon of largeness posing computational and redundancy challenges hampering understanding and the abduction-knowledge from flow study/richness of modeling, therefore an interesting possibility is to search for proper compressions of networks by means of grouping and coarse-graining nodes with redundant features or roles that preserve the flow."];
+  "N1" [label="(1,0,0) Induction-case: Currently, complex networks represent the structure of several natural and artificial complex systems that exhibit ubiquitous properties such as heterogeneous connectivity, efficient information transmission, mesoscale and hierarchical organization."];
+  "N18" [label="(18,0,0) Deduction-rule: If we capitalize on network density matrices similar to the Laplacian renormalization group to describe the information dynamics in the system, then typical macroscopic indicators like network entropy and free energy can be derived from them."];
+  "N2" [label="(2,0,0) Induction-common: Commonly, additional information can be used to enrich these models considering multiplexity and interdependence, high-order behavior and mechanisms."];
+  "N20" [label="(20,0,0) Deduction-case: Currently there is that such measures can be derived from the network partition function Z_τ as in equilibrium thermodynamics."];
+  "N22" [label="(22,0,0) Deduction-case: Currently we aim to reach a coarse-graining with minimum deviations from the full partition function profile."];
+  "N28" [label="(28,0,0) Induction-case: Currently, our approach leverages a machine learning model to automatically learn the vital similarity features that can be used to compress the network while preserving the macroscopic flow properties (identifying redundant roles in information flow via GNN representations of local features like degree, clustering, and core-number)."];
+  "N4" [label="(4,0,0) Induction-case: Currently, network science has been used to study the flow of information within networks, from electrochemical signals traveling between brain areas and pathogens spreading among social systems to flights in airline networks and messages shared on social media."];
+  "N56" [label="(56,0,0) Induction-common: Commonly, training graph neural networks on a vast number of real-world networks enables generalization to unseen datasets, leads to rapid and highly effective compressions across domains, and the approach differs from renormalization group methods (which uncover scaling or preserve topological properties like degree distribution) by preserving flow properties regardless of specific topology features, as confirmed by numerical experiments and model interpretability preservin..."];
+  "N6" [label="(6,0,0) Abduction-phenomenon: Currently, the largeness of many real-world systems poses a challenge due to computational complexity and components’ redundancies in roles and features, hampering a clear understanding of how complex systems operate."];
+  "N8" [label="(8,0,0) Induction-common: Commonly, the network renormalization method (and pioneering methods such as box-covering [40], geometric renormalization [48,49], spectral coarse-graining [51], and Laplacian renormalization [52]) focuses on compressing the size while preserving core properties, universality classes, or slow diffusion modes."];
+  "NROOT" [label="(0,0,0) This paper proposes a Network Flow Compression model that uses graph neural networks to identify nodes with redundant roles in complex networks and aggregate them into coarse-grained representations optimized to minimize deviations in the partition-function profile across propagation scales, thereby preserving macroscopic information-flow properties.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A compression method for complex networks is scientifically useful when it groups nodes with redundant roles into coarse-grained representations while retaining macroscopic flow information across the relevant propagation-scale profile."];
+  "R4" [label="(0,0,0) Macroscopic indicators of network information dynamics, such as entropy, free energy, and heat capacity, can be derived within a network density-matrix and partition-function formalism."];
+  "R5" [label="(0,0,0) The proposed coarse-graining objective is to minimize deviations from the full partition-function profile Z_tau, a profile from which macroscopic information-dynamics measures are derived."];
+  "R7" [label="(0,0,0) Searching for compressions that group or coarse-grain nodes with redundant features or roles to preserve flow is a network-compression objective related to the broader renormalization goal of reducing network size while preserving core properties."];
+  "R8" [label="(0,0,0) The proposed machine-learning approach uses graph neural networks to learn similarity features for compressing networks while preserving macroscopic flow properties, and training on many real-world networks supports generalization to unseen datasets."];
+  "N1" -> "C1" [label="induction-case"];
+  "N2" -> "C1" [label="induction-common"];
+  "N4" -> "C2" [label="induction-case"];
+  "C1" -> "C2" [label="induction-common"];
+  "N6" -> "C3" [label="abduction-phenomenon"];
+  "C2" -> "C3" [label="abduction-knowledge"];
+  "N18" -> "R4" [label="deduction-rule"];
+  "N20" -> "R4" [label="deduction-case"];
+  "R4" -> "R5" [label="deduction-rule"];
+  "N22" -> "R5" [label="deduction-case"];
+  "C3" -> "R7" [label="induction-case"];
+  "N8" -> "R7" [label="induction-common"];
+  "N28" -> "R8" [label="induction-case"];
+  "N56" -> "R8" [label="induction-common"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

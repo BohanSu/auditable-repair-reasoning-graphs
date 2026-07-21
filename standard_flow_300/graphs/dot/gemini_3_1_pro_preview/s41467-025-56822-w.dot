@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56822-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Develop a scalable Medical Multimodal Multitask Foundation Model (M3FM) as a single AI system for lung cancer screening by curating a large multimodal lung cancer screening dataset that combines 3-D CT volumes with clinical data, so that the model can support diverse screening-workflow tasks and address limitations of task-specific models.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R3" [label="(0,0,0) Across current LCS-related AI models and lung cancer risk models, existing task-specific LCS AI approaches tend to be constrained by single-task or single-modality development, data silos, limited multimodal integration, and costly annotation requirements."];
+  "R5" [label="(0,0,0) Because current foundation models cannot effectively perform LCS tasks from multimodal clinical data, particularly 3D LDCT scans, the stated rule supports a conditional need for a dedicated Medical Multimodal Multitask Foundation Model if foundation models are taken as the superior multitask-learning paradigm."];
+  "R6" [label="(0,0,0) Given the barriers of aligning 3D medical images and handling high-dimensional data, an integrated data-curation approach together with a scalable architecture is a plausible design response for building an effective LCS foundation model."];
+  "node_10" [label="(0,0,0) Induction-common: The common pattern is that existing task-specific AI models in LCS are limited by data silos, lack of multimodal integration, and high annotation costs."];
+  "node_12" [label="(15,0,0) In the case of NLP and CV, large Foundation Models (FMs) have updated the state-of-the-art performance."];
+  "node_13" [label="(16,0,0) In the case of medicine, increasing efforts are being made to develop biomedical language and generalist medical AI models."];
+  "node_14" [label="(0,0,0) Induction-common: The common pattern is that Foundation Models show unseen abilities to understand diverse data types and execute many tasks in a unified fashion."];
+  "node_15" [label="(14,0,0) Inductive-reasoning: Given FM success in general AI and medicine, therefore FMs are the ideal paradigm for handling diverse data and multiple tasks."];
+  "node_16" [label="(17,0,0) Currently there is a gap where no existing FM can effectively perform LCS tasks by interpreting 3D LDCT scans."];
+  "node_17" [label="(0,0,0) Deduction-rule: If FMs are the superior paradigm for multitask learning but no FM exists for the specific 3D multimodal requirements of LCS, then a dedicated Medical Multimodal Multitask Foundation Model must be developed."];
+  "node_19" [label="(20,0,0) Currently there is a requirement for domain-specific expertise to align 3D medical images and a limitation of small networks due to high dimensionality."];
+  "node_20" [label="(0,0,0) Deduction-rule: If we provide an integrated data curation approach and a scalable architecture, then we can build an effective LCS foundation model."];
+  "node_3" [label="(0,0,0) Abduction-knowledge: If a disease is a leading killer and a specific screening method is proven to reduce its mortality, then there is a fundamental need to implement that screening effectively."];
+  "node_4" [label="(4,0,0) Abductive-reasoning: Given the high mortality of lung cancer and the effectiveness of LCS, therefore there is an immediate need for multidisciplinary efforts to optimally implement LCS."];
+  "node_5" [label="(3,0,0) Currently LCS faces challenges like low screening rates, high false-positives, and a global shortage of radiologists."];
+  "node_6" [label="(0,0,0) Deduction-rule: If a critical medical screening process is hindered by human resource shortages and efficiency issues, then Artificial Intelligence (AI) is required to improve its quality and efficiency."];
+  "node_7" [label="(5,0,0) Deductive-reasoning: Given the shortage of radiologists and low LCS efficiency, therefore AI promises to improve the quality and efficiency of LCS significantly."];
+  "node_8" [label="(12,0,0) In the case of current LCS-related AI models, they are developed with small single-modality datasets for individual tasks."];
+  "node_phenomenon_1" [label="(0,0,0) Currently we observe lung cancer's high mortality and the proven effectiveness of LDCT screening."];
+  "node_phenomenon_1" -> "node_4" [label="abduction-phenomenon"];
+  "node_3" -> "node_4" [label="abduction-knowledge"];
+  "node_5" -> "node_7" [label="deduction-case"];
+  "node_6" -> "node_7" [label="deduction-rule"];
+  "node_12" -> "node_15" [label="induction-case"];
+  "node_13" -> "node_15" [label="induction-case"];
+  "node_14" -> "node_15" [label="induction-common"];
+  "node_8" -> "R3" [label="induction-case"];
+  "node_10" -> "R3" [label="induction-common"];
+  "node_17" -> "R5" [label="deduction-rule"];
+  "node_16" -> "R5" [label="deduction-case"];
+  "node_19" -> "R6" [label="abduction-phenomenon"];
+  "node_20" -> "R6" [label="abduction-knowledge"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "node_15" -> "NROOT" [label="induction-case"];
+  "node_4" -> "NROOT" [label="induction-case"];
+  "node_7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

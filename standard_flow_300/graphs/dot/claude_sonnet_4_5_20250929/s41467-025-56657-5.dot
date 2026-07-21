@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N10" [label="(8,1,0) Gut C. albicans strains with high IL-1β induction ability correlate with increased ulcerative colitis severity"];
+  "N23" [label="(22,1,0) C. albicans proteins have not been reported to directly influence intracellular cell death core components"];
+  "N5" [label="(5,1,0) Hyphal morphogenesis controls balance between gut commensalism and invasive infection"];
+  "N6" [label="(5,0,3) Ref [3]: Filament formation appears required for mortality from deep-seated infection"];
+  "NROOT" [label="(0,0,0) Investigate whether the hypha-specific C. albicans adhesin Als3 engages FADD/caspase-8 DED-associated signaling to influence innate immune responses, regulated cell-death pathways, intestinal inflammation, and fungal pathogenicity.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Converging evidence that hypha-associated C. albicans factors, Als3, and DED-linked FADD/caspase-8 signaling are each connected to inflammation, immune responses, or cell-death regulation motivates a focused mechanistic investigation."];
+  "R12" [label="(0,0,0) The association between high IL-1β-inducing gut C. albicans strains and ulcerative colitis severity motivates investigating whether C. albicans affects intracellular cell-death components through an uncharacterized mechanism."];
+  "R8" [label="(0,0,0) Hyphal morphogenesis and filament formation are linked to the shift of C. albicans from commensalism toward invasive, mortality-associated infection."];
+  "N5" -> "R8" [label="deduction-rule"];
+  "N6" -> "R8" [label="deduction-case"];
+  "N10" -> "R12" [label="abduction-phenomenon"];
+  "N23" -> "R12" [label="abduction-knowledge"];
+  "R12" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

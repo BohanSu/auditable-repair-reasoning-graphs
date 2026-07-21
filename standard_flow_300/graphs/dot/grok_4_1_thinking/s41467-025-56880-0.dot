@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56880-0
+  rankdir="TB";
+  "A_tackle" [label="(0,0,0) abduction: Given the phenomenon is how composite morphogenesis is directed and coordinated is largely unexplored, and the knowledge that studying mesoderm folding/extension tackles it, therefore to tackle this question we study the concomitant folding and extension of the prospective mesoderm during early Drosophila gastrulation."];
+  "I_nuc_obs2" [label="(0,0,0) induction: Given specific cases of apical constriction with nuclear displacement and common pattern that nuclei migrate basally during apical constriction, therefore nuclear position changes (basal migration/displacement) are tightly associated with apical constriction phases."];
+  "K_tackle" [label="(7,0,0) Background knowledge: If we study the concomitant folding and extension of prospective mesoderm during early Drosophila gastrulation, then we can direct and coordinate composite morphogenesis."];
+  "N12" [label="(12,0,0) Currently there is while the two tiers share the same nature, their origin differs."];
+  "N15" [label="(15,0,0) Currently there is the formation of the two-tier junctional system is under the control of synergistic AP and DV gene patterning systems."];
+  "N17" [label="(17,0,0) Currently there is nuclear migration precedes MyoII-LC formation."];
+  "N29" [label="(29,0,0) Currently there is MyoII lateral intensity and nuclear position as function of time with temporal cross-correlation between nuclear migration speed peak and MyoII lateral recruitment peak."];
+  "N33" [label="(33,0,0) Currently there is mesoderm front/cross-section time-lapse showing apical constriction and associated nuclear displacement."];
+  "N35" [label="(35,0,0) Currently there is mean nuclear position as function of mean apical cell surface at invagination phases with exponential fit."];
+  "N39" [label="(39,0,0) Currently there is in addition to molecular signalling, change in position/shape of cellular organelles plays a role in cell remodelling."];
+  "N40" [label="(40,0,0) Currently there is during apical constriction phase of mesoderm cells, nuclei migrate basally."];
+  "N6" [label="(6,0,0) The observed phenomenon is while great advances have been made for single morphogenetic processes, how composite morphogenesis is directed and coordinated is largely unexplored."];
+  "NROOT" [label="(0,0,0) Investigate in Drosophila mesoderm cells whether basal nuclear migration promotes cortical compartmentalization that directs RhoGEF2 and actomyosin into a lateral junctional tier, thereby coordinating composite morphogenesis through simultaneous tissue folding by apical constriction and tissue extension by cell intercalation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R10" [label="(0,0,0) In ventral furrow time-series observations, nuclear migration precedes and temporally correlates with MyoII-LC or lateral MyoII recruitment."];
+  "R11" [label="(0,0,0) Nuclear position and migration are plausible factors to investigate in tissue remodelling because nuclear migration temporally precedes lateral MyoII recruitment and organelle position or shape can contribute to cell remodelling."];
+  "R9" [label="(0,0,0) The two-tier junctional system is under synergistic anterior-posterior and dorsal-ventral patterning control, and the two tiers share the same nature while differing in origin."];
+  "N6" -> "A_tackle" [label="abduction-phenomenon"];
+  "K_tackle" -> "A_tackle" [label="abduction-knowledge"];
+  "N33" -> "I_nuc_obs2" [label="induction-case"];
+  "N40" -> "I_nuc_obs2" [label="induction-common"];
+  "N35" -> "I_nuc_obs2" [label="induction-case"];
+  "N15" -> "R9" [label="deduction-rule"];
+  "N12" -> "R9" [label="deduction-case"];
+  "N29" -> "R10" [label="induction-case"];
+  "N17" -> "R10" [label="induction-common"];
+  "R10" -> "R11" [label="abduction-phenomenon"];
+  "N39" -> "R11" [label="abduction-knowledge"];
+  "A_tackle" -> "NROOT" [label="induction-case"];
+  "I_nuc_obs2" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

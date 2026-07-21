@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-55999-4
+  rankdir="TB";
+  "N1" [label="(2,1,0) Currently, molecular forms of low nuclearity phosphorus species (P4, P2, P6) are highly unstable under ambient conditions."];
+  "N10" [label="(10,2,0) Induction-case: Trans-linear chains containing [P8] cages have been predicted to be more stable than P4."];
+  "N11" [label="(10,3,0) Induction-case: Helical chains containing [P8] cages have been predicted to be more stable than P4."];
+  "N12" [label="(10,4,0) Induction-case: Double-helical chains containing [P8] cages have been predicted to be more stable than P4."];
+  "N13" [label="(11,1,0) Induction-case: A phase-pure sample of fibrous phosphorus featuring parallel chains of P8 building blocks has been experimentally isolated."];
+  "N14" [label="(0,0,0) Induction-common: If multiple theoretical predictions and experimental evidence show P8-based chain structures are stable, then P8-based chains represent a promising structural motif for stable phosphorus allotropes."];
+  "N15" [label="(0,0,0) Induction-reasoning: Multiple predictions show P8 chains are stable and experimental isolation confirms this, and if such convergent evidence exists then P8 chains are promising, so P8-based chains represent a promising structural motif for stable phosphorus allotropes."];
+  "N16" [label="(12,1,0) Induction-case: Supramolecular chemistry can promote controllable polymerisation of phosphorus chains within nanochannels of porous hosts."];
+  "N19" [label="(0,0,0) Induction-common: If multiple different porous host materials successfully stabilize and polymerize phosphorus chains, then confinement in porous hosts is a general strategy for stabilizing novel phosphorus structures."];
+  "N21" [label="(15,1,0) Abduction-phenomenon: The structure determination of phosphorus materials in amorphous hosts (like carbon nanotubes) remains elusive."];
+  "N22" [label="(0,0,0) Abduction-knowledge: If a host material has high crystallinity, then it enables structural determination by diffraction methods."];
+  "N34" [label="(17,1,0) Abduction-phenomenon: Doping MOFs with phosphorus chains of atomic width may improve semiconducting properties of P-MOF composites."];
+  "N35" [label="(0,0,0) Abduction-knowledge: If P-MOF composites have improved semiconducting properties, then they address the bandgap challenges of red phosphorus-based materials."];
+  "N36" [label="(0,0,0) Abduction-reasoning: P-MOF composites may have improved semiconducting properties, and if such improvement occurs then bandgap challenges are addressed, so P-MOF composites may address the bandgap challenges of phosphorus materials."];
+  "N6" [label="(0,0,0) Deduction-rule: If a phosphorus allotrope has instability issues OR requires high energy synthesis OR has unsuitable bandgap, then new phosphorus structures with improved properties are needed."];
+  "N9" [label="(10,1,0) Induction-case: Cis-linear chains containing [P8] cages have been predicted to be more stable than P4."];
+  "NROOT" [label="(0,0,0) Investigate encapsulation of white phosphorus in the helical channels of the indium-based MOF MFM-300(In) as a crystalline confinement strategy for inducing and stabilising double-helical chains of butterfly P8 units, enabling their crystallographic characterisation and testing their relevance as structural building blocks of amorphous red phosphorus.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R2" [label="(0,0,0) Reports of phosphorus chain formation in porous host nanochannels and of encapsulated white phosphorus polymerisation in carbon nanotubes provide precedents that confinement in host channels can promote or stabilise phosphorus chain structures."];
+  "R3" [label="(0,0,0) Because structural determination of phosphorus materials in amorphous hosts remains elusive, high-crystallinity host materials offer a plausible route for diffraction-based structural determination of confined phosphorus species."];
+  "R6" [label="(0,0,0) Because low-nuclearity molecular phosphorus species are highly unstable under ambient conditions, there is a motivation to develop new phosphorus structures with improved properties."];
+  "N9" -> "N15" [label="induction-case"];
+  "N10" -> "N15" [label="induction-case"];
+  "N11" -> "N15" [label="induction-case"];
+  "N12" -> "N15" [label="induction-case"];
+  "N13" -> "N15" [label="induction-case"];
+  "N14" -> "N15" [label="induction-common"];
+  "N34" -> "N36" [label="abduction-phenomenon"];
+  "N35" -> "N36" [label="abduction-knowledge"];
+  "N16" -> "R2" [label="induction-case"];
+  "N19" -> "R2" [label="induction-common"];
+  "N21" -> "R3" [label="abduction-phenomenon"];
+  "N22" -> "R3" [label="abduction-knowledge"];
+  "N6" -> "R6" [label="deduction-rule"];
+  "N1" -> "R6" [label="deduction-case"];
+  "N15" -> "NROOT" [label="induction-case"];
+  "N36" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

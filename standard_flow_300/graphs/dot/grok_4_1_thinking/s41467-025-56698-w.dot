@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56698-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to optimize and standardize a faecal small-RNA sequencing pipeline, use it to define a reproducible murine faecal miRNA signature in health, and apply it longitudinally to chronic Trichuris muris infection to test whether faecal miRNAs, including wound-healing, barrier-integrity, and fibrosis-related miRNAs, can serve as non-invasive biomarkers of intestinal physiology and intestinal disease.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A standardized faecal small-RNA sequencing pipeline, a reproducible healthy murine faecal miRNA signature, and longitudinal infection-model profiling together support evaluating faecal miRNAs as robust non-invasive biomarkers of intestinal physiology and disease."];
+  "R1" [label="(0,0,0) Faecal miRNAs are extracellularly detectable, can be stabilized or transported in extracellular vesicles, and have documented roles in intestinal physiology, including barrier integrity, metabolism, mucosal immune regulation, and microbial homeostasis; therefore they provide a biologically plausible, non-invasive class of molecules to investigate as indicators of intestinal state."];
+  "R3" [label="(0,0,0) Given limited understanding of reproducibility and stability in faecal miRNA profiling, together with the biological plausibility of faecal miRNAs as non-invasive indicators of intestinal state, it is reasonable to develop an optimized faecal small-RNA sequencing pipeline and use it to define a reproducible murine faecal miRNA signature in health."];
+  "R4" [label="(0,0,0) Because chronic Trichuris muris infection disrupts intestinal epithelial, microbial, and immune processes that are regulated by intestinal miRNAs, this infection model motivates testing whether faecal miRNA profiles shift during infection, particularly for miRNAs linked to barrier integrity, wound-healing or repair responses, and fibrosis-related intestinal remodeling where such annotations are measured."];
+  "R5" [label="(0,0,0) Combining an optimized pipeline for a reproducible murine faecal miRNA signature with longitudinal application in chronic Trichuris muris infection can address reproducibility limitations while evaluating whether faecal miRNAs reveal biologically meaningful changes relevant to intestinal physiology and intestinal disease."];
+  "R6" [label="(0,0,0) The study therefore aims to develop and evaluate a standardized faecal small-RNA sequencing workflow that defines a reproducible murine faecal miRNA signature in health and tests, in chronic Trichuris muris infection, whether faecal miRNAs can act as non-invasive biomarkers of intestinal physiology and intestinal disease."];
+  "n_case_bg2" [label="(2,0,0) Induction-case: Mature miRNAs can be detected extracellularly in bodily fluids including faeces."];
+  "n_case_lim1" [label="(7,0,0) Induction-case: Previous work has employed microarrays and qPCRs to study faecal miRNAs, primarily in colorectal cancer and IBD."];
+  "n_case_lim2" [label="(8,0,0) Induction-case: In gastrointestinal cancers and IBD, alterations in specific miRNAs have been identified as novel diagnostic tools and indicators of disease severity and prognosis."];
+  "n_case_lim3" [label="(9,0,0) Induction-case: Substantial heterogeneity in study design (sample storage, miRNA isolation, data analysis) limits the reproducibility and utility of these findings."];
+  "n_case_lim4" [label="(10,0,0) Induction-case: More recently, faecal miRNA profiles in humans and mice were examined using high-throughput small RNA sequencing."];
+  "n_common_bg" [label="(0,0,0) Induction-common: Across literature on nematodes, plants, animals, bodily fluids and EVs, miRNAs are stabilized extracellularly for inter-tissue communication and play essential regulatory roles in intestinal physiology, enabling faecal detection."];
+  "n_common_final" [label="(0,0,0) Induction-common: In scientific literature addressing biomarker gaps, combining optimised pipelines/meta-analysis for core profiles with application to disease models (e.g., infection) demonstrates utility and enables hypothesis generation, including longitudinal healthy baselines."];
+  "n_common_lim" [label="(0,0,0) Induction-common: In biomarker research using varied methods and designs for faecal miRNAs, heterogeneity consistently limits reproducibility across studies and stability assessment in health."];
+  "n_know_inf" [label="(5,0,0) Abduction-knowledge: miRNAs in the intestine regulate barrier integrity, metabolism, mucosal immune response, microbial homoeostasis and the processes (disruption, perturbation, Th1/Th2 polarisation) affected by T. muris."];
+  "n_lim" [label="(11,0,0) induction-reasoning: From cases of prior microarray/qPCR work, identified alterations, heterogeneity limitations, recent sequencing approaches, and the common pattern of method variation, therefore there remains a limited understanding of the reproducibility of miRNA profiles in faecal samples across studies, or if faecal miRNA profiles are stable in health and homoeostasis."];
+  "n_phen_inf" [label="(17,0,0) Abduction-phenomenon: T. muris is a model of human Trichuris trichiura (infecting >500 million, causing chronic diarrheal disease in children) and during pathogenesis disrupts the intestinal epithelium, perturbs the microbiota, and induces Th1- or Th2-polarised mucosal immune response (covering sentences 16-19)."];
+  "n_rule_final" [label="(0,0,0) Deduction-rule: If background shows miRNAs/EVs as promising non-invasive faecal tool for intestinal disease study but with limited reproducibility/stability in health (n_bg + n_lim), and T. muris infection model reveals miRNA-regulated disruption with potential differential expression for repair (n_inf), then to address these gaps and demonstrate pipeline utility in hypothesis generation, develop the optimised faecal small RNA sequencing pipeline, perform meta-analysis of murine data, establi..."];
+  "n_case_lim1" -> "n_lim" [label="induction-case"];
+  "n_case_lim2" -> "n_lim" [label="induction-case"];
+  "n_case_lim3" -> "n_lim" [label="induction-case"];
+  "n_case_lim4" -> "n_lim" [label="induction-case"];
+  "n_common_lim" -> "n_lim" [label="induction-common"];
+  "n_case_bg2" -> "R1" [label="induction-case"];
+  "n_common_bg" -> "R1" [label="induction-common"];
+  "n_lim" -> "R3" [label="abduction-phenomenon"];
+  "R1" -> "R3" [label="abduction-knowledge"];
+  "n_phen_inf" -> "R4" [label="abduction-phenomenon"];
+  "n_know_inf" -> "R4" [label="abduction-knowledge"];
+  "R3" -> "R5" [label="induction-case"];
+  "n_common_final" -> "R5" [label="induction-common"];
+  "n_rule_final" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

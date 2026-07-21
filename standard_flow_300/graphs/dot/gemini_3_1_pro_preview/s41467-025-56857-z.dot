@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56857-z
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper investigates in mice whether the lupus-risk Ncf1 R90H polymorphism, which is linked to altered ROS production, promotes systemic lupus erythematosus-like disease when combined with murine norovirus infection as an environmental trigger, thereby testing a defined gene–environment synergy for disease induction.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When a complex autoimmune disease has difficult-to-identify genetic and environmental causes, a human-relevant lupus-risk allele can be studied in mice together with a defined infection to test whether their combination induces disease."];
+  "Node_Imp_A0" [label="(0,0,0) Inductive: Given SLE is caused by an interplay of many unknown genes and environmental factors, and GWAS has identified hundreds of loci strengthening the view that SLE is a polygenic disease, therefore currently SLE is a complex polygenic disease where specific causative genes and environmental factors are hard to identify."];
+  "Node_Imp_A1" [label="(0,0,0) If a disease is highly complex and polygenic, then precisely pinpointing and functionally confirming the causative factors is difficult."];
+  "Node_Imp_A2" [label="(0,0,0) If it is difficult to pinpoint causative factors, then the identification of the causative SNPs and inducing environmental factors remains largely unknown."];
+  "Node_Imp_A3" [label="(0,0,0) If the identification of the causative SNPs and inducing environmental factors remains largely unknown, then an alternative approach is to use genetic crosses of inbred animals susceptible to SLE."];
+  "Node_Imp_A4" [label="(0,0,0) If an alternative approach to identify the underlying genes has been to use genetic crosses of inbred animals susceptible to SLE, then to understand the pathogenic role of the NCF1 polymorphism relevant to humans, we address the role of the Ncf1 R90H alleles in mice."];
+  "Node_S1" [label="(1,0,0) Systemic lupus erythematosus (SLE) is a common and complex autoimmune disease, caused by an interplay of many unknown genes and environmental factors."];
+  "Node_S2" [label="(2,0,0) Deductive: Given currently SLE is a complex polygenic disease where specific causative genes and environmental factors are hard to identify, and if a disease is highly complex and polygenic, then precisely pinpointing and functionally confirming the causative factors is difficult, therefore currently it has been difficult to precisely pinpoint and functionally confirm the causative factors."];
+  "Node_S23" [label="(23,0,0) Deductive: Given currently an alternative approach to identify the underlying genes has been to use genetic crosses of inbred animals susceptible to SLE, and if an alternative approach to identify the underlying genes has been to use genetic crosses of inbred animals susceptible to SLE, then to understand the pathogenic role of the NCF1 polymorphism relevant to humans, we address the role of the Ncf1 R90H alleles in mice, therefore currently to understand the pathogenic role of the NCF1 polymorphism relevant to humans, we have addressed the role of the Ncf1 R90H alleles in mice."];
+  "Node_S25" [label="(25,0,0) To our surprise, the Ncf1 90H allele does not enhance pristane-induced lupus in the mice under specific pathogen-free conditions."];
+  "Node_S26" [label="(26,0,0) However, infection with MNV causes the development of severe lupus in Ncf1 90H mice irrespective of whether these were naïve or injected with pristane."];
+  "Node_S3" [label="(3,0,0) Thanks to genome-wide association studies (GWAS), hundreds of lupus disease-associated loci in the genome have been identified, which has strengthened the view that SLE is indeed a polygenic disease most likely regulated by variants in loci determining tolerance and immune responsiveness of the immune system."];
+  "Node_S4" [label="(4,0,0) Deductive: Given currently it has been difficult to precisely pinpoint and functionally confirm the causative factors, and if it is difficult to pinpoint causative factors, then the identification of the causative SNPs and inducing environmental factors remains largely unknown, therefore currently the identification of the causative SNPs and the inducing environmental factors remains largely unknown."];
+  "Node_S5" [label="(5,0,0) Deductive: Given currently the identification of the causative SNPs and the inducing environmental factors remains largely unknown, and if the identification of the causative SNPs and inducing environmental factors remains largely unknown, then an alternative approach is to use genetic crosses of inbred animals susceptible to SLE, therefore currently an alternative approach to identify the underlying genes has been to use genetic crosses of inbred animals susceptible to SLE."];
+  "R6" [label="(0,0,0) The observations support that the Ncf1 90H allele does not enhance pristane-induced lupus under specific pathogen-free conditions, while MNV infection is associated with development of severe lupus in Ncf1 90H mice; this implicates the Ncf1 90H–MNV combination in severe lupus without proving that the combination is strictly required in all settings."];
+  "R7" [label="(0,0,0) Because the study addressed the pathogenic role of human-relevant Ncf1 R90H alleles in mice, and the observed phenotype links MNV infection with severe lupus in Ncf1 90H mice, these premises motivate investigating whether Ncf1 R90H and MNV infection act together to promote lupus-like disease in mice."];
+  "Node_S1" -> "Node_Imp_A0" [label="induction-case"];
+  "Node_S3" -> "Node_Imp_A0" [label="induction-common"];
+  "Node_Imp_A0" -> "Node_S2" [label="deduction-case"];
+  "Node_Imp_A1" -> "Node_S2" [label="deduction-rule"];
+  "Node_S2" -> "Node_S4" [label="deduction-case"];
+  "Node_Imp_A2" -> "Node_S4" [label="deduction-rule"];
+  "Node_S4" -> "Node_S5" [label="deduction-case"];
+  "Node_Imp_A3" -> "Node_S5" [label="deduction-rule"];
+  "Node_S5" -> "Node_S23" [label="deduction-case"];
+  "Node_Imp_A4" -> "Node_S23" [label="deduction-rule"];
+  "Node_S25" -> "R6" [label="induction-case"];
+  "Node_S26" -> "R6" [label="induction-common"];
+  "R6" -> "R7" [label="abduction-phenomenon"];
+  "Node_S23" -> "R7" [label="abduction-knowledge"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

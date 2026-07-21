@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56856-0
+  rankdir="TB";
+  "N13" [label="(7,0,0) Currently, the scalability of current oligo-selection methods is limited."];
+  "N16" [label="(8,0,0) Currently, given that the current length limit for de novo oligonucleotide synthesis is 200 nt, dedicating 40 nt to the selection region regardless of the number of oligo subsets is inefficient."];
+  "N17" [label="(0,0,0) deduction-reasoning: Given 200 nt limit and 40 nt dedicated, and if dedicating fixed is inefficient, therefore dedicating 40 nt is inefficient."];
+  "N18" [label="(9,0,0) Currently, to prevent library depletion during repeated subset selection, it is essential to enable oligo library amplification, which requires an additional 40 nt replication region where universal primers bind."];
+  "N19" [label="(0,0,0) deduction-reasoning: Given need for amplification to prevent depletion, and if amplification requires additional region, therefore additional 40 nt replication region."];
+  "N22" [label="(11,0,0) Currently, despite the introduction of multiplexed target selection methods, the requirement for primer synthesis proportionally increases with the number of target subsets, posing a bottleneck."];
+  "N23" [label="(0,0,0) induction-reasoning: Given multiplexed target selection methods introduced, and the requirement for primer synthesis proportionally increases with the number of target subsets, therefore posing a bottleneck."];
+  "N24" [label="(8,19,12) Abduction-knowledge: Synthesis and selection can be performed for multiplex oligonucleotide libraries step-by-step (from reference opinion on purification)."];
+  "N26" [label="(19,0,0) Induction-case: The synthesis- and selection-based approach involves cyclic reactions."];
+  "N27" [label="(0,0,0) Induction-common: Cyclic reactions allow higher groups in the hierarchy to be selected with fewer cycles."];
+  "N29" [label="(16,0,0) Deduction-rule: If there are four possible bases in each nucleotide, then four to the power of N oligo subsets can be encoded by N nt."];
+  "N30" [label="(0,0,0) Deduction-case: Currently, the proposed method uses N nt for the barcode selection region."];
+  "N31" [label="(0,0,0) deduction-reasoning: Given the proposed method uses N nt for the barcode selection region, and if there are four possible bases in each nucleotide then four to the power of N oligo subsets can be encoded by N nt, therefore 4^N subsets can be encoded."];
+  "N33" [label="(0,0,0) Deduction-rule: If the de novo synthesis limit is 200 nt and 40 nt is dedicated to the selection region regardless of the number of oligo subsets, then it is inefficient."];
+  "N34" [label="(0,0,0) Deduction-rule: If amplification is essential to prevent library depletion, then it requires an additional 40 nt replication region."];
+  "N36" [label="(0,0,0) Induction-common: The requirement for primer synthesis proportionally increases with the number of target subsets."];
+  "NROOT" [label="(0,0,0) This paper proposes a cyclic synthesis-and-selection technique for retrieving oligonucleotide subsets from a complex library: single-nucleotide barcode positions in N-nt barcodes are recognized through stepwise chemistry using reversible and irreversible terminators, enabling hierarchical and scalable retrieval of up to 4^N encoded subsets without requiring subset-specific primers.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A barcode-based oligonucleotide selection method becomes scalable when single-nucleotide barcode positions are read through cyclic synthesis-and-selection chemistry rather than by synthesizing subset-specific primer pairs for each target subset."];
+  "R10" [label="(0,0,0) Given that current oligo-selection methods have limited scalability and that synthesis and selection can be performed step-by-step for multiplex oligonucleotide libraries, a step-by-step synthesis-and-selection strategy is a plausible design direction to investigate for scalable oligonucleotide subset selection."];
+  "R11" [label="(0,0,0) Because the synthesis-and-selection approach involves cyclic reactions, and cyclic reactions allow higher groups in a hierarchy to be selected with fewer cycles, the approach supports hierarchical selection of oligonucleotide subsets."];
+  "R13" [label="(0,0,0) Combining hierarchical cyclic selection with an N-nt barcode selection region that can encode up to 4^N oligonucleotide subsets makes hierarchical retrieval from an N-nt barcode space a plausible capability of the synthesis-and-selection method."];
+  "N16" -> "N17" [label="deduction-case"];
+  "N33" -> "N17" [label="deduction-rule"];
+  "N18" -> "N19" [label="deduction-case"];
+  "N34" -> "N19" [label="deduction-rule"];
+  "N22" -> "N23" [label="induction-case"];
+  "N36" -> "N23" [label="induction-common"];
+  "N29" -> "N31" [label="deduction-rule"];
+  "N30" -> "N31" [label="deduction-case"];
+  "N13" -> "R10" [label="abduction-phenomenon"];
+  "N24" -> "R10" [label="abduction-knowledge"];
+  "N27" -> "R11" [label="deduction-rule"];
+  "N26" -> "R11" [label="deduction-case"];
+  "N31" -> "R13" [label="abduction-phenomenon"];
+  "R11" -> "R13" [label="abduction-knowledge"];
+  "N17" -> "NROOT" [label="induction-case"];
+  "N19" -> "NROOT" [label="induction-case"];
+  "N23" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

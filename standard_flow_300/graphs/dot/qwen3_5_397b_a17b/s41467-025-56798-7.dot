@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "Imp5" [label="(0,0,0) If a challenge remains unresolved, it becomes a cutting-edge task."];
+  "Imp9" [label="(0,0,0) If ceramics have defects from sintering and defects hinder performance, then poor performance is due to defects."];
+  "NROOT" [label="(0,0,0) Develop Pb0.92Ba0.08[Zr0.50+xTi0.48−x(Nb0.5Sb0.5)0.02]O3 PZT-based ceramics by tuning the Zr/Ti ratio to form a morphotropic phase boundary and by applying tape-casting, lamination, and hot-pressing process engineering to densify the microstructure and reduce oxygen vacancies, with the goal of simultaneously improving piezoelectric performance and thermal stability.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Because piezoelectric devices require both high piezoelectric response and reliable temperature stability, a viable materials design should combine a composition/phase strategy that enhances piezoelectricity with a processing strategy that improves microstructural quality and suppresses defect-related instability."];
+  "R17" [label="(0,0,0) Strategy 1 adjusts the Zr/Ti ratio to establish the morphotropic phase boundary, where a flattened Landau energy profile and multiphase coexistence support enhanced piezoelectricity."];
+  "R9" [label="(0,0,0) Process engineering using tape casting, lamination, and hot pressing to achieve a denser microstructure is supported as a route that reduces pores and oxygen vacancies and thereby improves piezoelectric properties and temperature stability."];
+  "S13" [label="(13,0,0) Pores reduce density and breakdown strength, while oxygen vacancies construct dipole defects hindering poling."];
+  "S14" [label="(14,0,0) Dipole defects pin domain switching at room temperature and de-pin at high temperature, worsening stability."];
+  "S18" [label="(18,0,0) Strategy 1 (Phase Boundary Engineering) adjusts the Zr/Ti ratio to establish the morphotropic phase boundary (MPB)."];
+  "S19" [label="(19,0,0) The flattened Landau energy profile at MPB and multi-phase coexistence boost piezoelectricity."];
+  "S20" [label="(20,0,0) Strategy 2 (Process Engineering) employs tape casting, lamination, and hot pressing to achieve denser microstructure."];
+  "S26" [label="(26,0,0) Process engineering reduces pores and oxygen vacancies, improving piezoelectric properties and boosting temperature stability."];
+  "S4" [label="(4,0,0) A trade-off relationship between piezoelectricity and temperature stability poses a significant unresolved challenge."];
+  "S5" [label="(5,0,0) Developing piezoceramics with both satisfactory properties has become a cutting-edge task."];
+  "S4" -> "S5" [label="deduction-case"];
+  "Imp5" -> "S5" [label="deduction-rule"];
+  "S13" -> "Imp9" [label="deduction-case"];
+  "S14" -> "Imp9" [label="deduction-rule"];
+  "S26" -> "R9" [label="deduction-rule"];
+  "S20" -> "R9" [label="deduction-case"];
+  "S19" -> "R17" [label="deduction-rule"];
+  "S18" -> "R17" [label="deduction-case"];
+  "Imp9" -> "NROOT" [label="induction-case"];
+  "R17" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "S5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

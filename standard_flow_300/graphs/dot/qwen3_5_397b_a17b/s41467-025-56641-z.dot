@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N14" [label="(7,2,0) Currently, achieving dense labeling in fixed tissues has remained challenging."];
+  "N15" [label="(8,1,0) If uniform and continuous membrane labeling is enabled, ultrastructure is preserved alongside visualization of associated proteins."];
+  "N7" [label="(4,1,0) Currently, the net result of expansion is that biomolecules are separated in space to distances far enough to resolve them."];
+  "N8" [label="(0,0,0) If biomolecules are separated to distances far enough, they can be resolved."];
+  "N9" [label="(0,0,0) Deduction-reasoning: Currently, the net result of expansion is that biomolecules are separated in space to distances far enough to resolve them, and if biomolecules are separated to distances far enough, they can be resolved, so ExM resolves biomolecules."];
+  "NROOT" [label="(0,0,0) Develop and validate ultrastructural membrane expansion microscopy (umExM): a method based on rationally designed membrane-anchorable probes and optimized expansion microscopy to densely label cellular membranes in fixed tissues, preserve ultrastructure, and enable nanoscale visualization and tracing of membranous structures, including higher-resolution iterative expansion imaging, using standard confocal microscopy.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Combining membrane-compatible probe design with an optimized expansion microscopy workflow can address the need for dense membrane labeling while preserving ultrastructure and enabling nanoscale visualization with conventional optical readout."];
+  "R6" [label="(0,0,0) Because achieving dense labeling in fixed tissues has remained challenging, and uniform and continuous membrane labeling would preserve ultrastructure alongside visualization of associated proteins, there is a need for a method that enables uniform membrane labeling in fixed tissues."];
+  "N8" -> "N9" [label="deduction-rule"];
+  "N7" -> "N9" [label="deduction-case"];
+  "N14" -> "R6" [label="abduction-phenomenon"];
+  "N15" -> "R6" [label="abduction-knowledge"];
+  "N9" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

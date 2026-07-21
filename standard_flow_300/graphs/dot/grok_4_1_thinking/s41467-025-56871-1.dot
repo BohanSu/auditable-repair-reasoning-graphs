@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56871-1
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study in Bacillus subtilis tests whether prevailing models that assign primary sensory roles to RsbR proteins within the stressosome should be revised: environmental stress detection and subsequent σB activation may depend chiefly on RsbT-mediated signaling, while stressosome components, including RsbR proteins, mainly modulate the magnitude and timing of the σB general stress response.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R10" [label="(0,0,0) In Bacillus subtilis, σB activates a general stress regulon of about 200 genes in response to energy or environmental stress, including environmental and physical stressors such as salt, ethanol, heat, acid, sodium nitroprusside, and blue light."];
+  "R5" [label="(0,0,0) Because RsbT availability to activate RsbU is controlled by sequestration in stressosomes, and stress sensation is modeled as releasing RsbT to activate downstream σB signaling, RsbT release is central in the environmental-stress branch of σB activation."];
+  "R7" [label="(0,0,0) The evidence supports that RsbR proteins affect σB response profiles and signaling output, but stimulation of RsbT kinase activity by putative RsbR stress sensing is not necessary for σB activation."];
+  "R8" [label="(0,0,0) In Bacillus subtilis, σB activity is controlled by the RsbVW partner-switching mechanism: upon stress exposure, dephosphorylated RsbV binds RsbW, releasing σB to activate its regulon."];
+  "case12" [label="(12,0,0) deduction-case: Upon stress exposure, RsbV becomes dephosphorylated, making it a preferred partner for RsbW; RsbW releases σ^B in favor of binding RsbV, allowing σ^B to activate its regulon."];
+  "case16" [label="(16,0,0) deduction-case: The availability of RsbT to activate RsbU is controlled by sequestration of RsbT in large cytoplasmic complexes termed stressosomes."];
+  "case5" [label="(5,0,0) induction-case: In B. subtilis, σ^B activates the general stress regulon, comprising some 200 genes, in response to energy or environmental stress."];
+  "case7" [label="(7,0,0) induction-case: Environmental and physical stressors include salt, ethanol, heat, acid, sodium nitroprusside, and blue light."];
+  "case9" [label="(9,0,0) deduction-case: In B. subtilis, σ^B activity is ultimately controlled by the RsbVW partner-switching mechanism."];
+  "common52" [label="(52,0,0) induction-common: The putative outcome of RsbR stress sensing (stimulation of RsbT kinase activity) is not necessary for σ^B activation, as reduced signaling still occurs even in mutant strains with unphosphorylatable RsbS."];
+  "paralog_impact" [label="(50,0,0) deduction-case: The RsbR paralogs are distinct with respect to σ^B response profiles when subjected to different environmental stressors, showing that RsbR proteins impact σ^B responses; this is at least consistent with a sensory function."];
+  "rule20" [label="(20,0,0) deduction-rule: If stress sensation leads to release of RsbT, which then activates downstream steps leading to release of σ^B, then RsbT release is central."];
+  "rule20" -> "R5" [label="deduction-rule"];
+  "case16" -> "R5" [label="deduction-case"];
+  "paralog_impact" -> "R7" [label="induction-case"];
+  "common52" -> "R7" [label="induction-common"];
+  "case5" -> "R10" [label="induction-case"];
+  "case7" -> "R10" [label="induction-common"];
+  "case12" -> "R8" [label="deduction-rule"];
+  "case9" -> "R8" [label="deduction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,13 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56842-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper uses atomic-resolution electron tomography to reconstruct three-dimensional atomic coordinates of gold–palladium five-fold twinned icosahedral nanoparticles and investigate how intrinsic angular deficiency and strain are relieved through a Janus-like mechanism involving edge dislocations and amorphization that enlarge solid angles of selected tetrahedra on one hemisphere while the opposite hemisphere remains nearly ideal fcc.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When three-dimensional atomic-structure measurements resolve local strain, defects, and ordered versus disordered tetrahedral regions in fivefold-twinned nanoparticles, they can support a mechanistic model for how angular deficiency is compensated."];
+  "R1" [label="(0,0,0) Icosahedral Pt alloy catalysts provide a specific example of superior activity in an icosahedral particle, and fivefold twinning into decahedra or icosahedra is common in multiply twinned particles; therefore fivefold-twinned icosahedral MTPs are scientifically important structural motifs to examine."];
+  "node_1" [label="(3,0,0) Currently Wu et al. reported that the icosahedral Pt alloy catalysts have superior activity toward oxygen reduction reaction."];
+  "node_2" [label="(1,0,0) Twinning of tetrahedra to form decahedra or icosahedra with fivefold symmetry is common in multiply twinned particles (MTPs)."];
+  "node_1" -> "R1" [label="induction-case"];
+  "node_2" -> "R1" [label="induction-common"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

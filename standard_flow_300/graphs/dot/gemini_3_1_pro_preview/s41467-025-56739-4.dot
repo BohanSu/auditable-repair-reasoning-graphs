@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56739-4
+  rankdir="TB";
+  "N1" [label="(1,0,0) The rapid growth of artificial intelligence and machine learning has resulted in increasingly complex and large models."];
+  "N10" [label="(17,0,0) [abduction-reasoning]: Given progress in the promising neuromorphic field is impeded by the absence of benchmarks, therefore standard and rigorous benchmarking is necessary for the neuromorphic community."];
+  "N11" [label="(19,0,0) The variety of approaches to exploring brain-inspired principles creates difficulties in defining a set of criteria for what should be benchmarked as a neuromorphic solution."];
+  "N12" [label="(24,0,0) The diversity of frameworks comes at the cost of portability and standardization, which limits the ease of benchmark implementation."];
+  "N13" [label="(0,0,0) [induction-reasoning]: Given difficulties in defining criteria and limited ease of benchmark implementation due to diversity, therefore currently, existing neuromorphic benchmarking efforts face significant challenges."];
+  "N17" [label="(0,0,0) [abduction-reasoning]: Given existing efforts face significant challenges and standard benchmarking is necessary, therefore currently, a new comprehensive benchmark framework must be introduced to tackle these challenges."];
+  "N18" [label="(29,0,0) If a new comprehensive benchmark framework must be introduced to tackle these challenges, then NeuroBench, a dual-track, multi-task benchmark framework, is presented."];
+  "N2" [label="(2,0,0) The substantial growth rate of model computation exceeds efficiency gains realized through Moore and Dennard technology scaling."];
+  "N3" [label="(0,0,0) [induction-reasoning]: Given AI models are growing rapidly and computation exceeds efficiency gains, therefore currently, current computing techniques face severe efficiency and resource constraints."];
+  "N4" [label="(4,0,0) If current computing techniques face severe efficiency and resource constraints, then the urgency for exploring new resource-efficient and scalable computing architectures has intensified."];
+  "N5" [label="(0,0,0) [deduction-reasoning]: Given current computing techniques face severe efficiency and resource constraints, therefore currently, there is an urgent need for new resource-efficient architectures."];
+  "N6" [label="(6,0,0) If there is an urgent need for new resource-efficient architectures, then neuromorphic systems hold a critical position as the brain exemplifies an exceptional model for scalable, energy-efficient computation."];
+  "N7" [label="(5,0,0) [deduction-reasoning]: Given there is an urgent need for new architectures and neuromorphic systems hold a critical position, therefore neuromorphic computing has emerged as a promising area in addressing these challenges."];
+  "N8" [label="(15,0,0) Progress in the field of neuromorphic research is impeded due to the absence of fair and widely-adopted objective metrics and benchmarks."];
+  "NROOT" [label="(0,0,0) The paper proposes NeuroBench as a community-driven, dual-track benchmark suite with shared datasets, hierarchical metrics, and open-source tooling to support fair and inclusive evaluation of neuromorphic algorithms and neuromorphic hardware alongside conventional computing approaches.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A comprehensive neuromorphic benchmarking framework can be motivated by efficiency pressures in AI computing, the promise of neuromorphic approaches, and the need for fair, standardized evaluation resources."];
+  "R7" [label="(0,0,0) Given that a new comprehensive benchmark framework is needed to tackle neuromorphic benchmarking challenges, NeuroBench is presented as a dual-track, multi-task benchmark framework."];
+  "N1" -> "N3" [label="induction-case"];
+  "N2" -> "N3" [label="induction-common"];
+  "N4" -> "N5" [label="deduction-rule"];
+  "N3" -> "N5" [label="deduction-case"];
+  "N6" -> "N7" [label="deduction-rule"];
+  "N5" -> "N7" [label="deduction-case"];
+  "N8" -> "N10" [label="abduction-phenomenon"];
+  "N7" -> "N10" [label="abduction-knowledge"];
+  "N11" -> "N13" [label="induction-case"];
+  "N12" -> "N13" [label="induction-common"];
+  "N13" -> "N17" [label="abduction-phenomenon"];
+  "N10" -> "N17" [label="abduction-knowledge"];
+  "N18" -> "R7" [label="deduction-rule"];
+  "N17" -> "R7" [label="deduction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

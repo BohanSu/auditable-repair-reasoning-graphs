@@ -1,0 +1,45 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56738-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Test selective inhibition of host-cell homologous recombination factors as a host-cell strategy to redirect rAAV vector genome joining toward the non-homologous end-joining pathway, thereby improving concatenation and expression of split transgenes in dual AAV vectors to enable payload size expansion for gene therapy.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R4" [label="(0,0,0) Because rAAV vector genomes can join through ITR-ITR interactions and such joined double-stranded vector genomes resemble DNA-repair substrates, host DNA repair pathways are plausible contributors to vector genome joining."];
+  "R5" [label="(0,0,0) Promiscuous ITR joining into many nonproductive configurations is a mechanistic reason that split-transgene dual-vector systems can be inefficient."];
+  "R6" [label="(0,0,0) The improvement produced by an AP fragment may be explained by HR-mediated recombination, leaving HR's contribution to split-transgene reconstitution as a mechanistic question to test."];
+  "R7" [label="(0,0,0) rAAV's small genetic payload constrains the coding and regulatory elements that can be included in therapeutic cassettes."];
+  "n10" [label="(20,0,0) If no viral enzymes are delivered, then VG circularization/concatenation must be orchestrated by host cellular factors."];
+  "n11" [label="(18,0,0) deduction-reasoning: Given no viral enzymes are packaged and if no viral enzymes are delivered then VG circularization/concatenation must be orchestrated by host cellular factors, therefore host cellular factors orchestrate VG circularization/concatenation."];
+  "n12" [label="(16,0,0) Currently, VGs can circularize and concatenate via ITR-ITR joining."];
+  "n13" [label="(21,0,0) If dsDNA VGs resemble chromosomal breaks and ITR-ITR joining is analogous to DNA repair, then host DNA repair pathways are plausible mechanisms for VG joining."];
+  "n16" [label="(22,0,0) Currently, host DSB repair proceeds mainly via HR/HDR (high-fidelity, restricted) or NHEJ (constitutively active, error-prone)."];
+  "n17" [label="(23,0,0) Currently, MRN recognizes DNA ends/ITRs but inhibits VG concatenation."];
+  "n18" [label="(24,0,0) Currently, inhibiting/depleting DNA-PKcs (NHEJ factor) reduces VG concatenation, suggesting NHEJ contributes to concatenation."];
+  "n20" [label="(0,0,0) induction-reasoning: Given inhibiting/depleting DNA-PKcs reduces VG concatenation and host DSB repair proceeds mainly via HR/HDR or NHEJ, therefore which repair pathway is engaged plausibly modulates concatenation efficiency and HR’s role should be tested/targeted."];
+  "n24" [label="(30,0,0) Currently, dual vectors require correct, directional, stoichiometric concatenation and correct expression to be effective."];
+  "n25" [label="(31,0,0) Currently, any ITR can join any ITR, yielding many permutations that fail to reconstitute correctly."];
+  "n28" [label="(33,0,0) Currently, adding an AP fragment between splice signals and ITR increases chances of correct L/R joining (AP is highly recombinogenic in dual vectors)."];
+  "n29" [label="(34,0,0) If AP promotes annealing of +/− sense VGs leading to reconstitution via HR, then AP’s benefit may be mediated by HR-driven recombination."];
+  "n3" [label="(3,0,0) Currently, a major limitation of rAAV is small genetic payload."];
+  "n5" [label="(6,0,0) Currently, standard cDNA+short promoter strategies exclude larger genes (e.g., dystrophin, accurate Cas9/base editors)."];
+  "n9" [label="(11,0,0) Currently, no viral enzymes are packaged in the rAAV virion."];
+  "n10" -> "n11" [label="deduction-rule"];
+  "n9" -> "n11" [label="deduction-case"];
+  "n18" -> "n20" [label="induction-case"];
+  "n16" -> "n20" [label="induction-common"];
+  "n17" -> "n20" [label="induction-case"];
+  "n5" -> "R7" [label="induction-case"];
+  "n3" -> "R7" [label="induction-common"];
+  "n12" -> "R4" [label="abduction-phenomenon"];
+  "n13" -> "R4" [label="abduction-knowledge"];
+  "n25" -> "R5" [label="abduction-phenomenon"];
+  "n24" -> "R5" [label="abduction-knowledge"];
+  "n28" -> "R6" [label="abduction-phenomenon"];
+  "n29" -> "R6" [label="abduction-knowledge"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "n11" -> "NROOT" [label="induction-case"];
+  "n20" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

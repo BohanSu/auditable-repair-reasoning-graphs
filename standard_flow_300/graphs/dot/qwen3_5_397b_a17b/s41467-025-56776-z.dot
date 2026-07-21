@@ -1,0 +1,32 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56776-z
+  rankdir="TB";
+  "I1_CONCLUSION" [label="(0,0,0) Induction Reasoning: Asynchronous virus resurgence appears to be a common pattern because it occurred in Australia AND it occurred in other countries."];
+  "IMPLICIT3" [label="(0,0,0) Implicit Knowledge: If epidemic timing is analyzed using statistical models across multiple viruses, then relative timing differences can be quantified."];
+  "NROOT" [label="(0,0,0) This study proposes to investigate whether the asynchronous post-COVID-19 resurgence of common respiratory viruses is globally consistent or region-specific by compiling worldwide surveillance data, determining epidemic onsets and epidemic peaks using a unified method, and applying generalized linear mixed-effects models to compare intervals between epidemic onsets and peaks across multiple respiratory viruses.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R4" [label="(0,0,0) Because it was unclear whether resurgence variations were regionally specific or globally consistent, compiling global respiratory virus activity data and determining epidemic onset and peak from different data sources with a unified method provides a basis for examining those variations."];
+  "R5" [label="(0,0,0) Using a generalized linear mixed-effects model framework to synthesize intervals between epidemic onsets and peaks supports quantifying relative timing differences across multiple respiratory viruses."];
+  "R6" [label="(0,0,0) The analytical matching approach provides a way to examine relative timing differences between pairs of respiratory viruses."];
+  "S11" [label="(11,0,0) We used a generalised linear mixed-effects model (GLMM) framework to synthesise time intervals between epidemic onsets and peaks."];
+  "S15" [label="(15,0,0) Two approaches were implemented: descriptive pooling approach compared intervals between consecutive epidemic onsets, and analytical matching approach examined relative timing differences between pairs of viruses."];
+  "S5" [label="(5,0,0) However, the resurgence of these common respiratory viruses did not occur simultaneously."];
+  "S6" [label="(6,0,0) In New South Wales Australia, RV and AdV were least affected, RSV resurged in September 2020, PIV and MPV until mid-2021, IV remained low by end of 2021."];
+  "S7" [label="(7,0,0) Similar asynchronous resurgence was also noted in other countries with varied timing and stridency of NPIs."];
+  "S8" [label="(8,0,0) It remains unclear whether observed variations in resurgence are regionally specific or globally consistent."];
+  "S9" [label="(9,0,0) In this study, we compiled a large dataset on respiratory virus activity across the globe from published studies, surveillance reports, and international collaborators."];
+  "S6" -> "I1_CONCLUSION" [label="induction-case"];
+  "S7" -> "I1_CONCLUSION" [label="induction-common"];
+  "S5" -> "I1_CONCLUSION" [label="induction-case"];
+  "S9" -> "R4" [label="induction-case"];
+  "S8" -> "R4" [label="induction-common"];
+  "IMPLICIT3" -> "R5" [label="deduction-rule"];
+  "S11" -> "R5" [label="deduction-case"];
+  "IMPLICIT3" -> "R6" [label="deduction-rule"];
+  "S15" -> "R6" [label="deduction-case"];
+  "I1_CONCLUSION" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

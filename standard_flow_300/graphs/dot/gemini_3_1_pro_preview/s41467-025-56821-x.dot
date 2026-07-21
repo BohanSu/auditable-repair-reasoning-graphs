@@ -1,0 +1,36 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56821-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to use bulk transcriptomics and full-length single-cell transcriptomics to profile alternative splicing events and RNA-binding protein regulatory networks across pituitary neuroendocrine tumor subtypes, including TPIT-lineage tumors, to test whether subtype-specific splicing signatures better capture tumor heterogeneity and improve molecular classification beyond transcription-factor-based approaches.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A study that links unmet needs in pituitary neuroendocrine tumor classification to alternative-splicing-based heterogeneity analysis can motivate broader transcriptomic profiling strategies for improved molecular classification."];
+  "Node_Rule1" [label="(0,0,0) If PitNETs are significant tumors requiring pathological classification, then their classification incorporates the expression of specific hormone genes."];
+  "Node_Rule2" [label="(0,0,0) If the current classification system is insufficient to capture inter-tumor heterogeneity, then there is a requirement for more precise subtype classification."];
+  "Node_Rule3" [label="(0,0,0) If investigating alternative splicing is hypothesized to provide the missing molecular features for classification, then characterizing the alternative splicing landscape will better demonstrate inter-tumor heterogeneity."];
+  "Node_Rule4" [label="(0,0,0) If the analysis better demonstrates inter-tumor heterogeneity of pituitary neuroendocrine tumors, then the study offers an enhanced approach to pituitary neuroendocrine tumor classification."];
+  "Node_S1" [label="(1,1,0) The pituitary gland is the most critical endocrine gland in humans."];
+  "Node_S11" [label="(11,1,0) deduction-reasoning: Given the rule and current situation, therefore complex hormone secretion profiles of pituitary neuroendocrine tumors present requirements for more precise subtype classification."];
+  "Node_S2" [label="(2,1,0) Pituitary neuroendocrine tumors are among the most prevalent intracranial tumors."];
+  "Node_S3" [label="(3,1,0) deduction-reasoning: Given the rule and current situation, therefore the pathological classification of pituitary neuroendocrine tumors incorporates the expression of specific hormone genes."];
+  "Node_S9" [label="(9,1,0) Even the same subtypes exhibit diverse clinical manifestations."];
+  "Node_T1" [label="(0,0,0) induction-reasoning: Given the pituitary is critical and PitNETs are prevalent, therefore currently PitNETs are significant tumors requiring pathological classification."];
+  "Node_T2" [label="(0,0,0) abduction-reasoning: Given the phenomenon that the same subtypes exhibit diverse clinical manifestations, and the knowledge that current classification relies on specific hormone genes, therefore currently the current classification system is insufficient to capture inter-tumor heterogeneity."];
+  "R5" [label="(0,0,0) Because more precise pituitary neuroendocrine tumor subtype classification is required, and the graph states that hypothesized investigation of alternative splicing would support characterization of tumor heterogeneity, investigating alternative splicing is a plausible candidate direction for improving classification rather than a proven missing molecular feature."];
+  "R6" [label="(0,0,0) If investigating alternative splicing is treated as a plausible candidate direction for improving pituitary neuroendocrine tumor classification, then characterizing the alternative-splicing landscape is expected to better demonstrate inter-tumor heterogeneity."];
+  "R7" [label="(0,0,0) If characterizing the alternative-splicing landscape better demonstrates inter-tumor heterogeneity in pituitary neuroendocrine tumors, then the study motivates an enhanced approach to pituitary neuroendocrine tumor classification."];
+  "Node_S1" -> "Node_T1" [label="induction-case"];
+  "Node_S2" -> "Node_T1" [label="induction-common"];
+  "Node_Rule1" -> "Node_S3" [label="deduction-rule"];
+  "Node_T1" -> "Node_S3" [label="deduction-case"];
+  "Node_S9" -> "Node_T2" [label="abduction-phenomenon"];
+  "Node_S3" -> "Node_T2" [label="abduction-knowledge"];
+  "Node_Rule2" -> "Node_S11" [label="deduction-rule"];
+  "Node_T2" -> "Node_S11" [label="deduction-case"];
+  "Node_S11" -> "R5" [label="abduction-phenomenon"];
+  "Node_Rule3" -> "R5" [label="abduction-knowledge"];
+  "Node_Rule3" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "Node_Rule4" -> "R7" [label="deduction-rule"];
+  "R6" -> "R7" [label="deduction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

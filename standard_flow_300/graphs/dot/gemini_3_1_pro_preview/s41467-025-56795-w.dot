@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56795-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper develops and evaluates the newly synthesized single crystal trans-[Ru(SO2)(NH3)4(4-bromopyridine)](tosylate)2 as a light-driven optical actuator in which temperature-controlled SO2 linkage photoisomerisation can access η1-OSO and η2-(OS)O states, enabling thermally reversible cracking deformation and a fully addressable ternary molecular switch.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When single-crystal optical actuation, SO2-linkage photoisomerisation, high-purity η1-OSO and η2-(OS)O states, and photonic state addressability converge in a Ru–SO2 crystal, they support developing and evaluating a molecular optical actuator and switch."];
+  "N_Case_1" [label="(2,2,0) Currently single crystals offer a highly pure solid-state medium for photonic control."];
+  "N_Case_B1" [label="(14,3,0) Currently dark- (0) and light-induced (1,2,…) states can be distinguished as integer encodings for photonic applications."];
+  "N_Case_C1" [label="(16,1,0) Currently the η2-(OS)O photoisomer is often found in [RuSO2] complexes."];
+  "N_Conclusion_4" [label="(0,0,0) deduction-reasoning: Given the development of [RuSO2] complexes and the ideal of 100% photoisomerisation, therefore achieving 100% SO2-linkage photoisomerisation in these new complexes is the ideal goal."];
+  "N_Rule_1" [label="(0,0,0) If a material offers a highly pure solid-state medium for photonic control, then it is a particularly attractive form of optically actuating material."];
+  "N_Rule_6" [label="(0,0,0) If there is a critical need to discover a new [RuSO2] complex with 100% photoconversion, then discovering one that exhibits single-crystal optical actuation is a major breakthrough."];
+  "N_Rule_B1" [label="(0,0,0) If dark and light-induced states can be distinguished as integer encodings, then they are useful for photonic applications."];
+  "N_Rule_C1" [label="(0,0,0) If the η2-(OS)O photoisomer is often found in [RuSO2] complexes, then its isolation is of scientific interest."];
+  "R1" [label="(0,0,0) Single crystals are a particularly attractive form of optically actuating material because they offer a highly pure solid-state medium for photonic control."];
+  "R4" [label="(0,0,0) Distinguishable dark and light-induced states encoded as integers are useful for photonic applications."];
+  "R6" [label="(0,0,0) Because the η2-(OS)O photoisomer is often found in [RuSO2] complexes, isolating this photoisomer is of scientific interest."];
+  "R7" [label="(0,0,0) The goal of 100% SO2-linkage photoisomerisation in new [RuSO2] complexes, together with scientific interest in η2-(OS)O isolation, motivates investigating new [RuSO2] systems capable of high-purity or fully converted photoisomer states."];
+  "R8" [label="(0,0,0) Given the motivation to discover new [RuSO2] systems with high-purity photoisomer states, a new [RuSO2] complex that also exhibits single-crystal optical actuation would be a significant discovery to develop and evaluate."];
+  "N_Rule_1" -> "R1" [label="deduction-rule"];
+  "N_Case_1" -> "R1" [label="deduction-case"];
+  "N_Rule_B1" -> "R4" [label="deduction-rule"];
+  "N_Case_B1" -> "R4" [label="deduction-case"];
+  "N_Rule_C1" -> "R6" [label="deduction-rule"];
+  "N_Case_C1" -> "R6" [label="deduction-case"];
+  "N_Conclusion_4" -> "R7" [label="abduction-phenomenon"];
+  "R6" -> "R7" [label="abduction-knowledge"];
+  "N_Rule_6" -> "R8" [label="deduction-rule"];
+  "R7" -> "R8" [label="deduction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

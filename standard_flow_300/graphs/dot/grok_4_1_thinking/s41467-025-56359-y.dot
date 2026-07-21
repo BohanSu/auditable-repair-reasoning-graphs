@@ -1,0 +1,28 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56359-y
+  rankdir="TB";
+  "N1" [label="(1,0,0) Currently there is the discovery of ferroelectrics in Rochelle salt in the 1920s and ferroelectric materials have garnered considerable attention due to their unique structural properties at the unit cell level for various applications."];
+  "N2" [label="(2,0,0) If the symmetry-breaking nature of the electrostatic boundary condition, which generates a permanent depolarization field, then it confers ferroelectrics with unique physical properties."];
+  "N20" [label="(14,0,0) Induction-case: Pioneering research has shown that the activity is moderately increased when internal screening charges are partially eliminated."];
+  "N22" [label="(0,0,0) Induction-common: It is common that mitigating internal screening charges contributes to improved activity in ferroelectric catalysts."];
+  "N23" [label="(0,0,0) induction-reasoning: From cases of moderate increase and 15x enhancement by STO growth, and common that mitigating screening improves activity, so efforts to mitigate screening have shown increased activity."];
+  "N29" [label="(0,0,0) Abduction-knowledge: Defective structures (particularly Ti defects at positive polarization facets) can inhibit efficient electron transfer for hydrogen production in ferroelectric photocatalysts."];
+  "N31" [label="(23,0,0) Currently there is by eliminating abundant Ti defective sites on the positive surface of PTO through the growth of STO nanolayers, AQE@365 nm of the overall water splitting was elevated by 400 times due to the construction of a highly efficient electron transfer route."];
+  "NROOT" [label="(0,0,0) This paper proposes and demonstrates precise surface-defect control for ferroelectric photocatalysis: Ti-related defects on the positively polarized facets of ferroelectric PbTiO3 impede photogenerated electron transfer for hydrogen evolution, and selective elimination of those defects by growing defect-free SrTiO3 nanolayers opens an efficient electron-transfer pathway that increases overall water-splitting quantum efficiency by roughly 400-fold.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R1" [label="(0,0,0) Ferroelectrics are notable materials with unique unit-cell structural properties that have attracted attention, and their symmetry-breaking electrostatic boundary condition generates a permanent depolarization field that confers unique physical properties."];
+  "R8" [label="(0,0,0) A plausible mechanistic explanation for the improved PbTiO3 water-splitting performance after SrTiO3 nanolayer growth is that Ti defects on the positive polarization facets can inhibit efficient electron transfer for hydrogen production, so eliminating those defective surface sites can create a more efficient electron-transfer route."];
+  "R9" [label="(0,0,0) By eliminating Ti-related defective sites on the positive surface of PbTiO3 through SrTiO3 nanolayers, the study constructed an efficient electron-transfer pathway and raised the overall water-splitting AQE at 365 nm by about 400-fold, supporting precise surface-defect control as a strategy for improving ferroelectric photocatalyst performance."];
+  "N20" -> "N23" [label="induction-case"];
+  "N22" -> "N23" [label="induction-common"];
+  "N2" -> "R1" [label="deduction-rule"];
+  "N1" -> "R1" [label="deduction-case"];
+  "N31" -> "R8" [label="abduction-phenomenon"];
+  "N29" -> "R8" [label="abduction-knowledge"];
+  "R8" -> "R9" [label="deduction-rule"];
+  "N31" -> "R9" [label="deduction-case"];
+  "N23" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

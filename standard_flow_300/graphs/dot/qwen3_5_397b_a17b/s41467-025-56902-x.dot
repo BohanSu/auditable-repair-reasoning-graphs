@@ -1,0 +1,13 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56902-x
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes rational design of quinoline analogues as noncovalent inhibitors of SARS-CoV-2 papain-like protease by targeting the Val70Ub pocket, with crystallographic confirmation of Val70Ub engagement by Jun13296 and reported antiviral-candidate properties motivating further development against coronaviruses.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A structure-guided antiviral discovery pattern: if a designed inhibitor series targets a specific protease pocket and a lead compound is structurally confirmed to engage that pocket, then the series and lead can motivate further optimization of protease inhibitors."];
+  "R3" [label="(0,0,0) This work designs quinoline analogues to target the Val70Ub site, and X-ray crystal structures confirm that Jun13296 is among the compounds whose 2-aryl substituent occupies the Val70Ub site."];
+  "S28" [label="(28,0,0) In this work, we design a series of quinoline analogs to similarly target the Val70Ub site."];
+  "S29" [label="(29,0,0) X-ray crystal structures confirm the 2-aryl substituent occupies the Val70Ub site as expected for five compounds including Jun13296."];
+  "S29" -> "R3" [label="deduction-rule"];
+  "S28" -> "R3" [label="deduction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

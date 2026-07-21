@@ -1,0 +1,44 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56751-8
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes developing and evaluating PLMeAE, a closed-loop protein engineering platform that uses protein language model guidance to prioritize high-fitness mutants under different mutation-site scenarios and couples this prediction with automated biofoundry construction and screening to accelerate directed evolution, including application to Methanocaldococcus jannaschii p-cyanophenylalanine tRNA synthetase.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When directed evolution and related protein engineering methods face practical bottlenecks, and protein language models and biofoundries offer complementary prediction and automation capabilities, a closed-loop platform that integrates prediction with automated construction and screening is a plausible research strategy to test."];
+  "R3" [label="(0,0,0) Targeted mutagenesis has a practical limitation because its success depends strongly on choosing appropriate mutation sites."];
+  "R4" [label="(0,0,0) Experimental acquisition of functional protein data is a time- and labor-intensive bottleneck for data-driven protein engineering approaches."];
+  "R5" [label="(0,0,0) Current protein engineering has an additional opportunity and limitation in that it has not fully leveraged recent biofoundry developments."];
+  "R7" [label="(0,0,0) Biofoundry automation for large data volumes and protein language model predictive strength motivate treating these capabilities as complementary for protein engineering."];
+  "R8" [label="(0,0,0) The incompletely used biofoundry capability and the complementary roles of biofoundry automation and protein language model prediction motivate investigating an integrated PLM-biofoundry strategy for protein engineering."];
+  "a1" [label="(0,0,0) The common pattern is that current protein engineering methods share limitations in time, labor, sampling, and generality."];
+  "a10" [label="(34,0,0) Currently protein engineering has yet to fully leverage recent developments in biofoundries."];
+  "a2" [label="(5,0,0) Currently the process of traditional directed evolution is time-consuming and labor-intensive."];
+  "a3" [label="(0,0,0) Induction: Given the case of DE being time-consuming and the common pattern, therefore DE has efficiency limitations."];
+  "a4" [label="(6,0,0) Currently directed evolution can be trapped in local fitness optima."];
+  "a5" [label="(0,0,0) Induction: Given the additional case of local optima trapping and the previous general, therefore the limitations include trapping in local optima."];
+  "a6" [label="(10,0,0) Currently the success of targeted mutagenesis is highly dependent on target site choice."];
+  "a8" [label="(20,0,0) Currently experimentally collecting functional data is time-consuming and labor-intensive."];
+  "b1" [label="(0,0,0) The common pattern is that PLMs and biofoundries provide complementary predictive and automation capabilities."];
+  "b2" [label="(23,0,0) Currently PLMs have proven powerful in modeling functional proteins and zero-shot optimization."];
+  "b3" [label="(0,0,0) Induction: Given the case of PLM power and the common pattern, therefore PLMs provide key predictive strength."];
+  "b4" [label="(28,0,0) Currently biofoundries provide invaluable automation for large data volumes."];
+  "a2" -> "a3" [label="induction-case"];
+  "a1" -> "a3" [label="induction-common"];
+  "a4" -> "a5" [label="induction-case"];
+  "a3" -> "a5" [label="induction-common"];
+  "b2" -> "b3" [label="induction-case"];
+  "b1" -> "b3" [label="induction-common"];
+  "a6" -> "R3" [label="induction-case"];
+  "a1" -> "R3" [label="induction-common"];
+  "a8" -> "R4" [label="induction-case"];
+  "a1" -> "R4" [label="induction-common"];
+  "a10" -> "R5" [label="induction-case"];
+  "a1" -> "R5" [label="induction-common"];
+  "b4" -> "R7" [label="abduction-phenomenon"];
+  "b3" -> "R7" [label="abduction-knowledge"];
+  "R5" -> "R8" [label="abduction-phenomenon"];
+  "R7" -> "R8" [label="abduction-knowledge"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "a5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

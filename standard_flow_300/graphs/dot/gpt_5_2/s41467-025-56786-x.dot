@@ -1,0 +1,47 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56786-x
+  rankdir="TB";
+  "N1" [label="(1,0,0) Currently, many autoimmune diseases are characterized by disease-specific autoantibodies."];
+  "N10" [label="(0,0,0) Deduction rule: If a biomarker poorly predicts disease activity, then other immune components may be involved."];
+  "N12" [label="(27,0,0) Observed phenomenon: Anti-MPO-IgG pathogenicity depends on complement activation via the alternative pathway."];
+  "N13" [label="(0,0,0) Abductive knowledge: IgM antibodies are potent activators of the complement system."];
+  "N15" [label="(36,0,0) Observed phenomenon: MPO-reactive B cells persist in circulation even after rituximab treatment or during remission."];
+  "N16" [label="(0,0,0) Abductive knowledge: IgM+ B cells often escape depletion and represent early or innate-like autoreactive compartments."];
+  "N17" [label="(0,0,0) Abductive reasoning: Persistent MPO-reactive B cells may belong to an IgM+ compartment with pathogenic relevance."];
+  "N18" [label="(25,0,0) Currently, anti-MPO-ANCA are directly pathogenic, as shown by passive transfer experiments."];
+  "N19" [label="(9,0,0) Deduction rule: If a disease is prototypically B-cell mediated, it is suitable for studying pathogenic B-cell mechanisms."];
+  "N2" [label="(2,0,0) Currently, broadly B-cell-targeting therapies are effective in multiple autoimmune diseases."];
+  "N20" [label="(0,0,0) Deduction reasoning: Because MPO+ AAV is B-cell mediated and MPO-ANCA are pathogenic, it is an ideal model to study autoreactive B cells."];
+  "N3" [label="(0,0,0) Induction rule: If multiple autoimmune diseases share autoantibodies and respond to B-cell targeting, then B cells are commonly pathogenic drivers."];
+  "N4" [label="(0,0,0) Induction reasoning: Given widespread autoantibodies and effective B-cell therapies, B cells commonly play a pivotal pathogenic role in autoimmune diseases."];
+  "N5" [label="(4,0,0) Currently, the mechanisms by which B cells contribute to autoimmune disease are often unknown."];
+  "N6" [label="(5,0,0) Deduction rule: If B-cell depletion carries substantial risks, then mechanistic understanding of specific B-cell roles is required."];
+  "N7" [label="(0,0,0) Deduction reasoning: Since B-cell mechanisms are unclear and depletion is risky, precise understanding of pathogenic B-cell subsets is necessary."];
+  "N9" [label="(18,0,0) Currently, IgG levels variably correlate with disease activity and poorly predict relapses."];
+  "NROOT" [label="(0,0,0) The paper proposes to investigate MPO-positive ANCA-associated vasculitis as a B-cell-mediated autoimmune disease in which persistent MPO-reactive IgM-positive B cells and anti-MPO IgM antibodies may represent underrecognized pathogenic components, particularly through complement-related mechanisms, warranting focused characterization to refine pathogenic B-cell understanding.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Converging evidence that autoimmune disease is B-cell mediated, that IgG measurements incompletely explain disease activity, and that persistent or complement-active non-IgG B-cell/antibody compartments may exist motivates targeted investigation of those compartments."];
+  "R3" [label="(0,0,0) Because anti-MPO-IgG pathogenicity is complement-dependent and IgM antibodies can potently activate complement, it is reasonable to test whether anti-MPO IgM could participate in complement-mediated MPO-positive AAV pathology."];
+  "R6" [label="(0,0,0) The poor correlation of IgG levels with disease activity and relapse prediction supports the possibility that immune components beyond IgG contribute to MPO-positive AAV disease activity."];
+  "R7" [label="(0,0,0) If precise understanding of pathogenic B-cell roles is needed and non-IgG immune components may contribute to disease activity, then additional antibody classes or B-cell subsets should be specifically investigated as candidate pathogenic mechanisms."];
+  "N1" -> "N4" [label="induction-case"];
+  "N3" -> "N4" [label="induction-common"];
+  "N2" -> "N4" [label="induction-case"];
+  "N5" -> "N7" [label="deduction-case"];
+  "N6" -> "N7" [label="deduction-rule"];
+  "N15" -> "N17" [label="abduction-phenomenon"];
+  "N16" -> "N17" [label="abduction-knowledge"];
+  "N18" -> "N20" [label="deduction-case"];
+  "N19" -> "N20" [label="deduction-rule"];
+  "N12" -> "R3" [label="abduction-phenomenon"];
+  "N13" -> "R3" [label="abduction-knowledge"];
+  "N10" -> "R6" [label="deduction-rule"];
+  "N9" -> "R6" [label="deduction-case"];
+  "N7" -> "R7" [label="deduction-rule"];
+  "R6" -> "R7" [label="deduction-case"];
+  "N17" -> "NROOT" [label="induction-case"];
+  "N20" -> "NROOT" [label="induction-case"];
+  "N4" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,34 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N10" [label="(9,0,0) Challenging to establish structure-reactivity relations for technical Ru catalysts"];
+  "N26" [label="(23,0,0) Influence of kinetic couplings and strain on activity is difficult to uncover experimentally"];
+  "N28" [label="(0,0,0) If kMC can model complex multi-site systems with strain, then kMC simulations should be used"];
+  "N31" [label="(25,0,0) Expected: Combined effect of structural complexity and strain accounts for experimental TOF"];
+  "N32" [label="(26,0,0) Expected: Kinetic couplings between sites yield high activity via different sites for N₂ dissociation and NHₓ hydrogenation"];
+  "N33" [label="(27,0,0) Expected: Inherent strain enhances activity by promoting reactions on both types of sites"];
+  "N34" [label="(0,0,0) Induction: Given multiple expected findings (structural complexity, kinetic coupling, strain effects) all contribute to enhanced catalytic activity, therefore combined effects are essential"];
+  "N35" [label="(28,1,0) Scaling relations limit catalyst design flexibility"];
+  "N9" [label="(8,0,0) Sizes and shapes of Ru NPs are ill-defined"];
+  "NROOT" [label="(0,0,0) This paper proposes and evaluates, using first-principles kinetic Monte Carlo simulations, whether the high ammonia-synthesis activity of Ru nanoparticles arises from kinetic coupling among different surface sites for N2 dissociation and NHx hydrogenation together with random strain, and whether such understanding can motivate strain-engineered, site-coupled Ru catalysts that challenge scaling-relation limits.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When simplified catalyst models omit site diversity, kinetic coupling, and nanoparticle strain, first-principles simulations can be used to test whether these coupled effects explain activity and suggest improved catalyst-design principles."];
+  "R10" [label="(0,0,0) When the influence of kinetic couplings and strain on activity is difficult to uncover experimentally, a computational approach such as kMC that can model complex multi-site systems with strain is motivated."];
+  "R11" [label="(0,0,0) If combined structural complexity, kinetic coupling, and strain enhance catalytic activity, then these effects motivate testing whether strained, site-coupled Ru nanoparticles can move beyond constraints imposed by scaling relations."];
+  "R7" [label="(0,0,0) The study’s significance is to evaluate whether kinetic coupling among surface sites and strain in Ru nanoparticles can guide design of more active Ru catalysts beyond conventional scaling-relation limitations."];
+  "R9" [label="(0,0,0) The ill-defined sizes and shapes of supported Ru nanoparticles help explain why establishing structure-reactivity relations for technical Ru catalysts is challenging, motivating better structural understanding."];
+  "N31" -> "N34" [label="induction-case"];
+  "N32" -> "N34" [label="induction-case"];
+  "N33" -> "N34" [label="induction-common"];
+  "N10" -> "R9" [label="abduction-phenomenon"];
+  "N9" -> "R9" [label="abduction-knowledge"];
+  "N26" -> "R10" [label="abduction-phenomenon"];
+  "N28" -> "R10" [label="abduction-knowledge"];
+  "N34" -> "R11" [label="abduction-phenomenon"];
+  "N35" -> "R11" [label="abduction-knowledge"];
+  "N34" -> "R7" [label="induction-case"];
+  "N35" -> "R7" [label="induction-common"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

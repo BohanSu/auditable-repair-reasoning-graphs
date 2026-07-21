@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56814-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes, develops, and evaluates a miniaturized aqueous optoelectrochemical synapse based on a single-component n-type OMIEC p(C2F-z) OECT channel, aiming to exploit intrinsic channel light absorption and ion-mediated low-voltage modulation for multispectral, electrically addressable biomimetic neuromorphic vision.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When neuromorphic-vision devices require multispectral, electrically addressable and biomimetic synaptic behavior, an aqueous OMIEC OECT whose channel itself is light-responsive provides a coherent materials-and-device design strategy."];
+  "R2" [label="(0,0,0) Because biological sensory systems convert external information into biological signals, the reliance of many light-responsive devices on additional non-biological circuit elements identifies a biomimetic gap for neuromorphic-vision synaptic devices."];
+  "R3" [label="(0,0,0) Prior optoelectronic OECT synapses and the low-voltage, ion-mediated multiple doping states of OMIEC channels together motivate using OMIEC-based OECT channels for low-voltage synaptic conductance modulation in optoelectronic devices."];
+  "R5" [label="(0,0,0) For neuromorphic optoelectronic synapses, existing reliance on hard, poorly biocompatible inorganic materials and on non-biological light-response circuitry motivates developing softer and more biomimetic device approaches."];
+  "R6" [label="(0,0,0) OMIEC-based OECTs are a plausible platform for softer, aqueous-operable biointerfacing synaptic hardware because OMIEC/OECT channels can translate ionic or biological information in aqueous media into amplified electronic signals."];
+  "R7" [label="(0,0,0) Since prior OECT optoelectronic synapses often rely on large-area light-sensitive gates that hinder miniaturization and integration, the underexploited light absorption of OMIECs motivates exploring channel-intrinsic light sensitivity as a miniaturizable route."];
+  "R8" [label="(0,0,0) A light-absorbing OMIEC channel in an aqueous OECT is a well-motivated strategy for miniaturizable optoelectrochemical synaptic behavior that can combine optical stimulation with low-voltage ion/electronic conductance modulation."];
+  "n1" [label="(1,0,0) Currently, converting external information into biological signals by the sensory nervous system is fundamental for organisms to interact with their environment."];
+  "n11" [label="(9,0,0) Currently, OECTs use OMIECs in microscale channels to translate ionic/biological information in aqueous media into amplified electronic signals."];
+  "n12" [label="(10,0,0) Currently, OMIEC channels can reach multiple doping states via small ionic fluxes, enabling high transconductance at low voltages (<1 V)."];
+  "n15" [label="(12,0,0) Currently, for neuromorphic vision, OMIECs have a crucial yet underexploited property: they can absorb light."];
+  "n16" [label="(13,0,0) Currently, some reports show OECTs can act as optoelectronic synapses converting light signals into spike-train patterns."];
+  "n17" [label="(14,0,0) Currently, prior OECT optoelectronic synapse studies often do not use OMIEC channel light sensitivity; instead they use light-sensitive large-area gates, which hinders operation, miniaturization, and integration."];
+  "n19" [label="(16,0,0) Currently, organic synaptic transistors that process light often work at only one wavelength or a restricted wavelength range."];
+  "n20" [label="(17,0,0) Currently, mimicking human vision requires multifunctional materials responsive to both light and electrical stimuli, because vision uses photoreceptors (light capture) and neurons (electrical transmission)."];
+  "n21" [label="(18,0,0) Currently, to build a biomimetic optoelectronic synapse, developing multi-stimuli-responsive OMIECs capable of multispectral perception is key to surpass single-mode drives."];
+  "n5" [label="(5,0,0) Currently, most optoelectronic devices for hardware neural networks/interfaces use inorganic materials that are hard, not biocompatible, and lack extra functionalities."];
+  "n6" [label="(6,0,0) Currently, making these devices light-responsive often needs additional circuit elements whose mechanisms differ from biological ones."];
+  "n20" -> "n21" [label="deduction-rule"];
+  "n19" -> "n21" [label="deduction-case"];
+  "n6" -> "R2" [label="abduction-phenomenon"];
+  "n1" -> "R2" [label="abduction-knowledge"];
+  "n16" -> "R3" [label="induction-case"];
+  "n12" -> "R3" [label="induction-common"];
+  "R2" -> "R5" [label="deduction-rule"];
+  "n5" -> "R5" [label="deduction-case"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "n11" -> "R6" [label="abduction-knowledge"];
+  "n17" -> "R7" [label="abduction-phenomenon"];
+  "n15" -> "R7" [label="abduction-knowledge"];
+  "R3" -> "R8" [label="induction-case"];
+  "R7" -> "R8" [label="induction-common"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "n21" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

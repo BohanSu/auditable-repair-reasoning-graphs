@@ -1,0 +1,12 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper develops and evaluates the nano-CMDO nanoconfined molecular-dipole orienting strategy, motivated by the difficulty of conjugated-polymer single-crystal thin-film manufacture, in which a spatial-electrostatic nanoconfined capacitor applies perpendicular electric fields to rotate polymer backbones and align side chains, thereby directing crystallization of conjugated polymers into microscale single-crystal thin films with high charge mobility for high-performance organic electronics.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent research contribution is supported when a documented manufacturing challenge is connected to a proposed molecular-control strategy, its operating mechanism, resulting single-crystal thin-film fabrication, and device-relevant mobility."];
+  "node_1" [label="(4,0,0) Currently, the manufacturing of CP single crystals remains significantly challenging due to the intrinsic contradiction between energetic preference and entropic cost."];
+  "node_2" [label="(5,0,0) If the manufacturing of CP single crystals remains significantly challenging due to the intrinsic contradiction between energetic preference and entropic cost, then this challenge is further exacerbated in thin films where two-dimensional constraints limit spatial freedom."];
+  "node_3" [label="(0,0,0) deduction-reasoning: Given the manufacturing of CP single crystals remains significantly challenging, therefore this challenge is further exacerbated in thin films where two-dimensional constraints limit spatial freedom."];
+  "node_1" -> "node_3" [label="deduction-case"];
+  "node_2" -> "node_3" [label="deduction-rule"];
+  "node_3" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

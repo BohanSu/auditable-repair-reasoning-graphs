@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56765-2
+  rankdir="TB";
+  "N10" [label="(11,1,0) Observation: Potential energy surfaces evaluated using DFT on single-crystal surfaces."];
+  "N12" [label="(15,1,0) Observation: Modeling NPs as isolated single-crystal surfaces does not capture structural complexity."];
+  "N15" [label="(18,1,0) Observation: Technical NPs are inherently strained due to structural mismatch."];
+  "N17" [label="(21,1,0) Observation: Advanced synthesis techniques open opportunity to link structure and function."];
+  "N18" [label="(22,1,0) Observation: HRTEM makes it possible to measure strain distribution directly."];
+  "N25" [label="(28,1,0) Observation: Kinetic coupling on strained-designed Ru NPs offers possibility to break scaling relations."];
+  "N26" [label="(28,2,0) Observation: Breaking scaling relations enables design of new generations of Ru catalysts."];
+  "N28" [label="(0,0,0) Induction-case: Process requires harsh conditions (N3) and consumes 2% energy (N4)."];
+  "N3" [label="(3,1,0) Observation: Haber-Bosch process requires harsh reaction conditions (673-773K, 10-30MPa)."];
+  "N4" [label="(4,1,0) Observation: Nearly 2% of world's energy consumption is attributed to Haber-Bosch process."];
+  "N40" [label="(0,0,0) Deduction-rule: If models use single-crystals (N10), they miss NP complexity (N12)."];
+  "N51" [label="(0,0,0) Deduction-case: Advanced techniques exist (N17) and HRTEM measures strain (N18)."];
+  "N7" [label="(7,1,0) Observation: Technical Ru catalysts are composed of supported Ru nanoparticles (NPs)."];
+  "NROOT" [label="(0,0,0) Investigate and design next-generation Ru nanoparticle ammonia-synthesis catalysts by using first-principles kinetic Monte Carlo simulations to explain high turnover frequencies through the combined effects of structural heterogeneity, inherent random lattice strain, and kinetic coupling among distinct surface sites, including step-site promotion of N2 dissociation.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A catalyst-design strategy is motivated when experimentally relevant activity cannot be explained by idealized models but can be rationalized by combining nanoparticle structure, strain, and site-to-site kinetic coupling."];
+  "R10" [label="(0,0,0) Supported Ru nanoparticles in technical Ru catalysts are technical nanoparticles, and technical nanoparticles are inherently strained."];
+  "R17" [label="(0,0,0) Kinetic coupling on strained-designed Ru nanoparticles offers a route to break scaling relations and thereby enables design of new generations of Ru catalysts."];
+  "N3" -> "N28" [label="induction-case"];
+  "N4" -> "N28" [label="induction-common"];
+  "N10" -> "N40" [label="deduction-case"];
+  "N12" -> "N40" [label="deduction-rule"];
+  "N17" -> "N51" [label="induction-case"];
+  "N18" -> "N51" [label="induction-common"];
+  "N15" -> "R10" [label="deduction-rule"];
+  "N7" -> "R10" [label="deduction-case"];
+  "N26" -> "R17" [label="deduction-rule"];
+  "N25" -> "R17" [label="deduction-case"];
+  "N28" -> "NROOT" [label="induction-case"];
+  "N40" -> "NROOT" [label="induction-case"];
+  "N51" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R17" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

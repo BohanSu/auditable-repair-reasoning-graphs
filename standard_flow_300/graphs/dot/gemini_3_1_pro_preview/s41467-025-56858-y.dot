@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56858-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The study proposes to develop and evaluate controlled extracellular electrical stimulation of CD8+ T cells during ex vivo expansion as a way to enhance TCR signaling and EGR1-mediated chromatin-accessibility programs, promote optimized effector-cell differentiation, and improve antitumor efficacy in adoptive cell therapy and CAR-T therapy.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Interventions that can modulate TCR/EGR1-linked signaling during ex vivo CD8+ T-cell expansion are rational candidates for optimizing effector differentiation and improving cellular immunotherapy efficacy."];
+  "Node_16" [label="(16,0,0) Currently, utilizing piezoelectric membrane materials, electrical stimulation accelerates bone regeneration and combats bacteria."];
+  "Node_22" [label="(22,0,0) Currently, physical characteristics can independently or synergistically impact the tumor microenvironment and the efficacy of CAR-T cells."];
+  "Node_23" [label="(23,0,0) Currently, membrane potential depolarization in T cells affects receptor mobility, and electrostatic interactions in TCR signaling regulation have been observed."];
+  "Node_5" [label="(5,0,0) Currently, unlike immune checkpoint inhibitors, ACT relies on the ex vivo activation and expansion of T cells."];
+  "Node_6" [label="(6,0,0) If the ex vivo activation and expansion phase can influence the therapeutic efficacy of tumor-specific CD8+ T cells, then optimizing these conditions is critical."];
+  "Node_7" [label="(7,0,0) deduction-reasoning: Given that ACT relies on ex vivo expansion which influences efficacy, therefore optimizing culture conditions and elucidating the underlying mechanisms are critical for broadening the clinical utility of ACT immunotherapy."];
+  "Node_8" [label="(8,0,0) If T cell activation and proliferation are orchestrated by extrinsic and intrinsic signaling cascades, then specific receptor engagements trigger these cascades."];
+  "Node_9" [label="(9,0,0) Currently, following T cell receptor (TCR) engagement, antigen recognition is reinforced by the formation of TCR clusters at the cell membrane."];
+  "R4" [label="(0,0,0) Physical and biophysical culture-related conditions are relevant variables for optimizing cellular immunotherapy performance, including ACT and CAR-T contexts."];
+  "R7" [label="(0,0,0) Electrical or electrostatic cues can plausibly modulate T-cell receptor signaling, motivating investigation of controlled extracellular electrical stimulation as a biophysical input for CD8+ T cells."];
+  "R9" [label="(0,0,0) TCR engagement and TCR clustering are specific receptor-associated events that can initiate T-cell signaling cascades."];
+  "Node_6" -> "Node_7" [label="deduction-rule"];
+  "Node_5" -> "Node_7" [label="deduction-case"];
+  "Node_8" -> "R9" [label="deduction-rule"];
+  "Node_9" -> "R9" [label="deduction-case"];
+  "Node_16" -> "R7" [label="abduction-phenomenon"];
+  "Node_23" -> "R7" [label="abduction-knowledge"];
+  "Node_7" -> "R4" [label="induction-case"];
+  "Node_22" -> "R4" [label="induction-common"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

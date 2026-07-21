@@ -1,0 +1,13 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56761-6
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper aims to investigate whether Lon protease released from lysed bacterial cells degrades liberated cellular proteins into small peptides that surviving bacteria import and use for growth, thereby testing post-mortem nutrient recycling in bacteria.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Evidence that bacteria often face nutrient-limited low-growth states, that degraded protein products can support growth, that small peptides are importable nutrients, and that extracellular proteins require degradation jointly motivates testing a bacterial nutrient-recycling mechanism."];
+  "R2" [label="(0,0,0) Casein hydrolysate is a degraded protein nutrient used in bacterial culture, and in the cited E. coli minimal-medium condition it enhances wild-type E. coli growth in a dose-dependent manner."];
+  "S4" [label="(4,0,0) Casein hydrolysate (enzyme-degraded casein) is used as a source of nutrients for bacterial growth in laboratory microbial culture."];
+  "S6" [label="(6,0,0) Casein hydrolysate gives a dose-dependent enhancement of wild type Escherichia coli growth when used as an additive to minimal media with glycerol as carbon source."];
+  "S4" -> "R2" [label="deduction-rule"];
+  "S6" -> "R2" [label="deduction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

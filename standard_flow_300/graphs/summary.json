@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "workflow_state": "locked_standard_flow",
+  "claim": "300/350 strict rows; 50 typed residual rows remain in the denominator",
+  "generated_at": "2026-07-21T20:31:30+08:00",
+  "source_accounting_file": "STRICT_ACCEPTED_350.csv",
+  "source_accounting_sha256": "8cdbe586c05bf1e20c855cf43d43dff4ab7ef892dcd8bae54afa126b13dc6767",
+  "verified_key_tables": [
+    {
+      "file": "STRICT_ACCEPTED_350.csv",
+      "sha256": "e7111677dfa9079dac230421a70572fa3e9bac83f43ce2bcbf2ef1db66ce514c"
+    },
+    {
+      "file": "SEMANTIC_REPAIR_STAGE_STRICT_ROWS_350.csv",
+      "sha256": "5003021d5f318de0a3b5464592d3b4d8037f060e2d601b501e6fd62e86d18cca"
+    }
+  ],
+  "graph_count": 300,
+  "unique_paper_spec_count": 300,
+  "paper_count": 70,
+  "model_count": 5,
+  "graphs_by_model": {
+    "claude_sonnet_4_5_20250929": 61,
+    "gemini_3_1_pro_preview": 53,
+    "gpt_5_2": 68,
+    "grok_4_1_thinking": 59,
+    "qwen3_5_397b_a17b": 59
+  },
+  "graphs_per_paper_histogram": {
+    "1": 1,
+    "2": 1,
+    "3": 8,
+    "4": 27,
+    "5": 33
+  },
+  "source_resolution_counts": {
+    "materialized_curated_relocation": 300
+  },
+  "total_dot_bytes": 2097165,
+  "all_dot_parseable": true,
+  "all_strict_structure_ok": true,
+  "all_source_destination_hashes_match": true,
+  "manifest_file": "manifest.csv",
+  "manifest_sha256": "d34e18f0b26ee8532eb733d4bdefff8a0d54f58030c61a80396349958f876724"
+}

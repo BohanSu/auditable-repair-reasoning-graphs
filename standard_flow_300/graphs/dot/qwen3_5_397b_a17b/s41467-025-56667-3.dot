@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Develop and validate precisely laser-tailored, nanometre-thick, conduction-restricted polymer foils irradiated by a high-contrast multi-petawatt femtosecond pulse to drive laser-driven proton acceleration through a hybrid radiation-pressure and enhanced Coulomb-repulsion acceleration regime, aiming to reach about 110 MeV proton energies and provide a route toward higher-quality proton beams.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The paper-level bridge is that tailoring target geometry and electrical conduction in ultrathin polymer foils, while preserving them with high temporal contrast, can change the dominant ion-acceleration dynamics and improve the energy and quality of laser-driven proton beams."];
+  "N_I3" [label="(0,0,0) Deduction-reasoning: Given Currently energy is <100 MeV (S5), and if apps are essential then energy must improve (S6), therefore energy improvement is needed."];
+  "N_I8" [label="(0,0,0) Abduction-reasoning: Given Observation structures hard to preserve (S15), and Knowledge contrast is prerequisite (S16), therefore contrast is a hurdle."];
+  "N_S15" [label="(15,1,0) Observation: Preserving nano-structures before main pulse is a challenge."];
+  "N_S16" [label="(16,1,0) Knowledge: High temporal contrast is a prerequisite for such experiments."];
+  "N_S5" [label="(5,1,0) Currently, limitations lead to proton energy below 100 MeV."];
+  "N_S6" [label="(6,1,0) If applications are essential, then improving proton energy is required."];
+  "N_S5" -> "N_I3" [label="deduction-case"];
+  "N_S6" -> "N_I3" [label="deduction-rule"];
+  "N_S15" -> "N_I8" [label="abduction-phenomenon"];
+  "N_S16" -> "N_I8" [label="abduction-knowledge"];
+  "N_I3" -> "NROOT" [label="induction-case"];
+  "N_I8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

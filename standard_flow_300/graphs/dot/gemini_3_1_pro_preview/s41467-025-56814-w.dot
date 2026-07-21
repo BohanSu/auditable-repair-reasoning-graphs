@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56814-w
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes developing and evaluating p(C2F-z), a single-component n-type organic mixed ionic–electronic conductor, as the channel of an aqueous-gated organic electrochemical transistor to form an ion-tunable optoelectrochemical synapse that converts multispectral light and electrical stimuli into controllable ionic doping states for synaptic plasticity and neuromorphic vision functions including image recognition, color processing, and motion detection.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A material/device platform that couples optical responsiveness with electrical or ionic modulation can be investigated as an optoelectronic synaptic element for neuromorphic vision."];
+  "N_case_1" [label="(2,0,0) Currently, the human visual system is able to recognize and remember the identity of a wide range of objects by receiving visual cues."];
+  "N_conc_1" [label="(3,0,0) deduction-reasoning: Given biological processes inspire artificial counterparts and the human visual system efficiently processes visual cues, therefore the processes in the human visual system have inspired the development of artificial visual systems implemented through electronic devices."];
+  "N_conc_2" [label="(4,0,0) deduction-reasoning: Given artificial visual systems use electronic devices and optoelectronic synapses are instrumental for this, therefore optoelectronic synapses have been instrumental in the progression of neuromorphic devices that can decode images or enable artificial vision."];
+  "N_rule_1" [label="(0,0,0) If biological processes efficiently process information, then they inspire the development of artificial counterparts."];
+  "N_rule_2" [label="(0,0,0) If artificial visual systems are being developed through electronic devices, then optoelectronic synapses are instrumental in the progression of such neuromorphic devices."];
+  "N_rule_3" [label="(0,0,0) If optoelectronic synapses are instrumental in neuromorphic devices, then OMIECs, which feature the crucial ability to absorb light, are promising candidates for neuromorphic vision engineering."];
+  "N_rule_4" [label="(0,0,0) If OMIECs feature the crucial ability to absorb light for neuromorphic vision, then mimicking the human visual system demands multi-functional materials responsive to both light and electrical stimuli."];
+  "N_rule_5" [label="(0,0,0) If mimicking the human visual system demands multi-functional materials responsive to both light and electrical stimuli, then the development of multi-stimuli-responsive OMIECs is key to building a biomimetic optoelectronic synapse."];
+  "N_rule_6" [label="(0,0,0) If the development of multi-stimuli-responsive OMIECs is key to building a biomimetic optoelectronic synapse, then developing an organic ion-tunable optoelectrochemical synapse using a single-component OMIEC OECT channel successfully achieves this."];
+  "R3" [label="(0,0,0) Given that optoelectronic synapses are instrumental in neuromorphic devices, OMIECs, which can absorb light, are promising candidates for neuromorphic vision engineering."];
+  "R4" [label="(0,0,0) Because OMIECs can absorb light for neuromorphic vision, mimicking the human visual system motivates multi-functional materials responsive to both light and electrical stimuli."];
+  "R5" [label="(0,0,0) Because mimicking the human visual system motivates materials responsive to both light and electrical stimuli, developing multi-stimuli-responsive OMIECs is key to building a biomimetic optoelectronic synapse."];
+  "R6" [label="(0,0,0) Developing an organic ion-tunable optoelectrochemical synapse using a single-component OMIEC as an OECT channel responsive to both light and voltage stimuli is a motivated approach for building a biomimetic optoelectronic synapse."];
+  "N_rule_1" -> "N_conc_1" [label="deduction-rule"];
+  "N_case_1" -> "N_conc_1" [label="deduction-case"];
+  "N_rule_2" -> "N_conc_2" [label="deduction-rule"];
+  "N_conc_1" -> "N_conc_2" [label="deduction-case"];
+  "N_rule_3" -> "R3" [label="deduction-rule"];
+  "N_conc_2" -> "R3" [label="deduction-case"];
+  "N_rule_4" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "N_rule_5" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "N_rule_6" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

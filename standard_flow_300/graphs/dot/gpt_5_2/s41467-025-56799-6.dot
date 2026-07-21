@@ -1,0 +1,43 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56799-6
+  rankdir="TB";
+  "I1" [label="(0,0,0) induction: Given OSCs have special-application merits and already high PCE progress, therefore improving remaining loss mechanisms is a worthwhile research goal."];
+  "I2" [label="(0,0,0) deduction: Given OSCs lag inorganic PV due to higher Eloss and lower FF, therefore reducing Eloss and improving FF are priority targets."];
+  "N1" [label="(1,0,0) Organic solar cells (OSCs) have unique merits (light/thin/flexible/translucent/colorizable) enabling special applications, making OSCs a promising green energy technology."];
+  "N10" [label="(10,0,0) If intermolecular interactions (D-D, A-A, D-A) are manipulated to control intermolecular coupling, then Eloss can be suppressed and FF improved."];
+  "N13" [label="(13,0,0) If side-chain modifications (length/topology/branching point/dimension) are applied, then solubility, crystallization, and stacking of SMAs can be tuned."];
+  "N14" [label="(14,0,0) Currently, changing alkyl-branching position alters SMA stacking, which can optimize phase separation and exciton dissociation."];
+  "N18" [label="(18,0,0) Currently, for asymmetric-side-chain acceptors, intrinsic molecular properties (packing, electron coupling, transport), especially electron-vibrational coupling, must be understood; electron-vibrational coupling describes geometry deformation during electron transfer."];
+  "N19" [label="(19,0,0) If electron-vibrational coupling is reduced, then non-radiative recombination is suppressed, leading to reduced non-radiative energy loss."];
+  "N2" [label="(2,0,0) Currently, due to advances in materials and processing—especially A-DA’D-A type SMAs—single-junction OSC PCE has exceeded 19%."];
+  "N20" [label="(20,0,0) If side-chain asymmetric acceptors are comprehensively investigated using DFT calculations and single-crystal structures, then energy-loss and charge-transport mechanisms can be deeply understood."];
+  "N3" [label="(3,0,0) Currently, OSC performance still lags inorganic PV because OSCs have relatively higher energy loss (Eloss) and lower fill factor (FF)."];
+  "NROOT" [label="(0,0,0) The paper proposes to develop, evaluate, and mechanistically study asymmetric alkyl/thienyl side-chain A-DA’D-A small-molecule acceptors for organic solar cells, testing whether their effects on molecular packing, interfacial interactions, and electron-vibrational coupling can reduce non-radiative losses and recombination while improving device performance.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When OSC performance is limited by energy loss, fill factor, recombination, and charge-generation constraints, molecular design strategies that can tune packing, interactions, and electron-vibrational coupling are appropriate candidates for systematic development and mechanistic evaluation."];
+  "R10" [label="(0,0,0) Because OSCs still need lower energy loss and higher fill factor, manipulating donor–donor, acceptor–acceptor, and donor–acceptor intermolecular interactions is a plausible route to investigate for suppressing energy loss and improving fill factor."];
+  "R11" [label="(0,0,0) Prior side-chain modification examples show that side-chain engineering can tune SMA stacking, morphology, charge transport, voltage/fill-factor behavior, and energy loss, so it is a reasonable design lever for systematic study."];
+  "R12" [label="(0,0,0) Since intermolecular-interaction control is a plausible route to reduce OSC losses and side-chain modifications can tune SMA solubility, crystallization, and stacking, side-chain design is a plausible way to influence morphology-linked fill factor and energy-loss behavior."];
+  "R13" [label="(0,0,0) The evidence motivates developing and evaluating side-chain-asymmetric small-molecule acceptors while mechanistically studying their packing, intermolecular-interaction, charge-transport, and electron-vibrational-coupling behavior."];
+  "R3" [label="(0,0,0) For asymmetric-side-chain acceptors, the need to understand packing, electron coupling, transport, and electron-vibrational coupling justifies comprehensive mechanistic investigation, including DFT calculations and single-crystal-structure analysis, to clarify energy-loss and charge-transport mechanisms."];
+  "R9" [label="(0,0,0) For asymmetric-side-chain acceptors, electron-vibrational coupling is a mechanistically relevant property to investigate because reduced electron-vibrational coupling is linked to suppressed non-radiative recombination and lower non-radiative energy loss."];
+  "N1" -> "I1" [label="induction-case"];
+  "N2" -> "I1" [label="induction-common"];
+  "I1" -> "I2" [label="deduction-rule"];
+  "N3" -> "I2" [label="deduction-case"];
+  "I2" -> "R10" [label="abduction-phenomenon"];
+  "N10" -> "R10" [label="abduction-knowledge"];
+  "N14" -> "R11" [label="induction-case"];
+  "N13" -> "R11" [label="induction-common"];
+  "R10" -> "R12" [label="abduction-phenomenon"];
+  "N13" -> "R12" [label="abduction-knowledge"];
+  "N20" -> "R3" [label="deduction-rule"];
+  "N18" -> "R3" [label="deduction-case"];
+  "N18" -> "R9" [label="abduction-phenomenon"];
+  "N19" -> "R9" [label="abduction-knowledge"];
+  "R3" -> "R13" [label="abduction-phenomenon"];
+  "R12" -> "R13" [label="abduction-knowledge"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

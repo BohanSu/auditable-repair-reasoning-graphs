@@ -1,0 +1,18 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) Use high-contrast multi-petawatt femtosecond pulses to irradiate laser-tailored nanometre-thick polymer foils, testing how restriction of cold-electron conduction supports the reported hybrid radiation-pressure and Coulomb-repulsion acceleration route, with the goal of reproducing about 110 MeV proton generation and further boosting laser-driven proton energies.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent laser-plasma proton-acceleration research strategy is to connect an experimentally demonstrated high-energy proton result with the target geometry, laser conditions, and stated acceleration mechanism that explain why the result exceeds earlier laser-driven proton-energy limits."];
+  "R12" [label="(0,0,0) Deduction-reasoning: If a structured nanometre-thick polymer foil is driven by a multi-petawatt femtosecond laser with well-controlled temporal contrast, pointing stability, and transverse tailoring, then enhanced proton generation can be demonstrated; in the reported experiment, those controls and tailoring were applied to polymer foils, supporting the demonstration of about 110 MeV proton generation from laser-tailored nanometre-thick polymer foils."];
+  "R2" [label="(0,0,0) Induction-reasoning: From the case that structured targets have been used in efforts to increase laser-driven proton energy, together with the common pattern that conduction-restricted nanometre targets can enhance acceleration, structured target design is a plausible route for improving proton-energy performance, especially when cold-electron conduction is restricted."];
+  "demo_case" [label="(20,0,0) Deduction-case: The temporal contrast and pointing stability of the petawatt laser were well controlled, and the transverse shape of the polymer foils was tailored with a 100-kHz, μJ femtosecond laser."];
+  "demo_rule" [label="(19,0,0) Deduction-rule: If a structured nanometre-thick polymer foil is driven by a multi-petawatt femtosecond laser with well-controlled temporal contrast and pointing stability plus transverse shape tailored by auxiliary 100-kHz μJ femtosecond laser, then enhanced proton acceleration is demonstrated with 110-MeV protons measured and confirmed."];
+  "know_common" [label="(0,0,0) Induction-common: The common is that conduction-restricted nanometre targets enable the enhancement."];
+  "struct_conc" [label="(8,0,0) induction-reasoning: From the case of past efforts to increase proton energy and the common that structured targets (front/rear modification, mass-limited) have been intensively studied with effective designs demonstrated, the utilization of structured targets enhances proton energy (but requires addressing petawatt challenges). Induction-case: The utilization of structured targets has been intensively studied, and several effective designs have been demonstrated."];
+  "struct_conc" -> "R2" [label="induction-case"];
+  "know_common" -> "R2" [label="induction-common"];
+  "demo_rule" -> "R12" [label="deduction-rule"];
+  "demo_case" -> "R12" [label="deduction-case"];
+  "R12" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

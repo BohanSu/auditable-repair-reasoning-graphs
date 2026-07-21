@@ -1,0 +1,35 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56761-6
+  rankdir="TB";
+  "C3" [label="(0,0,0) induction-reasoning: Currently casein hydrolysate increases E. coli growth in a dose-dependent way, and generally dose-dependent growth rescue by peptide hydrolysate indicates peptides are limiting nutrients; so peptides are limiting nutrients in that condition."];
+  "C6" [label="(0,0,0) deduction-reasoning: We observe Lon protease released from dead cells catabolizes co-released proteins into small-peptide nutrients, and if such a factor enables protein-to-peptide conversion that supports growth, then Lon-mediated post-mortem processing provides a mechanism for nutrient recycling from dead bacteria."];
+  "K1" [label="(0,0,0) Background rule: If bacteria are nutrient-limited in nature, then identifying processes that generate importable nutrients from environmental macromolecules is crucial for explaining how growth can occur when resources appear."];
+  "K2" [label="(0,0,0) Background rule: If bacteria mainly import small peptides/amino acids rather than intact proteins, then environmental proteins must first be broken down into small peptides/amino acids to become usable nutrients."];
+  "K3" [label="(0,0,0) Background case: In natural environments, dead bacteria lyse and release intracellular proteins into the environment (a potential macromolecule nutrient pool)."];
+  "K5" [label="(0,0,0) Background rule: If supplementing a medium with small-peptide mixtures increases bacterial growth in a dose-dependent manner, then small peptides are growth-limiting nutrients under those conditions."];
+  "K6" [label="(0,0,0) Background rule: If a particular factor (e.g., Lon protease) released from dead cells performs the necessary protein-to-peptide conversion, then live cells can recycle nutrients from dead-cell proteins via that factor (a nutrient-recycling mechanism)."];
+  "N1v" [label="(1,2,0) Currently, nutrient limitation is a typical cause of limited bacterial growth in nature."];
+  "N3" [label="(3,0,0) Currently, bacteria typically transport small peptides into the cell to serve as sources of fixed nitrogen and amino acids."];
+  "N6" [label="(6,0,0) Currently, adding casein hydrolysate to minimal glycerol medium produces a dose-dependent enhancement of wild-type E. coli growth."];
+  "N8" [label="(8,0,0) Observation/claim: Proteins released from dead bacteria are catabolized to small peptides, and Lon protease released from dead cells catabolizes co-released proteins into small-peptide nutrients."];
+  "NROOT" [label="(0,0,0) Investigate and mechanistically evaluate how proteins released by lysed dead Escherichia coli can be converted by released Lon protease into importable small-peptide nutrients that support surviving bacterial growth, thereby motivating a framework for post-mortem nutrient recycling in microbial communities.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent study can connect nutrient limitation, peptide-based nutrient uptake, dead-cell protein release, and protease-mediated protein degradation to investigate microbial recycling of lysate-derived nutrients."];
+  "R4" [label="(0,0,0) Because bacterial growth in nature is commonly nutrient-limited, identifying processes that generate importable nutrients from environmental macromolecules is important for explaining microbial growth under resource limitation."];
+  "R5" [label="(0,0,0) Because bacteria typically transport small peptides and amino acids rather than intact proteins, environmental proteins generally need to be degraded into small peptides or amino acids before they can serve as usable bacterial nutrients."];
+  "R6" [label="(0,0,0) Proteins released when dead bacteria lyse are an environmental protein pool that would need degradation into small peptides or amino acids before supporting growth of other live bacteria."];
+  "N6" -> "C3" [label="induction-case"];
+  "K5" -> "C3" [label="induction-common"];
+  "K6" -> "C6" [label="deduction-rule"];
+  "N8" -> "C6" [label="deduction-case"];
+  "K1" -> "R4" [label="deduction-rule"];
+  "N1v" -> "R4" [label="deduction-case"];
+  "K2" -> "R5" [label="deduction-rule"];
+  "N3" -> "R5" [label="deduction-case"];
+  "R5" -> "R6" [label="deduction-rule"];
+  "K3" -> "R6" [label="deduction-case"];
+  "C3" -> "NROOT" [label="induction-case"];
+  "C6" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

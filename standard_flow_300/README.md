@@ -21,6 +21,8 @@ recorded as typed residual rows. In this state, the residual count is 50.
   generation.
 - `results/`: public result summaries and row-level tables for the locked
   300/350 state.
+- `graphs/`: byte-for-byte copies of the 300 accepted terminal DOT graphs,
+  organized by model, with a SHA-256 manifest and validation summary.
 - `docs/`: scope, metric, and reporting notes for this state.
 - `figures/`: lightweight result figures.
 
@@ -42,6 +44,10 @@ recorded as typed residual rows. In this state, the residual count is 50.
 - `results/RESIDUAL_50_CLOSEOUT_QUEUE.csv`: the typed queue used to plan
   residual closeout.
 - `results/LLM_BASELINE_SUMMARY_350.json`: raw-graph baseline comparison.
+- `graphs/manifest.csv`: one row per accepted paper-model graph, including its
+  repository path, SHA-256 digest, byte size, and parsed node/edge counts.
+- `graphs/summary.json`: graph-set counts and the results of DOT parsing,
+  strict structure validation, and source-to-copy hash checks.
 
 ## Reporting Boundary
 

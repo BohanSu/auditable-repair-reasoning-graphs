@@ -1,0 +1,30 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56902-x
+  rankdir="TB";
+  "ABD_KNOWLEDGE_RULE" [label="(27,0,0) If an inhibitor extends to the previously unexplored Val70 Ub site (in addition to BL2), then it accounts for high potency (as demonstrated by Jun12682 binding data)."];
+  "ABD_KNOW_PLPRO" [label="(0,0,0) If a second cysteine protease like PLpro is inhibited (especially noncovalently via validated BL2 site), then antiviral activity with an alternative mechanism to Mpro is achieved and interest in PLpro inhibitors resurged since the pandemic (sentence 22)."];
+  "ABD_PHEN_PLPRO" [label="(20,0,0) PLpro is part of nsp3, cleaves viral polyproteins at nsp1/2, nsp2/3, nsp3/4 junctions, and has deubiquitinase/deISGylase activities antagonizing host immune responses (sentences 20-21)."];
+  "IND_CASE_BROAD" [label="(5,0,0) The SARS-CoV-2 RdRp inhibitors remdesivir and molnupiravir (plus Mpro inhibitor nirmatrelvir) are known to have broad-spectrum antiviral activities against viruses in different families (sentences 5-8 + examples from refs 5,6,7,8)."];
+  "IND_CASE_PERF" [label="(25,0,0) Our recent study revealed a first-in-class rationally designed noncovalent inhibitor Jun12682 showing in vivo antiviral efficacy in a mouse model of SARS-CoV-2 infection, which binds BL2 and extends to Val70 Ub."];
+  "IND_COMMON_BROAD" [label="(4,0,0) Induction-common: Priorities have been given to conserved viral targets including polymerases and proteases, with the COVID-19 pandemic accelerating antiviral development and genuinely new strategies emerging beyond repurposing (sentences 1-4)."];
+  "IND_COMMON_PERF" [label="(29,0,0) Induction-common: X-ray crystal structures of six quinoline leads reveal five occupy Val70 Ub as designed (Jun13317 etc.), while the optimized lead Jun13296 shows flipped orientations or superior binding in some cases, consistently outperforming prior biarylphenyl scaffolds."];
+  "IND_CONC_BROAD" [label="(3,0,0) induction-reasoning: From the cases of remdesivir, molnupiravir, and nirmatrelvir exhibiting broad-spectrum activity against multiple families, and the common prioritization of conserved targets, therefore one of the ultimate goals is to develop broad-spectrum oral antivirals for pandemic-potential pathogens."];
+  "NROOT" [label="(0,0,0) The paper-level research proposal is to use rational design of quinoline-based noncovalent inhibitors of SARS-CoV-2 papain-like protease, extending from the BL2 loop region toward the Val70Ub pocket, to develop and evaluate leads such as Jun13296 for enzymatic potency, cellular antiviral activity, and in-vivo efficacy as candidates toward broad-spectrum oral antivirals.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A conserved viral protease target with a structurally exploitable binding extension site can motivate rational design of noncovalent inhibitors and subsequent testing across enzymatic, cellular, and in-vivo antiviral endpoints."];
+  "R2" [label="(0,0,0) Because SARS-CoV-2 PLpro has viral polyprotein-processing and immune-antagonism roles, and because extension from the BL2 region into the previously unexplored Val70Ub site is presented as accounting for high potency in a prior inhibitor context, a mechanistically plausible design hypothesis is to pursue PLpro inhibitors that engage the Val70Ub site as potent alternative-mechanism antivirals."];
+  "R3" [label="(0,0,0) The premises support two limited observations: Jun12682 is a prior rationally designed noncovalent PLpro inhibitor with in-vivo antiviral efficacy, and X-ray structures show that several newer quinoline leads, including Jun13296, occupy the Val70Ub site as expected. Together, these observations justify structural/design follow-up of Val70Ub-engaging quinoline leads, but they do not by themselves establish superior enzymatic potency, cellular antiviral activity, or oral in-vivo efficacy for Jun13296."];
+  "R5" [label="(0,0,0) Since PLpro contributes to SARS-CoV-2 replication and immune antagonism, and inhibition of PLpro is presented as an alternative antiviral mechanism to Mpro inhibition, PLpro is a scientifically plausible antiviral target for noncovalent inhibitor development."];
+  "IND_CASE_BROAD" -> "IND_CONC_BROAD" [label="induction-case"];
+  "IND_COMMON_BROAD" -> "IND_CONC_BROAD" [label="induction-common"];
+  "ABD_PHEN_PLPRO" -> "R2" [label="abduction-phenomenon"];
+  "ABD_KNOWLEDGE_RULE" -> "R2" [label="abduction-knowledge"];
+  "IND_CASE_PERF" -> "R3" [label="induction-case"];
+  "IND_COMMON_PERF" -> "R3" [label="induction-common"];
+  "ABD_PHEN_PLPRO" -> "R5" [label="abduction-phenomenon"];
+  "ABD_KNOW_PLPRO" -> "R5" [label="abduction-knowledge"];
+  "IND_CONC_BROAD" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

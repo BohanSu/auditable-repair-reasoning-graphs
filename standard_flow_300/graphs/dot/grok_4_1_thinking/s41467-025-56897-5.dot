@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56897-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes a simple, automatable late-stage radiofluorination strategy in which no-carrier-added [18F]fluoride directly converts α-bromo-α-fluoroalkane precursors into high-molar-activity 18F-labeled α,α-difluoromethylalkanes, addressing limitations of prior approaches and expanding PET tracer chemical space.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When PET radiochemistry has both a strong need for high-molar-activity 18F-labeled motifs and practical limitations in existing routes, a direct late-stage [18F]fluoride substitution strategy on suitable precursors is a meaningful research proposal for expanding tracer-accessible chemical space."];
+  "R4" [label="(0,0,0) Recognition that difluoromethyl groups can confer distinct advantages in biomolecule design supports increased interest in methods for incorporating the α,α-difluoromethyl group."];
+  "common_18f" [label="(3,0,0) deduction-reasoning: Currently there is accessibility + favorable properties, and if such properties, then one of the most commonly used for PET, so fluorine-18 is one of the most commonly used for PET."];
+  "deduction_case_18f" [label="(4,0,0) Currently there is: High accessibility in NCA from cyclotrons + many favorable physical properties for imaging/tracer design."];
+  "deduction_rule_18f" [label="(0,0,0) If radionuclide has NCA accessibility + favorable properties (pure β+ decay/low energy positron/high resolution/long half-life/similar radius/high electronegativity), then it is one of the most commonly used for PET."];
+  "induction_case_arene" [label="(27,0,0) Currently there is: These methods require specialized precursors, metal catalysts, additional manipulations and provide mediocre molar activities."];
+  "induction_case_cf2h" [label="(15,0,0) Currently there is: This interest is driven by recognition of the difluoromethyl group's potential to confer distinct advantages in biomolecule designs."];
+  "induction_common_arene" [label="(0,0,0) Induction-common: When methods require specialized precursors/catalysts/manipulations and give mediocre Am, they have practical limitations."];
+  "induction_common_cf2h" [label="(0,0,0) Induction-common: When a group acts as H-bond donor, metabolically stable bioisostere of OH/SH/NH2 and improves PK/physicochemical properties, it confers distinct advantages driving surged interest in incorporation methods."];
+  "lim_arene" [label="(0,0,0) induction-reasoning: Currently there is specialized requirements and mediocre Am, and when methods require such, they have limitations, so arene methods have limitations."];
+  "induction_case_arene" -> "lim_arene" [label="induction-case"];
+  "induction_common_arene" -> "lim_arene" [label="induction-common"];
+  "deduction_rule_18f" -> "common_18f" [label="deduction-rule"];
+  "deduction_case_18f" -> "common_18f" [label="deduction-case"];
+  "induction_case_cf2h" -> "R4" [label="induction-case"];
+  "induction_common_cf2h" -> "R4" [label="induction-common"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "common_18f" -> "NROOT" [label="induction-case"];
+  "lim_arene" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

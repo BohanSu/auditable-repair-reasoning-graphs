@@ -1,0 +1,26 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56882-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper develops and evaluates a non-Hermitian graphene-based circuit lattice to investigate whether a complex-conjugate pair of intrinsically non-Hermitian Dirac cones with valley-dependent imaginary energies can host non-Hermitian Dirac quasiparticles whose unequal lifetimes yield effective single-cone and valley-selective topological transport phenomena.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Open questions about the stability and consequences of Dirac points under non-Hermitian perturbations motivate using a designed non-Hermitian graphene lattice to test specific Dirac-cone phenomena and their transport signatures."];
+  "Node_1" [label="(9,1,0) Currently Dirac points and other Hermitian band degeneracies are usually unstable under non-Hermitian perturbations."];
+  "Node_2" [label="(0,0,0) If Dirac points are unstable under non-Hermitian perturbations, then it is unclear whether unique non-Hermitian physics can be obtained for them."];
+  "Node_3" [label="(11,1,0) [deduction-reasoning]: Given Dirac points are unstable under non-Hermitian perturbations, therefore it is still unclear whether unique non-Hermitian physics can be obtained for conventional band degeneracies like Dirac points."];
+  "Node_4" [label="(12,1,0) The authors design a non-Hermitian extension of the graphene lattice."];
+  "Node_6" [label="(0,0,0) If the Dirac cones are intrinsically non-Hermitian, then the system will effectively exhibit single Dirac cone physics in the long time limit."];
+  "Node_8" [label="(0,0,0) The common pattern among these experimental observations is that they reveal interesting non-Hermitian physics beyond their Hermitian counterparts."];
+  "R2" [label="(0,0,0) The designed non-Hermitian graphene lattice can be framed as a test platform for the hypothesis that its Dirac-cone physics may become intrinsically non-Hermitian, rather than as proof that the Dirac cones are intrinsically non-Hermitian."];
+  "R3" [label="(0,0,0) If the tested hypothesis of intrinsically non-Hermitian Dirac cones is realized in the designed lattice, then the system is expected to exhibit effective single-Dirac-cone physics in the long-time limit."];
+  "R4" [label="(0,0,0) The expected effective single-Dirac-cone behavior is a bounded example of non-Hermitian physics beyond a Hermitian counterpart, rather than evidence that Dirac cones in non-Hermitian lattices generally have such physics."];
+  "Node_1" -> "Node_3" [label="deduction-case"];
+  "Node_2" -> "Node_3" [label="deduction-rule"];
+  "Node_4" -> "R2" [label="abduction-phenomenon"];
+  "Node_6" -> "R2" [label="abduction-knowledge"];
+  "Node_6" -> "R3" [label="deduction-rule"];
+  "R2" -> "R3" [label="deduction-case"];
+  "R3" -> "R4" [label="induction-case"];
+  "Node_8" -> "R4" [label="induction-common"];
+  "Node_3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

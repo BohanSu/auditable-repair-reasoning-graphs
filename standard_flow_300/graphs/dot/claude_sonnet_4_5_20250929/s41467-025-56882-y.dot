@@ -1,0 +1,37 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56882-y
+  rankdir="TB";
+  "N1" [label="(2,0,0) Dirac physics can be accessed in crystals with band degeneracies called Dirac points"];
+  "N17" [label="(2,3,3) Graphene has two-dimensional Dirac-like electronic excitations"];
+  "N18" [label="(0,0,0) If a system already exhibits Dirac physics, then extending it with non-Hermitian features is a natural approach"];
+  "N2" [label="(3,0,0) In the low-energy limit, states around a Dirac point are governed by the Dirac equation and behave as Dirac quasiparticles"];
+  "N21" [label="(14,0,0) The Dirac quasiparticles are governed by non-Hermitian Dirac Hamiltonians with a valley-dependent background imaginary term"];
+  "N22" [label="(15,0,0) This differs from uniform background loss added to Hermitian graphene which induces the same imaginary term for both valleys"];
+  "N4" [label="(7,0,0) Nonconservative systems have appeared as a new playground for studying band degeneracies"];
+  "N5" [label="(8,0,0) Nonconservative systems modeled by non-Hermitian Hamiltonians typically host exceptional points where both eigenvalues and eigenstates coalesce"];
+  "N7" [label="(9,0,0) Dirac points can only survive under symmetry protection"];
+  "N8" [label="(10,0,0) When Dirac quasiparticles survive under symmetry protection, they still obey the conventional Hermitian Dirac equation and behave much like those in Hermitian systems"];
+  "NROOT" [label="(0,0,0) Use graphene's Dirac platform to pursue an experimentally testable non-Hermitian Dirac design in which intrinsically non-Hermitian, valley-dependent imaginary Hamiltonian terms produce valley-dependent Dirac quasiparticles; treat circuit-lattice and nonreciprocal-coupling implementation, complex-conjugate Dirac cones, unequal lifetimes, effective single-cone behavior, and valley-polarized topological kink states as objectives to be established experimentally rather than as conclusions already derived from the repaired premises.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When the evidence supports a valuable gap, a graphene Dirac platform, and distinctive valley-dependent non-Hermitian Hamiltonian features, the paper-level proposal should state those supported elements and frame more specific implementation and phenomenological outcomes as experimental objectives rather than already established consequences."];
+  "R3" [label="(0,0,0) Non-Hermitian Hamiltonian systems are part of the nonconservative-system setting used to study band degeneracies such as exceptional points."];
+  "R4" [label="(0,0,0) When non-Hermitian Dirac quasiparticles survive under symmetry protection, they can still obey the conventional Hermitian Dirac equation and behave much like quasiparticles in Hermitian systems."];
+  "R6" [label="(0,0,0) Because graphene has two-dimensional Dirac-like electronic excitations, extending graphene with non-Hermitian features is a natural platform approach."];
+  "R7" [label="(0,0,0) Valley-dependent background imaginary terms in non-Hermitian Dirac Hamiltonians are a distinctive feature compared with uniform background loss applied equally to both valleys in Hermitian graphene."];
+  "R9" [label="(0,0,0) Dirac points provide low-energy states governed by the Dirac equation and behaving as Dirac quasiparticles."];
+  "N1" -> "R9" [label="deduction-rule"];
+  "N2" -> "R9" [label="deduction-case"];
+  "N7" -> "R4" [label="deduction-rule"];
+  "N8" -> "R4" [label="deduction-case"];
+  "N4" -> "R3" [label="deduction-rule"];
+  "N5" -> "R3" [label="deduction-case"];
+  "N18" -> "R6" [label="deduction-rule"];
+  "N17" -> "R6" [label="deduction-case"];
+  "N22" -> "R7" [label="deduction-rule"];
+  "N21" -> "R7" [label="deduction-case"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

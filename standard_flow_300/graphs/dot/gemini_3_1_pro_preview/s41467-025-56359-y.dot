@@ -1,0 +1,21 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56359-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper investigates whether precise surface-defect control in ferroelectric PbTiO3 photocatalysis can overcome non-bulk charge-transfer limitations in overall water splitting, focusing on Ti-related defects at positively polarized facets and evaluating surface engineering, including SrTiO3 nanolayers, as a way to create efficient photogenerated electron-transfer pathways and improve apparent quantum efficiency at 365 nm.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When ferroelectric photocatalytic water splitting is limited by surface or defect-mediated charge transfer rather than bulk charge separation, targeted control of surface defects can be developed and evaluated as a route to improve photocatalytic performance."];
+  "Node_1" [label="(11,3,0) Ferroelectric catalysts have unexpectedly shown relatively poor water splitting performance in actual practice."];
+  "Node_2" [label="(18,1,0) The inherent driving force for charge separation within the bulk phase of ferroelectric materials is not an impediment to achieving high photocatalytic activity."];
+  "Node_4" [label="(0,0,0) If the main obstacle for efficient photocatalytic water splitting by PTO is the existence of Ti defects at the positive polarization facets, then eliminating these abundant Ti defective sites will construct a highly efficient electron transfer route and elevate performance."];
+  "Node_6" [label="(0,0,0) Precise control of surface defects in various ferroelectric materials generally improves their photocatalytic performance by facilitating efficient charge transfer."];
+  "R1" [label="(0,0,0) Because ferroelectric catalysts can show poor practical water-splitting performance even when bulk ferroelectric charge separation is not the impediment, the limiting factors are plausibly outside bulk charge separation and should be sought in other aspects of ferroelectric photocatalysis."];
+  "R2" [label="(0,0,0) Given that non-bulk limitations plausibly constrain ferroelectric photocatalytic water splitting, Ti-related defects at the positively polarized facets of ferroelectric PbTiO3 are a motivated surface-defect target to test, because eliminating such defects is expected to construct a more efficient electron-transfer pathway."];
+  "R3" [label="(0,0,0) The Ti-defect hypothesis for positively polarized PbTiO3 surfaces, together with the broader pattern that precise surface-defect control in ferroelectric materials facilitates charge transfer, motivates developing and evaluating surface-defect-control strategies for improved ferroelectric photocatalytic overall water splitting."];
+  "Node_1" -> "R1" [label="abduction-phenomenon"];
+  "Node_2" -> "R1" [label="abduction-knowledge"];
+  "R1" -> "R2" [label="abduction-phenomenon"];
+  "Node_4" -> "R2" [label="abduction-knowledge"];
+  "R2" -> "R3" [label="induction-case"];
+  "Node_6" -> "R3" [label="induction-common"];
+  "R3" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

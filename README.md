@@ -28,6 +28,7 @@ as typed residuals.
 standard_flow_300/
   code/       Python source snapshot for the standard-flow and residual-audit path
   results/    GitHub-safe result summaries and row-level tables
+  graphs/     The 300 accepted terminal DOT graphs, hash manifest, and audit summary
   docs/       Method design, reporting boundary, and result notes
   figures/    Lightweight benchmark figures
 ```
@@ -49,6 +50,8 @@ standard_flow_300/
 - `standard_flow_300/results/STRICT_ACCEPTED_350.csv`
 - `standard_flow_300/results/TYPED_RESIDUAL_350.csv`
 - `standard_flow_300/results/RESIDUAL_50_CLOSEOUT_QUEUE.csv`
+- `standard_flow_300/graphs/manifest.csv`
+- `standard_flow_300/graphs/summary.json`
 
 ## Reporting Boundary
 

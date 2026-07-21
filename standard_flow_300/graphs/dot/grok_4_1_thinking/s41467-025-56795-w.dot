@@ -1,0 +1,38 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56795-w
+  rankdir="TB";
+  "N1" [label="(1,0,0) Induction-case: Single-crystal optical actuators have wide-ranging prospective applications in light-driven molecular machinery, microrobotics, optical data storage, and futuristic quantum-computing circuitry."];
+  "N12" [label="(0,0,0) induction-reasoning: Given the induction-case of complete η1-OSO photoconversion had only been reported in two [RuSO2] complexes, neither of which display macroscopic optical actuation; the η2-(OS)O photoisomer often found in [RuSO2] complexes has never been structurally isolated with 100% photoconversion (co-exists with other configurations) and the induction-common that previous [RuSO2] complexes show limitations where full photoconversion is either absent with actuation or present in mixed states for η2, therefore there is a gap in achieving both 100% SO2-linkage photoisomerisation and macroscopic optical actuation in [RuSO2] complexes."];
+  "N16" [label="(17,0,0) Abduction-phenomenon: The paper reports the discovery of new [RuSO2] complex 1 (trans-[Ru(SO2)(NH3)4(4-bromopyridine)]tosylate2) exhibiting thermally-reversible cracking actuation, with η1-SO2 dark-state undergoing 100% SO2-linkage photoisomerisation to pure η1-OSO at 90 K or pure η2-(OS)O at 100 K; each photoisomer is metastable at its temperature and accompanied by substantial micro- and nanoscopic crystal strain that diminishes as the complex thermally recovers its dark-state (determined v..."];
+  "N17" [label="(0,0,0) Abduction-knowledge: The molecular origins lie in photostructural changes caused by 100% SO2 linkage photoisomerisation upon 505 nm light at low temperature (η1-OSO at 90 K or η2-(OS)O at 100 K, with the latter also generatable by warming the former by 10 K); dark-state recovered on warming; out-of-equilibrium photostructural effects are the real terra nova of solid-state chemistry; crystal strain causes cracking deformation; this enables ternary switching controlled by temperature and visibl..."];
+  "N18" [label="(23,0,0) abduction-reasoning: Given the abduction-phenomenon of the new complex with cracking and 100% pure isomers, and the abduction-knowledge that this enables ternary photonic signatures, therefore this demonstration reveals the foundational possibility of creating ternary photonic signatures of high purity in single-crystal optical actuators."];
+  "N2" [label="(0,0,0) Induction-common: Emerging technologies with wide-ranging prospective applications across multiple domains commonly stimulate a new field of chemistry."];
+  "N4" [label="(7,0,0) Abduction-phenomenon: Linkage photoisomerisation is often the molecular-scale phenomenon that underpins the microscopic manifestation of single-crystal optical actuation in coordination complexes."];
+  "N5" [label="(6,0,0) Abduction-knowledge: Coordination complexes that contain transition metals, such as ruthenium, are of particular interest since they exhibit metal-to-ligand charge transfer (MLCT) that gives rise to broad-band optical absorption, while maintaining good thermal stability."];
+  "N6" [label="(8,0,0) abduction-reasoning: Given the abduction-phenomenon that linkage photoisomerisation underpins actuation in coordination complexes, and the abduction-knowledge that ruthenium complexes are of particular interest due to MLCT and stability, therefore we sought to discover a new single-crystal optical actuator by developing an extended series of ruthenium-tetraammine complexes that undergo SO2-linkage photoisomerisation (with generic formula trans-[Ru(SO2)(NH3)4(X)]m+Yn and variations of X/Y supporting η1-OSO or η2-(OS)O photoisomers that are metastable at ~100 K and thermally revert)."];
+  "N7" [label="(11,0,0) Induction-case: Single-crystal optical actuation has been reported in one [RuSO2] complex as a thermally-reversible macroscopic crystal-peeling effect, owing to the untenable crystal strain from molecular-scale photostructural effects (crystals may peel, bend, stretch, crack, fracture or explode under light)."];
+  "N8" [label="(0,0,0) Induction-common: In photoactive complexes, macroscopic deformations due to photostructural strain often stabilise incomplete photoconversion levels."];
+  "N9" [label="(13,0,0) induction-reasoning: Given the induction-case of peeling in one complex and the induction-common that deformations stabilise incomplete conversion, therefore the peeling effect stabilises the substantial but incomplete (52%) photoconversion level of the η1-OSO isomer in the reported [RuSO2] complex."];
+  "NROOT" [label="(0,0,0) This paper proposes and evaluates trans-[Ru(SO2)(NH3)4(4-bromopyridine)](tosylate)2 as a single-crystal optical actuator and ternary molecular-switch platform whose visible-light- and temperature-controlled SO2-linkage photoisomerisation yields distinct metastable η1-OSO and η2-(OS)O crystal structures and associated reversible light-induced crystal cracking.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When prior actuator and [RuSO2] systems show application promise but incomplete coupling of full photoisomerisation, isolated metastable states, and macroscopic actuation, a new complex that combines these features provides a coherent target for developing and evaluating molecular photonic switching and optical actuation."];
+  "R1" [label="(0,0,0) The wide-ranging prospective applications of single-crystal optical actuators motivate treating them as an emerging and scientifically promising research area, rather than by themselves proving that they already constitute a new field."];
+  "R5" [label="(0,0,0) The documented limitations of previous [RuSO2] complexes motivate developing and evaluating new [RuSO2] single-crystal optical actuators that combine high SO2-linkage photoisomerisation with macroscopic actuation for prospective photonic applications."];
+  "R7" [label="(0,0,0) The reported discovery of a new [RuSO2] complex with 100% SO2-linkage photoisomerisation, pure light-induced isomers, and thermally reversible cracking actuation supports evaluating it as a high-purity photonic actuation platform, rather than proving that it fulfills all broader field-level aims."];
+  "N4" -> "N6" [label="abduction-phenomenon"];
+  "N5" -> "N6" [label="abduction-knowledge"];
+  "N7" -> "N9" [label="induction-case"];
+  "N8" -> "N9" [label="induction-common"];
+  "N16" -> "N18" [label="abduction-phenomenon"];
+  "N17" -> "N18" [label="abduction-knowledge"];
+  "N1" -> "R1" [label="induction-case"];
+  "N2" -> "R1" [label="induction-common"];
+  "N12" -> "R5" [label="induction-case"];
+  "N2" -> "R5" [label="induction-common"];
+  "N18" -> "R7" [label="abduction-phenomenon"];
+  "R5" -> "R7" [label="abduction-knowledge"];
+  "N6" -> "NROOT" [label="induction-case"];
+  "N9" -> "NROOT" [label="induction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

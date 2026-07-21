@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56738-5
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This study investigates whether inhibiting the host cell homologous recombination machinery that engages recombinant AAV vector genomes as DNA-repair substrates can shift repair toward non-homologous end joining, thereby improving concatenation of split transgenes, increasing transgene expression, and helping overcome rAAV payload limitations for gene therapy.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) Together, rAAV payload constraints, split-transgene concatenation requirements, host-cell DNA repair involvement, and the relative efficiency of NHEJ over homologous recombination motivate host-directed strategies for improving dual-vector gene delivery."];
+  "R1" [label="(0,0,0) Given that recombinant AAV has a small genetic payload limitation, its capsid imposes a strict size limit on the DNA it can package."];
+  "R10" [label="(0,0,0) Identifying cellular pathways inhibitory to split transgene reconstitution by a genome-wide screen supports blocking homologous recombination as a strategy to increase concatenation of rAAV vector genomes."];
+  "R13" [label="(0,0,0) The suggestion that NHEJ is a more efficient mechanism for vector-genome concatenation than homologous recombination motivates pharmacological approaches to increase deliverable transgene size in rAAV gene therapies."];
+  "R5" [label="(0,0,0) For the dual vector technique to be effective, splitting a large transgene cassette into two halves requires correct concatenation."];
+  "R6" [label="(0,0,0) Because effective dual-vector reconstitution requires correct concatenation, the post-uncoating nuclear steps of rAAV transduction are attributed to host cellular factors in the absence of delivered viral enzymes."];
+  "R8" [label="(0,0,0) The analogy between ITR-ITR joining and host DNA repair mechanisms motivates improving dual vector transduction through an alternative approach focused on the host cell."];
+  "node_1" [label="(3,2,0) Currently, the major limitation of the recombinant adeno-associated viral vector system is the small genetic payload."];
+  "node_10" [label="(0,0,0) If the dual vector approach splits a large transgene cassette into two halves, then it requires correct concatenation to be effective."];
+  "node_12" [label="(0,0,0) If the dual vector technique requires correct concatenation, then the absence of delivered enzymes implies that the post-uncoating nuclear steps of rAAV transduction are orchestrated by host cellular factors."];
+  "node_15" [label="(21,1,0) deduction-reasoning: Given the post-uncoating nuclear steps are orchestrated by host cellular factors, and this implies reliance on host DNA repair, therefore ITR-ITR joining is analogous to host DNA repair mechanisms."];
+  "node_16" [label="(0,0,0) If ITR-ITR joining is analogous to host DNA repair mechanisms, then the aim is to improve dual vector transduction by an alternative approach that focuses on the host cell."];
+  "node_19" [label="(38,1,0) deduction-reasoning: Given the aim is to improve dual vector transduction by focusing on the host cell, and this requires identifying inhibitory pathways, therefore cellular pathways inhibitory to split transgene reconstitution are identified by a genome-wide screen."];
+  "node_2" [label="(0,0,0) If a vector has a small genetic payload limitation, then its capsid imposes a strict size limit on the DNA it can package."];
+  "node_20" [label="(0,0,0) If cellular pathways inhibitory to split transgene reconstitution are identified by a genome-wide screen, then blocking HR increases concatenation of rAAV VGs."];
+  "node_25" [label="(41,2,0) abduction-reasoning: Given blocking HR dramatically increases dual vector transduction efficiencies, and this implies NHEJ is more efficient, therefore NHEJ is suggested to be a more efficient mechanism for VG concatenation than HR."];
+  "node_26" [label="(0,0,0) If NHEJ is suggested to be a more efficient mechanism for VG concatenation than HR, then the results highlight the potential for pharmacological approaches to increase deliverable transgene size in rAAV gene therapies."];
+  "node_9" [label="(27,1,0) deduction-reasoning: Given the propensity of VGs to concatenate can be exploited, and this leads to splitting the transgene, therefore in the dual vector approach, a large transgene cassette is split into two halves."];
+  "node_2" -> "R1" [label="deduction-rule"];
+  "node_1" -> "R1" [label="deduction-case"];
+  "node_10" -> "R5" [label="deduction-rule"];
+  "node_9" -> "R5" [label="deduction-case"];
+  "node_12" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "node_16" -> "R8" [label="deduction-rule"];
+  "node_15" -> "R8" [label="deduction-case"];
+  "node_20" -> "R10" [label="deduction-rule"];
+  "node_19" -> "R10" [label="deduction-case"];
+  "node_26" -> "R13" [label="deduction-rule"];
+  "node_25" -> "R13" [label="deduction-case"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

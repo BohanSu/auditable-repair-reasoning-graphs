@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  rankdir="TB";
+  "N22" [label="(0,0,0) Induction-common: If multiple independent efforts converge on the same approach, the approach is scientifically promising."];
+  "N23" [label="(0,0,0) Induction: Given multiple methods exist for SGE prediction from H&E, and convergent approaches indicate promise, therefore predicting SGE from H&E is a promising research direction."];
+  "N24" [label="(0,0,0) Deduction-rule: If methods in a field lack comprehensive benchmarking, then systematic evaluation is needed to understand their true capabilities."];
+  "N28" [label="(0,0,0) Abduction-knowledge: Comprehensive benchmarking across multiple metrics can reveal method strengths, limitations, and generalizability."];
+  "N4" [label="(4,0,0) H&E images are cost-effective and routinely used in clinical practice."];
+  "N5" [label="(7,0,0) Several approaches exist to predict SGE from H&E data alone."];
+  "N6" [label="(12,0,0) These methods were recently published and are evolving; their performance has not been comprehensively benchmarked."];
+  "NROOT" [label="(0,0,0) This paper aims to systematically benchmark contemporary machine-learning methods for predicting spatially resolved gene expression from H&E histopathology images, using broad spatial, biological, and downstream-analysis metrics to evaluate accuracy, robustness, limitations, generalizability, and clinical-translation potential.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When a clinically motivated prediction task is promising but under-benchmarked, a systematic multi-criterion benchmark is an appropriate research aim to test accuracy, robustness, limitations, and translational potential."];
+  "R10" [label="(0,0,0) The existence of several approaches to predict SGE from H&E supports the feasibility and promise of this research direction."];
+  "R11" [label="(0,0,0) SGE prediction methods currently lack comprehensive and consistent independent benchmarking."];
+  "R13" [label="(0,0,0) A comprehensive benchmark of methods predicting SGE from H&E images should be conducted to assess performance, spatial and biological behavior, downstream usefulness, limitations, generalizability, and clinical-translation potential."];
+  "R7" [label="(0,0,0) Because H&E images are cost-effective and routinely used in clinical practice, they are a practical imaging substrate for clinically oriented prediction efforts."];
+  "N4" -> "R7" [label="induction-case"];
+  "N22" -> "R7" [label="induction-common"];
+  "N5" -> "R10" [label="induction-case"];
+  "N22" -> "R10" [label="induction-common"];
+  "N6" -> "R11" [label="induction-case"];
+  "N24" -> "R11" [label="induction-common"];
+  "N23" -> "R13" [label="induction-case"];
+  "N28" -> "R13" [label="induction-common"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R13" -> "NROOT" [label="induction-case"];
+  "R7" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

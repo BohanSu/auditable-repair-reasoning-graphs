@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56902-x
+  rankdir="TB";
+  "N1_Know" [label="(9,2,0) abduction-knowledge: Additional antivirals with alternative mechanisms of action are needed to combat viruses for which drug resistance issues with current antivirals are associated."];
+  "N1_Phenom" [label="(16,1,0) abduction-phenomenon: Nirmatrelvir-resistant mutants have been identified from in vitro viral passage experiments."];
+  "N2_Case" [label="(27,2,0) deduction-case: Currently Jun12682’s extension to the Val70 Ub site accounts for its high potency."];
+  "N3_Case" [label="(29,2,0) induction-case: Jun13296 has its 2-aryl substituent occupying the Val70 Ub site."];
+  "N4_Phenom" [label="(31,1,0) abduction-phenomenon: In a SARS-CoV-2 infection mouse model, oral treatment of Jun13296 displays improved in vivo antiviral efficacy compared to Jun12682."];
+  "N5_Rule" [label="(0,0,0) deduction-rule: If a compound demonstrates superior therapeutic efficacy driven by its targeted design against an essential viral protease, then it represents a promising antiviral drug candidate for further development."];
+  "NROOT" [label="(0,0,0) This study motivates and evaluates Val70 Ub-pocket-targeted SARS-CoV-2 papain-like protease antiviral development, exemplified by Jun13296, as a route toward improved orally active candidates for COVID-19 treatment.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R1" [label="(0,0,0) The emergence of nirmatrelvir-resistant mutants supports the need to investigate additional antivirals that act through alternative mechanisms."];
+  "R2" [label="(0,0,0) Because Jun12682's extension to the Val70 Ub site accounts for its high potency, and additional antivirals with alternative mechanisms are needed, the Val70 Ub site is a motivated structural target to investigate for improved antiviral compounds."];
+  "R3" [label="(0,0,0) Jun13296 achieves the intended Val70 Ub-site occupancy through its 2-aryl substituent; this establishes the targeted binding mode but does not by itself establish high potency."];
+  "R4" [label="(0,0,0) Jun13296 combines intended Val70 Ub-site occupancy with improved oral in-vivo antiviral efficacy in a SARS-CoV-2 infection mouse model compared with Jun12682, supporting an association between the targeted binding profile and improved antiviral performance without proving causation."];
+  "R5" [label="(0,0,0) The combined evidence that Jun13296 has a targeted structural binding profile and improved oral in-vivo antiviral efficacy supports considering it a promising antiviral drug candidate for further development, while causal claims about design-driven superiority remain provisional."];
+  "N1_Phenom" -> "R1" [label="abduction-phenomenon"];
+  "N1_Know" -> "R1" [label="abduction-knowledge"];
+  "N2_Case" -> "R2" [label="abduction-phenomenon"];
+  "R1" -> "R2" [label="abduction-knowledge"];
+  "N3_Case" -> "R3" [label="induction-case"];
+  "R2" -> "R3" [label="induction-common"];
+  "N4_Phenom" -> "R4" [label="abduction-phenomenon"];
+  "R3" -> "R4" [label="abduction-knowledge"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "N5_Rule" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

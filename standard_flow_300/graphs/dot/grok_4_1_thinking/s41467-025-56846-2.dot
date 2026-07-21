@@ -1,0 +1,19 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56846-2
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes moDON, a modular DNA-origami monomer strategy in which a re-routable scaffold supplies many orthogonal shape-matching connections in the xy plane, a single-sequence three-strand handle system supplies directional z-plane links, and these features enable one-pot assembly, trigger-controlled disassembly, and fully addressable superstructures.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained evidence converges on modular DNA-origami construction: reusable modular units reduce assembly effort, while the paper's described moDON implementation combines xy-plane scaffold rerouting, z-plane handle connections, one-pot assembly, and retained addressability."];
+  "R6" [label="(0,0,0) Structural DNA nanotechnology is a widely used construction approach in synthetic biology, and published DNA origami nanostructures provide complete addressability with base-pair precision and diverse functional designs."];
+  "imp1" [label="(0,0,0) Induction-common: The common pattern across engineering, biology, and synthetic systems is that modularity enables low-effort, cost-effective assembly through independent, reusable subunits."];
+  "imp7" [label="(0,0,0) Induction-common: The common feature of published DONs is complete addressability with bp precision and a large variety of functional designs."];
+  "mod_ben" [label="(0,0,0) induction-reasoning: Currently there is low-effort, cost-effective assembly via modularity (and the common pattern is efficient construction through independent reusable subunits), so modularity enables low-effort, cost-effective assembly of complex systems."];
+  "s4" [label="(4,0,0) Currently there is: This allows for low-effort, cost-effective assembly of e.g. buildings, hardware, machine code or genetic code."];
+  "s8" [label="(8,0,0) Currently there is: Structural DNA nanotechnology has become a widely used construction approach in synthetic biology."];
+  "s4" -> "mod_ben" [label="induction-case"];
+  "imp1" -> "mod_ben" [label="induction-common"];
+  "s8" -> "R6" [label="induction-case"];
+  "imp7" -> "R6" [label="induction-common"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "mod_ben" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

@@ -1,0 +1,31 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56871-1
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) This paper proposes to test environmental stress sensing in Bacillus subtilis by systematic mutagenesis of the putative N-terminal sensing domain of RsbRA and by measuring σ^B activation, asking whether RsbR-containing stressosome components are required as the environmental stress sensor or whether RsbT can drive a strictly RsbT-dependent σ^B response even without stressosomes, with the stressosome instead shaping response amplitude and kinetics.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "Node_1_Case" [label="(14,0,0) Currently environmental stress activates RsbU."];
+  "Node_1_Rule" [label="(15,0,0) If RsbU is activated, then its phosphatase activity is activated by interaction with RsbT."];
+  "Node_2_Case" [label="(16,0,0) Currently the availability of RsbT to activate RsbU is controlled by sequestration of RsbT in large cytoplasmic complexes termed stressosomes."];
+  "Node_2_Rule" [label="(47,0,0) If RsbT is sequestered in stressosomes, then one attractive model is that RsbR proteins serve as sensors and as activators of RsbT kinase activity."];
+  "Node_3_Rule" [label="(51,0,0) If substitutions in the linker that would presumably be important for communicating sensory information between domains of RsbRA impacted steady-state output but not stress sensitivity, then the role of the stressosome as the primary sensor is in doubt, establishing the rule that if substitutions influence magnitude and duration but are not critical for sensing, then the stressosome primarily serves to modulate the strength and timing of the σ B response."];
+  "Node_4_Case" [label="(56,0,0) Currently we found that these substitutions influenced the magnitude and duration of the σ B response to ethanol, a classic stressor, but that none was critical for stress sensing."];
+  "Node_5_Phenomenon" [label="(58,0,0) Currently cells deleted for stressosomes retained an environmental stress-inducible σ B response that strictly depended on RsbT."];
+  "R1" [label="(0,0,0) Environmental stress activation of RsbU is linked to RsbT because RsbU phosphatase activity is activated through interaction with RsbT."];
+  "R2" [label="(0,0,0) In the stressosome-associated control of RsbT availability, RsbR proteins are proposed in one model to serve as sensors and activators of RsbT kinase activity."];
+  "R4" [label="(0,0,0) Because RsbRA substitutions affected the magnitude and duration of the σ^B response to ethanol but were not critical for stress sensing, these stressosome-component changes support a modulatory role in response amplitude and kinetics rather than an essential role in sensing."];
+  "R5" [label="(0,0,0) Cells lacking stressosomes retained an environmental stress-inducible σ^B response that strictly depended on RsbT, supporting the inference that RsbT mediates a stressosome-independent environmental stress response."];
+  "R6" [label="(0,0,0) Together, RsbT-dependent σ^B activation in cells lacking stressosome components and RsbRA/stressosome effects on response magnitude and duration support a refined model in which RsbT can mediate stressosome-independent environmental stress responses while stressosome components modulate response amplitude and kinetics."];
+  "Node_1_Rule" -> "R1" [label="deduction-rule"];
+  "Node_1_Case" -> "R1" [label="deduction-case"];
+  "Node_2_Rule" -> "R2" [label="deduction-rule"];
+  "Node_2_Case" -> "R2" [label="deduction-case"];
+  "Node_3_Rule" -> "R4" [label="deduction-rule"];
+  "Node_4_Case" -> "R4" [label="deduction-case"];
+  "Node_5_Phenomenon" -> "R5" [label="abduction-phenomenon"];
+  "R1" -> "R5" [label="abduction-knowledge"];
+  "R4" -> "R6" [label="deduction-rule"];
+  "R5" -> "R6" [label="deduction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

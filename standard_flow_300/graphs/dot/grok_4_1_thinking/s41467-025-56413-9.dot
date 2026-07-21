@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56413-9
+  rankdir="TB";
+  "Ampere_Rule" [label="(1,2,6) If the definition of the ampere is based on the fixed value of elementary charge e, then any source generating an electric current which can be expressed in terms of e f provides a realisation of the ampere."];
+  "NROOT" [label="(0,0,0) The paper aims to develop and evaluate a next-generation programmable quantum current generator by combining a three-terminal quantum Hall resistance standard with a Josephson voltage array and loop-current locking, using a superconducting amplifier, to realize fully quantized low-noise currents from the microampere toward the milliampere range with relative uncertainties below 10^-8 and thereby support a correction-free high-accuracy realization of the SI ampere.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When direct single-electron current generation is limited at useful currents and the Josephson/QHRS Ohm-law route is limited by connection corrections, improving the quantum-standard connection motivates a next-generation programmable quantum current generator for high-accuracy ampere realization."];
+  "R1" [label="(0,0,0) Under the revised SI definition based on the fixed elementary charge, a current source whose output can be expressed in terms of elementary charge times frequency would provide a route to realizing the ampere."];
+  "R2" [label="(0,0,0) Single-electron current sources are a natural direct route to ampere realization, but present GaAs and Si tunable-barrier implementations face severe difficulty in reaching currents above about 100 pA with relative uncertainty better than 10^-7 because error rates increase at high operating frequency."];
+  "Route_Case" [label="(8,0,0) Currently there is: another route to the SI realization consists in applying Ohm’s law to the Josephson voltage and quantum Hall resistance standards, since the Josephson effect and the quantum Hall effect now provide direct and universal realizations of the volt and the ohm from h /2 e and h / e 2 constants with a 10 −9 measurement uncertainty."];
+  "Route_Conc" [label="(0,0,0) deduction-reasoning: Currently there is another route by applying Ohm’s law to Josephson voltage and QHRS standards with 10^{-9} uncertainty, and if phase/charge rigidity enable quantized V and charge transfer, then a current n J e f J can be generated, so the series connection of quantum standards provides a viable ampere route."];
+  "Route_Rule" [label="(0,0,0) If the high accuracy of Josephson voltage standards relies on phase rigidity with quantized voltage V = n J ϕ 0 f J under microwave, and if this voltage can be accurately applied to QHRS at ν=2 using charge rigidity of edge states, then a current n J e f J easily reaching microamperes can be generated."];
+  "SECS_Case" [label="(2,0,0) Specific case: Single-electron current sources (SECS) are mesoscopic devices able to handle electrons one by one at a rate f e , often presented as the most obvious way to realize the definition."];
+  "SECS_Common" [label="(3,0,0) Common pattern: Achieving currents above 100 pA using GaAs and Si-based tunable-barrier SECS accurate to within a relative uncertainty better than 10 −7 remains a very challenging goal because of increasing error rates at high frequencies (~1 GHz); more generally, for all mesoscopic current sources the control of charge fluctuations dependent on device coupling with the electromagnetic environment remains crucial; very recently dual Shapiro steps have been evidenced as consequence of phase-ch..."];
+  "SI_Case" [label="(1,0,0) Currently there is: any source generating an electric current which can be expressed in terms of e f , with e the elementary charge and f a frequency in Hz (s −1 ), provides a realisation of the ampere (SI revised 2019 on seven fixed constants)."];
+  "Route_Case" -> "Route_Conc" [label="deduction-case"];
+  "Route_Rule" -> "Route_Conc" [label="deduction-rule"];
+  "Ampere_Rule" -> "R1" [label="deduction-rule"];
+  "SI_Case" -> "R1" [label="deduction-case"];
+  "SECS_Case" -> "R2" [label="induction-case"];
+  "SECS_Common" -> "R2" [label="induction-common"];
+  "R1" -> "NROOT" [label="induction-case"];
+  "R2" -> "NROOT" [label="induction-case"];
+  "Route_Conc" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

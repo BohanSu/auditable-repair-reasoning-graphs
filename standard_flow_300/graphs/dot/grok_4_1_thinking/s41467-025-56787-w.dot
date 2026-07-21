@@ -1,0 +1,29 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56787-w
+  rankdir="TB";
+  "N17" [label="(17,0,0) Currently there is: We found that the effector named HaRxL10 interacted with several clock components including CCA1 HIKING EXPEDITION (CHE, also known as TCP21, AT5G08330) in yeast, implying that HaRxL10 may affect plant circadian clock in a CHE-dependent manner."];
+  "N26" [label="(26,0,0) Currently there is: Overall, HaRxL10 perturbed the key clock component CHE’s transcriptional regulation function as well as several physiological processes."];
+  "N29" [label="(0,0,0) Currently there is: To counteract plant defences, Hpa secretes apoplastic or cytoplasmic effectors (some with RXLR motif) into host cells, with bioinformatic analysis predicting >130 RXLR-type effectors whose functions mostly remain uncharacterized."];
+  "N31" [label="(0,0,0) If how phytopathogens trigger clock-gene perturbations and the specific targeted clock components remain elusive, then a targeted Y2H screen of highly-expressed predicted Hpa RXLR effectors against central Arabidopsis clock components is required to identify interactors."];
+  "N33" [label="(0,0,0) If HaRxL10 interacts with and perturbs the transcriptional-regulation function of the key clock component CHE (stabilising it while repressing downstream binding, reprogramming the transcriptome including clock genes, repressing SA immunity, and altering physiology in CHE-dependent manner), then HaRxL10 perturbs the plant circadian clock and associated immunity/physiology."];
+  "N7" [label="(7,0,0) Currently there is: However, how phytopathogens trigger these perturbations and the specific clock components targeted by pathogens remain elusive."];
+  "NROOT" [label="(0,0,0) This study investigates whether the Hyaloperonospora arabidopsidis RXLR effector HaRxL10 manipulates Arabidopsis circadian defences by targeting the CHE transcription factor, including testing effects on CHE stability and ZTL-mediated degradation, promoter binding, clock gene expression, and salicylic-acid-dependent immunity.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A coherent research program can proceed from unresolved pathogen-clock targeting, through candidate effector-clock interaction screening, to mechanistic testing of how a specific effector alters clock-linked immune regulation."];
+  "R1" [label="(0,0,0) Because the pathogen components responsible for phytopathogen-induced clock perturbations remain unknown and Hpa encodes many predicted RXLR-type host-cell effectors, Hpa RXLR effectors are plausible candidates to screen for interactions with Arabidopsis clock components."];
+  "R2" [label="(0,0,0) Given the unresolved identity of pathogen-targeted clock components and the plausibility of Hpa RXLR effectors as candidates, a targeted Y2H screen of highly expressed predicted Hpa RXLR effectors against central Arabidopsis clock components is a justified approach to identify candidate effector-clock interactions."];
+  "R3" [label="(0,0,0) The Y2H interaction between HaRxL10 and several clock components, including CHE, identifies HaRxL10-CHE as a candidate effector-clock component interaction suitable for follow-up in Arabidopsis."];
+  "R4" [label="(0,0,0) Follow-up evidence that HaRxL10 perturbed CHE transcriptional-regulation function and several physiological processes supports treating HaRxL10 as a CHE-linked perturbing effector rather than merely a yeast-interaction candidate."];
+  "R5" [label="(0,0,0) The HaRxL10-associated perturbation of CHE regulation and physiology motivates testing a mechanistic model in which HaRxL10 manipulates Arabidopsis clock and immune outputs through effects on CHE stability, promoter binding, clock-gene expression, and SA-related immunity."];
+  "N7" -> "R1" [label="abduction-phenomenon"];
+  "N29" -> "R1" [label="abduction-knowledge"];
+  "N31" -> "R2" [label="deduction-rule"];
+  "R1" -> "R2" [label="deduction-case"];
+  "N17" -> "R3" [label="abduction-phenomenon"];
+  "R2" -> "R3" [label="abduction-knowledge"];
+  "N26" -> "R4" [label="induction-case"];
+  "R3" -> "R4" [label="induction-common"];
+  "R4" -> "R5" [label="abduction-phenomenon"];
+  "N33" -> "R5" [label="abduction-knowledge"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

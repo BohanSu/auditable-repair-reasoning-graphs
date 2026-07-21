@@ -18,11 +18,16 @@ workspace.
 | `results/RESIDUAL_FAILURE_TYPE_COUNTS_350.csv` | Residual taxonomy. |
 | `results/LLM_BASELINE_SUMMARY_350.json` | Raw graph baseline comparison. |
 | `results/ABLATION_RESULTS_TABLE_350.csv` | Ablation comparison table. |
+| `graphs/dot/<model>/<paper>.dot` | The 300 accepted terminal DOT graphs, separated by model. |
+| `graphs/manifest.csv` | Per-graph key, path, SHA-256, size, node/edge counts, and validation flags. |
+| `graphs/summary.json` | Set-level count, provenance, and validation summary for the 300 DOT files. |
+| `graphs/README.md` | Graph selection rule, layout, and verification boundary. |
 | `figures/` | Lightweight benchmark figures. |
 | `docs/CURRENT_RESULT.md` | Locked result summary. |
 | `docs/STANDARD_FLOW_METHOD_DESIGN.md` | Method design for the locked standard flow. |
 | `docs/SCOPE_AND_REPORTING.md` | Reporting boundary and metric notes. |
 | `docs/FILE_MAP.md` | This public file inventory. |
 
-The full per-paper graphs, evaluator directories, provider logs, and local
-caches are not included in this GitHub-ready package.
+The accepted terminal DOT graph for each of the 300 strict-success rows is
+included. Intermediate candidate graphs, evaluator directories, provider logs,
+and local caches remain outside this GitHub-ready package.

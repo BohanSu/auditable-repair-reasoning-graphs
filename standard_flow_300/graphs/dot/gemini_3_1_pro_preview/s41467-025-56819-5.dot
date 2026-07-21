@@ -1,0 +1,42 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56819-5
+  rankdir="TB";
+  "N1" [label="(4,3,0) Utilizing optical signals for training and converting them into non-volatile electrical signals for inference combines the strengths of both signal types."];
+  "N10" [label="(0,0,0) If a device allows exciton separation without additional gate voltage, then it can exhibit adjustable synaptic weights using light without gate voltage assistance."];
+  "N14" [label="(2,1,0) During training, synaptic devices need to adjust weights dynamically."];
+  "N15" [label="(3,1,0) During inference, non-volatile storage of these weights is required."];
+  "N2" [label="(5,1,0) The strategy leverages the wide bandwidth of optical signals."];
+  "N4" [label="(11,1,0) Synaptic weights could not be modulated through light without gate voltage assistance when 2D materials are used as channels or floating gates."];
+  "N5" [label="(12,1,0) The additional gate electrode poses challenges for large-scale integration."];
+  "N6" [label="(0,0,0) induction-reasoning: Given synaptic weights cannot be modulated by light without gate voltage and additional gates pose integration challenges, therefore current FGTs using 2D materials as channels or floating gates are inadequate for optical modulation."];
+  "N7" [label="(17,1,0) If a material has low exciton binding energy and long exciton lifetime, then it allows the separation of excitons without the assistance of additional gate voltage."];
+  "N8" [label="(20,3,0) Currently (NH 4)BiI 3 has low exciton binding energy (E B)."];
+  "NROOT" [label="(0,0,0) The paper proposes developing and evaluating an optical floating-gate transistor in which the dielectric 2D photoconductive material (NH₄)BiI₃ serves as a photosensitive control gate, aiming for ultra-dim-light, gate-voltage-free modulation of multiple non-volatile resistive states at femtojoule-scale energies for compact optoelectronic memory that supports optical training and electrical inference in neuromorphic hardware.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A neuromorphic optoelectronic memory proposal is supported when material-level photophysics, device-level floating-gate modulation, and system-level optical-training/electrical-inference requirements jointly motivate a testable device architecture."];
+  "R1" [label="(0,0,0) Using optical signals for training and converting them into non-volatile electrical signals for inference is a motivated optical-electrical strategy because it combines complementary signal strengths and leverages optical bandwidth."];
+  "R3" [label="(0,0,0) (NH₄)BiI₃ having low exciton binding energy satisfies one material condition relevant to voltage-free exciton separation, but the stated rule also requires long exciton lifetime before voltage-free separation can be concluded."];
+  "R4" [label="(0,0,0) An O-FGT using (NH₄)BiI₃ should be treated as a candidate for light-adjustable synaptic weights without gate-voltage assistance only insofar as the material-device system can provide voltage-free exciton separation."];
+  "R5" [label="(0,0,0) Because current 2D-material FGT approaches face optical-modulation and integration limitations, and because (NH₄)BiI₃ has a material property relevant to voltage-free exciton separation, an O-FGT incorporating (NH₄)BiI₃ is a plausible approach to investigate for addressing those specific limitations."];
+  "R6" [label="(0,0,0) The combination of a plausible (NH₄)BiI₃-based O-FGT approach and a motivated optical-training/electrical-inference strategy supports investigating this O-FGT concept as a candidate hardware basis for machine-learning-oriented optoelectronic memory."];
+  "R7" [label="(0,0,0) Machine-learning hardware that aims to support both training and inference would benefit from combining dynamic weight adjustment during training with non-volatile weight storage for inference, whether in one device or an integrated device system."];
+  "R8" [label="(0,0,0) Given the need for dynamic weight adjustment and non-volatile storage in training-to-inference hardware, the (NH₄)BiI₃-based O-FGT concept should be developed and evaluated for whether it can meet optical-training and electrical-inference demands."];
+  "N4" -> "N6" [label="induction-case"];
+  "N5" -> "N6" [label="induction-common"];
+  "N1" -> "R1" [label="induction-case"];
+  "N2" -> "R1" [label="induction-common"];
+  "N7" -> "R3" [label="deduction-rule"];
+  "N8" -> "R3" [label="deduction-case"];
+  "N10" -> "R4" [label="deduction-rule"];
+  "R3" -> "R4" [label="deduction-case"];
+  "N6" -> "R5" [label="induction-case"];
+  "N7" -> "R5" [label="induction-common"];
+  "R5" -> "R6" [label="abduction-phenomenon"];
+  "R1" -> "R6" [label="abduction-knowledge"];
+  "N14" -> "R7" [label="induction-case"];
+  "N15" -> "R7" [label="induction-common"];
+  "R7" -> "R8" [label="abduction-phenomenon"];
+  "R6" -> "R8" [label="abduction-knowledge"];
+  "R4" -> "NROOT" [label="induction-case"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

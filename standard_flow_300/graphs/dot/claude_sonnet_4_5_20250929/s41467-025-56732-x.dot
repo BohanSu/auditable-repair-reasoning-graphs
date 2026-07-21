@@ -1,0 +1,25 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56732-x
+  rankdir="TB";
+  "N1" [label="(1,0,0) Pesticides are used globally to support agricultural production and protect human and animal health."];
+  "N17" [label="(11,0,0) An analysis is needed to support a robust evidence base for non-target effects extending beyond scenario-specific case studies and model species."];
+  "N18" [label="(12,0,0) Previous meta-analyses considered only particular taxonomic groups (fish, bees) or specific habitats (aquatic ecosystems)."];
+  "N3" [label="(4,0,0) Specific examples exist: fungicides decrease arbuscular mycorrhizal fungi biomass affecting plant symbioses; herbicides reduce plant pollen viability and carbohydrate metabolism; insecticides cause long-term declines in non-target insect pollinators."];
+  "N4" [label="(5,0,0) Individual studies report pesticide effects across diverse taxa: microorganisms, plants, invertebrates, amphibians, birds, and mammals."];
+  "N5" [label="(6,0,0) Pesticide influence propagates across trophic levels, impacting ecosystem-scale species interactions and causing secondary effects."];
+  "N6" [label="(0,0,0) Deductive rule - If pesticides affect individual organisms across multiple taxa and propagate across trophic levels, then pesticide impacts are widespread and multi-dimensional across ecosystems."];
+  "NROOT" [label="(0,0,0) Conduct a phylogenetically informed global meta-analysis of experimental effect estimates to quantify how insecticides, fungicides, herbicides, and legacy versus newer pesticide compounds affect growth, reproduction, behaviour, metabolic biomarkers, and physiological biomarkers of non-target animals, plants, and microorganisms across terrestrial and aquatic environments.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A comprehensive pesticide-effects synthesis should connect broad ecological motivation with large-scale experimental evidence, taxonomic breadth, endpoint breadth, environmental breadth, and phylogenetically informed analysis."];
+  "R5" [label="(0,0,0) Prior pesticide-effect meta-analyses being restricted to particular taxonomic groups or habitats helps explain why a broader analysis beyond scenario-specific case studies and model species is needed."];
+  "R8" [label="(0,0,0) Pesticide-effect research is motivated by supported challenges of widespread, multi-dimensional ecological impacts and prior synthesis limitations that call for broader evidence synthesis."];
+  "N1" -> "N6" [label="induction-case"];
+  "N3" -> "N6" [label="induction-case"];
+  "N4" -> "N6" [label="induction-case"];
+  "N5" -> "N6" [label="induction-common"];
+  "N18" -> "R5" [label="abduction-phenomenon"];
+  "N17" -> "R5" [label="abduction-knowledge"];
+  "N6" -> "R8" [label="induction-case"];
+  "R5" -> "R8" [label="induction-common"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

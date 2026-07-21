@@ -1,0 +1,40 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56769-y
+  rankdir="TB";
+  "N1" [label="(1,1,0) Currently Rice (Oryza sativa) is one of the most important crops."];
+  "N10" [label="(11,1,0) If there is an urgent need to uncover hidden viruses, then viral metagenomics is a potent tool for uncovering hidden viruses without prior knowledge."];
+  "N12" [label="(24,1,0) Up to now, publicly available RNA-seq data for rice have not undergone systematic analysis for virus identification."];
+  "N14" [label="(22,2,0) Currently the fragmentary RdRP information from Serratus lays the groundwork for more specialized, in-depth analyses such as viral genome assembly."];
+  "N2" [label="(2,2,0) In common, global yield losses in rice can reach up to 30% due to pathogens and pests."];
+  "N3" [label="(0,0,0) inductive: Given rice is an important crop and commonly suffers massive yield losses from pathogens, therefore protecting rice from diseases is critical for global agriculture."];
+  "N4" [label="(3,4,0) Insect-borne viruses wreak havoc on rice production in East, South, and Southeast Asia."];
+  "N5" [label="(0,0,0) abductive: Given insect-borne viruses wreak havoc on rice and protecting rice is critical, therefore viral diseases are a major threat to global food security."];
+  "N6" [label="(7,2,0) The dissemination of insect-borne viruses with minimal symptoms poses significant challenges to viral disease prevention."];
+  "N8" [label="(10,2,0) Our current understanding of rice viruses may fall short, with additional viruses potentially lurking overtly or covertly within rice ecosystems."];
+  "NROOT" [label="(0,0,0) This paper proposes systematically mining publicly available RNA-seq libraries from diverse Oryza species with complementary homology-based, homology-independent, and broader metagenomic methods to discover, assemble, and classify previously hidden RNA viruses, thereby expanding the rice virome and providing viral resources relevant to improved disease surveillance and disease management.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) The retained and repaired terminal conclusions jointly motivate the paper-level research proposal."];
+  "R3" [label="(0,0,0) Insect-borne rice viruses that can disseminate with minimal symptoms are difficult and important targets for viral disease prevention in rice."];
+  "R4" [label="(0,0,0) Because rice-virus knowledge may be incomplete and minimally symptomatic spread complicates prevention, there is a justified need to search for underrecognized or hidden viruses in rice ecosystems."];
+  "R5" [label="(0,0,0) Viral metagenomics is an appropriate tool to apply to rice ecosystems when searching for underrecognized or hidden rice-associated viruses without requiring prior viral knowledge."];
+  "R6" [label="(0,0,0) Applying viral metagenomic analysis to publicly available rice RNA-seq data is a promising research avenue for virus identification because those data have not been systematically analyzed for this purpose."];
+  "R7" [label="(0,0,0) Fragmentary Serratus RdRP information can support specialized follow-up analyses, including viral genome assembly, within systematic viral metagenomic studies of public rice RNA-seq data."];
+  "R8" [label="(0,0,0) A systematic, assembly-oriented viral metagenomic analysis of public rice RNA-seq data is therefore a justified research strategy for identifying rice-associated viral sequences."];
+  "N1" -> "N3" [label="induction-case"];
+  "N2" -> "N3" [label="induction-common"];
+  "N4" -> "N5" [label="abduction-phenomenon"];
+  "N3" -> "N5" [label="abduction-knowledge"];
+  "N6" -> "R3" [label="abduction-phenomenon"];
+  "N5" -> "R3" [label="abduction-knowledge"];
+  "N8" -> "R4" [label="abduction-phenomenon"];
+  "R3" -> "R4" [label="abduction-knowledge"];
+  "N10" -> "R5" [label="deduction-rule"];
+  "R4" -> "R5" [label="deduction-case"];
+  "N12" -> "R6" [label="abduction-phenomenon"];
+  "R5" -> "R6" [label="abduction-knowledge"];
+  "N14" -> "R7" [label="induction-case"];
+  "R6" -> "R7" [label="induction-common"];
+  "R7" -> "R8" [label="induction-case"];
+  "R6" -> "R8" [label="induction-common"];
+  "R8" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

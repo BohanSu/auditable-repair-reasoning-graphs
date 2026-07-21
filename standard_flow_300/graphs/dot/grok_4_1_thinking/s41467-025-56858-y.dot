@@ -1,0 +1,33 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56858-y
+  rankdir="TB";
+  "NROOT" [label="(0,0,0) The paper proposes to develop and evaluate controlled external electrical stimulation of CD8+ T cells during ex vivo expansion as a culture strategy that may engage EGR1-dependent chromatin remodeling and TCR-signaling-linked programs, promote proliferative and effector differentiation, limit virtual memory polarization, and thereby improve the antitumor efficacy of adoptive cell transfer and CAR-T therapies.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) When adoptive T-cell therapies are limited by CD8+ T-cell functional deficits and the ex vivo expansion phase is known to influence therapeutic efficacy, convergent mechanistic evidence about TCR/EGR1 signaling and physical/electrical culture cues can motivate testing a controlled ex vivo stimulation strategy to improve differentiation and antitumor function."];
+  "N_abd_know_piezo" [label="(0,0,0) Charged substrates can deliver electrical stimulation to modulate gene expression (e.g., transcription factors like EGR1) in an antigen-dependent manner."];
+  "N_abd_phen_piezo" [label="(16,0,0) Utilizing piezoelectric membrane materials demonstrates the role of electrical stimulation in accelerating bone regeneration and combating bacteria."];
+  "N_case_bio" [label="(21,0,0) Currently there is the role of biophysical cues such as shear stress, solid stress, and matrix stiffness is increasingly recognized as critical in CD8 + T cell activation (and electrical signals affect receptor mobility/TCR)."];
+  "N_case_tcr" [label="(14,0,0) Currently there is EGR1 is rapidly induced in T cells upon antigen receptor cross-linking or TCR stimulation, serving as a key mediator linking early TCR signaling to downstream gene expression."];
+  "N_concl_egr" [label="(13,0,0) induction: Given the case that studies have demonstrated the importance of EGR1 in thymic development, regulation of IL-2/TNF, and clonal expansion of virus-specific CD8 + T cells in LCMV model, and the common pattern that such transcription factors play a pivotal role in CD8 + T cell responses, therefore EGR1 plays a pivotal role in CD8 + T cell responses."];
+  "N_ind_case_egr" [label="(15,0,0) Studies have demonstrated the importance of EGR1 in thymic development, regulation of IL-2/TNF, and clonal expansion of virus-specific CD8 + T cells in LCMV model."];
+  "N_ind_common_egr" [label="(0,0,0) When a transcription factor is repeatedly shown important in multiple T cell development/expansion processes across models, it plays a pivotal role in CD8 + T cell responses."];
+  "N_rule_bio" [label="(0,0,0) If biochemical factors are extensively studied but biophysical cues (shear stress, matrix stiffness) and electrical signals (membrane potential depolarization, electrostatic interactions) are critical/observed in T cell activation/TCR signaling, then external electrical stimulation is a potential modulator whose mechanisms remain elusive."];
+  "N_rule_tcr" [label="(0,0,0) If immune synapse (from TCR clusters) activates TFs including EGR1 and EGR1 is rapidly induced upon TCR stimulation, then EGR1 links early TCR signaling to downstream gene expression and chromatin accessibility shaping T cell fate."];
+  "R4" [label="(0,0,0) Because EGR1 is rapidly induced after antigen receptor cross-linking or TCR stimulation, and because EGR1-containing transcriptional responses can connect TCR signaling to downstream gene expression and chromatin-accessibility programs, EGR1 is a plausible mediator linking TCR stimulation to chromatin-regulatory CD8+ T-cell response programs."];
+  "R5" [label="(0,0,0) Recognition that mechanical biophysical cues such as shear stress, solid stress, and matrix stiffness influence CD8+ T-cell activation, together with background that electrical interactions can affect T-cell receptor behavior, motivates testing physical and electrical culture cues as modulators of CD8+ T-cell activation rather than proving their effect deductively."];
+  "R6" [label="(0,0,0) Evidence that piezoelectric membrane materials can deliver biologically active electrical stimulation in other settings, combined with knowledge that charged substrates can modulate gene expression, provides a cross-domain rationale for investigating externally delivered electrical stimulation as a gene-expression-modulating cue, not direct proof of CD8+ T-cell therapeutic benefit."];
+  "R9" [label="(0,0,0) Together, the plausible TCR/EGR1 chromatin-regulatory link in CD8+ T cells and the rationale that externally delivered electrical stimulation can modulate gene-expression programs support investigating electrical stimulation as a way to influence TCR/EGR1-linked CD8+ T-cell differentiation programs."];
+  "N_ind_case_egr" -> "N_concl_egr" [label="induction-case"];
+  "N_ind_common_egr" -> "N_concl_egr" [label="induction-common"];
+  "N_case_tcr" -> "R4" [label="induction-case"];
+  "N_rule_tcr" -> "R4" [label="induction-common"];
+  "N_case_bio" -> "R5" [label="abduction-phenomenon"];
+  "N_rule_bio" -> "R5" [label="abduction-knowledge"];
+  "N_abd_phen_piezo" -> "R6" [label="abduction-phenomenon"];
+  "N_abd_know_piezo" -> "R6" [label="abduction-knowledge"];
+  "R6" -> "R9" [label="abduction-phenomenon"];
+  "R4" -> "R9" [label="abduction-knowledge"];
+  "N_concl_egr" -> "NROOT" [label="induction-case"];
+  "R5" -> "NROOT" [label="induction-case"];
+  "R9" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}

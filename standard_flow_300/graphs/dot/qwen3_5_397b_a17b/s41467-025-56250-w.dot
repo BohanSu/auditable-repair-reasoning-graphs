@@ -1,0 +1,41 @@
+digraph ReasoningTree {
+  // paper_id=s41467-025-56250-w
+  rankdir="TB";
+  "I_OldFail" [label="(0,0,0) Deduction-Conclusion: If previous proposals relied on weak transitions and surpass experimental limits, therefore previous atomic proposals are not experimentally feasible."];
+  "N10" [label="(10,0,0) Cooperative optical interactions confirmed in transmitted light experimentally."];
+  "N11" [label="(11,0,0) Previous atomic proposals relied on weak magnetic dipole transitions."];
+  "N12" [label="(12,0,0) Previous approaches surpass limits of experimental capabilities."];
+  "N13" [label="(13,0,0) Negative refraction demonstrated through microscopic simulations."];
+  "N14" [label="(14,0,0) Analysis encompasses relevant atomic transitions."];
+  "N15" [label="(15,0,0) Simulations uncover distinct deflection opposite to normal."];
+  "N16" [label="(16,0,0) Distinct deflection enables extraction of negative refractive index."];
+  "N17" [label="(17,0,0) High-transmission negative refraction is resilient to imperfections."];
+  "N18" [label="(18,0,0) Refraction aligns with transverse Bloch band collective resonances."];
+  "N19" [label="(19,0,0) Negative refraction realized by antiparallel group velocities."];
+  "N8" [label="(8,0,0) Cooperative non-local atom responses enable controlled response."];
+  "NROOT" [label="(0,0,0) The paper proposes and microscopically studies high-density subwavelength atomic arrays, arranged as stacked 2D layers, as a resonator-free platform in which non-local light-mediated interactions produce transverse Bloch bands whose in-plane group velocities can oppose the excitation quasimomenta, enabling robust, high-transmission negative refraction of light without the lossy resonators used in conventional metamaterials.", fillcolor="lightyellow", style="filled"];
+  "NROOT_COMMON" [label="(0,0,0) A microscopic atomic-array route to negative refraction is supported when cooperative optical interactions are experimentally relevant, simulations show opposite deflection, the band physics supplies antiparallel group velocities in transverse Bloch resonances, and the predicted refraction remains high-transmission and robust."];
+  "R10" [label="(0,0,0) The study combines microscopic simulations of negative refraction with analysis covering the relevant atomic transitions."];
+  "R11" [label="(0,0,0) The reported negative-refraction physics involves antiparallel group velocities and is associated with transverse Bloch band collective resonances."];
+  "R13" [label="(0,0,0) The simulations uncover a distinct deflection opposite to normal refraction, which provides the signature used to extract a negative refractive index."];
+  "R14" [label="(0,0,0) The reported negative-refraction signature is paired with high-transmission negative refraction that is resilient to imperfections."];
+  "R6" [label="(0,0,0) Experimentally confirmed cooperative optical interactions in atomic arrays are relevant to controlled optical response, because cooperative non-local atomic responses enable such control and cooperative optical interactions have been observed in transmitted light."];
+  "N11" -> "I_OldFail" [label="deduction-rule"];
+  "N12" -> "I_OldFail" [label="deduction-case"];
+  "N8" -> "R6" [label="deduction-rule"];
+  "N10" -> "R6" [label="deduction-case"];
+  "N13" -> "R10" [label="induction-case"];
+  "N14" -> "R10" [label="induction-common"];
+  "N19" -> "R11" [label="deduction-rule"];
+  "N18" -> "R11" [label="deduction-case"];
+  "N16" -> "R13" [label="deduction-rule"];
+  "N15" -> "R13" [label="deduction-case"];
+  "N17" -> "R14" [label="deduction-rule"];
+  "R13" -> "R14" [label="deduction-case"];
+  "I_OldFail" -> "NROOT" [label="induction-case"];
+  "R10" -> "NROOT" [label="induction-case"];
+  "R11" -> "NROOT" [label="induction-case"];
+  "R14" -> "NROOT" [label="induction-case"];
+  "R6" -> "NROOT" [label="induction-case"];
+  "NROOT_COMMON" -> "NROOT" [label="induction-common"];
+}
